@@ -8,7 +8,7 @@
       name="description"
       content="Portfolio site for Jesse Coggins featuring public work in analytics, machine learning, forecasting, deployment, dashboards, and databases."
     />
-    <meta name="theme-color" content="#081223" />
+    <meta name="theme-color" content="#0b1423" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -36,14 +36,14 @@
 
     <main id="top">
       <section class="hero">
-        <div class="hero-grid container">
+        <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Western Governors University · M.S. Data Analytics</p>
-            <h1>Analytics, modeling, and public portfolio work that look finished before anyone clicks the repo.</h1>
+            <p class="eyebrow">Western Governors University · M.S. in Data Analytics</p>
+            <h1>Business-first analytics and machine learning, packaged like finished professional work.</h1>
             <p class="lede">
-              I build business-facing analytics and applied machine learning projects with an emphasis on clarity,
-              honest evaluation, and presentation. This portfolio brings together public work in Tableau, SQL, Python,
-              forecasting, classification, deep learning, MLOps, and database design.
+              I build public-facing portfolio work across Tableau, SQL, Python, forecasting, classification, clustering,
+              NLP, computer vision, optimization, and MLOps. The goal is simple: make the technical work strong and make
+              the presentation clear enough that a recruiter or hiring manager can understand it fast.
             </p>
 
             <div class="cta-row">
@@ -53,73 +53,76 @@
               <a class="button button-secondary" href="https://public.tableau.com/shared/Z8Z9SR2NB?:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noreferrer">Tableau Public</a>
             </div>
 
-            <div class="signal-row">
-              <span>10 public repos</span>
+            <div class="pill-row">
+              <span>10 public portfolio repos</span>
               <span>Tableau dashboard live</span>
-              <span>DVC · MLflow · FastAPI</span>
-              <span>Forecasting · NLP · Computer Vision</span>
-            </div>
-
-            <div class="hero-metrics">
-              <article>
-                <strong>148,670</strong>
-                <span>loan records in the capstone model</span>
-              </article>
-              <article>
-                <strong>97.9%</strong>
-                <span>hospital readmission classification accuracy</span>
-              </article>
-              <article>
-                <strong>82.51</strong>
-                <span>flight delay test MSE</span>
-              </article>
-              <article>
-                <strong>26.50%</strong>
-                <span>dashboard churn KPI</span>
-              </article>
+              <span>SQL · Python · Tableau · scikit-learn</span>
+              <span>MLflow · DVC · FastAPI · Docker</span>
             </div>
           </div>
 
-          <div class="hero-lab">
-            <div class="lab-grid">
-              <article class="lab-panel lab-main">
-                <div class="panel-label">Interactive Dashboard</div>
-                <img src="/assets/images/dashboard_full.png" alt="Customer churn dashboard overview" />
-              </article>
+          <aside class="hero-panel">
+            <section class="panel-section">
+              <div class="section-kicker">Quick Proof</div>
+              <div class="proof-grid">
+                <article>
+                  <strong>148,670</strong>
+                  <span>loan records modeled in the capstone workflow</span>
+                </article>
+                <article>
+                  <strong>97.9%</strong>
+                  <span>readmission classification accuracy</span>
+                </article>
+                <article>
+                  <strong>82.51</strong>
+                  <span>flight delay test MSE</span>
+                </article>
+                <article>
+                  <strong>26.50%</strong>
+                  <span>customer churn dashboard KPI</span>
+                </article>
+              </div>
+            </section>
 
-              <article class="lab-panel lab-contract">
-                <div class="panel-label">Churn Driver</div>
-                <img src="/assets/images/contract_type_churn.png" alt="Churn by contract type chart" />
-              </article>
+            <section class="panel-section">
+              <div class="section-kicker">Best Fit</div>
+              <div class="fit-grid">
+                <article class="fit-card">
+                  <h2>Data Analyst</h2>
+                  <p>Dashboard design, KPI reporting, SQL, exploratory analysis, forecasting, and business storytelling.</p>
+                </article>
+                <article class="fit-card">
+                  <h2>Data Scientist</h2>
+                  <p>Classification, clustering, NLP, computer vision, experiment tracking, deployment, and model evaluation.</p>
+                </article>
+              </div>
+            </section>
 
-              <article class="lab-panel lab-map">
-                <div class="panel-label">Geographic View</div>
-                <img src="/assets/images/state_churn_map.png" alt="Churn rate by state map" />
-              </article>
-
-              <article class="lab-note">
-                <span class="note-kicker">What this site should signal</span>
-                <strong>Business context + technical depth + finished presentation.</strong>
-                <p>Not just notebooks. Not just screenshots. Public work that reads clearly to recruiters and hiring managers.</p>
-              </article>
-            </div>
-          </div>
+            <section class="panel-section">
+              <div class="section-kicker">Open First</div>
+              <ol class="open-list">
+                <li><a href="https://github.com/jesse-coggins/flight-delay-mlops" target="_blank" rel="noreferrer">Flight Delay MLOps Pipeline</a></li>
+                <li><a href="https://github.com/jesse-coggins/loan-default-risk-capstone" target="_blank" rel="noreferrer">Loan Default Risk Capstone</a></li>
+                <li><a href="https://github.com/jesse-coggins/hospital-readmission-ml" target="_blank" rel="noreferrer">Hospital Readmission Analysis</a></li>
+              </ol>
+            </section>
+          </aside>
         </div>
       </section>
 
-      <section class="credibility-strip">
-        <div class="container credibility-grid">
-          <article>
-            <span class="credibility-tag">Analytics</span>
-            <strong>Dashboards, KPI reporting, exploratory analysis, business storytelling</strong>
+      <section class="signal-strip">
+        <div class="container signal-grid">
+          <article class="signal-card">
+            <span class="signal-label">Analytics</span>
+            <h2>Dashboards, KPI reporting, exploratory analysis, and business-facing storytelling.</h2>
           </article>
-          <article>
-            <span class="credibility-tag">Modeling</span>
-            <strong>Classification, clustering, forecasting, optimization, NLP, computer vision</strong>
+          <article class="signal-card">
+            <span class="signal-label">Modeling</span>
+            <h2>Classification, clustering, forecasting, NLP, computer vision, and optimization.</h2>
           </article>
-          <article>
-            <span class="credibility-tag">Deployment</span>
-            <strong>MLflow, DVC, FastAPI, Docker, GitLab CI/CD, API testing, public packaging</strong>
+          <article class="signal-card">
+            <span class="signal-label">Deployment</span>
+            <h2>MLflow, DVC, FastAPI, Docker, GitLab CI/CD, testing, and public portfolio packaging.</h2>
           </article>
         </div>
       </section>
@@ -130,103 +133,90 @@
             <p class="eyebrow">Featured Projects</p>
             <h2>The work I would want a recruiter to open first</h2>
             <p>
-              These projects lead with the strongest mix of business framing, analytical substance, and polished public presentation.
+              These are the strongest examples of business framing, measurable results, and polished public presentation
+              across the portfolio.
             </p>
           </div>
 
-          <div class="feature-grid">
-            <article class="feature-card">
-              <div class="feature-visual">
-                <img src="/assets/images/loan-default.png" alt="Loan default project visual" />
+          <div class="featured-grid">
+            <article class="project-card featured-card">
+              <div class="card-topline">
+                <span class="card-type">Flagship</span>
+                <span class="card-tags">Python · DVC · MLflow · FastAPI · Docker</span>
               </div>
-              <div class="feature-body">
-                <div class="feature-topline">
-                  <span class="role-pill">Data Science</span>
-                  <span class="role-pill subtle">Risk Modeling</span>
-                </div>
-                <h3>Loan Default Risk Capstone</h3>
-                <p class="feature-meta">Python · Random Forest · Cross-Validation · ROC-AUC</p>
-                <p>
-                  Binary classification pipeline on 148,670 loan records with class imbalance handling, tuned Random Forest modeling, and business-facing interpretation of risk outputs.
-                </p>
-                <ul class="metric-list">
-                  <li><strong>84.7%</strong><span>test accuracy</span></li>
-                  <li><strong>0.737</strong><span>ROC-AUC</span></li>
-                  <li><strong>148,670</strong><span>original rows</span></li>
-                </ul>
-                <a href="https://github.com/jesse-coggins/loan-default-risk-capstone" target="_blank" rel="noreferrer">View GitHub repo</a>
+              <h3>Flight Delay Prediction Pipeline</h3>
+              <p>
+                End-to-end workflow for predicting departure delays using versioned data, MLflow experiment tracking,
+                FastAPI deployment, automated tests, and restored GitLab deployment artifacts.
+              </p>
+              <ul class="result-list">
+                <li><strong>82.51</strong><span>test MSE</span></li>
+                <li><strong>4.68 min</strong><span>average predicted delay</span></li>
+                <li><strong>API + CI</strong><span>deployment evidence included</span></li>
+              </ul>
+              <div class="card-links">
+                <a href="https://github.com/jesse-coggins/flight-delay-mlops" target="_blank" rel="noreferrer">GitHub Repo</a>
               </div>
             </article>
 
-            <article class="feature-card">
-              <div class="feature-visual">
-                <img src="/assets/images/performance_plot.png" alt="Flight delay project visual" />
+            <article class="project-card featured-card">
+              <div class="card-topline">
+                <span class="card-type">Flagship</span>
+                <span class="card-tags">Python · Random Forest · ROC-AUC</span>
               </div>
-              <div class="feature-body">
-                <div class="feature-topline">
-                  <span class="role-pill">MLOps</span>
-                  <span class="role-pill subtle">Deployment</span>
-                </div>
-                <h3>Flight Delay Prediction Pipeline</h3>
-                <p class="feature-meta">Python · DVC · MLflow · FastAPI · Docker · GitLab CI/CD</p>
-                <p>
-                  End-to-end workflow for flight delay prediction with versioned data, experiment tracking, a FastAPI endpoint, automated tests, and restored GitLab deployment artifacts.
-                </p>
-                <ul class="metric-list">
-                  <li><strong>82.51</strong><span>test MSE</span></li>
-                  <li><strong>4.68 min</strong><span>average predicted delay</span></li>
-                  <li><strong>API</strong><span>prediction service included</span></li>
-                </ul>
-                <a href="https://github.com/jesse-coggins/flight-delay-mlops" target="_blank" rel="noreferrer">View GitHub repo</a>
+              <h3>Loan Default Risk Capstone</h3>
+              <p>
+                Supervised loan default prediction on 148,670 records with class imbalance handling, tuned Random Forest
+                modeling, and honest business-facing interpretation of risk performance.
+              </p>
+              <ul class="result-list">
+                <li><strong>84.7%</strong><span>test accuracy</span></li>
+                <li><strong>0.737</strong><span>ROC-AUC</span></li>
+                <li><strong>148,670</strong><span>original rows</span></li>
+              </ul>
+              <div class="card-links">
+                <a href="https://github.com/jesse-coggins/loan-default-risk-capstone" target="_blank" rel="noreferrer">GitHub Repo</a>
               </div>
             </article>
 
-            <article class="feature-card">
-              <div class="feature-visual">
-                <img src="/assets/images/hospital-clustering.png" alt="Hospital readmission clustering visual" />
+            <article class="project-card featured-card">
+              <div class="card-topline">
+                <span class="card-type">Flagship</span>
+                <span class="card-tags">Tableau · KPI Reporting · Storytelling</span>
               </div>
-              <div class="feature-body">
-                <div class="feature-topline">
-                  <span class="role-pill">Healthcare Analytics</span>
-                  <span class="role-pill subtle">Classification + Clustering</span>
-                </div>
-                <h3>Hospital Readmission Analysis</h3>
-                <p class="feature-meta">Python · Random Forest · K-Means · PCA</p>
-                <p>
-                  Three-part workflow combining Random Forest classification, unsupervised segmentation, and PCA-based visualization to show breadth across core machine learning tasks.
-                </p>
-                <ul class="metric-list">
-                  <li><strong>97.9%</strong><span>classification accuracy</span></li>
-                  <li><strong>3 clusters</strong><span>segmentation workflow</span></li>
-                  <li><strong>PCA</strong><span>visual dimensionality reduction</span></li>
-                </ul>
-                <a href="https://github.com/jesse-coggins/hospital-readmission-ml" target="_blank" rel="noreferrer">View GitHub repo</a>
+              <h3>Customer Churn Dashboard</h3>
+              <p>
+                Interactive churn analysis dashboard showing contract, geography, payment method, and income patterns with
+                business-facing KPI design and public Tableau delivery.
+              </p>
+              <ul class="result-list">
+                <li><strong>26.50%</strong><span>overall churn rate</span></li>
+                <li><strong>$172.62</strong><span>average monthly charge</span></li>
+                <li><strong>Live</strong><span>public Tableau dashboard</span></li>
+              </ul>
+              <div class="card-links">
+                <a href="https://public.tableau.com/shared/Z8Z9SR2NB?:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noreferrer">Tableau Public</a>
+                <a href="https://github.com/jesse-coggins/customer-churn-dashboard" target="_blank" rel="noreferrer">GitHub Repo</a>
               </div>
             </article>
 
-            <article class="feature-card">
-              <div class="feature-visual">
-                <img src="/assets/images/dashboard_full.png" alt="Customer churn dashboard visual" />
+            <article class="project-card featured-card">
+              <div class="card-topline">
+                <span class="card-type">Flagship</span>
+                <span class="card-tags">Python · Random Forest · K-Means · PCA</span>
               </div>
-              <div class="feature-body">
-                <div class="feature-topline">
-                  <span class="role-pill">Data Analyst</span>
-                  <span class="role-pill subtle">Tableau</span>
-                </div>
-                <h3>Customer Churn Dashboard</h3>
-                <p class="feature-meta">Tableau · EDA · Data Storytelling</p>
-                <p>
-                  Tableau Public dashboard designed to surface churn drivers across contract type, income, geography, and payment method using a telecom customer dataset.
-                </p>
-                <ul class="metric-list">
-                  <li><strong>26.50%</strong><span>overall churn rate</span></li>
-                  <li><strong>$172.62</strong><span>average monthly charge</span></li>
-                  <li><strong>Live</strong><span>public dashboard artifact</span></li>
-                </ul>
-                <div class="dual-links">
-                  <a href="https://public.tableau.com/shared/Z8Z9SR2NB?:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noreferrer">View Tableau dashboard</a>
-                  <a href="https://github.com/jesse-coggins/customer-churn-dashboard" target="_blank" rel="noreferrer">View GitHub repo</a>
-                </div>
+              <h3>Hospital Readmission Analysis</h3>
+              <p>
+                Hybrid healthcare analytics project that combines supervised classification, unsupervised clustering, and
+                PCA-based visualization to demonstrate breadth across core machine learning tasks.
+              </p>
+              <ul class="result-list">
+                <li><strong>97.9%</strong><span>classification accuracy</span></li>
+                <li><strong>0.999</strong><span>ROC-AUC</span></li>
+                <li><strong>3 clusters</strong><span>segmentation workflow</span></li>
+              </ul>
+              <div class="card-links">
+                <a href="https://github.com/jesse-coggins/hospital-readmission-ml" target="_blank" rel="noreferrer">GitHub Repo</a>
               </div>
             </article>
           </div>
@@ -237,76 +227,91 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Portfolio Atlas</p>
-            <h2>Additional public work across time series, databases, NLP, vision, optimization, and statistics</h2>
+            <h2>Additional public work across forecasting, databases, NLP, vision, optimization, and statistics</h2>
+            <p>
+              The broader portfolio shows range: time series, relational and NoSQL database design, text modeling,
+              computer vision, operations research, and applied statistical analysis.
+            </p>
           </div>
 
           <div class="portfolio-grid">
-            <article class="portfolio-card highlight">
-              <img src="/assets/images/revenue-arima.png" alt="Revenue forecasting report screenshot" />
-              <div>
-                <span class="card-tag">Time Series</span>
-                <h3>Revenue Forecasting with ARIMA</h3>
-                <p>Forecasting project on 731 daily revenue observations with stationarity testing, differencing, and holdout evaluation.</p>
-                <div class="card-stats">
-                  <span>RMSE 0.4887</span>
-                  <span>MAE 0.3766</span>
-                </div>
-                <a href="https://github.com/jesse-coggins/revenue-forecasting-arima" target="_blank" rel="noreferrer">View repo</a>
-              </div>
+            <article class="project-card atlas-card atlas-highlight">
+              <span class="card-type">Time Series</span>
+              <h3>Revenue Forecasting with ARIMA</h3>
+              <p>
+                Hospital revenue forecasting on 731 daily observations with stationarity testing, differencing, ARIMA
+                modeling, and holdout evaluation.
+              </p>
+              <ul class="result-list compact">
+                <li><strong>0.4887</strong><span>RMSE</span></li>
+                <li><strong>0.3766</strong><span>MAE</span></li>
+              </ul>
+              <a href="https://github.com/jesse-coggins/revenue-forecasting-arima" target="_blank" rel="noreferrer">View repo</a>
             </article>
 
-            <article class="portfolio-card">
-              <span class="card-tag">Databases</span>
+            <article class="project-card atlas-card">
+              <span class="card-type">Databases</span>
               <h3>EcoMart Relational + NoSQL Database Design</h3>
-              <p>PostgreSQL and MongoDB portfolio repo with schema design, ETL, views, indexes, and analytical queries.</p>
-              <div class="card-stats">
-                <span>5-table schema</span>
-                <span>100,000-record scenario</span>
-              </div>
+              <p>
+                PostgreSQL and MongoDB portfolio repo with extracted SQL scripts, NoSQL queries, indexes, views, and
+                documented data notes from WGU MSDA coursework.
+              </p>
               <a href="https://github.com/jesse-coggins/ecomart-relational-nosql-database-design" target="_blank" rel="noreferrer">View repo</a>
             </article>
 
-            <article class="portfolio-card">
-              <span class="card-tag">NLP</span>
+            <article class="project-card atlas-card">
+              <span class="card-type">NLP</span>
               <h3>Sentiment Analysis with BiLSTM</h3>
-              <p>Bidirectional LSTM pipeline using tokenization, padded sequences, and held-out evaluation for binary sentiment classification.</p>
-              <div class="card-stats">
-                <span>76.0% accuracy</span>
-                <span>0.72 F1-score</span>
-              </div>
+              <p>
+                Text classification project with sequence preprocessing, BiLSTM architecture, and strong precision on a
+                labeled sentiment dataset.
+              </p>
+              <ul class="result-list compact">
+                <li><strong>76.0%</strong><span>test accuracy</span></li>
+                <li><strong>0.72</strong><span>F1 score</span></li>
+              </ul>
               <a href="https://github.com/jesse-coggins/sentiment-analysis-bilstm" target="_blank" rel="noreferrer">View repo</a>
             </article>
 
-            <article class="portfolio-card">
-              <span class="card-tag">Computer Vision</span>
+            <article class="project-card atlas-card">
+              <span class="card-type">Computer Vision</span>
               <h3>Seedling Image Classifier</h3>
-              <p>12-class CNN project with a packaged Keras model for inference and documented training-data limitations.</p>
-              <div class="card-stats">
-                <span>66.62% accuracy</span>
-                <span>12 classes</span>
-              </div>
+              <p>
+                CNN-based multiclass plant classification repo with trained model artifact included for inference and a
+                documented dataset-size constraint for full retraining.
+              </p>
+              <ul class="result-list compact">
+                <li><strong>66.62%</strong><span>test accuracy</span></li>
+                <li><strong>12 classes</strong><span>plant species labels</span></li>
+              </ul>
               <a href="https://github.com/jesse-coggins/seedling-image-classifier" target="_blank" rel="noreferrer">View repo</a>
             </article>
 
-            <article class="portfolio-card">
-              <span class="card-tag">Statistics</span>
+            <article class="project-card atlas-card">
+              <span class="card-type">Statistics</span>
               <h3>Statistical Analysis + Market Basket</h3>
-              <p>Hypothesis testing on health insurance data plus Apriori-based association rule mining on retail transactions.</p>
-              <div class="card-stats">
-                <span>ANOVA F = 39.41</span>
-                <span>Lift = 88.2</span>
-              </div>
+              <p>
+                Combined repo for statistical testing and Apriori-based association rule mining, with findings translated
+                into practical business interpretation.
+              </p>
+              <ul class="result-list compact">
+                <li><strong>88.2</strong><span>top lift value</span></li>
+                <li><strong>8,234</strong><span>transactions analyzed</span></li>
+              </ul>
               <a href="https://github.com/jesse-coggins/statistical-analysis-and-market-basket" target="_blank" rel="noreferrer">View repo</a>
             </article>
 
-            <article class="portfolio-card">
-              <span class="card-tag">Optimization</span>
+            <article class="project-card atlas-card">
+              <span class="card-type">Optimization</span>
               <h3>Cargo Network Optimization</h3>
-              <p>Linear programming and MILP work using PuLP, including a multi-node Amazon Air transshipment model.</p>
-              <div class="card-stats">
-                <span>$200,863.75 optimal cost</span>
-                <span>LP + MILP</span>
-              </div>
+              <p>
+                Linear programming solution for a cargo routing network using PuLP, capacity constraints, and explicit
+                verification of feasible flows.
+              </p>
+              <ul class="result-list compact">
+                <li><strong>$200,863.75</strong><span>optimal cost</span></li>
+                <li><strong>Optimal</strong><span>solver status</span></li>
+              </ul>
               <a href="https://github.com/jesse-coggins/cargo-network-optimization" target="_blank" rel="noreferrer">View repo</a>
             </article>
           </div>
@@ -314,84 +319,86 @@
       </section>
 
       <section id="capabilities" class="section">
-        <div class="container capabilities-grid">
-          <div class="section-heading left">
+        <div class="container">
+          <div class="section-heading">
             <p class="eyebrow">Capabilities</p>
             <h2>What the portfolio demonstrates beyond a list of tools</h2>
             <p>
-              The thread across these projects is consistent: define the business question, clean the data, use an
-              appropriate analytical method, evaluate honestly, and package the result so another person can review it quickly.
+              The point is not just exposure to the stack. It is showing business framing, measurable outputs, and
+              presentation discipline across different kinds of data work.
             </p>
           </div>
 
-          <article class="capability-card">
-            <h3>Analytics &amp; BI</h3>
-            <p>Tableau, KPI reporting, exploratory analysis, data storytelling, dashboard design, and stakeholder communication.</p>
-          </article>
+          <div class="capability-layout">
+            <div class="capability-grid">
+              <article class="capability-card">
+                <h3>Analytics &amp; BI</h3>
+                <p>Dashboard development, KPI reporting, churn analysis, Tableau Public delivery, and business storytelling.</p>
+              </article>
+              <article class="capability-card">
+                <h3>Statistical &amp; ML Modeling</h3>
+                <p>Classification, clustering, PCA, ROC-AUC evaluation, time series forecasting, and hypothesis testing.</p>
+              </article>
+              <article class="capability-card">
+                <h3>Deep Learning</h3>
+                <p>BiLSTM text modeling, CNN image classification, sequence preprocessing, and evaluation on held-out data.</p>
+              </article>
+              <article class="capability-card">
+                <h3>Data &amp; Deployment</h3>
+                <p>SQL, MongoDB, DVC, MLflow, FastAPI, Docker, GitLab CI/CD, testing, and portfolio-ready packaging.</p>
+              </article>
+            </div>
 
-          <article class="capability-card">
-            <h3>Statistical &amp; ML Modeling</h3>
-            <p>Classification, clustering, forecasting, hypothesis testing, dimensionality reduction, predictive modeling, and evaluation.</p>
-          </article>
-
-          <article class="capability-card">
-            <h3>Deep Learning</h3>
-            <p>Computer vision and NLP workflows with TensorFlow, Keras, CNNs, and BiLSTMs.</p>
-          </article>
-
-          <article class="capability-card">
-            <h3>Data &amp; Deployment</h3>
-            <p>SQL, PostgreSQL, MongoDB, ETL, MLflow, DVC, FastAPI, Docker, GitLab CI/CD, APIs, and public repo packaging.</p>
-          </article>
-
-          <aside class="toolbox-card">
-            <span class="card-tag">Toolbox Snapshot</span>
-            <h3>Core stack</h3>
-            <ul>
-              <li><strong>Languages:</strong> Python, SQL</li>
-              <li><strong>Analytics:</strong> pandas, NumPy, statsmodels, scikit-learn</li>
-              <li><strong>Visualization:</strong> Tableau, Matplotlib, Seaborn</li>
-              <li><strong>Deployment:</strong> FastAPI, MLflow, DVC, Docker, GitLab CI/CD</li>
-              <li><strong>Databases:</strong> PostgreSQL, MongoDB</li>
-            </ul>
-          </aside>
+            <aside class="toolbox-card">
+              <div class="section-kicker">Core Stack</div>
+              <ul class="tool-list">
+                <li><strong>Languages:</strong> Python, SQL</li>
+                <li><strong>Analytics / BI:</strong> Tableau, pandas, NumPy</li>
+                <li><strong>Machine Learning:</strong> scikit-learn, statsmodels, mlxtend</li>
+                <li><strong>Deep Learning:</strong> TensorFlow, Keras, NLTK</li>
+                <li><strong>Data &amp; Deployment:</strong> PostgreSQL, MongoDB, DVC, MLflow, FastAPI, Docker, pytest</li>
+              </ul>
+            </aside>
+          </div>
         </div>
       </section>
 
-      <section id="experience" class="section experience-section">
+      <section id="experience" class="section alt">
         <div class="container experience-grid">
           <div class="experience-copy">
-            <p class="eyebrow">Experience</p>
-            <h2>Why the business framing is real</h2>
+            <p class="eyebrow">Background</p>
+            <h2>Why the business framing feels grounded</h2>
             <p>
-              Before graduate analytics work, I spent nearly a decade in multi-site operations leadership. That background is why my projects consistently emphasize KPI reporting, throughput, labor, revenue, and stakeholder communication instead of stopping at the model itself.
+              Before and alongside graduate analytics work, I built experience in operations leadership, team management,
+              customer service, KPI tracking, and process accountability. That background shapes how I present data work:
+              not just as modeling exercises, but as tools that should support decisions clearly and honestly.
             </p>
             <p>
-              In management roles at Xtreme Car Wash and International Car Wash Group, I tracked daily metrics, built recurring business reports, analyzed demand patterns, and used performance trends to guide staffing and coaching decisions across multiple locations.
+              The result is a portfolio aimed at both data analyst and data scientist roles. It balances dashboards and
+              business communication with machine learning, forecasting, databases, and deployment workflows.
             </p>
             <div class="experience-pills">
-              <span>Multi-site KPI tracking</span>
-              <span>Weekly and monthly reporting</span>
-              <span>Demand pattern analysis</span>
               <span>Operations leadership</span>
+              <span>KPI reporting</span>
+              <span>Public portfolio work</span>
+              <span>Business communication</span>
             </div>
           </div>
 
           <aside class="timeline-card">
-            <h3>Education</h3>
-            <ul>
-              <li><strong>M.S. Data Analytics – Data Science</strong><br />Western Governors University, Mar 2026</li>
-              <li><strong>B.S. Management</strong><br />Jacksonville State University, May 2024</li>
-              <li><strong>A.S. General Studies – Business Administration</strong><br />Gadsden State Community College, Aug 2022</li>
-            </ul>
-
-            <h3>Certifications</h3>
-            <ul>
-              <li>WGU Specialization: Data Science Professional</li>
-              <li>WGU Certificate: Data Analytics Professional</li>
-              <li>WGU Certificate: Data Operations</li>
-              <li>CompTIA A+ ce</li>
-            </ul>
+            <div class="section-kicker">Education &amp; Credentials</div>
+            <div class="timeline-item">
+              <strong>Western Governors University</strong>
+              <span>M.S. in Data Analytics</span>
+            </div>
+            <div class="timeline-item">
+              <strong>Western Governors University</strong>
+              <span>B.S. in Data Management / Data Analytics</span>
+            </div>
+            <div class="timeline-item">
+              <strong>Credentials</strong>
+              <span>Project+, ITIL 4, LPI Linux Essentials</span>
+            </div>
           </aside>
         </div>
       </section>
@@ -401,18 +408,19 @@
       <div class="container footer-grid">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2>Open to remote data analyst and data scientist roles</h2>
+          <h2>Ready to talk through the work.</h2>
           <p>
-            Everything on this site is live and public. If you want the fastest review path, start with GitHub, the Tableau dashboard, or the resume download.
+            If you want a quick way to review the portfolio, start with the GitHub profile, then open the four featured
+            projects above. The Tableau dashboard and downloadable resume are linked here as well.
           </p>
         </div>
 
         <div class="footer-links">
-          <a href="mailto:jessecoggins21@gmail.com">jessecoggins21@gmail.com</a>
-          <a href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer">linkedin.com/in/jessecoggins</a>
+          <a href="mailto:jessecoggins1@gmail.com">jessecoggins1@gmail.com</a>
           <a href="https://github.com/jesse-coggins" target="_blank" rel="noreferrer">github.com/jesse-coggins</a>
-          <a href="https://public.tableau.com/shared/Z8Z9SR2NB?:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noreferrer">Tableau Public dashboard</a>
-          <a href="/assets/resume/Jesse_Coggins_Resume.docx" download>Download resume</a>
+          <a href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer">linkedin.com/in/jessecoggins</a>
+          <a href="https://public.tableau.com/shared/Z8Z9SR2NB?:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noreferrer">Tableau Public Dashboard</a>
+          <a href="/assets/resume/Jesse_Coggins_Resume.docx" download>Download Resume (.docx)</a>
         </div>
       </div>
     </footer>
