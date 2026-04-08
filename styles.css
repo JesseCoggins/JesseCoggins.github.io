@@ -1,19 +1,19 @@
 :root {
-  --bg: #f5f7fb;
-  --bg-soft: #edf2f8;
-  --bg-alt: #f0f4fa;
-  --ink: #0f172a;
-  --muted: #55657d;
-  --line: #d7e0eb;
-  --surface: #ffffff;
-  --surface-alt: #f8fbff;
-  --navy: #0b1423;
-  --navy-2: #12213a;
-  --brand: #2962ff;
-  --brand-2: #16a2ff;
-  --accent: #16a085;
-  --shadow-lg: 0 28px 72px rgba(15, 23, 42, 0.12);
-  --shadow-md: 0 16px 42px rgba(15, 23, 42, 0.08);
+  --bg: #f6f1e7;
+  --bg-soft: #eee5d4;
+  --bg-alt: #e8dfcf;
+  --ink: #172019;
+  --muted: #5d675d;
+  --line: #d9cfbd;
+  --surface: #fffdf8;
+  --surface-alt: #f8f1e3;
+  --navy: #11231a;
+  --navy-2: #1d3428;
+  --brand: #2f684b;
+  --brand-2: #b58d5a;
+  --accent: #748968;
+  --shadow-lg: 0 28px 72px rgba(17, 35, 26, 0.14);
+  --shadow-md: 0 16px 42px rgba(17, 35, 26, 0.09);
   --radius-xl: 28px;
   --radius-lg: 20px;
   --radius-md: 14px;
@@ -55,7 +55,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(11, 20, 35, 0.9);
+  background: rgba(17, 35, 26, 0.92);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -84,7 +84,7 @@ a:hover {
   color: #ffffff;
   font-weight: 800;
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
-  box-shadow: 0 10px 28px rgba(41, 98, 255, 0.28);
+  box-shadow: 0 10px 28px rgba(47, 104, 75, 0.32);
 }
 
 .brand-text {
@@ -146,8 +146,8 @@ a:hover {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 12% 10%, rgba(22, 162, 255, 0.2), transparent 24%),
-    radial-gradient(circle at 85% 16%, rgba(41, 98, 255, 0.2), transparent 24%),
+    radial-gradient(circle at 12% 10%, rgba(181, 141, 90, 0.18), transparent 24%),
+    radial-gradient(circle at 85% 16%, rgba(47, 104, 75, 0.22), transparent 24%),
     linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
   color: #ffffff;
   padding: 6.25rem 0 5.4rem;
@@ -180,7 +180,7 @@ a:hover {
   letter-spacing: 0.14em;
   font-size: 0.78rem;
   font-weight: 800;
-  color: #7dd3fc;
+  color: #ddc8a3;
 }
 
 .section-kicker,
@@ -195,8 +195,8 @@ a:hover {
 }
 
 .section-kicker {
-  color: #d8e5fb;
-  background: rgba(255, 255, 255, 0.08);
+  color: #efe5d5;
+  background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -255,9 +255,9 @@ h3 {
 }
 
 .button-primary {
-  background: linear-gradient(135deg, #ffffff, #dff4ff);
-  color: #061121;
-  box-shadow: 0 16px 40px rgba(125, 211, 252, 0.18);
+  background: linear-gradient(135deg, #fbf5ea, #eadabd);
+  color: #172019;
+  box-shadow: 0 16px 40px rgba(181, 141, 90, 0.2);
 }
 
 .button-secondary {
@@ -277,8 +277,8 @@ h3 {
   padding: 0.42rem 0.78rem;
   font-size: 0.78rem;
   font-weight: 740;
-  color: #e8f0fd;
-  background: rgba(255, 255, 255, 0.06);
+  color: #f3eadc;
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
@@ -296,7 +296,7 @@ h3 {
 .hero-panel {
   border-radius: var(--radius-xl);
   padding: 1.45rem;
-  background: rgba(10, 22, 39, 0.72);
+  background: rgba(16, 32, 24, 0.76);
   border-color: rgba(255, 255, 255, 0.12);
   box-shadow: 0 18px 48px rgba(2, 6, 23, 0.28);
 }
@@ -322,7 +322,7 @@ h3 {
 .fit-card {
   border-radius: var(--radius-md);
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.045);
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -368,12 +368,12 @@ h3 {
 .signal-card {
   border-radius: var(--radius-lg);
   padding: 1.2rem 1.2rem 1.25rem;
-  border-top: 4px solid rgba(41, 98, 255, 0.4);
+  border-top: 4px solid rgba(181, 141, 90, 0.55);
 }
 
 .signal-label {
   color: var(--brand);
-  background: rgba(41, 98, 255, 0.1);
+  background: rgba(47, 104, 75, 0.1);
 }
 
 .signal-copy {
@@ -434,7 +434,7 @@ h3 {
   inset: 0 auto auto 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, rgba(41, 98, 255, 0.9), rgba(22, 162, 255, 0.45));
+  background: linear-gradient(90deg, rgba(47, 104, 75, 0.92), rgba(181, 141, 90, 0.62));
 }
 
 .card-topline {
@@ -446,7 +446,7 @@ h3 {
 
 .card-type {
   color: var(--brand);
-  background: rgba(41, 98, 255, 0.1);
+  background: rgba(47, 104, 75, 0.1);
 }
 
 .card-tags {
@@ -502,7 +502,7 @@ h3 {
 
 .atlas-highlight {
   grid-column: span 2;
-  background: linear-gradient(180deg, rgba(41, 98, 255, 0.04), rgba(41, 98, 255, 0) 60%), var(--surface);
+  background: linear-gradient(180deg, rgba(181, 141, 90, 0.08), rgba(181, 141, 90, 0) 60%), var(--surface);
 }
 
 .capability-layout,
@@ -528,7 +528,7 @@ h3 {
 
 .toolbox-card,
 .timeline-card {
-  background: linear-gradient(180deg, rgba(41, 98, 255, 0.03), rgba(255, 255, 255, 0) 65%), var(--surface);
+  background: linear-gradient(180deg, rgba(181, 141, 90, 0.08), rgba(255, 255, 255, 0) 65%), var(--surface);
 }
 
 .tool-list {
@@ -553,7 +553,7 @@ h3 {
   font-size: 0.8rem;
   font-weight: 720;
   color: var(--brand);
-  background: rgba(41, 98, 255, 0.1);
+  background: rgba(47, 104, 75, 0.1);
 }
 
 .site-footer {
