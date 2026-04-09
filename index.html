@@ -25,6 +25,9 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -52,14 +55,35 @@
           <a href="#contact">Contact</a>
         </nav>
 
-        <a class="nav-button" href="assets/resume/Jesse_Coggins_Resume.docx" download>
-          <span>Resume</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-            <polyline points="7 10 12 15 17 10" />
-            <line x1="12" y1="15" x2="12" y2="3" />
-          </svg>
-        </a>
+        <div class="nav-actions">
+          <details class="mobile-nav">
+            <summary class="nav-toggle" aria-label="Open menu">
+              <span>Menu</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            </summary>
+            <div class="mobile-nav-panel" aria-label="Mobile navigation">
+              <a href="#work">Work</a>
+              <a href="#portfolio">Portfolio</a>
+              <a href="#skills">Skills</a>
+              <a href="#experience">Experience</a>
+              <a href="#education">Education</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </details>
+
+          <a class="nav-button" href="assets/resume/Jesse_Coggins_Resume.docx" download>
+            <span>Resume</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+          </a>
+        </div>
       </div>
     </header>
 
@@ -685,22 +709,6 @@
       // Update year
       document.getElementById('year').textContent = new Date().getFullYear();
 
-      // Subtle fade-in on scroll
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('in-view');
-              io.unobserve(entry.target);
-            }
-          });
-        },
-        { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }
-      );
-      document
-        .querySelectorAll('.section, .hero, .project, .skill-card, .timeline-item, .edu-item, .cert-card')
-        .forEach((el) => io.observe(el));
-
       // Nav shadow on scroll
       const header = document.querySelector('.site-header');
       const onScroll = () => {
@@ -709,6 +717,13 @@
       };
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
+
+      const mobileNav = document.querySelector('.mobile-nav');
+      document.querySelectorAll('.mobile-nav-panel a').forEach((link) => {
+        link.addEventListener('click', () => {
+          if (mobileNav) mobileNav.removeAttribute('open');
+        });
+      });
     </script>
   </body>
 </html>
