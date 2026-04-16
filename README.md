@@ -1,6 +1,6 @@
 # Jesse Coggins GitHub Pages Site
 
-Static portfolio site for [jessecoggins.github.io](https://jessecoggins.github.io), built to complement the public GitHub portfolio, LinkedIn profile, and Tableau dashboard.
+Static portfolio site for [JesseCoggins.github.io](https://JesseCoggins.github.io), built to complement the public GitHub portfolio, LinkedIn profile, and Tableau dashboard.
 
 ## Contents
 
