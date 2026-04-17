@@ -478,6 +478,19 @@ main { position: relative; z-index: 2; }
 /* Atlas */
 .atlas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .project-atlas { padding: 32px; display: flex; flex-direction: column; }
+.project-atlas-spotlight {
+  grid-column: 1 / -1;
+}
+.project-atlas-spotlight-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
+  gap: 32px;
+  align-items: end;
+}
+.project-atlas-copy {
+  display: flex;
+  flex-direction: column;
+}
 .project-topline {
   display: flex;
   align-items: center;
@@ -499,6 +512,13 @@ main { position: relative; z-index: 2; }
   margin-bottom: 14px;
 }
 .project-atlas .project-copy { font-size: 14px; margin-bottom: 20px; flex-grow: 1; }
+.project-atlas-spotlight .project-copy {
+  max-width: 740px;
+  margin-bottom: 24px;
+}
+.project-atlas-spotlight .metric-row {
+  margin-bottom: 0;
+}
 
 /* Skills */
 .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -728,6 +748,7 @@ main { position: relative; z-index: 2; }
 /* Responsive */
 @media (max-width: 1024px) {
   .featured-grid, .atlas-grid, .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .project-atlas-spotlight-grid { grid-template-columns: 1fr; }
   .education-layout { grid-template-columns: 1fr; }
   .cert-card { position: static; }
   .footer-grid { grid-template-columns: 1fr; gap: 60px; }
