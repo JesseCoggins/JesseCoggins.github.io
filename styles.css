@@ -700,6 +700,9 @@ main { position: relative; z-index: 2; }
   margin-bottom: 36px;
 }
 .footer-links ul { display: flex; flex-direction: column; gap: 14px; }
+.footer-link-buttons { display: flex; flex-direction: column; gap: 12px; }
+.footer-link-btn { justify-content: flex-start; width: 100%; font-size: 13px; }
+.footer-location { font-size: 12px; padding-top: 4px; }
 .footer-links a {
   font-size: 14px;
   color: var(--text-dim);
