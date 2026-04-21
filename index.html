@@ -76,7 +76,7 @@
 
         <div class="nav-actions">
           <details class="mobile-nav">
-            <summary class="nav-toggle" aria-label="Open menu">
+            <summary class="nav-toggle" aria-label="Open menu" aria-expanded="false">
               <span>Menu</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="3" y1="6" x2="21" y2="6" />
@@ -98,8 +98,6 @@
             class="nav-button"
             href="assets/resume/Jesse_Coggins_Resume.pdf"
             data-resume-trigger
-            aria-haspopup="dialog"
-            aria-controls="resume-dialog"
             target="_blank"
             rel="noreferrer"
           >
@@ -143,8 +141,6 @@
               class="button button-primary"
               href="assets/resume/Jesse_Coggins_Resume.pdf"
               data-resume-trigger
-              aria-haspopup="dialog"
-              aria-controls="resume-dialog"
               target="_blank"
               rel="noreferrer"
             >
@@ -744,8 +740,6 @@
                 class="button button-ghost"
                 href="assets/resume/Jesse_Coggins_Resume.pdf"
                 data-resume-trigger
-                aria-haspopup="dialog"
-                aria-controls="resume-dialog"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -830,6 +824,17 @@
       onScroll();
 
       const mobileNav = document.querySelector('.mobile-nav');
+      const mobileNavToggle = document.querySelector('.nav-toggle');
+      const syncMobileNavState = () => {
+        if (!mobileNav || !mobileNavToggle) return;
+        const isOpen = mobileNav.hasAttribute('open');
+        mobileNavToggle.setAttribute('aria-expanded', String(isOpen));
+        mobileNavToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      };
+      if (mobileNav) {
+        mobileNav.addEventListener('toggle', syncMobileNavState);
+        syncMobileNavState();
+      }
       document.querySelectorAll('.mobile-nav-panel a').forEach((link) => {
         link.addEventListener('click', () => {
           if (mobileNav) mobileNav.removeAttribute('open');
@@ -842,6 +847,13 @@
       const resumeTriggers = document.querySelectorAll('[data-resume-trigger]');
       const resumeSource = 'assets/resume/Jesse_Coggins_Resume.pdf';
       let lastResumeTrigger = null;
+
+      if (resumeDialog && typeof resumeDialog.showModal === 'function') {
+        resumeTriggers.forEach((trigger) => {
+          trigger.setAttribute('aria-haspopup', 'dialog');
+          trigger.setAttribute('aria-controls', 'resume-dialog');
+        });
+      }
 
       const cleanupResumeDialog = () => {
         document.body.classList.remove('resume-modal-open');
