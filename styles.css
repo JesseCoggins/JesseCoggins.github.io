@@ -13,7 +13,7 @@
 
   --text: #f0ead8;
   --text-dim: #b8b09a;
-  --text-muted: #756e5c;
+  --text-muted: #8c846f;
 
   --accent: #c9b687;
   --accent-2: #8aa884;
@@ -52,6 +52,37 @@ img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; }
 ::selection { background: rgba(201, 182, 135, 0.35); color: #fff; }
+
+.skip-link {
+  position: fixed;
+  top: 16px;
+  left: 32px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  color: #0d1512;
+  background: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  transform: translateY(calc(-100% - 32px));
+  opacity: 0;
+  transition: transform 0.2s var(--ease), opacity 0.2s var(--ease);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+:where(a, button, summary):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+main:focus { outline: none; }
 
 ::-webkit-scrollbar { width: 12px; height: 12px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
