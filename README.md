@@ -8,4 +8,3 @@ Static portfolio site for [JesseCoggins.github.io](https://JesseCoggins.github.i
 - `styles.css`: site styles
 - `assets/images/`: selected portfolio visuals
 - `assets/resume/`: downloadable resume copy
-
