@@ -240,8 +240,7 @@
                   End-to-end ML engineering pipeline replicating a production MLOps workflow:
                   versioned data with DVC, experiment tracking through MLflow, containerized
                   deployment via FastAPI and Docker, and automated build and test through GitLab
-                  CI/CD. A live REST API serves real-time predictions from the Dockerized
-                  FastAPI endpoint.
+                  CI/CD. A FastAPI endpoint serves predictions from the Dockerized app.
                 </p>
                 <dl class="metric-row">
                   <div><dt>Test MSE</dt><dd>79.65</dd></div>
@@ -264,8 +263,8 @@
                 <p class="project-tags">Python · scikit-learn · Random Forest · ROC-AUC</p>
                 <p class="project-copy">
                   Binary classification pipeline on 148,670 loan records with feature engineering,
-                  class imbalance handling via balanced class weighting, stratified k-fold
-                  cross-validation, and tuned Random Forest modeling. Outputs are framed as a
+                  class imbalance handling via balanced class weighting, 5-fold cross-validation,
+                  and tuned Random Forest modeling. Outputs are framed as a
                   business risk decision tool, not just a confusion matrix.
                 </p>
                 <dl class="metric-row">
@@ -456,14 +455,14 @@
               </div>
               <h3>Statistical Analysis + Market Basket</h3>
               <p class="project-copy">
-                Five notebooks covering linear regression, logistic regression, PCA, hypothesis
-                testing (ANOVA, Mann-Whitney U, Chi-Square) on health insurance data, and Apriori
-                market basket analysis on 8,234 retail transactions surfacing high-lift association
-                rules.
+                Seven notebooks covering data cleaning, business finance aggregation, linear
+                regression, logistic regression, PCA, hypothesis testing on health insurance data,
+                and Apriori market basket analysis using 441 order baskets built from 8,234 retail
+                line items.
               </p>
               <dl class="metric-row compact">
                 <div><dt>Top Lift</dt><dd>88.2</dd></div>
-                <div><dt>Transactions</dt><dd>8,234</dd></div>
+                <div><dt>Order Baskets</dt><dd>441</dd></div>
               </dl>
               <a href="https://github.com/jessecoggins/statistical-analysis-and-market-basket" target="_blank" rel="noreferrer" class="project-link">Repository →</a>
             </article>
