@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Projects — Jesse Coggins</title>
+ <meta name="description" content="Explore Jesse Coggins' data analytics and data science projects. Search and filter work by topic, tools, and project type.">
+ <meta name="theme-color" content="#0d1512">
+ <link rel="canonical" href="https://jessecoggins.github.io/projects.html">
+ <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="styles.css">
+ <link rel="stylesheet" href="project-library.css">
+ <script>document.documentElement.classList.add('js');</script>
+ <script defer src="project-library.js"></script>
+</head>
+<body class="library-page">
+ <a class="skip-link" href="#project-results">Skip to project results</a>
+ <div class="grain" aria-hidden="true"></div><div class="gradient-orb orb-1" aria-hidden="true"></div><div class="gradient-orb orb-2" aria-hidden="true"></div>
+ <header class="site-header">
+  <div class="container nav">
+   <a class="brand" href="index.html" aria-label="Jesse Coggins — home"><span class="brand-mark">JC</span><span class="brand-divider" aria-hidden="true"></span><span class="brand-text"><strong>Jesse Coggins</strong></span></a>
+   <nav class="primary-nav" aria-label="Primary">
+    <a href="index.html#work">Work</a><a href="index.html#portfolio">Portfolio</a><a class="active-nav" href="projects.html" aria-current="page">Projects</a><a href="index.html#skills">Skills</a><a href="index.html#contact">Contact</a>
+   </nav>
+   <div class="nav-actions"><details class="mobile-nav"><summary class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span>Menu</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></summary><div class="mobile-nav-panel" aria-label="Mobile navigation"><a href="index.html#work">Work</a><a href="index.html#portfolio">Portfolio</a><a href="projects.html" aria-current="page">Projects</a><a href="index.html#skills">Skills</a><a href="index.html#contact">Contact</a></div></details><a class="nav-button" href="index.html#contact">Contact</a></div>
+  </div>
+ </header>
+ <main id="project-results" tabindex="-1">
+  <section class="library-intro">
+   <div class="container">
+    <div class="section-meta"><span class="section-index">03</span><span class="section-label">Project Library</span></div>
+    <p class="library-eyebrow">A growing collection of questions, methods, and useful answers.</p>
+    <h1 class="display library-title"><span class="display-line">Projects</span><span class="display-line italic">in practice.</span></h1>
+    <p class="library-lede">Browse by the kind of problem, the tools behind the work, or the ideas you want to explore. Each project links to its working materials and published result where available.</p>
+    <div class="library-stats" aria-label="Project library summary"><span><strong id="total-project-count">11</strong> projects</span><span><strong>5</strong> areas</span><span><strong>48</strong> searchable tags</span></div>
+   </div>
+  </section>
+  <section class="library-workspace" aria-label="Project filters and results">
+   <div class="container">
+    <div class="filter-shell">
+     <div class="filter-topline">
+      <label class="search-field"><span class="sr-only">Search projects, topics, or tools</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="project-search" type="search" placeholder="Search projects, topics, tools…" autocomplete="off"><kbd>/</kbd></label>
+      <label class="sort-field"><span>Sort</span><select id="project-sort"><option value="featured">Featured first</option><option value="title-asc">Title A–Z</option><option value="category">Project area</option></select></label>
+     </div>
+     <div class="filter-group category-filter"><div class="filter-label-row"><span class="filter-label">Explore by area</span><span class="filter-hint">Choose one</span></div><div id="category-filters" class="filter-pills" role="group" aria-label="Filter by project area"></div></div>
+     <div class="filter-group topic-filter">
+      <div class="filter-label-row"><div><span class="filter-label">Explore by tag</span><span class="filter-hint">Select several to build a focused view</span></div><div class="match-toggle" role="group" aria-label="How selected tags should match"><button type="button" data-match="any" aria-pressed="false">Any</button><button type="button" data-match="all" aria-pressed="true">All</button></div></div>
+      <label class="tag-search"><span class="sr-only">Find a tag</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="tag-search" type="search" placeholder="Find a tag…" autocomplete="off"></label>
+      <div id="tag-filters" class="tag-filter-list" role="group" aria-label="Filter by project tags"></div>
+      <button id="show-more-tags" class="show-more-tags" type="button" aria-expanded="false">Show all tags</button>
+     </div>
+     <div id="active-filters" class="active-filters" hidden><span class="filter-label">Your filters</span><div id="active-filter-chips"></div><button id="clear-filters" class="clear-filters" type="button">Clear all</button></div>
+    </div>
+    <div class="results-toolbar"><p id="result-count" role="status" aria-live="polite"></p><p class="results-note">Select a tag on any project card to add it to your filters.</p></div>
+    <div id="project-grid" class="library-grid"><article class="library-card is-featured" data-category="Machine Learning" data-tags="Python|MLOps|DVC|MLflow|FastAPI|Docker|CI/CD" data-title="Flight Delay Prediction Pipeline" data-index="01">
+  <div class="card-art art-machine" aria-hidden="true"><span class="art-index">01 / 11</span><span class="art-kind">MLOps</span><div class="art-shape"><i></i><i></i><i></i><i></i><i></i></div><span class="art-orbit"></span></div>
+  <div class="library-card-body">
+   <div class="card-meta"><span>Machine Learning</span><span class="featured-mark">Featured</span></div>
+   <h2>Flight Delay Prediction Pipeline</h2>
+   <p class="card-description">An end-to-end flight delay prediction service, from versioned data and experiment tracking to a containerized API and automated CI pipeline.</p>
+   
+   <div class="card-tags" aria-label="Project tags"><button class="tag-chip" type="button" data-tag="Python" aria-pressed="false">Python</button><button class="tag-chip" type="button" data-tag="MLOps" aria-pressed="false">MLOps</button><button class="tag-chip" type="button" data-tag="DVC" aria-pressed="false">DVC</button><button class="tag-chip" type="button" data-tag="MLflow" aria-pressed="false">MLflow</button><button class="tag-chip" type="button" data-tag="FastAPI" aria-pressed="false">FastAPI</button><button class="tag-chip" type="button" data-tag="Docker" aria-pressed="false">Docker</button><button class="tag-chip" type="button" data-tag="CI/CD" aria-pressed="false">CI/CD</button></div>
+   <div class="card-links"><a class="library-card-link" href="https://github.com/jessecoggins/flight-delay-mlops" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a></div>
+  </div>
+ </article>
+<article class="library-card is-featured" data-category="Machine Learning" data-tags="Python|scikit-learn|Random Forest|Classification|Risk" data-title="Loan Default Risk Capstone" data-index="02">
+  <div class="card-art art-machine" aria-hidden="true"><span class="art-index">02 / 11</span><span class="art-kind">Classification</span><div class="art-shape"><i></i><i></i><i></i><i></i><i></i></div><span class="art-orbit"></span></div>
+  <div class="library-card-body">
+   <div class="card-meta"><span>Machine Learning</span><span class="featured-mark">Featured</span></div>
+   <h2>Loan Default Risk Capstone</h2>
+   <p class="card-description">A risk modeling workflow on 148,670 loan records, with feature engineering, balanced class weights, cross-validation, and a tuned Random Forest.</p>
+   
+   <div class="card-tags" aria-label="Project tags"><button class="tag-chip" type="button" data-tag="Python" aria-pressed="false">Python</button><button class="tag-chip" type="button" data-tag="scikit-learn" aria-pressed="false">scikit-learn</button><button class="tag-chip" type="button" data-tag="Random Forest" aria-pressed="false">Random Forest</button><button class="tag-chip" type="button" data-tag="Classification" aria-pressed="false">Classification</button><button class="tag-chip" type="button" data-tag="Risk" aria-pressed="false">Risk</button></div>
+   <div class="card-links"><a class="library-card-link" href="https://github.com/jessecoggins/loan-default-risk-capstone" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a></div>
+  </div>
+ </article>
+<article class="library-card is-featured" data-category="Data Visualization" data-tags="Tableau|Dashboard|Storytelling|KPI Reporting|Accessibility" data-title="Customer Churn Dashboard" data-index="03">
+  <div class="card-art art-visual" aria-hidden="true"><span class="art-index">03 / 11</span><span class="art-kind">BI Dashboard</span><div class="art-shape"><i></i><i></i><i></i><i></i><i></i></div><span class="art-orbit"></span></div>
+  <div class="library-card-body">
+   <div class="card-meta"><span>Data Visualization</span><span class="featured-mark">Featured</span></div>
+   <h2>Customer Churn Dashboard</h2>
+   <p class="card-description">An interactive Tableau dashboard exploring churn across contract type, income, geography, and payment method, with accessible color choices.</p>
+   
+   <div class="card-tags" aria-label="Project tags"><button class="tag-chip" type="button" data-tag="Tableau" aria-pressed="false">Tableau</button><button class="tag-chip" type="button" data-tag="Dashboard" aria-pressed="false">Dashboard</button><button class="tag-chip" type="button" data-tag="Storytelling" aria-pressed="false">Storytelling</button><button class="tag-chip" type="button" data-tag="KPI Reporting" aria-pressed="false">KPI Reporting</button><button class="tag-chip" type="button" data-tag="Accessibility" aria-pressed="false">Accessibility</button></div>
+   <div class="card-links"><a class="library-card-link" href="https://public.tableau.com/shared/Z8Z9SR2NB?:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noreferrer">View dashboard <span aria-hidden="true">↗</span></a><a class="library-card-link" href="https://github.com/jessecoggins/customer-churn-dashboard" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a></div>
+  </div>
+ </article>
+<article class="library-card is-featured" data-category="Machine Learning" data-tags="Python|scikit-learn|Healthcare|Clustering|PCA|Statistics" data-title="Hospital Readmission Analysis" data-index="04">
+  <div class="card-art art-machine" aria-hidden="true"><span class="art-index">04 / 11</span><span class="art-kind">Hybrid ML</span><div class="art-shape"><i></i><i></i><i></i><i></i><i></i></div><span class="art-orbit"></span></div>
+  <div class="library-card-body">
+   <div class="card-meta"><span>Machine Learning</span><span class="featured-mark">Featured</span></div>
+   <h2>Hospital Readmission Analysis</h2>
+   <p class="card-description">A hybrid analysis combining discharge-time risk stratification, K-Means patient segments, and PCA, with a feature-timing sensitivity check.</p>
+   <p class="card-note">Reported model scores describe discharge-time stratification; excluding Initial_days reduces ROC-AUC to 0.498.</p>
+   <div class="card-tags" aria-label="Project tags"><button class="tag-chip" type="button" data-tag="Python" aria-pressed="false">Python</button><button class="tag-chip" type="button" data-tag="scikit-learn" aria-pressed="false">scikit-learn</button><button class="tag-chip" type="button" data-tag="Healthcare" aria-pressed="false">Healthcare</button><button class="tag-chip" type="button" data-tag="Clustering" aria-pressed="false">Clustering</button><button class="tag-chip" type="button" data-tag="PCA" aria-pressed="false">PCA</button><button class="tag-chip" type="button" data-tag="Statistics" aria-pressed="false">Statistics</button></div>
+   <div class="card-links"><a class="library-card-link" href="https://github.com/jessecoggins/hospital-readmission-ml" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a><a class="library-card-link" href="https://github.com/JesseCoggins/hospital-readmission-ml#results" target="_blank" rel="noreferrer">Sensitivity check <span aria-hidden="true">↗</span></a></div>
+  </div>
+ </article>
+<article class="library-card " data-category="Business &amp; Market Analytics" data-tags="Python|Market Research|Regional Analysis|Ranking|Economic Data" data-title="Southeast Housing Market Analysis" data-index="05">
+  <div class="card-art art-business" aria-hidden="true"><span class="art-index">05 / 11</span><span class="art-kind">Market Analysis</span><div class="art-shape"><i></i><i></i><i></i><i></i><i></i></div><span class="art-orbit"></span></div>
+  <div class="library-card-body">
+   <div class="card-meta"><span>Business &amp; Market Analytics</span></div>
+   <h2>Southeast Housing Market Analysis</h2>
+   <p class="card-description">A screening framework comparing 105 Southeast metros on affordability, growth, and labor-market depth, with rankings that separate low cost from stronger fundamentals.</p>
+   
+   <div class="card-tags" aria-label="Project tags"><button class="tag-chip" type="button" data-tag="Python" aria-pressed="false">Python</button><button class="tag-chip" type="button" data-tag="Market Research" aria-pressed="false">Market Research</button><button class="tag-chip" type="button" data-tag="Regional Analysis" aria-pressed="false">Regional Analysis</button><button class="tag-chip" type="button" data-tag="Ranking" aria-pressed="false">Ranking</button><button class="tag-chip" type="button" data-tag="Economic Data" aria-pressed="false">Economic Data</button></div>
+   <div class="card-links"><a class="library-card-link" href="https://jessecoggins.github.io/southeast-housing-market-analysis/" target="_blank" rel="noreferrer">Project summary <span aria-hidden="true">↗</span></a><a class="library-card-link" href="https://github.com/JesseCoggins/southeast-housing-market-analysis" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a></div>
+  </div>
+ </article>
+<article class="library-card " data-category="Business &amp; Market Analytics" data-tags="Python|Forecasting|Time Series|ARIMA|Statistics" data-title="Revenue Forecasting with ARIMA" data-index="06">
+  <div class="card-art art-business" aria-hidden="true"><span class="art-index">06 / 11</span><span class="art-kind">Forecasting</span><div class="art-shape"><i></i><i></i><i></i><i></i><i></i></div><span class="art-orbit"></span></div>
+  <div class="library-card-body">
+   <div class="card-meta"><span>Business &amp; Market Analytics</span></div>
+   <h2>Revenue Forecasting with ARIMA</h2>
+   <p class="card-description">A time-series forecast built from 731 daily revenue observations, including stationarity testing, differencing, parameter selection, and holdout evaluation.</p>
+   
+   <div class="card-tags" aria-label="Project tags"><button class="tag-chip" type="button" data-tag="Python" aria-pressed="false">Python</button><button class="tag-chip" type="button" data-tag="Forecasting" aria-pressed="false">Forecasting</button><button class="tag-chip" type="button" data-tag="Time Series" aria-pressed="false">Time Series</button><button class="tag-chip" type="button" data-tag="ARIMA" aria-pressed="false">ARIMA</button><button class="tag-chip" type="button" data-tag="Statistics" aria-pressed="false">Statistics</button></div>
+   <div class="card-links"><a class="library-card-link" href="https://github.com/jessecoggins/revenue-forecasting-arima" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a></div>
+  </div>
+ </article>
+<article class="library-card " data-category="Data Engineering &amp; Databases" data-tags="PostgreSQL|MongoDB|SQL|ETL|Data Modeling|NoSQL" data-title="EcoMart Relational + NoSQL Design" data-index="07">
+  <div class="card-art art-engineering" aria-hidden="true"><span class="art-index">07 / 11</span><span class="art-kind">Database Design</span><div class="art-shape"><i></i><i></i><i></i><i></i><i></i></div><span class="art-orbit"></span></div>
+  <div class="library-card-body">
+   <div class="card-meta"><span>Data Engineering &amp; Databases</span></div>
+   <h2>EcoMart Relational + NoSQL Design</h2>
+   <p class="card-description">A normalized PostgreSQL design across five tables and 100,000 records, paired with a MongoDB implementation, ETL staging, indexes, and analytical queries.</p>
+   
+   <div class="card-tags" aria-label="Project tags"><button class="tag-chip" type="button" data-tag="PostgreSQL" aria-pressed="false">PostgreSQL</button><button class="tag-chip" type="button" data-tag="MongoDB" aria-pressed="false">MongoDB</button><button class="tag-chip" type="button" data-tag="SQL" aria-pressed="false">SQL</button><button class="tag-chip" type="button" data-tag="ETL" aria-pressed="false">ETL</button><button class="tag-chip" type="button" data-tag="Data Modeling" aria-pressed="false">Data Modeling</button><button class="tag-chip" type="button" data-tag="NoSQL" aria-pressed="false">NoSQL</button></div>
+   <div class="card-links"><a class="library-card-link" href="https://github.com/jessecoggins/ecomart-relational-nosql-database-design" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a></div>
+  </div>
+ </article>
+<article class="library-card " data-category="Machine Learning" data-tags="Python|NLP|Deep Learning|BiLSTM|Text Analytics" data-title="Sentiment Analysis with BiLSTM" data-index="08">
+  <div class="card-art art-machine" aria-hidden="true"><span class="art-index">08 / 11</span><span class="art-kind">Natural Language Processing</span><div class="art-shape"><i></i><i></i><i></i><i></i><i></i></div><span class="art-orbit"></span></div>
+  <div class="library-card-body">
+   <div class="card-meta"><span>Machine Learning</span></div>
+   <h2>Sentiment Analysis with BiLSTM</h2>
+   <p class="card-description">A bidirectional LSTM sentiment classifier with tokenization, sequence preparation, padding, and evaluation on a labeled test set.</p>
+   
+   <div class="card-tags" aria-label="Project tags"><button class="tag-chip" type="button" data-tag="Python" aria-pressed="false">Python</button><button class="tag-chip" type="button" data-tag="NLP" aria-pressed="false">NLP</button><button class="tag-chip" type="button" data-tag="Deep Learning" aria-pressed="false">Deep Learning</button><button class="tag-chip" type="button" data-tag="BiLSTM" aria-pressed="false">BiLSTM</button><button class="tag-chip" type="button" data-tag="Text Analytics" aria-pressed="false">Text Analytics</button></div>
+   <div class="card-links"><a class="library-card-link" href="https://github.com/jessecoggins/sentiment-analysis-bilstm" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a></div>
+  </div>
+ </article>
+<article class="library-card " data-category="Machine Learning" data-tags="Python|Computer Vision|CNN|Image Classification|Deep Learning" data-title="Seedling Image Classifier" data-index="09">
+  <div class="card-art art-machine" aria-hidden="true"><span class="art-index">09 / 11</span><span class="art-kind">Computer Vision</span><div class="art-shape"><i></i><i></i><i></i><i></i><i></i></div><span class="art-orbit"></span></div>
+  <div class="library-card-body">
+   <div class="card-meta"><span>Machine Learning</span></div>
+   <h2>Seedling Image Classifier</h2>
+   <p class="card-description">A convolutional neural network for classifying plant seedling species, with the trained model artifact included for inference and inspection.</p>
+   
+   <div class="card-tags" aria-label="Project tags"><button class="tag-chip" type="button" data-tag="Python" aria-pressed="false">Python</button><button class="tag-chip" type="button" data-tag="Computer Vision" aria-pressed="false">Computer Vision</button><button class="tag-chip" type="button" data-tag="CNN" aria-pressed="false">CNN</button><button class="tag-chip" type="button" data-tag="Image Classification" aria-pressed="false">Image Classification</button><button class="tag-chip" type="button" data-tag="Deep Learning" aria-pressed="false">Deep Learning</button></div>
+   <div class="card-links"><a class="library-card-link" href="https://github.com/jessecoggins/seedling-image-classifier" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a></div>
+  </div>
+ </article>
+<article class="library-card " data-category="Statistics &amp; Optimization" data-tags="Python|Statistics|Regression|PCA|Hypothesis Testing|Market Basket|Apriori" data-title="Statistical Analysis + Market Basket" data-index="10">
+  <div class="card-art art-stats" aria-hidden="true"><span class="art-index">10 / 11</span><span class="art-kind">Applied Statistics</span><div class="art-shape"><i></i><i></i><i></i><i></i><i></i></div><span class="art-orbit"></span></div>
+  <div class="library-card-body">
+   <div class="card-meta"><span>Statistics &amp; Optimization</span></div>
+   <h2>Statistical Analysis + Market Basket</h2>
+   <p class="card-description">Seven notebooks covering business finance, regression, PCA, health insurance hypothesis testing, and Apriori market basket analysis across 441 baskets.</p>
+   
+   <div class="card-tags" aria-label="Project tags"><button class="tag-chip" type="button" data-tag="Python" aria-pressed="false">Python</button><button class="tag-chip" type="button" data-tag="Statistics" aria-pressed="false">Statistics</button><button class="tag-chip" type="button" data-tag="Regression" aria-pressed="false">Regression</button><button class="tag-chip" type="button" data-tag="PCA" aria-pressed="false">PCA</button><button class="tag-chip" type="button" data-tag="Hypothesis Testing" aria-pressed="false">Hypothesis Testing</button><button class="tag-chip" type="button" data-tag="Market Basket" aria-pressed="false">Market Basket</button><button class="tag-chip" type="button" data-tag="Apriori" aria-pressed="false">Apriori</button></div>
+   <div class="card-links"><a class="library-card-link" href="https://github.com/jessecoggins/statistical-analysis-and-market-basket" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a></div>
+  </div>
+ </article>
+<article class="library-card " data-category="Statistics &amp; Optimization" data-tags="Python|Operations Research|Linear Programming|PuLP|Optimization" data-title="Cargo Network Optimization" data-index="11">
+  <div class="card-art art-stats" aria-hidden="true"><span class="art-index">11 / 11</span><span class="art-kind">Operations Research</span><div class="art-shape"><i></i><i></i><i></i><i></i><i></i></div><span class="art-orbit"></span></div>
+  <div class="library-card-body">
+   <div class="card-meta"><span>Statistics &amp; Optimization</span></div>
+   <h2>Cargo Network Optimization</h2>
+   <p class="card-description">A linear programming model for a multi-node cargo transshipment network, with capacity constraints and explicit checks that the resulting flows are feasible.</p>
+   
+   <div class="card-tags" aria-label="Project tags"><button class="tag-chip" type="button" data-tag="Python" aria-pressed="false">Python</button><button class="tag-chip" type="button" data-tag="Operations Research" aria-pressed="false">Operations Research</button><button class="tag-chip" type="button" data-tag="Linear Programming" aria-pressed="false">Linear Programming</button><button class="tag-chip" type="button" data-tag="PuLP" aria-pressed="false">PuLP</button><button class="tag-chip" type="button" data-tag="Optimization" aria-pressed="false">Optimization</button></div>
+   <div class="card-links"><a class="library-card-link" href="https://github.com/jessecoggins/cargo-network-optimization" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a></div>
+  </div>
+ </article></div>
+    <div id="no-results" class="no-results" hidden><span class="no-results-mark">∅</span><h2>No projects match those filters.</h2><p>Try removing a tag or searching a broader topic.</p><button id="empty-clear" class="button button-ghost" type="button">Clear filters</button></div>
+    <noscript><p class="noscript-note">Project filters need JavaScript enabled. All projects are listed above.</p></noscript>
+   </div>
+  </section>
+ </main>
+ <footer class="site-footer library-footer"><div class="container"><div class="footer-meta"><span class="section-index">04</span><span class="section-label">Keep exploring</span></div><div class="footer-grid"><h2 class="display footer-display"><span class="display-line">Back to</span><span class="display-line italic">the bigger picture.</span></h2><p class="footer-copy">See the featured work, experience, and the rest of the portfolio.</p><div class="project-links"><a href="index.html">Home →</a><a href="index.html#work">Featured work →</a><a href="index.html#contact">Get in touch →</a></div></div><div class="footer-rule"></div><div class="footer-base"><span>© <span id="current-year">2026</span> Jesse Coggins</span><span>Curious work, clearly explained.</span></div></div></footer>
+</body>
+</html>
