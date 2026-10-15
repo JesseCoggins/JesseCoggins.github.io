@@ -53,7 +53,7 @@
   else if(state.sort==="category")sorted.sort((a,b)=>a.dataset.category.localeCompare(b.dataset.category)||a.dataset.title.localeCompare(b.dataset.title));
   else sorted.sort((a,b)=>Number(b.classList.contains("is-featured"))-Number(a.classList.contains("is-featured"))||Number(a.dataset.index)-Number(b.dataset.index));
   sorted.forEach(card=>document.getElementById("project-grid").append(card));
-  cards.forEach(card=>card.hidden=!visible.includes(card));
+  cards.forEach(card=>{card.hidden=!visible.includes(card);card.querySelectorAll(".tag-chip").forEach(button=>button.setAttribute("aria-pressed",String(state.tags.has(button.dataset.tag))))});
   count.textContent=visible.length+" of "+cards.length+" projects";
   noResults.hidden=visible.length>0;
   renderCategories();renderTags();renderActive();syncUrl();
