@@ -44,7 +44,7 @@
   if(state.query)filters.push(["search",state.query,()=>{state.query="";search.value=""}]);
   if(!filters.length){activeWrap.hidden=true;return}
   activeWrap.hidden=false;
-  filters.forEach(([kind,value,remove])=>{const button=document.createElement("button");button.type="button";button.className="active-filter-chip";button.innerHTML="<span>"+kind+"</span> "+value+" <span aria-hidden='true'>×</span>";button.setAttribute("aria-label","Remove "+kind+" filter "+value);button.addEventListener("click",()=>{remove();render()});activeChips.append(button)});
+  filters.forEach(([kind,value,remove])=>{const button=document.createElement("button");button.type="button";button.className="active-filter-chip";const kindLabel=document.createElement("span");kindLabel.textContent=kind;button.append(kindLabel,document.createTextNode(" "+value+" "));const removeMark=document.createElement("span");removeMark.setAttribute("aria-hidden","true");removeMark.textContent="×";button.append(removeMark);button.setAttribute("aria-label","Remove "+kind+" filter "+value);button.addEventListener("click",()=>{remove();render()});activeChips.append(button)});
  }
  function render(){
   const visible=resultSet();
