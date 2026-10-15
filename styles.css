@@ -944,7 +944,7 @@ main { position: relative; z-index: 2; }
   .cert-card { position: static; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .primary-nav { display: none; }
   .mobile-nav { display: block; }
 }
