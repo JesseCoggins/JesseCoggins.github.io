@@ -309,10 +309,15 @@
                   dimensionality reduction and cluster visualization.
                 </p>
                 <dl class="metric-row">
-                  <div><dt>Accuracy</dt><dd>98.0%</dd></div>
-                  <div><dt>ROC-AUC</dt><dd>0.999</dd></div>
+                  <div><dt>Discharge-Time Accuracy</dt><dd>98.0%</dd></div>
+                  <div><dt>Discharge-Time ROC-AUC</dt><dd>0.999</dd></div>
                   <div><dt>Clusters</dt><dd>k = 3</dd></div>
                 </dl>
+                <p class="project-note">
+                  Excluding <code>Initial_days</code> (length of stay) reduces ROC-AUC to 0.498;
+                  these scores reflect discharge-time stratification, not pre-admission prediction.
+                  <a href="https://github.com/JesseCoggins/hospital-readmission-ml#results" target="_blank" rel="noreferrer">See the sensitivity check →</a>
+                </p>
                 <div class="project-links">
                   <a href="https://github.com/jessecoggins/hospital-readmission-ml" target="_blank" rel="noreferrer">Repository →</a>
                 </div>
