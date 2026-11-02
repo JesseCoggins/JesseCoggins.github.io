@@ -27,7 +27,7 @@
   const normalize = (value) => value.toLocaleLowerCase().trim();
 
   const matchesQuery = (card) =>
-    !state.query || normalize(card.innerText).includes(normalize(state.query));
+    !state.query || normalize(card.textContent).includes(normalize(state.query));
   const matchesCategory = (card) =>
     state.category === "All projects" || card.dataset.category === state.category;
   const matchesTags = (card) => {
