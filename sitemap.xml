@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://jessecoggins.github.io/</loc>
-  </url>
+  <url><loc>https://jessecoggins.github.io/</loc></url>
+  <url><loc>https://jessecoggins.github.io/project-customer-churn-dashboard.html</loc></url>
+  <url><loc>https://jessecoggins.github.io/project-loan-default-risk.html</loc></url>
+  <url><loc>https://jessecoggins.github.io/project-flight-delay-prediction.html</loc></url>
+  <url><loc>https://jessecoggins.github.io/project-hospital-readmission.html</loc></url>
+  <url><loc>https://jessecoggins.github.io/project-revenue-forecasting.html</loc></url>
+  <url><loc>https://jessecoggins.github.io/project-ecomart-database-design.html</loc></url>
+  <url><loc>https://jessecoggins.github.io/project-sentiment-analysis-bilstm.html</loc></url>
+  <url><loc>https://jessecoggins.github.io/project-seedling-image-classifier.html</loc></url>
+  <url><loc>https://jessecoggins.github.io/project-statistical-analysis-market-basket.html</loc></url>
+  <url><loc>https://jessecoggins.github.io/project-cargo-network-optimization.html</loc></url>
 </urlset>

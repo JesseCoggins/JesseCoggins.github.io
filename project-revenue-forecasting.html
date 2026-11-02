@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revenue Forecasting with ARIMA — Jesse Coggins</title>
+    <meta name="description" content="A short-horizon forecast of daily hospital revenue using two years of history, stationarity testing, differencing, ARIMA selection, and chronological holdout evaluation." />
+    <meta name="author" content="Jesse Coggins" />
+    <meta name="theme-color" content="#f3f0e6" />
+    <link rel="canonical" href="https://jessecoggins.github.io/project-revenue-forecasting.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Revenue Forecasting with ARIMA — Jesse Coggins" />
+    <meta property="og:description" content="A short-horizon forecast of daily hospital revenue using two years of history, stationarity testing, differencing, ARIMA selection, and chronological holdout evaluation." />
+    <meta property="og:url" content="https://jessecoggins.github.io/project-revenue-forecasting.html" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=project-first-homepage-20261102" />
+    <link rel="stylesheet" href="project-detail.css?v=project-summaries-20261102" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to project summary</a>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="index.html#top" aria-label="Jesse Coggins home">
+          <span class="brand-name">Jesse Coggins</span>
+          <span class="brand-role">Data &amp; Analytics</span>
+        </a>
+        <nav class="profile-links" aria-label="Professional links">
+          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer"><span>LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="profile-link" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer"><span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container detail-page">
+      <a class="detail-back" href="index.html#projects"><span aria-hidden="true">←</span> All projects</a>
+      <header class="detail-hero">
+        <div class="detail-meta">
+          <span>Forecasting</span><span class="meta-divider">/</span><span>Time series</span>
+          <span class="meta-divider">/</span><span>Project 05 of 10</span>
+          <span class="coursework">M.S. coursework</span>
+        </div>
+        <h1>Revenue Forecasting with ARIMA</h1>
+        <p class="detail-lede">A short-horizon forecast of daily hospital revenue using two years of history, stationarity testing, differencing, ARIMA selection, and chronological holdout evaluation.</p>
+        <div class="detail-tags" aria-label="Project tags">
+          <a class="detail-tag" href="?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
+                <a class="detail-tag" href="?tag=Forecasting#projects" aria-label="Filter homepage projects by Forecasting">Forecasting</a>
+                <a class="detail-tag" href="?tag=Time%20series#projects" aria-label="Filter homepage projects by Time series">Time series</a>
+                <a class="detail-tag" href="?tag=ARIMA#projects" aria-label="Filter homepage projects by ARIMA">ARIMA</a>
+                <a class="detail-tag" href="?tag=Statistics#projects" aria-label="Filter homepage projects by Statistics">Statistics</a>
+                <a class="detail-tag" href="?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
+        </div>
+      </header>
+
+      <div class="detail-overview">
+        <section class="impact-panel" aria-labelledby="impact-heading">
+          <p class="detail-label" id="impact-heading">Business impact</p>
+          <p>Provides a baseline view of expected near-term revenue to support operational and financial planning.</p>
+        </section>
+        <div class="detail-metrics" aria-label="Key project results">
+          <div class="detail-metric"><strong>0.4887</strong><span>Holdout RMSE</span></div>
+              <div class="detail-metric"><strong>0.3766</strong><span>Holdout MAE</span></div>
+              <div class="detail-metric"><strong>30 days</strong><span>Forecast horizon</span></div>
+        </div>
+      </div>
+
+      <div class="detail-content">
+        <article class="detail-story">
+          <section class="detail-section">
+            <p class="detail-label">Business question</p>
+            <h2>Can daily revenue history support an accurate short-term forecast for a hospital in its first two years of operation?</h2>
+          </section>
+          <section class="detail-section">
+            <p class="detail-label">Approach</p>
+            <h2>How the work was done</h2>
+            <ul><li>Reviewed 731 daily observations for continuity, visualized the series, and ran an Augmented Dickey-Fuller stationarity test.</li>
+                <li>First-differenced the series; the post-difference ADF p-value was 5.11e-30, compared with 0.1997 before differencing.</li>
+                <li>Split the differenced series chronologically into 584 training and 146 test observations; used ACF/PACF patterns to guide an ARIMA(1,1,0) interpretation and forecast 30 days ahead with 95% intervals.</li></ul>
+          </section>
+          <section class="detail-section">
+            <p class="detail-label">Results</p>
+            <h2>What the analysis shows</h2>
+            <ul><li>Holdout RMSE was 0.4887 and MAE was 0.3766 on the revenue series’ reported scale.</li>
+                <li>The model includes a 30-day forecast beyond the observed period with 95% confidence intervals.</li>
+                <li>The workflow preserves time order during evaluation, avoiding a random split for a sequential forecasting problem.</li></ul>
+          </section>
+          
+          <section class="detail-section" style="margin-top:20px">
+            <p class="detail-label">Business relevance</p>
+            <h2>What this makes easier to decide</h2>
+            <p>A transparent time-series baseline gives planners a reference for comparing later revenue patterns and expected variance. The error measures are reported on the dataset’s scale.</p>
+          </section>
+        </article>
+
+        <aside class="detail-aside" aria-label="Project details and links">
+          <h2>Project details</h2>
+          <dl class="detail-facts"><div class="detail-fact"><dt>Dataset</dt><dd>731 daily revenue observations</dd></div>
+              <div class="detail-fact"><dt>Evaluation split</dt><dd>584 train · 146 test after differencing</dd></div>
+              <div class="detail-fact"><dt>Model</dt><dd>ARIMA(1,1,0) interpretation</dd></div></dl>
+          <div class="detail-resource-links"><a href="https://github.com/jessecoggins/revenue-forecasting-arima" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
+        </aside>
+      </div>
+
+      <nav class="detail-pagination" aria-label="Other projects">
+        <a href="project-hospital-readmission.html"><span>← Previous project</span><strong>Hospital Readmission Analysis</strong></a><a href="project-ecomart-database-design.html"><span>Next project →</span><strong>EcoMart Relational + NoSQL Design</strong></a>
+      </nav>
+    </main>
+
+    <footer class="detail-footer">
+      <div class="container footer-inner">
+        <a href="mailto:jessecoggins21@gmail.com">jessecoggins21@gmail.com <span aria-hidden="true">↗</span></a>
+        <span>Jesse Coggins · 2026</span>
+        <a href="index.html#projects">All projects ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

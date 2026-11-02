@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flight Delay Prediction Pipeline — Jesse Coggins</title>
+    <meta name="description" content="A reproducible regression workflow for estimating average departure delay, packaged with versioned data, tracked experiments, and a containerized prediction API." />
+    <meta name="author" content="Jesse Coggins" />
+    <meta name="theme-color" content="#f3f0e6" />
+    <link rel="canonical" href="https://jessecoggins.github.io/project-flight-delay-prediction.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Flight Delay Prediction Pipeline — Jesse Coggins" />
+    <meta property="og:description" content="A reproducible regression workflow for estimating average departure delay, packaged with versioned data, tracked experiments, and a containerized prediction API." />
+    <meta property="og:url" content="https://jessecoggins.github.io/project-flight-delay-prediction.html" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=project-first-homepage-20261102" />
+    <link rel="stylesheet" href="project-detail.css?v=project-summaries-20261102" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to project summary</a>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="index.html#top" aria-label="Jesse Coggins home">
+          <span class="brand-name">Jesse Coggins</span>
+          <span class="brand-role">Data &amp; Analytics</span>
+        </a>
+        <nav class="profile-links" aria-label="Professional links">
+          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer"><span>LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="profile-link" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer"><span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container detail-page">
+      <a class="detail-back" href="index.html#projects"><span aria-hidden="true">←</span> All projects</a>
+      <header class="detail-hero">
+        <div class="detail-meta">
+          <span>Machine Learning</span><span class="meta-divider">/</span><span>MLOps &amp; delivery</span>
+          <span class="meta-divider">/</span><span>Project 03 of 10</span>
+          <span class="coursework">M.S. coursework</span>
+        </div>
+        <h1>Flight Delay Prediction Pipeline</h1>
+        <p class="detail-lede">A reproducible regression workflow for estimating average departure delay, packaged with versioned data, tracked experiments, and a containerized prediction API.</p>
+        <div class="detail-tags" aria-label="Project tags">
+          <a class="detail-tag" href="?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
+                <a class="detail-tag" href="?tag=MLOps#projects" aria-label="Filter homepage projects by MLOps">MLOps</a>
+                <a class="detail-tag" href="?tag=DVC#projects" aria-label="Filter homepage projects by DVC">DVC</a>
+                <a class="detail-tag" href="?tag=FastAPI#projects" aria-label="Filter homepage projects by FastAPI">FastAPI</a>
+                <a class="detail-tag" href="?tag=Docker#projects" aria-label="Filter homepage projects by Docker">Docker</a>
+                <a class="detail-tag" href="?tag=MLflow#projects" aria-label="Filter homepage projects by MLflow">MLflow</a>
+                <a class="detail-tag" href="?tag=CI%2FCD#projects" aria-label="Filter homepage projects by CI/CD">CI/CD</a>
+                <a class="detail-tag" href="?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
+        </div>
+      </header>
+
+      <div class="detail-overview">
+        <section class="impact-panel" aria-labelledby="impact-heading">
+          <p class="detail-label" id="impact-heading">Business impact</p>
+          <p>Makes delay estimates repeatable and accessible to support schedule planning and timely passenger updates.</p>
+        </section>
+        <div class="detail-metrics" aria-label="Key project results">
+          <div class="detail-metric"><strong>8.92 min</strong><span>Held-out test RMSE</span></div>
+              <div class="detail-metric"><strong>79.65</strong><span>Held-out test MSE</span></div>
+              <div class="detail-metric"><strong>3.8</strong><span>Selected Ridge alpha</span></div>
+        </div>
+      </div>
+
+      <div class="detail-content">
+        <article class="detail-story">
+          <section class="detail-section">
+            <p class="detail-label">Business question</p>
+            <h2>Can a repeatable workflow estimate average departure delay for flights leaving a selected origin airport?</h2>
+          </section>
+          <section class="detail-section">
+            <p class="detail-label">Approach</p>
+            <h2>How the work was done</h2>
+            <ul><li>Prepared airline on-time data and tracked data versions with DVC.</li>
+                <li>Compared Ridge regression settings across 20 alpha values; features include destination airport and scheduled departure and arrival times.</li>
+                <li>Tracked experiments in MLflow and served predictions through FastAPI in Docker, with automated GitLab CI/CD and unit tests.</li></ul>
+          </section>
+          <section class="detail-section">
+            <p class="detail-label">Results</p>
+            <h2>What the analysis shows</h2>
+            <ul><li>The selected Ridge alpha was 3.8; held-out test RMSE was 8.92 minutes and MSE was 79.65.</li>
+                <li>The pipeline logs a mean predicted delay of 4.48 minutes for the evaluated test data.</li>
+                <li>The API makes the model available through a repeatable request-response workflow.</li></ul>
+          </section>
+          
+          <section class="detail-section" style="margin-top:20px">
+            <p class="detail-label">Business relevance</p>
+            <h2>What this makes easier to decide</h2>
+            <p>This project demonstrates how a prediction can move through data preparation, experiment tracking, packaging, and an API interface. The reported test error helps set expectations for how precise a schedule estimate may be.</p>
+          </section>
+        </article>
+
+        <aside class="detail-aside" aria-label="Project details and links">
+          <h2>Project details</h2>
+          <dl class="detail-facts"><div class="detail-fact"><dt>Prediction target</dt><dd>Average departure delay in minutes</dd></div>
+              <div class="detail-fact"><dt>Model</dt><dd>Ridge regression</dd></div>
+              <div class="detail-fact"><dt>Delivery</dt><dd>DVC · MLflow · FastAPI · Docker · GitLab CI/CD</dd></div></dl>
+          <div class="detail-resource-links"><a href="https://github.com/jessecoggins/flight-delay-mlops" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
+        </aside>
+      </div>
+
+      <nav class="detail-pagination" aria-label="Other projects">
+        <a href="project-loan-default-risk.html"><span>← Previous project</span><strong>Loan Default Risk Capstone</strong></a><a href="project-hospital-readmission.html"><span>Next project →</span><strong>Hospital Readmission Analysis</strong></a>
+      </nav>
+    </main>
+
+    <footer class="detail-footer">
+      <div class="container footer-inner">
+        <a href="mailto:jessecoggins21@gmail.com">jessecoggins21@gmail.com <span aria-hidden="true">↗</span></a>
+        <span>Jesse Coggins · 2026</span>
+        <a href="index.html#projects">All projects ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
