@@ -3,33 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jesse Coggins — Data Analyst &amp; Data Scientist</title>
+    <title>Jesse Coggins — Data &amp; Analytics</title>
     <meta
       name="description"
-      content="Jesse Coggins — Data Analyst and Data Scientist. Public portfolio spanning analytics, machine learning, forecasting, deep learning, databases, optimization, and MLOps."
+      content="A project portfolio by Jesse Coggins, showing practical work across analytics, machine learning, data systems, forecasting, and optimization."
     />
     <meta name="author" content="Jesse Coggins" />
-    <meta name="theme-color" content="#0d1512" />
-
+    <meta name="theme-color" content="#f3f0e6" />
     <link rel="canonical" href="https://jessecoggins.github.io/" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="shortcut icon" href="assets/favicon.svg" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Jesse Coggins — Data Analyst &amp; Data Scientist" />
+    <meta property="og:title" content="Jesse Coggins — Data &amp; Analytics" />
     <meta
       property="og:description"
-      content="Public portfolio spanning analytics, machine learning, forecasting, deep learning, databases, optimization, and MLOps."
+      content="Projects across analytics, machine learning, data systems, forecasting, and optimization."
     />
     <meta property="og:url" content="https://jessecoggins.github.io/" />
-    <meta property="og:image" content="https://jessecoggins.github.io/assets/images/og-preview.png" />
-    <meta property="og:image:width" content="2370" />
-    <meta property="og:image:height" content="892" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Jesse Coggins — Data Analyst &amp; Data Scientist" />
-    <meta name="twitter:description" content="Public portfolio spanning analytics, machine learning, forecasting, deep learning, databases, optimization, and MLOps." />
-    <meta name="twitter:image" content="https://jessecoggins.github.io/assets/images/og-preview.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Jesse Coggins — Data &amp; Analytics" />
+    <meta
+      name="twitter:description"
+      content="Projects across analytics, machine learning, data systems, forecasting, and optimization."
+    />
 
     <script type="application/ld+json">
       {
@@ -37,19 +34,18 @@
         "@type": "ProfilePage",
         "name": "Jesse Coggins Portfolio",
         "url": "https://jessecoggins.github.io/",
-        "description": "Public portfolio for Jesse Coggins, a Data Analyst and Data Scientist focused on analytics, machine learning, forecasting, databases, optimization, and MLOps.",
+        "description": "Project portfolio by Jesse Coggins across analytics, machine learning, data systems, forecasting, and optimization.",
         "mainEntity": {
           "@type": "Person",
           "name": "Jesse Coggins",
           "url": "https://jessecoggins.github.io/",
-          "jobTitle": "Data Analyst / Data Scientist",
           "alumniOf": {
             "@type": "CollegeOrUniversity",
             "name": "Western Governors University"
           },
           "knowsAbout": [
             "Data analytics",
-            "Data science",
+            "Business intelligence",
             "Machine learning",
             "Forecasting",
             "Database design",
@@ -75,1049 +71,373 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <script>
-      document.documentElement.classList.add('js');
-    </script>
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="portfolio.js"></script>
   </head>
+
   <body>
-    <a class="skip-link" href="#top">Skip to main content</a>
+    <a class="skip-link" href="#projects">Skip to projects</a>
 
-    <div class="grain" aria-hidden="true"></div>
-    <div class="gradient-orb orb-1" aria-hidden="true"></div>
-    <div class="gradient-orb orb-2" aria-hidden="true"></div>
-
-    <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="#top" aria-label="Jesse Coggins — home">
-          <span class="brand-mark">JC</span>
-          <span class="brand-divider" aria-hidden="true"></span>
-          <span class="brand-text">
-            <strong>Jesse Coggins</strong>
-          </span>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Jesse Coggins home">
+          <span class="brand-name">Jesse Coggins</span>
+          <span class="brand-role">Data &amp; Analytics</span>
         </a>
 
-        <nav class="primary-nav" aria-label="Primary">
-          <a href="#work">Featured work</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="projects.html">Project library</a>
-          <a href="#skills">Skills</a>
-          <a href="#experience">Experience</a>
-          <a href="#education">Education</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <div class="nav-actions">
-          <details class="mobile-nav">
-            <summary class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-              <span>Menu</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="3" y1="18" x2="21" y2="18" />
-              </svg>
-            </summary>
-            <div class="mobile-nav-panel" aria-label="Mobile navigation">
-              <a href="#work">Featured work</a>
-              <a href="#portfolio">Portfolio</a>
-              <a href="projects.html">Project library</a>
-              <a href="#skills">Skills</a>
-              <a href="#experience">Experience</a>
-              <a href="#education">Education</a>
-              <a href="#contact">Contact</a>
-            </div>
-          </details>
-
-          <a
-            class="nav-button"
-            href="assets/resume/Jesse_Coggins_Resume.pdf"
-            data-resume-trigger
-            target="_blank"
-            rel="noreferrer"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-              <polyline points="14 2 14 8 20 8" />
-              <line x1="8" y1="13" x2="16" y2="13" />
-              <line x1="8" y1="17" x2="16" y2="17" />
-            </svg>
-            <span>Resume</span>
+        <nav class="profile-links" aria-label="Professional links">
+          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6M8 13h8M8 17h6" /></svg>
+            <span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span>
           </a>
-        </div>
+          <a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" /><circle cx="4" cy="4" r="2" /></svg>
+            <span>LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="profile-link" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-1-2.6c3.3-.4 6.7-1.6 6.7-7.2a5.6 5.6 0 0 0-1.5-3.9 5.2 5.2 0 0 0-.1-3.9s-1.2-.4-4 1.5a13.8 13.8 0 0 0-7.2 0C5.1.1 3.9.5 3.9.5a5.2 5.2 0 0 0-.1 3.9 5.6 5.6 0 0 0-1.5 3.9c0 5.6 3.4 6.8 6.7 7.2a3.4 3.4 0 0 0-1 2.6V22" /></svg>
+            <span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span>
+          </a>
+        </nav>
       </div>
     </header>
 
-    <main id="top" tabindex="-1">
-      <!-- ===================== HERO ===================== -->
-      <section class="hero">
-        <div class="container hero-inner">
-          <div class="hero-meta">
-            <span class="section-index">01</span>
-            <span class="section-label">Introduction</span>
+    <main id="projects" class="container">
+      <section class="projects-section" aria-labelledby="projects-heading">
+        <div class="section-title-row">
+          <h1 id="projects-heading">Projects</h1>
+          <span class="collection-count">10 projects</span>
+        </div>
+
+        <div class="project-tools" aria-label="Search and filter projects">
+          <div class="search-sort-row">
+            <label class="search-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></svg>
+              <span class="sr-only">Search projects</span>
+              <input id="project-search" type="search" placeholder="Search projects, methods, and tools" autocomplete="off" />
+              <kbd aria-hidden="true">/</kbd>
+            </label>
+            <label class="sort-box">
+              <span>Sort</span>
+              <select id="project-sort" aria-label="Sort projects">
+                <option value="featured">Featured order</option>
+                <option value="title-asc">Title A–Z</option>
+                <option value="category">Project area</option>
+              </select>
+            </label>
           </div>
 
-          <p class="eyebrow">Western Governors University — M.S. Data Analytics, Data Science</p>
-
-          <h1 class="display">
-            <span class="display-line">Jesse</span>
-            <span class="display-line italic">Coggins</span>
-          </h1>
-
-          <div class="cta-row">
-            <a
-              class="button button-ghost"
-              href="assets/resume/Jesse_Coggins_Resume.pdf"
-              data-resume-trigger
-              target="_blank"
-              rel="noreferrer"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                <polyline points="14 2 14 8 20 8" />
-                <line x1="8" y1="13" x2="16" y2="13" />
-                <line x1="8" y1="17" x2="16" y2="17" />
-              </svg>
-              <span>Resume</span>
-            </a>
-            <a class="button button-ghost" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
-              <span>LinkedIn</span>
-            </a>
-            <a class="button button-ghost" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              <span>GitHub</span>
-            </a>
-            <a class="button button-ghost" href="https://public.tableau.com/shared/Z8Z9SR2NB?:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noreferrer">
-              <svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
-                <path d="M15.536.235v2.937h-2.624v.771h2.624V6.88h.933V3.943h2.624v-.771h-2.624V.235zm8.043 3.016v4.328h-3.943v1.233h3.943v4.251h1.391l.009-2.109.032-2.099 1.953-.032 1.943-.011V7.579H24.97V3.251zm-16.543.077v4.256H3.052v1.228h3.984v4.256h1.313V8.812h4.015V7.579H8.349V3.328zm8.115 7.027v4.791h-4.405v1.584h4.405v4.797h1.709V16.73h4.411v-1.584H16.86v-4.791zm12.964 2.066v2.959h-2.688v1.084h2.688v3.015h1.183v-3.015h2.703V15.38h-2.703v-2.959zm-25.484.172v2.901H0v.828h2.631v2.928h.891v-2.928h2.667v-.828H3.48v-2.901zm20.948 6.027v4.339h-4.027v1.235h4.027v4.285h1.427v-4.285h3.979v-1.235h-3.979V18.62zm-16.62.011v4.328H3.016v1.235h3.943v4.255h1.468v-4.255h3.937v-1.235H8.427v-4.333h-.733zm8.421 6.104v2.937h-2.625v1.077h2.625v3.016h1.24l.016-1.489.02-1.527h2.631v-1.077H16.62v-2.937z" />
-              </svg>
-              <span>Tableau Public</span>
-            </a>
+          <div class="filter-group">
+            <p class="filter-label">Project area</p>
+            <div id="category-filters" class="filter-list" aria-label="Filter by project area"></div>
           </div>
 
-        </div>
-      </section>
-
-      <!-- ===================== WORK / FEATURED ===================== -->
-      <section id="work" class="section">
-        <div class="container">
-          <header class="section-head">
-            <div class="section-meta">
-              <span class="section-index">02</span>
-              <span class="section-label">Featured Work</span>
+          <div class="filter-group tag-group">
+            <div class="tag-heading">
+              <p class="filter-label">Tags</p>
+              <label class="tag-search">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></svg>
+                <span class="sr-only">Search tags</span>
+                <input id="tag-search" type="search" placeholder="Find a tag" autocomplete="off" />
+              </label>
             </div>
-            <h2 class="section-title">
-              The work <em>worth opening first.</em>
-            </h2>
-            <p class="section-dek">
-              These cover the core story of the portfolio: end-to-end ML engineering, supervised
-              classification on a real-world business problem, a published BI dashboard, and a
-              hybrid analytics project that crosses supervised, unsupervised, and dimensionality
-              reduction methods.
-            </p>
-          </header>
-
-          <div class="featured-grid">
-            <article class="project project-featured">
-              <div class="project-rail">
-                <span class="project-index">F/01</span>
-                <span class="project-kind">MLOps</span>
-              </div>
-              <div class="project-body">
-                <h3>Flight Delay Prediction Pipeline</h3>
-                <p class="project-tags">Python · DVC · MLflow · FastAPI · Docker · GitLab CI/CD</p>
-                <p class="project-copy">
-                  End-to-end ML engineering pipeline replicating a production MLOps workflow:
-                  versioned data with DVC, experiment tracking through MLflow, containerized
-                  deployment via FastAPI and Docker, and automated build and test through GitLab
-                  CI/CD. A FastAPI endpoint serves predictions from the Dockerized app.
-                </p>
-                <dl class="metric-row">
-                  <div><dt>Test MSE</dt><dd>79.65</dd></div>
-                  <div><dt>Test RMSE</dt><dd>8.92 min</dd></div>
-                  <div><dt>Deployment</dt><dd>API + CI</dd></div>
-                </dl>
-                <div class="project-links">
-                  <a href="https://github.com/jessecoggins/flight-delay-mlops" target="_blank" rel="noreferrer">Repository →</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project project-featured">
-              <div class="project-rail">
-                <span class="project-index">F/02</span>
-                <span class="project-kind">Classification</span>
-              </div>
-              <div class="project-body">
-                <h3>Loan Default Risk Capstone</h3>
-                <p class="project-tags">Python · scikit-learn · Random Forest · ROC-AUC</p>
-                <p class="project-copy">
-                  Binary classification pipeline on 148,670 loan records with feature engineering,
-                  class imbalance handling via balanced class weighting, 5-fold cross-validation,
-                  and tuned Random Forest modeling. Outputs are framed as a
-                  business risk decision tool, not just a confusion matrix.
-                </p>
-                <dl class="metric-row">
-                  <div><dt>Test Accuracy</dt><dd>84.7%</dd></div>
-                  <div><dt>ROC-AUC</dt><dd>0.737</dd></div>
-                  <div><dt>Records</dt><dd>148,670</dd></div>
-                </dl>
-                <div class="project-links">
-                  <a href="https://github.com/jessecoggins/loan-default-risk-capstone" target="_blank" rel="noreferrer">Repository →</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project project-featured">
-              <div class="project-rail">
-                <span class="project-index">F/03</span>
-                <span class="project-kind">BI Dashboard</span>
-              </div>
-              <div class="project-body">
-                <h3>Customer Churn Dashboard</h3>
-                <p class="project-tags">Tableau · KPI Reporting · Storytelling</p>
-                <p class="project-copy">
-                  Interactive churn dashboard published to Tableau Public. Surfaces churn drivers
-                  by contract type, income, geography, and payment method, supported by two
-                  executive-facing KPIs and a color-blind-safe palette tuned for accessibility.
-                </p>
-                <dl class="metric-row">
-                  <div><dt>Overall Churn</dt><dd>26.50%</dd></div>
-                  <div><dt>Avg Monthly Charge</dt><dd>$172.62</dd></div>
-                  <div><dt>Delivery</dt><dd>Tableau Public</dd></div>
-                </dl>
-                <div class="project-links">
-                  <a href="https://public.tableau.com/shared/Z8Z9SR2NB?:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noreferrer">View dashboard →</a>
-                  <a href="https://github.com/jessecoggins/customer-churn-dashboard" target="_blank" rel="noreferrer">Repository →</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project project-featured">
-              <div class="project-rail">
-                <span class="project-index">F/04</span>
-                <span class="project-kind">Hybrid ML</span>
-              </div>
-              <div class="project-body">
-                <h3>Hospital Readmission Analysis</h3>
-                <p class="project-tags">Python · scikit-learn · statsmodels · K-Means · PCA</p>
-                <p class="project-copy">
-                  Three analytical methods applied to hospital readmission data: Random Forest
-                  discharge-time risk stratification with a feature-timing sensitivity check,
-                  K-Means clustering for unsupervised patient risk segmentation, and PCA for
-                  dimensionality reduction and cluster visualization.
-                </p>
-                <dl class="metric-row">
-                  <div><dt>Discharge-Time Accuracy</dt><dd>98.0%</dd></div>
-                  <div><dt>Discharge-Time ROC-AUC</dt><dd>0.999</dd></div>
-                  <div><dt>Clusters</dt><dd>k = 3</dd></div>
-                </dl>
-                <p class="project-note">
-                  Excluding <code>Initial_days</code> (length of stay) reduces ROC-AUC to 0.498;
-                  these scores reflect discharge-time stratification, not pre-admission prediction.
-                  <a href="https://github.com/JesseCoggins/hospital-readmission-ml#results" target="_blank" rel="noreferrer">See the sensitivity check →</a>
-                </p>
-                <div class="project-links">
-                  <a href="https://github.com/jessecoggins/hospital-readmission-ml" target="_blank" rel="noreferrer">Repository →</a>
-                </div>
-              </div>
-            </article>
+            <div id="tag-filters" class="filter-list tag-filter-list" aria-label="Filter by tags"></div>
+            <button id="show-more-tags" class="show-more-tags" type="button" hidden>Show all tags</button>
           </div>
-        </div>
-      </section>
 
-      <!-- ===================== PORTFOLIO ATLAS ===================== -->
-      <section id="portfolio" class="section section-alt">
-        <div class="container">
-          <header class="section-head">
-            <div class="section-meta">
-              <span class="section-index">03</span>
-              <span class="section-label">Portfolio Atlas</span>
-            </div>
-            <h2 class="section-title">
-              Additional work across <em>forecasting, databases, NLP, vision, optimization,</em> and statistics.
-            </h2>
-            <p class="section-dek">
-              The broader portfolio shows range across time series, relational and NoSQL database design, text modeling, computer vision, operations research, and applied statistical work on real datasets.
-            </p>
-            <div class="project-links">
-              <a class="project-link" href="projects.html">Browse all projects →</a>
-            </div>
-          </header>
-
-          <div class="atlas-grid">
-            
-
-            <article class="project project-atlas">
-              <div class="project-topline">
-                <span class="project-kind">Time Series</span>
-                <span class="project-index-sm">05</span>
-              </div>
-              <h3>Revenue Forecasting with ARIMA</h3>
-              <p class="project-copy">
-                ARIMA forecasting on 731 daily revenue observations with ADF stationarity testing,
-                differencing, parameter selection, and holdout evaluation.
-              </p>
-              <dl class="metric-row compact">
-                <div><dt>RMSE</dt><dd>0.4887</dd></div>
-                <div><dt>MAE</dt><dd>0.3766</dd></div>
-                <div><dt>Obs</dt><dd>731</dd></div>
-              </dl>
-              <a href="https://github.com/jessecoggins/revenue-forecasting-arima" target="_blank" rel="noreferrer" class="project-link">Repository →</a>
-            </article>
-
-            <article class="project project-atlas">
-              <div class="project-topline">
-                <span class="project-kind">Databases</span>
-                <span class="project-index-sm">06</span>
-              </div>
-              <h3>EcoMart Relational + NoSQL Design</h3>
-              <p class="project-copy">
-                Normalized 3NF PostgreSQL design across five tables and 100,000 records with ETL
-                staging, indexes, CTEs, and reusable analytical views — plus a parallel MongoDB
-                implementation with aggregation pipelines and compound indexes.
-              </p>
-              <dl class="metric-row compact">
-                <div><dt>Tables</dt><dd>5</dd></div>
-                <div><dt>Records</dt><dd>100K</dd></div>
-                <div><dt>Schema</dt><dd>3NF</dd></div>
-              </dl>
-              <a href="https://github.com/jessecoggins/ecomart-relational-nosql-database-design" target="_blank" rel="noreferrer" class="project-link">Repository →</a>
-            </article>
-
-            <article class="project project-atlas">
-              <div class="project-topline">
-                <span class="project-kind">NLP</span>
-                <span class="project-index-sm">07</span>
-              </div>
-              <h3>Sentiment Analysis with BiLSTM</h3>
-              <p class="project-copy">
-                Bidirectional LSTM sentiment classifier with sequence preprocessing, tokenization,
-                padding, and evaluation on a labeled test set.
-              </p>
-              <dl class="metric-row compact">
-                <div><dt>Accuracy</dt><dd>76%</dd></div>
-                <div><dt>F1</dt><dd>0.72</dd></div>
-              </dl>
-              <a href="https://github.com/jessecoggins/sentiment-analysis-bilstm" target="_blank" rel="noreferrer" class="project-link">Repository →</a>
-            </article>
-
-            <article class="project project-atlas">
-              <div class="project-topline">
-                <span class="project-kind">Computer Vision</span>
-                <span class="project-index-sm">08</span>
-              </div>
-              <h3>Seedling Image Classifier</h3>
-              <p class="project-copy">
-                Convolutional Neural Network for multi-class classification of plant seedling
-                species, with trained model artifact included for inference and inspection.
-              </p>
-              <dl class="metric-row compact">
-                <div><dt>Accuracy</dt><dd>66.62%</dd></div>
-                <div><dt>Classes</dt><dd>12</dd></div>
-              </dl>
-              <a href="https://github.com/jessecoggins/seedling-image-classifier" target="_blank" rel="noreferrer" class="project-link">Repository →</a>
-            </article>
-
-            <article class="project project-atlas">
-              <div class="project-topline">
-                <span class="project-kind">Statistics</span>
-                <span class="project-index-sm">09</span>
-              </div>
-              <h3>Statistical Analysis + Market Basket</h3>
-              <p class="project-copy">
-                Seven notebooks covering data cleaning, business finance aggregation, linear
-                regression, logistic regression, PCA, hypothesis testing on health insurance data,
-                and Apriori market basket analysis using 441 order baskets built from 8,234 retail
-                line items.
-              </p>
-              <dl class="metric-row compact">
-                <div><dt>Top Lift</dt><dd>88.2</dd></div>
-                <div><dt>Order Baskets</dt><dd>441</dd></div>
-              </dl>
-              <a href="https://github.com/jessecoggins/statistical-analysis-and-market-basket" target="_blank" rel="noreferrer" class="project-link">Repository →</a>
-            </article>
-
-            <article class="project project-atlas">
-              <div class="project-topline">
-                <span class="project-kind">Optimization</span>
-                <span class="project-index-sm">10</span>
-              </div>
-              <h3>Cargo Network Optimization</h3>
-              <p class="project-copy">
-                Linear programming formulation of a multi-node cargo transshipment network in
-                PuLP, with capacity constraints and explicit verification of feasible flows.
-              </p>
-              <dl class="metric-row compact">
-                <div><dt>Optimal Cost</dt><dd>$200,863.75</dd></div>
-                <div><dt>Status</dt><dd>Optimal</dd></div>
-              </dl>
-              <a href="https://github.com/jessecoggins/cargo-network-optimization" target="_blank" rel="noreferrer" class="project-link">Repository →</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===================== SKILLS ===================== -->
-      <section id="skills" class="section">
-        <div class="container">
-          <header class="section-head">
-            <div class="section-meta">
-              <span class="section-index">04</span>
-              <span class="section-label">Capabilities</span>
-            </div>
-            <h2 class="section-title">
-              The tools behind the work — <em>organized the way I actually use them.</em>
-            </h2>
-            <p class="section-dek">
-              Not an exposure list. Every tool below shows up across the public portfolio,
-              used on real data to produce real outputs.
-            </p>
-          </header>
-
-          <div class="skills-grid">
-            <div class="skill-card">
-              <div class="skill-head">
-                <span class="skill-index">a.</span>
-                <h3>Languages</h3>
-              </div>
-              <ul class="chip-list">
-                <li>Python</li>
-                <li>SQL</li>
-              </ul>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-head">
-                <span class="skill-index">b.</span>
-                <h3>Analytics &amp; BI</h3>
-              </div>
-              <ul class="chip-list">
-                <li>Tableau</li>
-                <li>pandas</li>
-                <li>NumPy</li>
-                <li>Matplotlib</li>
-                <li>Seaborn</li>
-                <li>KPI Reporting</li>
-                <li>Dashboard Development</li>
-                <li>EDA</li>
-              </ul>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-head">
-                <span class="skill-index">c.</span>
-                <h3>Statistical &amp; Machine Learning</h3>
-              </div>
-              <ul class="chip-list">
-                <li>scikit-learn</li>
-                <li>statsmodels</li>
-                <li>Random Forest</li>
-                <li>Logistic Regression</li>
-                <li>K-Means</li>
-                <li>PCA</li>
-                <li>ARIMA</li>
-                <li>Hypothesis Testing</li>
-                <li>Classification</li>
-                <li>Clustering</li>
-                <li>Forecasting</li>
-                <li>Association Rule Mining</li>
-              </ul>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-head">
-                <span class="skill-index">d.</span>
-                <h3>Deep Learning &amp; NLP</h3>
-              </div>
-              <ul class="chip-list">
-                <li>TensorFlow</li>
-                <li>Keras</li>
-                <li>CNN</li>
-                <li>Bi-LSTM</li>
-                <li>Computer Vision</li>
-                <li>Sentiment Analysis</li>
-                <li>Model Evaluation</li>
-              </ul>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-head">
-                <span class="skill-index">e.</span>
-                <h3>Data Engineering &amp; Deployment</h3>
-              </div>
-              <ul class="chip-list">
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-                <li>ETL</li>
-                <li>Docker</li>
-                <li>FastAPI</li>
-                <li>MLflow</li>
-                <li>DVC</li>
-                <li>GitLab CI/CD</li>
-                <li>pytest</li>
-              </ul>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-head">
-                <span class="skill-index">f.</span>
-                <h3>Operations Research</h3>
-              </div>
-              <ul class="chip-list">
-                <li>PuLP</li>
-                <li>Linear Programming</li>
-                <li>MILP</li>
-                <li>Transshipment Modeling</li>
-              </ul>
+          <div id="match-controls" class="match-controls" hidden>
+            <span>Match selected tags</span>
+            <div class="segmented-control" role="group" aria-label="How selected tags should match">
+              <button type="button" data-match="all" aria-pressed="true">All</button>
+              <button type="button" data-match="any" aria-pressed="false">Any</button>
             </div>
           </div>
+
+          <div id="active-filters" class="active-filters" hidden>
+            <div id="active-filter-chips" class="active-filter-chips"></div>
+          </div>
+
+          <div class="results-row">
+            <p id="result-count" aria-live="polite">10 projects</p>
+            <button id="clear-filters" type="button" class="clear-filters">Clear filters</button>
+          </div>
         </div>
-      </section>
 
-      <!-- ===================== EXPERIENCE ===================== -->
-      <section id="experience" class="section section-alt">
-        <div class="container">
-          <header class="section-head">
-            <div class="section-meta">
-              <span class="section-index">05</span>
-              <span class="section-label">Experience</span>
+        <div id="project-grid" class="project-list">
+          <article class="project-row" data-category="Analytics &amp; BI" data-tags="Tableau|KPI reporting|Segmentation|Customer retention" data-title="Customer Churn Dashboard" data-index="1">
+            <span class="project-number" aria-hidden="true">01</span>
+            <div class="project-main">
+              <div class="project-kicker"><span>Analytics &amp; BI</span><span class="kicker-divider">/</span><span>Dashboard</span></div>
+              <h2>Customer Churn Dashboard</h2>
+              <div class="project-tags" aria-label="Project tags">
+                <button type="button" class="tag-chip" data-tag="Tableau" aria-pressed="false">Tableau</button>
+                <button type="button" class="tag-chip" data-tag="KPI reporting" aria-pressed="false">KPI reporting</button>
+                <button type="button" class="tag-chip" data-tag="Segmentation" aria-pressed="false">Segmentation</button>
+                <button type="button" class="tag-chip" data-tag="Customer retention" aria-pressed="false">Customer retention</button>
+              </div>
+              <p class="project-description">An accessible Tableau dashboard comparing churn across contract type, income, geography, and payment method.</p>
+              <p class="business-impact"><span>Business impact</span> Helps retention teams focus outreach on customer segments with higher churn.</p>
             </div>
-            <h2 class="section-title">
-              Operations leadership is <em>where the business framing comes from.</em>
-            </h2>
-            <p class="section-dek">
-              Progressed from customer service and site management into general management,
-              overseeing teams, daily operations, inventory, purchasing, and equipment
-              maintenance across express car wash locations.
-            </p>
-          </header>
-
-          <ol class="timeline">
-            <li class="timeline-item">
-              <div class="timeline-marker" aria-hidden="true"></div>
-              <div class="timeline-dates">Jan 2022 — Feb 2026</div>
-              <div class="timeline-body">
-                <h3>General Manager</h3>
-                <p class="timeline-org">Xtreme Car Wash · Anniston, AL · Hybrid</p>
-                <ul class="timeline-points">
-                  <li>
-                    Oversaw daily operations across three express car wash locations, including
-                    staffing, inventory management, purchasing, and equipment maintenance.
-                  </li>
-                  <li>
-                    Managed inventory and coordinated purchases of equipment parts, tools, and
-                    supplies to support daily operations and minimize disruptions.
-                  </li>
-                  <li>
-                    Troubleshot equipment issues, coordinated repairs, and maintained operational
-                    efficiency across multiple locations.
-                  </li>
-                  <li>
-                    Supervised 20–25 employees, providing training, guidance, and support to
-                    maintain consistent operations.
-                  </li>
-                </ul>
+            <aside class="project-result">
+              <strong>26.50%</strong>
+              <span class="result-label">overall churn in dataset</span>
+              <span class="result-detail">$172.62 average monthly charge</span>
+              <div class="project-links">
+                <a class="tableau-link" href="https://public.tableau.com/shared/Z8Z9SR2NB?:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noreferrer">Tableau Public <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/jessecoggins/customer-churn-dashboard" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a>
               </div>
-            </li>
-
-            <li class="timeline-item">
-              <div class="timeline-marker" aria-hidden="true"></div>
-              <div class="timeline-dates">Mar 2020 — Jan 2022</div>
-              <div class="timeline-body">
-                <h3>Site Manager</h3>
-                <p class="timeline-org">Xtreme Car Wash · Anniston, AL · On-site</p>
-                <ul class="timeline-points">
-                  <li>
-                    Managed daily operations at an express car wash location, including employee
-                    supervision, scheduling, inventory, and equipment maintenance.
-                  </li>
-                  <li>
-                    Monitored daily operations, addressed equipment problems, and maintained the
-                    supplies and resources needed for efficient service.
-                  </li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <div class="timeline-marker" aria-hidden="true"></div>
-              <div class="timeline-dates">Oct 2017 — Mar 2020</div>
-              <div class="timeline-body">
-                <h3>Site Manager</h3>
-                <p class="timeline-org">International Car Wash Group · Gadsden, AL · On-site</p>
-                <ul class="timeline-points">
-                  <li>
-                    Managed daily operations and staff performance at a high-volume site,
-                    sustaining service quality and operational KPIs through consistent process
-                    execution.
-                  </li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <div class="timeline-marker" aria-hidden="true"></div>
-              <div class="timeline-dates">Oct 2015 — Oct 2017</div>
-              <div class="timeline-body">
-                <h3>Customer Service Attendant</h3>
-                <p class="timeline-org">Zippy’s Car Wash of Gadsden · Gadsden, AL</p>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <!-- ===================== EDUCATION ===================== -->
-      <section id="education" class="section">
-        <div class="container">
-          <header class="section-head">
-            <div class="section-meta">
-              <span class="section-index">06</span>
-              <span class="section-label">Education &amp; Credentials</span>
-            </div>
-            <h2 class="section-title">
-              Where the <em>analytical foundation</em> was built.
-            </h2>
-          </header>
-
-          <div class="education-layout">
-            <ol class="education-list">
-              <li class="edu-item">
-                <div class="edu-dates">Mar 2026</div>
-                <div class="edu-body">
-                  <h3>M.S. Data Analytics — Data Science</h3>
-                  <p class="edu-org">Western Governors University</p>
-                  <p class="edu-copy">
-                    Coursework: Machine Learning, Statistical Analysis, Data Mining, MLOps,
-                    Deep Learning, Optimization, Database Management.
-                  </p>
-                </div>
-              </li>
-
-              <li class="edu-item">
-                <div class="edu-dates">May 2024</div>
-                <div class="edu-body">
-                  <h3>B.S. Management</h3>
-                  <p class="edu-org">Jacksonville State University</p>
-                  <p class="edu-copy">
-                    <em>Summa Cum Laude</em> · Special Honors in Management.
-                  </p>
-                </div>
-              </li>
-
-              <li class="edu-item">
-                <div class="edu-dates">Aug 2022</div>
-                <div class="edu-body">
-                  <h3>A.S. General Studies — Business Administration</h3>
-                  <p class="edu-org">Gadsden State Community College</p>
-                </div>
-              </li>
-            </ol>
-
-            <aside class="cert-card">
-              <div class="section-kicker">Certifications</div>
-              <ul class="cert-list">
-                <li>
-                  <strong>WGU Specialization</strong>
-                  <span>Data Science Professional · Jan 2026</span>
-                </li>
-                <li>
-                  <strong>WGU Certificate</strong>
-                  <span>Data Analytics Professional · Jul 2025</span>
-                </li>
-                <li>
-                  <strong>WGU Certificate</strong>
-                  <span>Data Operations · Sep 2025</span>
-                </li>
-                <li>
-                  <strong>CompTIA</strong>
-                  <span>A+ ce</span>
-                </li>
-              </ul>
             </aside>
-          </div>
+          </article>
+
+          <article class="project-row" data-category="Machine Learning" data-tags="Python|Classification|Credit risk|Cross-validation" data-title="Loan Default Risk Capstone" data-index="2">
+            <span class="project-number" aria-hidden="true">02</span>
+            <div class="project-main">
+              <div class="project-kicker"><span>Machine Learning</span><span class="kicker-divider">/</span><span>Classification</span></div>
+              <h2>Loan Default Risk Capstone</h2>
+              <div class="project-tags" aria-label="Project tags">
+                <button type="button" class="tag-chip" data-tag="Python" aria-pressed="false">Python</button>
+                <button type="button" class="tag-chip" data-tag="Classification" aria-pressed="false">Classification</button>
+                <button type="button" class="tag-chip" data-tag="Credit risk" aria-pressed="false">Credit risk</button>
+                <button type="button" class="tag-chip" data-tag="Cross-validation" aria-pressed="false">Cross-validation</button>
+              </div>
+              <p class="project-description">A class-weighted Random Forest trained on 148,670 loan records, with feature engineering and 5-fold cross-validation.</p>
+              <p class="business-impact"><span>Business impact</span> Supports consistent risk comparisons and helps route higher-risk applications for closer review.</p>
+            </div>
+            <aside class="project-result">
+              <strong>0.737</strong>
+              <span class="result-label">held-out ROC-AUC</span>
+              <span class="result-detail">84.7% accuracy · 148,670 records</span>
+              <div class="project-links">
+                <a href="https://github.com/jessecoggins/loan-default-risk-capstone" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </aside>
+          </article>
+
+          <article class="project-row" data-category="Machine Learning" data-tags="Python|MLOps|DVC|MLflow|FastAPI|Docker|CI/CD" data-title="Flight Delay Prediction Pipeline" data-index="3">
+            <span class="project-number" aria-hidden="true">03</span>
+            <div class="project-main">
+              <div class="project-kicker"><span>Machine Learning</span><span class="kicker-divider">/</span><span>MLOps &amp; delivery</span></div>
+              <h2>Flight Delay Prediction Pipeline</h2>
+              <div class="project-tags" aria-label="Project tags">
+                <button type="button" class="tag-chip" data-tag="Python" aria-pressed="false">Python</button>
+                <button type="button" class="tag-chip" data-tag="MLOps" aria-pressed="false">MLOps</button>
+                <button type="button" class="tag-chip" data-tag="DVC" aria-pressed="false">DVC</button>
+                <button type="button" class="tag-chip" data-tag="FastAPI" aria-pressed="false">FastAPI</button>
+                <button type="button" class="tag-chip" data-tag="Docker" aria-pressed="false">Docker</button>
+                <button type="button" class="tag-chip" data-tag="MLflow" aria-pressed="false">MLflow</button>
+                <button type="button" class="tag-chip" data-tag="CI/CD" aria-pressed="false">CI/CD</button>
+              </div>
+              <p class="project-description">An end-to-end delay prediction workflow with versioned data, experiment tracking, a Dockerized FastAPI service, and automated CI.</p>
+              <p class="business-impact"><span>Business impact</span> Makes prediction outputs repeatable and accessible for schedule planning and passenger updates.</p>
+            </div>
+            <aside class="project-result">
+              <strong>8.92 min</strong>
+              <span class="result-label">held-out test RMSE</span>
+              <span class="result-detail">API service · GitLab CI/CD</span>
+              <div class="project-links">
+                <a href="https://github.com/jessecoggins/flight-delay-mlops" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </aside>
+          </article>
+
+          <article class="project-row" data-category="Machine Learning" data-tags="Python|Healthcare|Risk stratification|Feature timing|Clustering|PCA" data-title="Hospital Readmission Analysis" data-index="4">
+            <span class="project-number" aria-hidden="true">04</span>
+            <div class="project-main">
+              <div class="project-kicker"><span>Machine Learning</span><span class="kicker-divider">/</span><span>Healthcare analysis</span></div>
+              <h2>Hospital Readmission Analysis</h2>
+              <div class="project-tags" aria-label="Project tags">
+                <button type="button" class="tag-chip" data-tag="Python" aria-pressed="false">Python</button>
+                <button type="button" class="tag-chip" data-tag="Healthcare" aria-pressed="false">Healthcare</button>
+                <button type="button" class="tag-chip" data-tag="Risk stratification" aria-pressed="false">Risk stratification</button>
+                <button type="button" class="tag-chip" data-tag="Feature timing" aria-pressed="false">Feature timing</button>
+                <button type="button" class="tag-chip" data-tag="Clustering" aria-pressed="false">Clustering</button>
+                <button type="button" class="tag-chip" data-tag="PCA" aria-pressed="false">PCA</button>
+              </div>
+              <p class="project-description">Combines discharge-time risk stratification, K-Means patient segments, and PCA, with a sensitivity check on feature timing.</p>
+              <p class="business-impact"><span>Business impact</span> Shows how information timing changes a risk score, helping clarify which signals can guide discharge follow-up.</p>
+            </div>
+            <aside class="project-result">
+              <strong>0.999 → 0.498</strong>
+              <span class="result-label">ROC-AUC at discharge vs. without <code>Initial_days</code></span>
+              <span class="result-detail">Discharge-time model · k = 3 clusters</span>
+              <div class="project-links">
+                <a href="https://github.com/JesseCoggins/hospital-readmission-ml#results" target="_blank" rel="noreferrer">Sensitivity check <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/jessecoggins/hospital-readmission-ml" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </aside>
+          </article>
+
+          <article class="project-row" data-category="Forecasting" data-tags="Python|Forecasting|Time series|ARIMA|Statistics" data-title="Revenue Forecasting with ARIMA" data-index="5">
+            <span class="project-number" aria-hidden="true">05</span>
+            <div class="project-main">
+              <div class="project-kicker"><span>Forecasting</span><span class="kicker-divider">/</span><span>Time series</span></div>
+              <h2>Revenue Forecasting with ARIMA</h2>
+              <div class="project-tags" aria-label="Project tags">
+                <button type="button" class="tag-chip" data-tag="Python" aria-pressed="false">Python</button>
+                <button type="button" class="tag-chip" data-tag="Forecasting" aria-pressed="false">Forecasting</button>
+                <button type="button" class="tag-chip" data-tag="Time series" aria-pressed="false">Time series</button>
+                <button type="button" class="tag-chip" data-tag="ARIMA" aria-pressed="false">ARIMA</button>
+                <button type="button" class="tag-chip" data-tag="Statistics" aria-pressed="false">Statistics</button>
+              </div>
+              <p class="project-description">An ARIMA forecast built from 731 daily revenue observations, with stationarity testing, differencing, parameter selection, and holdout evaluation.</p>
+              <p class="business-impact"><span>Business impact</span> Offers a baseline for revenue planning and variance monitoring from daily sales history.</p>
+            </div>
+            <aside class="project-result">
+              <strong>0.4887</strong>
+              <span class="result-label">holdout RMSE</span>
+              <span class="result-detail">0.3766 MAE · 731 observations</span>
+              <div class="project-links">
+                <a href="https://github.com/jessecoggins/revenue-forecasting-arima" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </aside>
+          </article>
+
+          <article class="project-row" data-category="Data Systems" data-tags="SQL|PostgreSQL|MongoDB|Data modeling|ETL|NoSQL" data-title="EcoMart Relational + NoSQL Design" data-index="6">
+            <span class="project-number" aria-hidden="true">06</span>
+            <div class="project-main">
+              <div class="project-kicker"><span>Data Systems</span><span class="kicker-divider">/</span><span>Relational &amp; NoSQL</span></div>
+              <h2>EcoMart Relational + NoSQL Design</h2>
+              <div class="project-tags" aria-label="Project tags">
+                <button type="button" class="tag-chip" data-tag="SQL" aria-pressed="false">SQL</button>
+                <button type="button" class="tag-chip" data-tag="PostgreSQL" aria-pressed="false">PostgreSQL</button>
+                <button type="button" class="tag-chip" data-tag="MongoDB" aria-pressed="false">MongoDB</button>
+                <button type="button" class="tag-chip" data-tag="Data modeling" aria-pressed="false">Data modeling</button>
+                <button type="button" class="tag-chip" data-tag="ETL" aria-pressed="false">ETL</button>
+                <button type="button" class="tag-chip" data-tag="NoSQL" aria-pressed="false">NoSQL</button>
+              </div>
+              <p class="project-description">A normalized PostgreSQL model across five tables and 100,000 records, paired with a MongoDB implementation, ETL staging, indexes, and analytical queries.</p>
+              <p class="business-impact"><span>Business impact</span> Organizes sales and product records for consistent inventory, customer, and performance reporting.</p>
+            </div>
+            <aside class="project-result">
+              <strong>100K</strong>
+              <span class="result-label">records across 5 tables</span>
+              <span class="result-detail">3NF PostgreSQL · MongoDB</span>
+              <div class="project-links">
+                <a href="https://github.com/jessecoggins/ecomart-relational-nosql-database-design" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </aside>
+          </article>
+
+          <article class="project-row" data-category="Machine Learning" data-tags="Python|NLP|Deep learning|BiLSTM|Text analytics" data-title="Sentiment Analysis with BiLSTM" data-index="7">
+            <span class="project-number" aria-hidden="true">07</span>
+            <div class="project-main">
+              <div class="project-kicker"><span>Machine Learning</span><span class="kicker-divider">/</span><span>Natural language processing</span></div>
+              <h2>Sentiment Analysis with BiLSTM</h2>
+              <div class="project-tags" aria-label="Project tags">
+                <button type="button" class="tag-chip" data-tag="Python" aria-pressed="false">Python</button>
+                <button type="button" class="tag-chip" data-tag="NLP" aria-pressed="false">NLP</button>
+                <button type="button" class="tag-chip" data-tag="Deep learning" aria-pressed="false">Deep learning</button>
+                <button type="button" class="tag-chip" data-tag="BiLSTM" aria-pressed="false">BiLSTM</button>
+                <button type="button" class="tag-chip" data-tag="Text analytics" aria-pressed="false">Text analytics</button>
+              </div>
+              <p class="project-description">A bidirectional LSTM sentiment classifier with tokenization, sequence preparation, padding, and labeled test-set evaluation.</p>
+              <p class="business-impact"><span>Business impact</span> Turns text into consistent sentiment signals for tracking customer experience themes.</p>
+            </div>
+            <aside class="project-result">
+              <strong>76%</strong>
+              <span class="result-label">test accuracy</span>
+              <span class="result-detail">0.72 F1 score</span>
+              <div class="project-links">
+                <a href="https://github.com/jessecoggins/sentiment-analysis-bilstm" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </aside>
+          </article>
+
+          <article class="project-row" data-category="Machine Learning" data-tags="Python|Computer vision|CNN|Image classification|Deep learning" data-title="Seedling Image Classifier" data-index="8">
+            <span class="project-number" aria-hidden="true">08</span>
+            <div class="project-main">
+              <div class="project-kicker"><span>Machine Learning</span><span class="kicker-divider">/</span><span>Computer vision</span></div>
+              <h2>Seedling Image Classifier</h2>
+              <div class="project-tags" aria-label="Project tags">
+                <button type="button" class="tag-chip" data-tag="Python" aria-pressed="false">Python</button>
+                <button type="button" class="tag-chip" data-tag="Computer vision" aria-pressed="false">Computer vision</button>
+                <button type="button" class="tag-chip" data-tag="CNN" aria-pressed="false">CNN</button>
+                <button type="button" class="tag-chip" data-tag="Image classification" aria-pressed="false">Image classification</button>
+                <button type="button" class="tag-chip" data-tag="Deep learning" aria-pressed="false">Deep learning</button>
+              </div>
+              <p class="project-description">A convolutional neural network classifying plant seedling species, with the trained model artifact included for inference and inspection.</p>
+              <p class="business-impact"><span>Business impact</span> Automates a first-pass species label to help scale image sorting and review.</p>
+            </div>
+            <aside class="project-result">
+              <strong>66.62%</strong>
+              <span class="result-label">test accuracy</span>
+              <span class="result-detail">12 species classes</span>
+              <div class="project-links">
+                <a href="https://github.com/jessecoggins/seedling-image-classifier" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </aside>
+          </article>
+
+          <article class="project-row" data-category="Statistics &amp; Optimization" data-tags="Python|Statistics|Regression|PCA|Hypothesis testing|Market basket|Apriori|Retail" data-title="Statistical Analysis + Market Basket" data-index="9">
+            <span class="project-number" aria-hidden="true">09</span>
+            <div class="project-main">
+              <div class="project-kicker"><span>Statistics &amp; Optimization</span><span class="kicker-divider">/</span><span>Retail analysis</span></div>
+              <h2>Statistical Analysis + Market Basket</h2>
+              <div class="project-tags" aria-label="Project tags">
+                <button type="button" class="tag-chip" data-tag="Python" aria-pressed="false">Python</button>
+                <button type="button" class="tag-chip" data-tag="Statistics" aria-pressed="false">Statistics</button>
+                <button type="button" class="tag-chip" data-tag="Regression" aria-pressed="false">Regression</button>
+                <button type="button" class="tag-chip" data-tag="PCA" aria-pressed="false">PCA</button>
+                <button type="button" class="tag-chip" data-tag="Hypothesis testing" aria-pressed="false">Hypothesis testing</button>
+                <button type="button" class="tag-chip" data-tag="Market basket" aria-pressed="false">Market basket</button>
+                <button type="button" class="tag-chip" data-tag="Apriori" aria-pressed="false">Apriori</button>
+                <button type="button" class="tag-chip" data-tag="Retail" aria-pressed="false">Retail</button>
+              </div>
+              <p class="project-description">Seven notebooks covering business finance, regression, PCA, health-insurance hypothesis tests, and Apriori analysis on 441 order baskets.</p>
+              <p class="business-impact"><span>Business impact</span> Surfaces products often purchased together to inform merchandising and cross-sell experiments.</p>
+            </div>
+            <aside class="project-result">
+              <strong>88.2</strong>
+              <span class="result-label">top association lift</span>
+              <span class="result-detail">441 baskets · 8,234 retail line items</span>
+              <div class="project-links">
+                <a href="https://github.com/jessecoggins/statistical-analysis-and-market-basket" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </aside>
+          </article>
+
+          <article class="project-row" data-category="Statistics &amp; Optimization" data-tags="Python|Operations research|Linear programming|PuLP|Optimization" data-title="Cargo Network Optimization" data-index="10">
+            <span class="project-number" aria-hidden="true">10</span>
+            <div class="project-main">
+              <div class="project-kicker"><span>Statistics &amp; Optimization</span><span class="kicker-divider">/</span><span>Operations research</span></div>
+              <h2>Cargo Network Optimization</h2>
+              <div class="project-tags" aria-label="Project tags">
+                <button type="button" class="tag-chip" data-tag="Python" aria-pressed="false">Python</button>
+                <button type="button" class="tag-chip" data-tag="Operations research" aria-pressed="false">Operations research</button>
+                <button type="button" class="tag-chip" data-tag="Linear programming" aria-pressed="false">Linear programming</button>
+                <button type="button" class="tag-chip" data-tag="PuLP" aria-pressed="false">PuLP</button>
+                <button type="button" class="tag-chip" data-tag="Optimization" aria-pressed="false">Optimization</button>
+              </div>
+              <p class="project-description">A linear program for a multi-node cargo transshipment network, with capacity constraints and explicit flow-feasibility checks.</p>
+              <p class="business-impact"><span>Business impact</span> Compares routing options and identifies a least-cost feasible flow under network constraints.</p>
+            </div>
+            <aside class="project-result">
+              <strong>$200,863.75</strong>
+              <span class="result-label">modeled optimal cost</span>
+              <span class="result-detail">Solver status: optimal</span>
+              <div class="project-links">
+                <a href="https://github.com/jessecoggins/cargo-network-optimization" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </aside>
+          </article>
+        </div>
+
+        <div id="no-results" class="no-results" hidden>
+          <p>No projects match those filters.</p>
+          <button id="empty-clear" type="button" class="clear-filters">Clear filters</button>
         </div>
       </section>
     </main>
 
-    <footer id="contact" class="site-footer">
+    <footer class="site-footer">
       <div class="container footer-inner">
-        <div class="footer-meta">
-          <span class="section-index">07</span>
-          <span class="section-label">Contact</span>
-        </div>
-
-        <div class="footer-grid">
-          <div class="footer-pitch">
-            <h2 class="display footer-display">
-              <span class="display-line">Let's talk</span>
-              <span class="display-line italic">about the work.</span>
-            </h2>
-            <p class="footer-copy">
-              Currently seeking a remote Data Analyst or Data Scientist role where business
-              context, analytical rigor, and clear communication drive measurable impact. The
-              best place to start is the GitHub profile and the four featured projects above.
-            </p>
-            <div class="cta-row">
-              <a class="button button-ghost" href="mailto:jessecoggins21@gmail.com">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect x="3" y="5" width="18" height="14" rx="2" />
-                  <polyline points="3 7 12 13 21 7" />
-                </svg>
-                <span>jessecoggins21@gmail.com</span>
-              </a>
-              <a
-                class="button button-ghost"
-                href="assets/resume/Jesse_Coggins_Resume.pdf"
-                data-resume-trigger
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                  <polyline points="14 2 14 8 20 8" />
-                  <line x1="8" y1="13" x2="16" y2="13" />
-                  <line x1="8" y1="17" x2="16" y2="17" />
-                </svg>
-                <span>Resume</span>
-              </a>
-              <a class="button button-ghost" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
-                <span>LinkedIn</span>
-              </a>
-              <a class="button button-ghost" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                <span>GitHub</span>
-              </a>
-              <a class="button button-ghost" href="https://public.tableau.com/shared/Z8Z9SR2NB?:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noreferrer">
-                <svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
-                  <path d="M15.536.235v2.937h-2.624v.771h2.624V6.88h.933V3.943h2.624v-.771h-2.624V.235zm8.043 3.016v4.328h-3.943v1.233h3.943v4.251h1.391l.009-2.109.032-2.099 1.953-.032 1.943-.011V7.579H24.97V3.251zm-16.543.077v4.256H3.052v1.228h3.984v4.256h1.313V8.812h4.015V7.579H8.349V3.328zm8.115 7.027v4.791h-4.405v1.584h4.405v4.797h1.709V16.73h4.411v-1.584H16.86v-4.791zm12.964 2.066v2.959h-2.688v1.084h2.688v3.015h1.183v-3.015h2.703V15.38h-2.703v-2.959zm-25.484.172v2.901H0v.828h2.631v2.928h.891v-2.928h2.667v-.828H3.48v-2.901zm20.948 6.027v4.339h-4.027v1.235h4.027v4.285h1.427v-4.285h3.979v-1.235h-3.979V18.62zm-16.62.011v4.328H3.016v1.235h3.943v4.255h1.468v-4.255h3.937v-1.235H8.427v-4.333h-.733zm8.421 6.104v2.937h-2.625v1.077h2.625v3.016h1.24l.016-1.489.02-1.527h2.631v-1.077H16.62v-2.937z" />
-                </svg>
-                <span>Tableau Public</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="footer-rule"></div>
-
-        <div class="footer-base">
-          <span>© <span id="year">2026</span> Jesse Coggins</span>
-          <span class="muted">Hosted on GitHub Pages</span>
-        </div>
+        <a href="mailto:jessecoggins21@gmail.com">jessecoggins21@gmail.com <span aria-hidden="true">↗</span></a>
+        <span>Jesse Coggins · <span id="current-year"></span></span>
+        <a href="#top">Back to top ↑</a>
       </div>
     </footer>
-
-    <dialog id="resume-dialog" class="resume-dialog" aria-labelledby="resume-dialog-title">
-      <div class="resume-dialog-shell">
-        <div class="resume-dialog-head">
-          <div class="resume-dialog-copy">
-            <p class="section-kicker">Resume Preview</p>
-            <h2 id="resume-dialog-title">Jesse Coggins Resume</h2>
-          </div>
-          <div class="resume-dialog-actions">
-            <a
-              class="button button-primary"
-              href="assets/resume/Jesse_Coggins_Resume.pdf"
-              download
-            >
-              <span>Download Resume</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </a>
-            <a
-              class="button button-ghost"
-              href="assets/resume/Jesse_Coggins_Resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>Open PDF</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-            <button type="button" class="button button-ghost resume-dialog-close" data-resume-close autofocus>
-              <span>Close</span>
-            </button>
-          </div>
-        </div>
-        <div class="resume-dialog-body" id="resume-dialog-body">
-          <div class="resume-viewer" id="resume-viewer">
-            <div class="resume-viewer-status" id="resume-viewer-status" role="status" aria-live="polite">
-              <span class="resume-spinner" aria-hidden="true"></span>
-              <span id="resume-viewer-status-text">Loading resume preview…</span>
-            </div>
-            <div class="resume-viewer-error" id="resume-viewer-error" hidden>
-              <p id="resume-viewer-error-text">Unable to render the preview in this viewer.</p>
-              <a
-                class="button button-ghost"
-                href="assets/resume/Jesse_Coggins_Resume.pdf"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>Open PDF</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
-            <div class="resume-page-stack" id="resume-page-stack" hidden></div>
-          </div>
-        </div>
-      </div>
-    </dialog>
-
-    <script>
-      // Update year
-      document.getElementById('year').textContent = new Date().getFullYear();
-
-      // Nav shadow on scroll
-      const header = document.querySelector('.site-header');
-      const onScroll = () => {
-        if (window.scrollY > 8) header.classList.add('scrolled');
-        else header.classList.remove('scrolled');
-      };
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
-
-      const mobileNav = document.querySelector('.mobile-nav');
-      const mobileNavToggle = document.querySelector('.nav-toggle');
-      const syncMobileNavState = () => {
-        if (!mobileNav || !mobileNavToggle) return;
-        const isOpen = mobileNav.hasAttribute('open');
-        mobileNavToggle.setAttribute('aria-expanded', String(isOpen));
-        mobileNavToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-      };
-      if (mobileNav) {
-        mobileNav.addEventListener('toggle', syncMobileNavState);
-        syncMobileNavState();
-      }
-      document.querySelectorAll('.mobile-nav-panel a').forEach((link) => {
-        link.addEventListener('click', () => {
-          if (mobileNav) mobileNav.removeAttribute('open');
-        });
-      });
-
-      const resumeDialog = document.getElementById('resume-dialog');
-      const resumeDialogBody = document.getElementById('resume-dialog-body');
-      const resumeCloseButton = document.querySelector('[data-resume-close]');
-      const resumeTriggers = document.querySelectorAll('[data-resume-trigger]');
-      const resumeViewerStatus = document.getElementById('resume-viewer-status');
-      const resumeViewerStatusText = document.getElementById('resume-viewer-status-text');
-      const resumeViewerError = document.getElementById('resume-viewer-error');
-      const resumeViewerErrorText = document.getElementById('resume-viewer-error-text');
-      const resumePageStack = document.getElementById('resume-page-stack');
-      const resumeSource = 'assets/resume/Jesse_Coggins_Resume.pdf';
-      const resumePdfJsModuleUrl = new URL('assets/vendor/pdfjs/pdf.min.mjs', window.location.href).href;
-      const resumePdfJsWorkerUrl = new URL('assets/vendor/pdfjs/pdf.worker.min.mjs', window.location.href).href;
-      let lastResumeTrigger = null;
-      let resumePdfJsPromise = null;
-      let resumePdfDocumentPromise = null;
-      let resumePdfDocument = null;
-      let resumeRenderFrame = null;
-      let resumeRenderToken = 0;
-      let resumeRenderedWidth = 0;
-
-      if (resumeDialog && typeof resumeDialog.showModal === 'function') {
-        resumeTriggers.forEach((trigger) => {
-          trigger.setAttribute('aria-haspopup', 'dialog');
-          trigger.setAttribute('aria-controls', 'resume-dialog');
-        });
-      }
-
-      const setResumeViewerState = (state, message = '') => {
-        if (resumeViewerStatus) resumeViewerStatus.hidden = state !== 'loading';
-        if (resumePageStack) resumePageStack.hidden = state !== 'ready';
-        if (resumeViewerError) resumeViewerError.hidden = state !== 'error';
-
-        if (state === 'loading' && resumeViewerStatusText) {
-          resumeViewerStatusText.textContent = message || 'Loading resume preview…';
-        }
-
-        if (state === 'error' && resumeViewerErrorText) {
-          resumeViewerErrorText.textContent = message || 'Unable to render the preview in this viewer.';
-        }
-      };
-
-      const getResumePreviewWidth = () => {
-        const dialogWidth = resumeDialogBody?.clientWidth || resumeDialog?.clientWidth || 0;
-        return Math.max(240, Math.floor(dialogWidth - 56));
-      };
-
-      const loadResumePdfJs = async () => {
-        if (!resumePdfJsPromise) {
-          resumePdfJsPromise = import(resumePdfJsModuleUrl).then((pdfjsLib) => {
-            pdfjsLib.GlobalWorkerOptions.workerSrc = resumePdfJsWorkerUrl;
-            return pdfjsLib;
-          });
-        }
-
-        return resumePdfJsPromise;
-      };
-
-      const loadResumeDocument = async () => {
-        if (resumePdfDocument) return resumePdfDocument;
-
-        if (!resumePdfDocumentPromise) {
-          resumePdfDocumentPromise = loadResumePdfJs()
-            .then((pdfjsLib) => pdfjsLib.getDocument({ url: resumeSource }).promise)
-            .then((pdf) => {
-              resumePdfDocument = pdf;
-              return pdf;
-            })
-            .catch((error) => {
-              resumePdfDocumentPromise = null;
-              throw error;
-            });
-        }
-
-        return resumePdfDocumentPromise;
-      };
-
-      const renderResumePreview = async () => {
-        if (!resumeDialogBody || !resumePageStack) return;
-
-        const targetWidth = getResumePreviewWidth();
-        if (resumePdfDocument && resumePageStack.childElementCount && Math.abs(targetWidth - resumeRenderedWidth) < 12) {
-          setResumeViewerState('ready');
-          return;
-        }
-
-        const currentToken = ++resumeRenderToken;
-        setResumeViewerState('loading');
-
-        try {
-          const pdf = await loadResumeDocument();
-          const outputScale = Math.min(window.devicePixelRatio || 1, 2);
-          const fragment = document.createDocumentFragment();
-
-          for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
-            const page = await pdf.getPage(pageNumber);
-            const baseViewport = page.getViewport({ scale: 1 });
-            const scale = targetWidth / baseViewport.width;
-            const viewport = page.getViewport({ scale });
-
-            const pageItem = document.createElement('article');
-            pageItem.className = 'resume-page';
-
-            const pageLabel = document.createElement('p');
-            pageLabel.className = 'resume-page-label';
-            pageLabel.textContent = `Page ${pageNumber} of ${pdf.numPages}`;
-
-            const pageSurface = document.createElement('div');
-            pageSurface.className = 'resume-page-surface';
-
-            const canvas = document.createElement('canvas');
-            canvas.className = 'resume-page-canvas';
-            canvas.setAttribute('aria-label', `Resume page ${pageNumber} of ${pdf.numPages}`);
-
-            canvas.width = Math.floor(viewport.width * outputScale);
-            canvas.height = Math.floor(viewport.height * outputScale);
-            canvas.style.width = `${Math.floor(viewport.width)}px`;
-            canvas.style.height = `${Math.floor(viewport.height)}px`;
-
-            const context = canvas.getContext('2d', { alpha: false });
-            await page.render({
-              canvasContext: context,
-              viewport,
-              transform: outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : null,
-            }).promise;
-
-            if (currentToken !== resumeRenderToken) return;
-
-            pageSurface.appendChild(canvas);
-            pageItem.append(pageLabel, pageSurface);
-            fragment.appendChild(pageItem);
-            page.cleanup();
-          }
-
-          if (currentToken !== resumeRenderToken) return;
-
-          resumePageStack.replaceChildren(fragment);
-          resumeRenderedWidth = targetWidth;
-          resumeDialogBody.scrollTop = 0;
-          setResumeViewerState('ready');
-        } catch (error) {
-          console.error('Resume preview rendering failed.', error);
-          if (currentToken !== resumeRenderToken) return;
-          setResumeViewerState(
-            'error',
-            'Unable to render the preview in this viewer. You can still open or download the PDF directly.'
-          );
-        }
-      };
-
-      const scheduleResumeRender = () => {
-        if (resumeRenderFrame) cancelAnimationFrame(resumeRenderFrame);
-        resumeRenderFrame = requestAnimationFrame(() => {
-          resumeRenderFrame = null;
-          void renderResumePreview();
-        });
-      };
-
-      const syncResumePreviewSize = () => {
-        if (!resumeDialog?.open || !resumePdfDocument) return;
-        if (Math.abs(getResumePreviewWidth() - resumeRenderedWidth) < 12) return;
-        scheduleResumeRender();
-      };
-
-      if (resumeDialogBody && 'ResizeObserver' in window) {
-        const resumeResizeObserver = new ResizeObserver(() => {
-          syncResumePreviewSize();
-        });
-        resumeResizeObserver.observe(resumeDialogBody);
-      } else {
-        window.addEventListener('resize', syncResumePreviewSize);
-      }
-
-      const cleanupResumeDialog = () => {
-        document.body.classList.remove('resume-modal-open');
-        if (lastResumeTrigger) lastResumeTrigger.focus();
-        lastResumeTrigger = null;
-      };
-
-      const openResumeDialog = (trigger) => {
-        if (!resumeDialog || typeof resumeDialog.showModal !== 'function') return;
-        lastResumeTrigger = trigger;
-        document.body.classList.add('resume-modal-open');
-        if (mobileNav) mobileNav.removeAttribute('open');
-        if (!resumeDialog.open) resumeDialog.showModal();
-        scheduleResumeRender();
-      };
-
-      resumeTriggers.forEach((trigger) => {
-        trigger.addEventListener('click', (event) => {
-          const isPlainActivation =
-            !event.defaultPrevented &&
-            event.button === 0 &&
-            !event.metaKey &&
-            !event.ctrlKey &&
-            !event.shiftKey &&
-            !event.altKey;
-
-          if (!resumeDialog || typeof resumeDialog.showModal !== 'function' || !isPlainActivation) return;
-          event.preventDefault();
-          openResumeDialog(trigger);
-        });
-      });
-
-      if (resumeCloseButton) {
-        resumeCloseButton.addEventListener('click', () => {
-          if (resumeDialog && resumeDialog.open) resumeDialog.close();
-        });
-      }
-
-      if (resumeDialog) {
-        resumeDialog.addEventListener('click', (event) => {
-          if (event.target === resumeDialog) resumeDialog.close();
-        });
-
-        resumeDialog.addEventListener('close', cleanupResumeDialog);
-
-        resumeDialog.addEventListener('cancel', () => {
-          document.body.classList.remove('resume-modal-open');
-        });
-      }
-    </script>
   </body>
 </html>
