@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cargo Network Optimization — Jesse Coggins</title>
+    <meta name="description" content="A linear programming model that routes cargo across a multi-node network while meeting destination demand and respecting hub and focus-city capacity." />
+    <meta name="author" content="Jesse Coggins" />
+    <meta name="theme-color" content="#f3f0e6" />
+    <link rel="canonical" href="https://jessecoggins.github.io/project-cargo-network-optimization.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cargo Network Optimization — Jesse Coggins" />
+    <meta property="og:description" content="A linear programming model that routes cargo across a multi-node network while meeting destination demand and respecting hub and focus-city capacity." />
+    <meta property="og:url" content="https://jessecoggins.github.io/project-cargo-network-optimization.html" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=project-first-homepage-20261102" />
+    <link rel="stylesheet" href="project-detail.css?v=project-summaries-20261102" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to project summary</a>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="index.html#top" aria-label="Jesse Coggins home">
+          <span class="brand-name">Jesse Coggins</span>
+          <span class="brand-role">Data &amp; Analytics</span>
+        </a>
+        <nav class="profile-links" aria-label="Professional links">
+          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer"><span>LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="profile-link" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer"><span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container detail-page">
+      <a class="detail-back" href="index.html#projects"><span aria-hidden="true">←</span> All projects</a>
+      <header class="detail-hero">
+        <div class="detail-meta">
+          <span>Statistics &amp; Optimization</span><span class="meta-divider">/</span><span>Operations research</span>
+          <span class="meta-divider">/</span><span>Project 10 of 10</span>
+          <span class="coursework">M.S. coursework</span>
+        </div>
+        <h1>Cargo Network Optimization</h1>
+        <p class="detail-lede">A linear programming model that routes cargo across a multi-node network while meeting destination demand and respecting hub and focus-city capacity.</p>
+        <div class="detail-tags" aria-label="Project tags">
+          <a class="detail-tag" href="?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
+                <a class="detail-tag" href="?tag=Operations%20research#projects" aria-label="Filter homepage projects by Operations research">Operations research</a>
+                <a class="detail-tag" href="?tag=Linear%20programming#projects" aria-label="Filter homepage projects by Linear programming">Linear programming</a>
+                <a class="detail-tag" href="?tag=PuLP#projects" aria-label="Filter homepage projects by PuLP">PuLP</a>
+                <a class="detail-tag" href="?tag=Optimization#projects" aria-label="Filter homepage projects by Optimization">Optimization</a>
+                <a class="detail-tag" href="?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
+        </div>
+      </header>
+
+      <div class="detail-overview">
+        <section class="impact-panel" aria-labelledby="impact-heading">
+          <p class="detail-label" id="impact-heading">Business impact</p>
+          <p>Compares feasible routing plans and identifies the least-cost flow under the model’s demand, capacity, and flow-balance constraints.</p>
+        </section>
+        <div class="detail-metrics" aria-label="Key project results">
+          <div class="detail-metric"><strong>$200,863.75</strong><span>Modeled minimum cost</span></div>
+              <div class="detail-metric"><strong>Optimal</strong><span>Solver status</span></div>
+              <div class="detail-metric"><strong>95,650 tons</strong><span>CVG hub capacity used</span></div>
+        </div>
+      </div>
+
+      <div class="detail-content">
+        <article class="detail-story">
+          <section class="detail-section">
+            <p class="detail-label">Business question</p>
+            <h2>How should cargo move through a multi-node network to satisfy demand at minimum modeled shipping cost?</h2>
+          </section>
+          <section class="detail-section">
+            <p class="detail-label">Approach</p>
+            <h2>How the work was done</h2>
+            <ul><li>Represented shipment quantities across hubs, focus cities, and downstream demand centers as decision variables.</li>
+                <li>Minimized total shipping cost while enforcing hub capacity, focus-city processing capacity, demand satisfaction, flow balance, and non-negativity.</li>
+                <li>Solved the model with PuLP and checked each saved flow against the network constraints.</li></ul>
+          </section>
+          <section class="detail-section">
+            <p class="detail-label">Results</p>
+            <h2>What the analysis shows</h2>
+            <ul><li>The solver returned an optimal modeled cost of $200,863.75.</li>
+                <li>CVG was fully utilized at 95,650 tons; AFW carried 38,097 of 44,350 available tons.</li>
+                <li>Saved verification outputs show hub, focus-city, demand, and flow-balance constraints were satisfied.</li></ul>
+          </section>
+          <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The $200,863.75 value is the model’s optimized objective for the provided network inputs; it is not a measured real-world savings figure.</p></aside>
+          <section class="detail-section" style="margin-top:20px">
+            <p class="detail-label">Business relevance</p>
+            <h2>What this makes easier to decide</h2>
+            <p>The model gives planners a costed feasible routing baseline for comparing network decisions. The total is the optimization result under the stated model inputs and constraints.</p>
+          </section>
+        </article>
+
+        <aside class="detail-aside" aria-label="Project details and links">
+          <h2>Project details</h2>
+          <dl class="detail-facts"><div class="detail-fact"><dt>Method</dt><dd>Linear programming</dd></div>
+              <div class="detail-fact"><dt>Objective</dt><dd>Minimize modeled shipping cost</dd></div>
+              <div class="detail-fact"><dt>Solver</dt><dd>PuLP · optimal solution</dd></div></dl>
+          <div class="detail-resource-links"><a href="https://github.com/jessecoggins/cargo-network-optimization" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
+        </aside>
+      </div>
+
+      <nav class="detail-pagination" aria-label="Other projects">
+        <a href="project-statistical-analysis-market-basket.html"><span>← Previous project</span><strong>Statistical Analysis + Market Basket</strong></a>
+      </nav>
+    </main>
+
+    <footer class="detail-footer">
+      <div class="container footer-inner">
+        <a href="mailto:jessecoggins21@gmail.com">jessecoggins21@gmail.com <span aria-hidden="true">↗</span></a>
+        <span>Jesse Coggins · 2026</span>
+        <a href="index.html#projects">All projects ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
