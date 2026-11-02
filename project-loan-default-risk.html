@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Default Risk Capstone — Jesse Coggins</title>
+    <meta name="description" content="A class-weighted Random Forest workflow that evaluates how borrower financial attributes distinguish default risk in historical loan data." />
+    <meta name="author" content="Jesse Coggins" />
+    <meta name="theme-color" content="#f3f0e6" />
+    <link rel="canonical" href="https://jessecoggins.github.io/project-loan-default-risk.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Loan Default Risk Capstone — Jesse Coggins" />
+    <meta property="og:description" content="A class-weighted Random Forest workflow that evaluates how borrower financial attributes distinguish default risk in historical loan data." />
+    <meta property="og:url" content="https://jessecoggins.github.io/project-loan-default-risk.html" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=project-first-homepage-20261102" />
+    <link rel="stylesheet" href="project-detail.css?v=project-summaries-20261102" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to project summary</a>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="index.html#top" aria-label="Jesse Coggins home">
+          <span class="brand-name">Jesse Coggins</span>
+          <span class="brand-role">Data &amp; Analytics</span>
+        </a>
+        <nav class="profile-links" aria-label="Professional links">
+          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer"><span>LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="profile-link" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer"><span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container detail-page">
+      <a class="detail-back" href="index.html#projects"><span aria-hidden="true">←</span> All projects</a>
+      <header class="detail-hero">
+        <div class="detail-meta">
+          <span>Machine Learning</span><span class="meta-divider">/</span><span>Classification</span>
+          <span class="meta-divider">/</span><span>Project 02 of 10</span>
+          <span class="coursework">M.S. coursework</span>
+        </div>
+        <h1>Loan Default Risk Capstone</h1>
+        <p class="detail-lede">A class-weighted Random Forest workflow that evaluates how borrower financial attributes distinguish default risk in historical loan data.</p>
+        <div class="detail-tags" aria-label="Project tags">
+          <a class="detail-tag" href="?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
+                <a class="detail-tag" href="?tag=Classification#projects" aria-label="Filter homepage projects by Classification">Classification</a>
+                <a class="detail-tag" href="?tag=Credit%20risk#projects" aria-label="Filter homepage projects by Credit risk">Credit risk</a>
+                <a class="detail-tag" href="?tag=Cross-validation#projects" aria-label="Filter homepage projects by Cross-validation">Cross-validation</a>
+                <a class="detail-tag" href="?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
+        </div>
+      </header>
+
+      <div class="detail-overview">
+        <section class="impact-panel" aria-labelledby="impact-heading">
+          <p class="detail-label" id="impact-heading">Business impact</p>
+          <p>Supports consistent risk comparisons and helps route higher-risk applications for closer human review.</p>
+        </section>
+        <div class="detail-metrics" aria-label="Key project results">
+          <div class="detail-metric"><strong>0.737</strong><span>Held-out ROC-AUC</span></div>
+              <div class="detail-metric"><strong>26.5%</strong><span>Held-out recall</span></div>
+              <div class="detail-metric"><strong>121,447</strong><span>Rows in modeling set</span></div>
+        </div>
+      </div>
+
+      <div class="detail-content">
+        <article class="detail-story">
+          <section class="detail-section">
+            <p class="detail-label">Business question</p>
+            <h2>How well can financial characteristics distinguish loan default risk before an underwriting decision?</h2>
+          </section>
+          <section class="detail-section">
+            <p class="detail-label">Approach</p>
+            <h2>How the work was done</h2>
+            <ul><li>Started with 148,670 records and 34 columns; the modeling set contains 121,447 complete records after removing rows with missing values.</li>
+                <li>Selected 13 predictors plus the Status target, one-hot encoded eight categorical variables, and used a stratified 70/15/15 train-validation-test split.</li>
+                <li>Trained a balanced Random Forest, then tuned 48 parameter candidates with 5-fold GridSearchCV on ROC-AUC and evaluated the selected model on the untouched test set.</li></ul>
+          </section>
+          <section class="detail-section">
+            <p class="detail-label">Results</p>
+            <h2>What the analysis shows</h2>
+            <ul><li>Test performance: 84.7% accuracy, 57.0% precision, 26.5% recall, 0.362 F1, and 0.737 ROC-AUC.</li>
+                <li>The model ranks above chance by ROC-AUC, while its recall at the selected operating point leaves many defaults unidentified.</li>
+                <li>The project frames the score as underwriting decision support rather than an automatic approval rule.</li></ul>
+          </section>
+          <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The 0.737 ROC-AUC summarizes ranking performance across thresholds. Recall at the selected test threshold is 26.5%, so it should not be read as a complete default-detection system.</p></aside>
+          <section class="detail-section" style="margin-top:20px">
+            <p class="detail-label">Business relevance</p>
+            <h2>What this makes easier to decide</h2>
+            <p>The model can support a consistent first-pass risk review, but the measured recall and the stakes of lending make human review and policy controls essential.</p>
+          </section>
+        </article>
+
+        <aside class="detail-aside" aria-label="Project details and links">
+          <h2>Project details</h2>
+          <dl class="detail-facts"><div class="detail-fact"><dt>Source data</dt><dd>148,670 records · 34 columns</dd></div>
+              <div class="detail-fact"><dt>Modeling data</dt><dd>121,447 complete records</dd></div>
+              <div class="detail-fact"><dt>Method</dt><dd>Class-weighted Random Forest · 5-fold CV</dd></div></dl>
+          <div class="detail-resource-links"><a href="https://github.com/jessecoggins/loan-default-risk-capstone" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
+        </aside>
+      </div>
+
+      <nav class="detail-pagination" aria-label="Other projects">
+        <a href="project-customer-churn-dashboard.html"><span>← Previous project</span><strong>Customer Churn Dashboard</strong></a><a href="project-flight-delay-prediction.html"><span>Next project →</span><strong>Flight Delay Prediction Pipeline</strong></a>
+      </nav>
+    </main>
+
+    <footer class="detail-footer">
+      <div class="container footer-inner">
+        <a href="mailto:jessecoggins21@gmail.com">jessecoggins21@gmail.com <span aria-hidden="true">↗</span></a>
+        <span>Jesse Coggins · 2026</span>
+        <a href="index.html#projects">All projects ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
