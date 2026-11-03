@@ -76,7 +76,7 @@
           <section class="detail-section">
             <p class="detail-label">Approach</p>
             <h2>How the work was done</h2>
-            <ul><li>Started with 148,670 records and 34 columns; the modeling set contains 121,447 complete records after removing rows with missing values.</li>
+            <ul><li>Of 148,670 source records, 121,447 had complete values. The split assigned 85,012 to training, 18,217 to validation and 18,218 to testing.</li>
                 <li>Selected 13 predictors plus the Status target, one-hot encoded eight categorical variables, and used a stratified 70/15/15 train-validation-test split.</li>
                 <li>Trained a balanced Random Forest, then tuned 48 parameter candidates with 5-fold GridSearchCV on ROC-AUC and evaluated the selected model on the untouched test set.</li></ul>
           </section>
@@ -84,7 +84,7 @@
             <p class="detail-label">Results</p>
             <h2>What the analysis shows</h2>
             <ul><li>Test performance: 84.7% accuracy, 57.0% precision, 26.5% recall, 0.362 F1, and 0.737 ROC-AUC.</li>
-                <li>The model ranks above chance by ROC-AUC, while its recall at the selected operating point leaves many defaults unidentified.</li>
+                <li>At the tested threshold, 1,380 loans were flagged. Of those, 787 defaulted and 593 were repaid. Another 2,186 defaults went unflagged.</li>
                 <li>The project frames the score as underwriting decision support rather than an automatic approval rule.</li></ul>
           </section>
           <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The 0.737 ROC-AUC summarizes ranking performance across thresholds. Recall at the selected test threshold is 26.5%, so it should not be read as a complete default-detection system.</p></aside>

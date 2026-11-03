@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Revenue Forecasting with ARIMA — Jesse Coggins</title>
-    <meta name="description" content="A short-horizon forecast of daily hospital revenue using two years of history, stationarity testing, differencing, ARIMA selection, and chronological holdout evaluation." />
+    <meta name="description" content="I used 731 daily hospital revenue observations to evaluate an ARIMA forecast against a no-change baseline and project revenue for the next 30 days." />
     <meta name="author" content="Jesse Coggins" />
     <meta name="theme-color" content="#f3f0e6" />
     <link rel="canonical" href="https://jessecoggins.github.io/project-revenue-forecasting.html" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Revenue Forecasting with ARIMA — Jesse Coggins" />
-    <meta property="og:description" content="A short-horizon forecast of daily hospital revenue using two years of history, stationarity testing, differencing, ARIMA selection, and chronological holdout evaluation." />
+    <meta property="og:description" content="I used 731 daily hospital revenue observations to evaluate an ARIMA forecast against a no-change baseline and project revenue for the next 30 days." />
     <meta property="og:url" content="https://jessecoggins.github.io/project-revenue-forecasting.html" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="shortcut icon" href="assets/favicon.svg" />
@@ -45,7 +45,7 @@
           <span class="coursework">M.S. coursework</span>
         </div>
         <h1>Revenue Forecasting with ARIMA</h1>
-        <p class="detail-lede">A short-horizon forecast of daily hospital revenue using two years of history, stationarity testing, differencing, ARIMA selection, and chronological holdout evaluation.</p>
+        <p class="detail-lede">I used 731 daily hospital revenue observations to evaluate an ARIMA forecast against a no-change baseline and project revenue for the next 30 days.</p>
         <div class="detail-tags" aria-label="Project tags">
           <a class="detail-tag" href="?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
                 <a class="detail-tag" href="?tag=Forecasting#projects" aria-label="Filter homepage projects by Forecasting">Forecasting</a>
@@ -59,12 +59,12 @@
       <div class="detail-overview">
         <section class="impact-panel" aria-labelledby="impact-heading">
           <p class="detail-label" id="impact-heading">Business impact</p>
-          <p>Provides a baseline view of expected near-term revenue to support operational and financial planning.</p>
+          <p>For finance staff estimating the next day’s change in receipts, assuming no change produced slightly smaller errors than ARIMA on this holdout.</p>
         </section>
         <div class="detail-metrics" aria-label="Key project results">
-          <div class="detail-metric"><strong>0.4887</strong><span>Holdout RMSE</span></div>
-              <div class="detail-metric"><strong>0.3766</strong><span>Holdout MAE</span></div>
-              <div class="detail-metric"><strong>30 days</strong><span>Forecast horizon</span></div>
+          <div class="detail-metric"><strong>0.4887</strong><span>ARIMA change RMSE ($ millions)</span></div>
+              <div class="detail-metric"><strong>0.4860</strong><span>No-change RMSE ($ millions)</span></div>
+              <div class="detail-metric"><strong>30 days</strong><span>Forward projection</span></div>
         </div>
       </div>
 
@@ -79,20 +79,20 @@
             <h2>How the work was done</h2>
             <ul><li>Reviewed 731 daily observations for continuity, visualized the series, and ran an Augmented Dickey-Fuller stationarity test.</li>
                 <li>First-differenced the series; the post-difference ADF p-value was 5.11e-30, compared with 0.1997 before differencing.</li>
-                <li>Split the differenced series chronologically into 584 training and 146 test observations; used ACF/PACF patterns to guide an ARIMA(1,1,0) interpretation and forecast 30 days ahead with 95% intervals.</li></ul>
+                <li>Fit an AR(1) model to 584 daily changes. From day 585, forecast changes for days 586–731 and compare them with assuming zero change each day.</li></ul>
           </section>
           <section class="detail-section">
             <p class="detail-label">Results</p>
             <h2>What the analysis shows</h2>
-            <ul><li>Holdout RMSE was 0.4887 and MAE was 0.3766 on the revenue series’ reported scale.</li>
-                <li>The model includes a 30-day forecast beyond the observed period with 95% confidence intervals.</li>
-                <li>The workflow preserves time order during evaluation, avoiding a random split for a sequential forecasting problem.</li></ul>
+            <ul><li>On the 146 held-out days, ARIMA had MAE of 0.3765 and RMSE of 0.4887 million dollars of daily change. The no-change forecast had MAE of 0.3746 and RMSE of 0.4860 million.</li>
+                <li>For the 30-day projection, the portfolio version refits the model on all 731 revenue observations. It forecasts daily revenue levels for days 732–761 with model-based 95% prediction intervals.</li>
+                <li>The submitted MAE was 0.3766. Correcting a one-day offset pairs the first forecast step with the first test day.</li></ul>
           </section>
           
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
             <h2>What this makes easier to decide</h2>
-            <p>A transparent time-series baseline gives planners a reference for comparing later revenue patterns and expected variance. The error measures are reported on the dataset’s scale.</p>
+            <p>The simpler forecast is a reasonable starting point for daily planning in this dataset. A monthly budget would also require testing forecasts of revenue totals at several historical cutoffs.</p>
           </section>
         </article>
 
@@ -100,7 +100,7 @@
           <h2>Project details</h2>
           <dl class="detail-facts"><div class="detail-fact"><dt>Dataset</dt><dd>731 daily revenue observations</dd></div>
               <div class="detail-fact"><dt>Evaluation split</dt><dd>584 train · 146 test after differencing</dd></div>
-              <div class="detail-fact"><dt>Model</dt><dd>ARIMA(1,1,0) interpretation</dd></div></dl>
+              <div class="detail-fact"><dt>Model</dt><dd>AR(1) on daily changes · ARIMA(1,1,0) with drift on levels</dd></div></dl>
           <div class="detail-resource-links"><a href="https://github.com/jessecoggins/revenue-forecasting-arima" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
         </aside>
       </div>

@@ -59,7 +59,7 @@
       <div class="detail-overview">
         <section class="impact-panel" aria-labelledby="impact-heading">
           <p class="detail-label" id="impact-heading">Business impact</p>
-          <p>Turns unstructured review text into consistent sentiment signals for tracking customer experience themes.</p>
+          <p>A team considering feedback triage can use the test counts to judge how much reading the classifier would create.</p>
         </section>
         <div class="detail-metrics" aria-label="Key project results">
           <div class="detail-metric"><strong>76.0%</strong><span>Test accuracy</span></div>
@@ -88,7 +88,7 @@
                 <li>High precision means positive predictions were usually correct in this test set; lower recall means some positive reviews were missed.</li>
                 <li>The trained Keras model is included in the repository so it can be inspected or loaded without retraining.</li></ul>
           </section>
-          <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The test set has 75 examples. Results show a useful proof of concept, while the missed positive examples make recall important for any broader use.</p></aside>
+          <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The model flagged 49 of 75 IMDb test reviews as negative. Those included 34 negative and 15 positive reviews. The coursework tokenizer saw the full review vocabulary. A customer-support trial would need a vocabulary fitted on training data and evaluation on support messages.</p></aside>
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
             <h2>What this makes easier to decide</h2>

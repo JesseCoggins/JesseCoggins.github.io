@@ -206,13 +206,13 @@
                 <button type="button" class="tag-chip" data-tag="Cross-validation" aria-pressed="false">Cross-validation</button>
                               <button type="button" class="tag-chip" data-tag="M.S. coursework" aria-pressed="false">M.S. coursework</button>
               </div>
-              <p class="project-description">A class-weighted Random Forest trained on 148,670 loan records, with feature engineering and 5-fold cross-validation.</p>
-              <p class="business-impact"><span>Business impact</span> Supports consistent risk comparisons and helps route higher-risk applications for closer review.</p>
+              <p class="project-description">I trained a class-weighted Random Forest on 85,012 loans and evaluated it on 18,218 held-out loans.</p>
+              <p class="business-impact"><span>Business impact</span> At the tested threshold, underwriters would review 1,380 loans to identify 787 defaults.</p>
             </div>
             <aside class="project-result">
               <strong>0.737</strong>
               <span class="result-label">held-out ROC-AUC</span>
-              <span class="result-detail">84.7% accuracy · 148,670 records</span>
+              <span class="result-detail">26.5% default recall · 18,218 test loans</span>
               <div class="project-links">
                 <a class="case-study-link" href="project-loan-default-risk.html">Case study <span aria-hidden="true">↗</span></a>
                 <a href="https://github.com/jessecoggins/loan-default-risk-capstone" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a>
@@ -236,7 +236,7 @@
                               <button type="button" class="tag-chip" data-tag="M.S. coursework" aria-pressed="false">M.S. coursework</button>
               </div>
               <p class="project-description">An end-to-end delay prediction workflow with versioned data, experiment tracking, a Dockerized FastAPI service, and automated CI.</p>
-              <p class="business-impact"><span>Business impact</span> Makes prediction outputs repeatable and accessible for schedule planning and passenger updates.</p>
+              <p class="business-impact"><span>Business impact</span> Planners can compare average Atlanta departure delays by route and schedule. The evaluation excludes delays of an hour or more.</p>
             </div>
             <aside class="project-result">
               <strong>8.92 min</strong>
@@ -291,13 +291,13 @@
                 <button type="button" class="tag-chip" data-tag="Statistics" aria-pressed="false">Statistics</button>
                               <button type="button" class="tag-chip" data-tag="M.S. coursework" aria-pressed="false">M.S. coursework</button>
               </div>
-              <p class="project-description">An ARIMA forecast built from 731 daily revenue observations, with stationarity testing, differencing, parameter selection, and holdout evaluation.</p>
-              <p class="business-impact"><span>Business impact</span> Offers a baseline for revenue planning and variance monitoring from daily sales history.</p>
+              <p class="project-description">I evaluated forecasts of daily revenue changes on 146 later days and refitted the model through day 731 for a 30-day projection.</p>
+              <p class="business-impact"><span>Business impact</span> Assuming no daily change gave finance staff slightly lower errors on this test period.</p>
             </div>
             <aside class="project-result">
               <strong>0.4887</strong>
-              <span class="result-label">holdout RMSE</span>
-              <span class="result-detail">0.3766 MAE · 731 observations</span>
+              <span class="result-label">daily-change RMSE ($ millions)</span>
+              <span class="result-detail">0.4860 RMSE with no change</span>
               <div class="project-links">
                 <a class="case-study-link" href="project-revenue-forecasting.html">Case study <span aria-hidden="true">↗</span></a>
                 <a href="https://github.com/jessecoggins/revenue-forecasting-arima" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a>
@@ -320,11 +320,11 @@
                               <button type="button" class="tag-chip" data-tag="M.S. coursework" aria-pressed="false">M.S. coursework</button>
               </div>
               <p class="project-description">A normalized PostgreSQL model across five tables and 100,000 records, paired with a MongoDB implementation, ETL staging, indexes, and analytical queries.</p>
-              <p class="business-impact"><span>Business impact</span> Organizes sales and product records for consistent inventory, customer, and performance reporting.</p>
+              <p class="business-impact"><span>Business impact</span> Managers can compare quarterly and regional profit. The regional report took 89 ms before indexing and 71 ms after in the coursework timing check.</p>
             </div>
             <aside class="project-result">
               <strong>100K</strong>
-              <span class="result-label">records across 5 tables</span>
+              <span class="result-label">sales records</span>
               <span class="result-detail">3NF PostgreSQL · MongoDB</span>
               <div class="project-links">
                 <a class="case-study-link" href="project-ecomart-database-design.html">Case study <span aria-hidden="true">↗</span></a>
@@ -347,12 +347,12 @@
                               <button type="button" class="tag-chip" data-tag="M.S. coursework" aria-pressed="false">M.S. coursework</button>
               </div>
               <p class="project-description">A bidirectional LSTM sentiment classifier with tokenization, sequence preparation, padding, and labeled test-set evaluation.</p>
-              <p class="business-impact"><span>Business impact</span> Turns text into consistent sentiment signals for tracking customer experience themes.</p>
+              <p class="business-impact"><span>Business impact</span> A trial review queue flagged 49 movie reviews, including 34 negative and 15 positive reviews.</p>
             </div>
             <aside class="project-result">
               <strong>76%</strong>
               <span class="result-label">test accuracy</span>
-              <span class="result-detail">0.72 F1 score</span>
+              <span class="result-detail">0.72 F1 for positive reviews</span>
               <div class="project-links">
                 <a class="case-study-link" href="project-sentiment-analysis-bilstm.html">Case study <span aria-hidden="true">↗</span></a>
                 <a href="https://github.com/jessecoggins/sentiment-analysis-bilstm" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a>

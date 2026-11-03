@@ -61,7 +61,7 @@
       <div class="detail-overview">
         <section class="impact-panel" aria-labelledby="impact-heading">
           <p class="detail-label" id="impact-heading">Business impact</p>
-          <p>Makes delay estimates repeatable and accessible to support schedule planning and timely passenger updates.</p>
+          <p>An airline planner can compare average Atlanta departure delays by destination and scheduled times. The evaluation excluded departures delayed by an hour or more.</p>
         </section>
         <div class="detail-metrics" aria-label="Key project results">
           <div class="detail-metric"><strong>8.92 min</strong><span>Held-out test RMSE</span></div>
@@ -74,7 +74,7 @@
         <article class="detail-story">
           <section class="detail-section">
             <p class="detail-label">Business question</p>
-            <h2>Can a repeatable workflow estimate average departure delay for flights leaving a selected origin airport?</h2>
+            <h2>How accurately can a planner estimate the average departure delay for a given Atlanta route and schedule?</h2>
           </section>
           <section class="detail-section">
             <p class="detail-label">Approach</p>
@@ -88,7 +88,7 @@
             <h2>What the analysis shows</h2>
             <ul><li>The selected Ridge alpha was 3.8; held-out test RMSE was 8.92 minutes and MSE was 79.65.</li>
                 <li>The pipeline logs a mean predicted delay of 4.48 minutes for the evaluated test data.</li>
-                <li>The API makes the model available through a repeatable request-response workflow.</li></ul>
+                <li>The API returns a route-and-schedule average. Individual flights and major disruptions can depart much later.</li></ul>
           </section>
           
           <section class="detail-section" style="margin-top:20px">
