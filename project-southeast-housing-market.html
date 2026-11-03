@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Southeast Housing Market Analysis — Jesse Coggins</title>
+    <meta name="description" content="A comparison of Southeast metro areas using housing costs, population growth and employment data from the Census Bureau, FHFA and BLS." />
+    <meta name="author" content="Jesse Coggins" />
+    <meta name="theme-color" content="#f3f0e6" />
+    <link rel="canonical" href="https://jessecoggins.github.io/project-southeast-housing-market.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Southeast Housing Market Analysis — Jesse Coggins" />
+    <meta property="og:description" content="A comparison of Southeast metro areas using housing costs, population growth and employment data from the Census Bureau, FHFA and BLS." />
+    <meta property="og:url" content="https://jessecoggins.github.io/project-southeast-housing-market.html" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=project-first-homepage-20261102" />
+    <link rel="stylesheet" href="project-detail.css?v=project-summaries-20261102" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to project summary</a>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="index.html#top" aria-label="Jesse Coggins home">
+          <span class="brand-name">Jesse Coggins</span>
+          <span class="brand-role">Data &amp; Analytics</span>
+        </a>
+        <nav class="profile-links" aria-label="Professional links">
+          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer"><span>LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="profile-link" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer"><span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container detail-page">
+      <a class="detail-back" href="index.html#projects"><span aria-hidden="true">←</span> All projects</a>
+      <header class="detail-hero">
+        <div class="detail-meta">
+          <span>Analytics &amp; BI</span><span class="meta-divider">/</span><span>Regional analysis</span>
+          <span class="meta-divider">/</span><span>Project 11 of 11</span>
+          <span class="coursework">Independent project</span>
+        </div>
+        <h1>Southeast Housing Market Analysis</h1>
+        <p class="detail-lede">A comparison of Southeast metro areas using housing costs, population growth and employment data from the Census Bureau, FHFA and BLS.</p>
+        <div class="detail-tags" aria-label="Project tags">
+          <a class="detail-tag" href="?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
+          <a class="detail-tag" href="?tag=Housing#projects" aria-label="Filter homepage projects by Housing">Housing</a>
+          <a class="detail-tag" href="?tag=Census#projects" aria-label="Filter homepage projects by Census">Census</a>
+          <a class="detail-tag" href="?tag=Labor%20market#projects" aria-label="Filter homepage projects by Labor market">Labor market</a>
+          <a class="detail-tag" href="?tag=Regional%20analysis#projects" aria-label="Filter homepage projects by Regional analysis">Regional analysis</a>
+        </div>
+      </header>
+
+      <div class="detail-overview">
+        <section class="impact-panel" aria-labelledby="impact-heading">
+          <p class="detail-label" id="impact-heading">Business impact</p>
+          <p>Helps a reader distinguish a low-cost market from one where population and employment are also growing.</p>
+        </section>
+        <div class="detail-metrics" aria-label="Key project results">
+          <div class="detail-metric"><strong>Huntsville, AL</strong><span>Top overall and balance scores</span></div>
+          <div class="detail-metric"><strong>3</strong><span>Scoring dimensions</span></div>
+          <div class="detail-metric"><strong>2019–2023</strong><span>Population growth comparison</span></div>
+        </div>
+      </div>
+
+      <div class="detail-content">
+        <article class="detail-story">
+          <section class="detail-section">
+            <p class="detail-label">Business question</p>
+            <h2>Which Southeast metros combine attainable housing costs with growth and a resilient labor market?</h2>
+          </section>
+          <section class="detail-section">
+            <p class="detail-label">Method</p>
+            <h2>Compare each metro against its peers</h2>
+            <p>The pipeline combines Census housing, income and population estimates with FHFA house price data and BLS labor-market measures. It ranks inputs across metros and combines them into affordability, growth and labor-market scores. The overall score weights the three dimensions at 33%, 34% and 33%.</p>
+            <p>A second score takes the geometric mean of growth and labor-market strength. A metro that scores poorly on either measure falls in that ranking, even when housing is inexpensive.</p>
+          </section>
+          <section class="detail-section">
+            <p class="detail-label">Results</p>
+            <h2>Huntsville leads on both measures</h2>
+            <p>Huntsville, Alabama, ranks first on both scores in the project snapshot. Fayetteville–Springdale–Rogers and Nashville follow on the balance score. Florence–Muscle Shoals and Decatur lead on affordability but have weaker growth signals.</p>
+          </section>
+          <aside class="detail-note"><p class="detail-label">Scope</p><p>These rankings compare the metros and data vintages in the notebook. The separate coursework housing models analyze individual properties.</p></aside>
+        </article>
+
+        <aside class="detail-aside" aria-label="Project details and links">
+          <h2>Project details</h2>
+          <dl class="detail-facts">
+            <div class="detail-fact"><dt>Geography</dt><dd>Southeast U.S. metro areas</dd></div>
+            <div class="detail-fact"><dt>Sources</dt><dd>Census, FHFA and BLS</dd></div>
+            <div class="detail-fact"><dt>Method</dt><dd>Percentile ranks and weighted scores</dd></div></dl>
+          <div class="detail-resource-links"><a href="https://github.com/JesseCoggins/southeast-housing-market-analysis" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
+        </aside>
+      </div>
+
+      <nav class="detail-pagination" aria-label="Other projects">
+        <a href="project-cargo-network-optimization.html"><span>← Previous project</span><strong>Cargo Network Optimization</strong></a>
+      </nav>
+    </main>
+
+    <footer class="detail-footer">
+      <div class="container footer-inner">
+        <a href="mailto:jessecoggins21@gmail.com">jessecoggins21@gmail.com <span aria-hidden="true">↗</span></a>
+        <span>Jesse Coggins · 2026</span>
+        <a href="index.html#projects">All projects ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
