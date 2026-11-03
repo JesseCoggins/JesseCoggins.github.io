@@ -87,7 +87,7 @@
             <h2>What the analysis shows</h2>
             <ul><li>The full discharge-time model achieved 98.0% accuracy, 96.4% precision, 98.2% recall, 0.973 F1, and 0.999 ROC-AUC.</li>
                 <li>Removing Initial_days reduced ROC-AUC to 0.498, near chance; the full score therefore describes discharge-time stratification, not pre-admission prediction.</li>
-                <li>The clinical clusters describe differences in age, length of stay and charges. Cluster membership alone does not estimate future readmission risk.</li></ul>
+                <li>The published clustering notebook segments eight patient-experience survey ratings. The companion report images describe a separate analysis of clinical features.</li></ul>
           </section>
           <aside class="detail-note"><p class="detail-label">Scope and context</p><p>Initial_days records length of stay. Because that value is only known after admission, the 0.999 ROC-AUC is a discharge-time result; the model without that feature reaches 0.498 ROC-AUC.</p></aside>
           <section class="detail-section" style="margin-top:20px">
