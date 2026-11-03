@@ -548,6 +548,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
   .profile-link { min-height: 32px; font-size: 10px; }
   .projects-section { padding-top: 31px; }
   .search-sort-row { align-items: stretch; flex-direction: column; gap: 8px; }
+  .search-box { flex: 0 0 auto; }
   .sort-box { justify-content: space-between; }
   .sort-box select { max-width: none; flex: 1; }
   .project-row { grid-template-columns: 26px minmax(0, 1fr); gap: 5px 10px; padding: 19px 0 20px; }
