@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=project-first-homepage-20261102" />
-    <link rel="stylesheet" href="project-detail.css?v=project-summaries-20261102" />
+    <link rel="stylesheet" href="project-detail.css?v=project-visuals-20261103" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to project summary</a>
@@ -91,6 +91,30 @@
                 <li>The top Apriori rules had 1.13% support, 100% confidence, and lift 88.2; the strongest rules linked themed children’s gift items.</li>
                 <li>The employee-turnover cleaning workflow produced a validated 4,464-row output from 10,199 source rows.</li></ul>
           </section>
+          <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
+            <p class="detail-label">From the project</p>
+            <h2 id="visuals-heading">Inspecting the housing models</h2>
+            <figure class="project-figure">
+              <a class="project-image-link" href="https://raw.githubusercontent.com/JesseCoggins/statistical-analysis-and-market-basket/b27db3b874b18c8c6774e11e6a6abff45ea6722d/assets/housing/residuals.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Checking the price model’s errors">
+                <img src="https://raw.githubusercontent.com/JesseCoggins/statistical-analysis-and-market-basket/b27db3b874b18c8c6774e11e6a6abff45ea6722d/assets/housing/residuals.png" alt="Scatterplot of home-price residuals against fitted prices, showing a wide spread around the zero line." width="733" height="547" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>
+                <h3>Checking the price model’s errors</h3>
+                <p>The spread and large residuals show where individual price estimates can miss. These diagnostics provide context for the reduced model’s 29.5% training R².</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/statistical-analysis-and-market-basket/blob/main/notebooks/linear_regression.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="https://raw.githubusercontent.com/JesseCoggins/statistical-analysis-and-market-basket/b27db3b874b18c8c6774e11e6a6abff45ea6722d/assets/housing/residuals.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+              </figcaption>
+            </figure>
+            <figure class="project-figure">
+              <a class="project-image-link" href="https://raw.githubusercontent.com/JesseCoggins/statistical-analysis-and-market-basket/b27db3b874b18c8c6774e11e6a6abff45ea6722d/assets/housing/scree.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Choosing a smaller representation">
+                <img src="https://raw.githubusercontent.com/JesseCoggins/statistical-analysis-and-market-basket/b27db3b874b18c8c6774e11e6a6abff45ea6722d/assets/housing/scree.png" alt="Scree plot showing explained predictor variance declining across thirteen principal components." width="790" height="490" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>
+                <h3>Choosing a smaller representation</h3>
+                <p>The first components capture the largest shares of variation in the predictors. This plot helps assess dimension reduction before examining the regression on home price.</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/statistical-analysis-and-market-basket/blob/main/notebooks/pca_analysis.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="https://raw.githubusercontent.com/JesseCoggins/statistical-analysis-and-market-basket/b27db3b874b18c8c6774e11e6a6abff45ea6722d/assets/housing/scree.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+              </figcaption>
+            </figure>
+          </section>
           <section class="detail-section">
             <p class="detail-label">Housing analysis</p>
             <h2>Three models on 7,000 properties</h2>
@@ -109,7 +133,7 @@
           <dl class="detail-facts"><div class="detail-fact"><dt>Collection</dt><dd>Seven analytics notebooks</dd></div>
               <div class="detail-fact"><dt>Market basket</dt><dd>8,234 line items · 441 baskets</dd></div>
               <div class="detail-fact"><dt>Methods</dt><dd>Regression · PCA · hypothesis tests · Apriori</dd></div></dl>
-          <div class="detail-resource-links"><a href="https://github.com/JesseCoggins/statistical-analysis-and-market-basket/tree/main/notebooks" target="_blank" rel="noreferrer">Explore the modeling notebooks <span aria-hidden="true">↗</span></a><a href="https://github.com/jessecoggins/statistical-analysis-and-market-basket" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
+          <div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/JesseCoggins/statistical-analysis-and-market-basket/tree/main/notebooks" target="_blank" rel="noreferrer">Explore the modeling notebooks <span aria-hidden="true">↗</span></a><a href="https://github.com/jessecoggins/statistical-analysis-and-market-basket" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
         </aside>
       </div>
 

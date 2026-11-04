@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=project-first-homepage-20261102" />
-    <link rel="stylesheet" href="project-detail.css?v=project-summaries-20261102" />
+    <link rel="stylesheet" href="project-detail.css?v=project-visuals-20261103" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to project summary</a>
@@ -87,6 +87,20 @@
                 <li>At the tested threshold, 1,380 loans were flagged. Of those, 787 defaulted and 593 were repaid. Another 2,186 defaults went unflagged.</li>
                 <li>The project frames the score as underwriting decision support rather than an automatic approval rule.</li></ul>
           </section>
+          <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
+            <p class="detail-label">From the project</p>
+            <h2 id="visuals-heading">What the risk score means for an underwriter</h2>
+            <figure class="project-figure">
+              <a class="project-image-link" href="assets/project-visuals/loan-test-results.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Caught defaults and review workload">
+                <img src="assets/project-visuals/loan-test-results.png" alt="Stakeholder slide showing 14,652 correctly cleared loans, 593 false alarms, 2,186 missed defaults and 787 caught defaults." width="1440" height="810" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>
+                <h3>Caught defaults and review workload</h3>
+                <p>Slide 9 of the published stakeholder presentation translates test performance into cases. Reviewing all 1,380 flagged loans would identify 787 defaults at this threshold.</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/loan-default-risk-capstone/blob/main/docs/loan-default-presentation.pdf#page=9" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/loan-test-results.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+              </figcaption>
+            </figure>
+          </section>
           <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The 0.737 ROC-AUC summarizes ranking performance across thresholds. Recall at the selected test threshold is 26.5%, so it should not be read as a complete default-detection system.</p></aside>
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
@@ -100,7 +114,7 @@
           <dl class="detail-facts"><div class="detail-fact"><dt>Source data</dt><dd>148,670 records · 34 columns</dd></div>
               <div class="detail-fact"><dt>Modeling data</dt><dd>121,447 complete records</dd></div>
               <div class="detail-fact"><dt>Method</dt><dd>Class-weighted Random Forest · 5-fold CV</dd></div></dl>
-          <div class="detail-resource-links"><a href="https://github.com/JesseCoggins/loan-default-risk-capstone/blob/main/docs/loan-default-presentation.pdf" target="_blank" rel="noreferrer">View the stakeholder presentation <span aria-hidden="true">↗</span></a><a href="https://github.com/JesseCoggins/loan-default-risk-capstone/blob/main/docs/loan-default-report.pdf" target="_blank" rel="noreferrer">Read the full report <span aria-hidden="true">↗</span></a><a href="https://github.com/jessecoggins/loan-default-risk-capstone" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
+          <div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/JesseCoggins/loan-default-risk-capstone/blob/main/docs/loan-default-presentation.pdf" target="_blank" rel="noreferrer">View the stakeholder presentation <span aria-hidden="true">↗</span></a><a href="https://github.com/JesseCoggins/loan-default-risk-capstone/blob/main/docs/loan-default-report.pdf" target="_blank" rel="noreferrer">Read the full report <span aria-hidden="true">↗</span></a><a href="https://github.com/jessecoggins/loan-default-risk-capstone" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
         </aside>
       </div>
 

@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=project-first-homepage-20261102" />
-    <link rel="stylesheet" href="project-detail.css?v=project-summaries-20261102" />
+    <link rel="stylesheet" href="project-detail.css?v=project-visuals-20261103" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to project summary</a>
@@ -88,6 +88,20 @@
                 <li>CVG was fully utilized at 95,650 tons; AFW carried 38,097 of 44,350 available tons.</li>
                 <li>Saved verification outputs show hub, focus-city, demand, and flow-balance constraints were satisfied.</li></ul>
           </section>
+          <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
+            <p class="detail-label">From the project</p>
+            <h2 id="visuals-heading">Verifying the shipment plan</h2>
+            <figure class="project-figure project-figure--portrait">
+              <a class="project-image-link" href="https://raw.githubusercontent.com/JesseCoggins/cargo-network-optimization/153bc0f3fe255129ee61132fa7fb16238df658b6/assets/report-extracts/report_image_02.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Capacity, flow and demand checks">
+                <img src="https://raw.githubusercontent.com/JesseCoggins/cargo-network-optimization/153bc0f3fe255129ee61132fa7fb16238df658b6/assets/report-extracts/report_image_02.png" alt="Original notebook code and output checking both hub capacities, intermediate-city flow balance and demand satisfaction." width="665" height="949" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>
+                <h3>Capacity, flow and demand checks</h3>
+                <p>The saved output confirms that CVG uses all 95,650 tons of capacity, AFW uses 38,097 of 44,350 tons, and every demand center receives its required shipment.</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/cargo-network-optimization/blob/main/notebooks/optimization.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="https://raw.githubusercontent.com/JesseCoggins/cargo-network-optimization/153bc0f3fe255129ee61132fa7fb16238df658b6/assets/report-extracts/report_image_02.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+              </figcaption>
+            </figure>
+          </section>
           <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The $200,863.75 value is the model’s optimized objective for the provided network inputs; it is not a measured real-world savings figure.</p></aside>
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
@@ -101,7 +115,7 @@
           <dl class="detail-facts"><div class="detail-fact"><dt>Method</dt><dd>Linear programming</dd></div>
               <div class="detail-fact"><dt>Objective</dt><dd>Minimize modeled shipping cost</dd></div>
               <div class="detail-fact"><dt>Solver</dt><dd>PuLP · optimal solution</dd></div></dl>
-          <div class="detail-resource-links"><a href="https://github.com/JesseCoggins/cargo-network-optimization/blob/main/docs/abc-logistics-routing.md" target="_blank" rel="noreferrer">Read the ABC Logistics routing proposal <span aria-hidden="true">↗</span></a><a href="https://github.com/jessecoggins/cargo-network-optimization" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
+          <div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/JesseCoggins/cargo-network-optimization/blob/main/docs/abc-logistics-routing.md" target="_blank" rel="noreferrer">Read the ABC Logistics routing proposal <span aria-hidden="true">↗</span></a><a href="https://github.com/jessecoggins/cargo-network-optimization" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
         </aside>
       </div>
 

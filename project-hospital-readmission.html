@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=project-first-homepage-20261102" />
-    <link rel="stylesheet" href="project-detail.css?v=project-summaries-20261102" />
+    <link rel="stylesheet" href="project-detail.css?v=project-visuals-20261103" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to project summary</a>
@@ -89,6 +89,20 @@
                 <li>Removing Initial_days reduced ROC-AUC to 0.498, near chance; the full score therefore describes discharge-time stratification, not pre-admission prediction.</li>
                 <li>The clinical clustering notebook uses 14 features. One group averaged 9 days in hospital, another averaged 60 days, and the oldest group averaged 74 years. These profiles describe the three groups. They do not establish future readmission risk.</li></ul>
           </section>
+          <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
+            <p class="detail-label">From the project</p>
+            <h2 id="visuals-heading">Choosing the number of patient groups</h2>
+            <figure class="project-figure">
+              <a class="project-image-link" href="https://raw.githubusercontent.com/JesseCoggins/hospital-readmission-ml/bb55aa8ff551a00e8634160d3471d51adb40568c/assets/task2-report-extracts/report_image_08.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: The clustering tradeoff">
+                <img src="https://raw.githubusercontent.com/JesseCoggins/hospital-readmission-ml/bb55aa8ff551a00e8634160d3471d51adb40568c/assets/task2-report-extracts/report_image_08.png" alt="Elbow plot showing within-cluster sum of squares decreasing as the number of clusters increases from one to ten." width="713" height="470" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>
+                <h3>The clustering tradeoff</h3>
+                <p>The early reductions in within-group variation informed the choice of three clusters. This is evidence about grouping similar records. The separate classification analysis evaluates readmission prediction.</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/hospital-readmission-ml/blob/main/notebooks/readmission_clustering_pca.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="https://raw.githubusercontent.com/JesseCoggins/hospital-readmission-ml/bb55aa8ff551a00e8634160d3471d51adb40568c/assets/task2-report-extracts/report_image_08.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+              </figcaption>
+            </figure>
+          </section>
           <aside class="detail-note"><p class="detail-label">Scope and context</p><p>Initial_days records length of stay. Because that value is only known after admission, the 0.999 ROC-AUC is a discharge-time result; the model without that feature reaches 0.498 ROC-AUC.</p></aside>
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
@@ -102,7 +116,7 @@
           <dl class="detail-facts"><div class="detail-fact"><dt>Supervised method</dt><dd>Random Forest classification</dd></div>
               <div class="detail-fact"><dt>Unsupervised methods</dt><dd>K-Means · PCA</dd></div>
               <div class="detail-fact"><dt>Segmentation</dt><dd>3 patient clusters</dd></div></dl>
-          <div class="detail-resource-links"><a href="https://github.com/JesseCoggins/hospital-readmission-ml#results" target="_blank" rel="noreferrer">Read the sensitivity check <span aria-hidden="true">↗</span></a>
+          <div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/JesseCoggins/hospital-readmission-ml#results" target="_blank" rel="noreferrer">Read the sensitivity check <span aria-hidden="true">↗</span></a>
               <a href="https://github.com/jessecoggins/hospital-readmission-ml" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
         </aside>
       </div>

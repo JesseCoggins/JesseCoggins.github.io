@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=project-first-homepage-20261102" />
-    <link rel="stylesheet" href="project-detail.css?v=project-summaries-20261102" />
+    <link rel="stylesheet" href="project-detail.css?v=project-visuals-20261103" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to project summary</a>
@@ -88,6 +88,20 @@
                 <li>High precision means positive predictions were usually correct in this test set; lower recall means some positive reviews were missed.</li>
                 <li>The trained Keras model is included in the repository so it can be inspected or loaded without retraining.</li></ul>
           </section>
+          <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
+            <p class="detail-label">From the project</p>
+            <h2 id="visuals-heading">Why validation mattered during training</h2>
+            <figure class="project-figure">
+              <a class="project-image-link" href="https://raw.githubusercontent.com/JesseCoggins/sentiment-analysis-bilstm/a809dfe243ce9a60b7a433c65420846aa20da71f/assets/report-extracts/report_image_03.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Training fit and unseen reviews">
+                <img src="https://raw.githubusercontent.com/JesseCoggins/sentiment-analysis-bilstm/a809dfe243ce9a60b7a433c65420846aa20da71f/assets/report-extracts/report_image_03.png" alt="Training loss decreases while validation loss rises sharply after the third recorded epoch." width="567" height="455" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>
+                <h3>Training fit and unseen reviews</h3>
+                <p>The model continues to fit training reviews while validation loss worsens. This divergence explains why early stopping and a separate test set matter for evaluating new reviews.</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/sentiment-analysis-bilstm/blob/main/notebooks/sentiment_bilstm.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="https://raw.githubusercontent.com/JesseCoggins/sentiment-analysis-bilstm/a809dfe243ce9a60b7a433c65420846aa20da71f/assets/report-extracts/report_image_03.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+              </figcaption>
+            </figure>
+          </section>
           <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The model flagged 49 of 75 IMDb test reviews as negative. Those included 34 negative and 15 positive reviews. The coursework tokenizer saw the full review vocabulary. A customer-support trial would need a vocabulary fitted on training data and evaluation on support messages.</p></aside>
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
@@ -101,7 +115,7 @@
           <dl class="detail-facts"><div class="detail-fact"><dt>Dataset</dt><dd>IMDb labeled sentences · 748 reviews</dd></div>
               <div class="detail-fact"><dt>Model</dt><dd>100-d embedding · 128-unit BiLSTM</dd></div>
               <div class="detail-fact"><dt>Artifact</dt><dd>Saved Keras model included</dd></div></dl>
-          <div class="detail-resource-links"><a href="https://github.com/jessecoggins/sentiment-analysis-bilstm" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
+          <div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/jessecoggins/sentiment-analysis-bilstm" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
         </aside>
       </div>
 

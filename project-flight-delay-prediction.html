@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=project-first-homepage-20261102" />
-    <link rel="stylesheet" href="project-detail.css?v=project-summaries-20261102" />
+    <link rel="stylesheet" href="project-detail.css?v=project-visuals-20261103" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to project summary</a>
@@ -90,6 +90,20 @@
                 <li>The pipeline logs a mean predicted delay of 4.48 minutes for the evaluated test data.</li>
                 <li>The API returns a route-and-schedule average. Individual flights and major disruptions can depart much later.</li></ul>
           </section>
+          <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
+            <p class="detail-label">From the project</p>
+            <h2 id="visuals-heading">Where the delay estimates miss</h2>
+            <figure class="project-figure">
+              <a class="project-image-link" href="https://raw.githubusercontent.com/JesseCoggins/flight-delay-mlops/d06a334b7465696c5935034469c8d8ecc2cb083f/assets/performance_plot.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Predicted and observed average delays">
+                <img src="https://raw.githubusercontent.com/JesseCoggins/flight-delay-mlops/d06a334b7465696c5935034469c8d8ecc2cb083f/assets/performance_plot.png" alt="Line chart with actual delays in blue and predictions in orange, with actual values varying more widely." width="640" height="480" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>
+                <h3>Predicted and observed average delays</h3>
+                <p>The saved coursework plot shows predictions concentrated near typical delays while observed averages have larger spikes. The horizontal axis lists evaluated samples. The held-out RMSE is 8.92 minutes.</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/flight-delay-mlops/blob/main/notebooks/flight_delay_mlflow_tracking.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="https://raw.githubusercontent.com/JesseCoggins/flight-delay-mlops/d06a334b7465696c5935034469c8d8ecc2cb083f/assets/performance_plot.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+              </figcaption>
+            </figure>
+          </section>
           
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
@@ -103,7 +117,7 @@
           <dl class="detail-facts"><div class="detail-fact"><dt>Prediction target</dt><dd>Average departure delay in minutes</dd></div>
               <div class="detail-fact"><dt>Model</dt><dd>Ridge regression</dd></div>
               <div class="detail-fact"><dt>Delivery</dt><dd>DVC · MLflow · FastAPI · Docker · GitLab CI/CD</dd></div></dl>
-          <div class="detail-resource-links"><a href="https://github.com/JesseCoggins/flight-delay-mlops/blob/main/docs/kronkers-mlops-design.md" target="_blank" rel="noreferrer">Read the Kronkers grocery MLOps design <span aria-hidden="true">↗</span></a><a href="https://github.com/jessecoggins/flight-delay-mlops" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
+          <div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/JesseCoggins/flight-delay-mlops/blob/main/docs/kronkers-mlops-design.md" target="_blank" rel="noreferrer">Read the Kronkers grocery MLOps design <span aria-hidden="true">↗</span></a><a href="https://github.com/jessecoggins/flight-delay-mlops" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
         </aside>
       </div>
 

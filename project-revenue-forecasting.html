@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=project-first-homepage-20261102" />
-    <link rel="stylesheet" href="project-detail.css?v=project-summaries-20261102" />
+    <link rel="stylesheet" href="project-detail.css?v=project-visuals-20261103" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to project summary</a>
@@ -88,6 +88,30 @@
                 <li>For the 30-day projection, the portfolio version refits the model on all 731 revenue observations. It forecasts daily revenue levels for days 732–761 with model-based 95% prediction intervals.</li>
                 <li>The submitted MAE was 0.3766. Correcting a one-day offset pairs the first forecast step with the first test day.</li></ul>
           </section>
+          <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
+            <p class="detail-label">From the project</p>
+            <h2 id="visuals-heading">Forecast error and uncertainty</h2>
+            <figure class="project-figure">
+              <a class="project-image-link" href="assets/project-visuals/revenue-holdout.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: The chronological holdout">
+                <img src="assets/project-visuals/revenue-holdout.png" alt="Observed daily revenue changes and ARIMA predictions for days 586 through 731, with individual 95 percent prediction intervals." width="990" height="490" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>
+                <h3>The chronological holdout</h3>
+                <p>These are the 146 forecasts used for evaluation, all issued at day 585. Assuming no daily change gave slightly lower MAE and RMSE. Values are in millions of dollars.</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/revenue-forecasting-arima/blob/main/notebooks/revenue_arima_forecast.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/revenue-holdout.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+              </figcaption>
+            </figure>
+            <figure class="project-figure">
+              <a class="project-image-link" href="assets/project-visuals/revenue-forward.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: The next 30 days">
+                <img src="assets/project-visuals/revenue-forward.png" alt="Revenue forecast for days 732 through 761 with widening 95 percent prediction intervals after the final observed day." width="989" height="490" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>
+                <h3>The next 30 days</h3>
+                <p>The corrected portfolio notebook refits through day 731 before projecting revenue levels. The widening interval shows how uncertainty grows over the month.</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/revenue-forecasting-arima/blob/main/notebooks/revenue_arima_forecast.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/revenue-forward.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+              </figcaption>
+            </figure>
+          </section>
           
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
@@ -101,7 +125,7 @@
           <dl class="detail-facts"><div class="detail-fact"><dt>Dataset</dt><dd>731 daily revenue observations</dd></div>
               <div class="detail-fact"><dt>Evaluation split</dt><dd>584 train · 146 test after differencing</dd></div>
               <div class="detail-fact"><dt>Model</dt><dd>AR(1) on daily changes · ARIMA(1,1,0) with drift on levels</dd></div></dl>
-          <div class="detail-resource-links"><a href="https://github.com/jessecoggins/revenue-forecasting-arima" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
+          <div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/jessecoggins/revenue-forecasting-arima" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
         </aside>
       </div>
 
