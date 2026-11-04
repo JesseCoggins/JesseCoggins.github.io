@@ -122,6 +122,35 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 }
 .link-arrow { color: var(--rust); font-size: 12px; }
 
+.intro-section {
+  padding: clamp(32px, 5vw, 56px) 0 32px;
+  border-bottom: 1px solid var(--line);
+}
+.intro-section h1 {
+  margin: 0 0 20px;
+  font-family: var(--serif);
+  font-size: clamp(42px, 6vw, 64px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -.035em;
+}
+.intro-copy {
+  max-width: 780px;
+  color: var(--ink-soft);
+  font-size: clamp(14px, 1.6vw, 16px);
+  line-height: 1.75;
+}
+.intro-copy p { margin: 0; }
+.intro-copy p + p { margin-top: 12px; }
+.intro-location {
+  margin: 20px 0 0;
+  color: var(--sage-dark);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.intro-location span { margin-inline: 5px; }
+
 .projects-section { padding: 40px 0 56px; }
 .section-title-row {
   display: flex;
@@ -130,7 +159,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
   gap: 16px;
   margin-bottom: 18px;
 }
-.section-title-row h1 {
+.section-title-row h2 {
   margin: 0;
   font-family: var(--serif);
   font-size: clamp(38px, 5.2vw, 54px);
@@ -404,7 +433,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
   text-transform: uppercase;
 }
 .kicker-divider { color: var(--line-strong); }
-.project-main h2 {
+.project-main :is(h2, h3) {
   margin: 5px 0 7px;
   color: var(--ink);
   font-family: var(--serif);
@@ -576,21 +605,21 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
   cursor: pointer;
   transition: background-color .16s ease;
 }
-.project-row .project-main h2 a {
+.project-row .project-main :is(h2, h3) a {
   color: inherit;
   text-decoration: none;
 }
-.project-row .project-main h2 a::after {
+.project-row .project-main :is(h2, h3) a::after {
   position: absolute;
   z-index: 1;
   inset: 0;
   content: "";
   cursor: pointer;
 }
-.project-row .project-main h2 a:focus-visible {
+.project-row .project-main :is(h2, h3) a:focus-visible {
   outline: none;
 }
-.project-row .project-main h2 a:focus-visible::after {
+.project-row .project-main :is(h2, h3) a:focus-visible::after {
   outline: 2px solid var(--rust);
   outline-offset: 3px;
 }
