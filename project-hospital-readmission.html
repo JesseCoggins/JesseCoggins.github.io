@@ -64,7 +64,7 @@
         </section>
         <div class="detail-metrics" aria-label="Key project results">
           <div class="detail-metric"><strong>0.999</strong><span>ROC-AUC at discharge</span></div>
-              <div class="detail-metric"><strong>0.498</strong><span>ROC-AUC without Initial_days</span></div>
+              <div class="detail-metric"><strong>0.492</strong><span>ROC-AUC without Initial_days</span></div>
               <div class="detail-metric"><strong>k = 3</strong><span>Patient segments</span></div>
         </div>
       </div>
@@ -79,14 +79,14 @@
             <p class="detail-label">Approach</p>
             <h2>How the work was done</h2>
             <ul><li>Tuned a Random Forest classification workflow and evaluated it on a held-out test set.</li>
-                <li>Ran a feature-timing sensitivity check that removed Initial_days, a length-of-stay value known only after admission.</li>
+                <li>In the verified portfolio rerun, ran a feature-timing sensitivity check that removed Initial_days, a length-of-stay value known only after admission.</li>
                 <li>Used the Elbow Method to select three K-Means segments, then applied PCA to inspect cluster separation and profiles.</li></ul>
           </section>
           <section class="detail-section">
             <p class="detail-label">Results</p>
             <h2>What the analysis shows</h2>
-            <ul><li>The full discharge-time model achieved 98.0% accuracy, 96.4% precision, 98.2% recall, 0.973 F1, and 0.999 ROC-AUC.</li>
-                <li>Removing Initial_days reduced ROC-AUC to 0.498, near chance; the full score therefore describes discharge-time stratification, not pre-admission prediction.</li>
+            <ul><li>The full discharge-time model achieved 97.9% accuracy, 96.3% precision, 98.0% recall, 0.971 F1, and 0.999 ROC-AUC.</li>
+                <li>Removing Initial_days reduced ROC-AUC to 0.492, near chance; the full score therefore describes discharge-time stratification, not pre-admission prediction.</li>
                 <li>The clinical clustering notebook uses 14 features. One group averaged 9 days in hospital, another averaged 60 days, and the oldest group averaged 74 years. These profiles describe the three groups. They do not establish future readmission risk.</li></ul>
           </section>
           <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
@@ -103,7 +103,7 @@
               </figcaption>
             </figure>
           </section>
-          <aside class="detail-note"><p class="detail-label">Scope and context</p><p>Initial_days records length of stay. Because that value is only known after admission, the 0.999 ROC-AUC is a discharge-time result; the model without that feature reaches 0.498 ROC-AUC.</p></aside>
+          <aside class="detail-note"><p class="detail-label">Scope and context</p><p>Initial_days records length of stay. Because that value is only known after admission, the 0.999 ROC-AUC is a discharge-time result; the model without that feature reaches 0.492 ROC-AUC.</p></aside>
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
             <h2>What this makes easier to decide</h2>
