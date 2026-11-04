@@ -72,6 +72,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
   gap: 2px;
 }
 .brand-name {
+  margin: 0;
   font-family: var(--serif);
   font-size: 27px;
   font-weight: 400;
@@ -122,18 +123,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
 }
 .link-arrow { color: var(--rust); font-size: 12px; }
 
-.intro-section {
-  padding: clamp(32px, 5vw, 56px) 0 32px;
-  border-bottom: 1px solid var(--line);
-}
-.intro-section h1 {
-  margin: 0 0 20px;
-  font-family: var(--serif);
-  font-size: clamp(42px, 6vw, 64px);
-  font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -.035em;
-}
+.header-intro { padding-bottom: 24px; }
 .intro-copy {
   max-width: 780px;
   color: var(--ink-soft);
