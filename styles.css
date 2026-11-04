@@ -626,7 +626,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
   padding-bottom: 20px;
 }
 .header-intro .profile-links {
-  justify-content: flex-start;
+  justify-content: flex-end;
   flex-wrap: wrap;
   margin-top: 20px;
 }
