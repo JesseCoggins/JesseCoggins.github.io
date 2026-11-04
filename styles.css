@@ -625,10 +625,23 @@ button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible
   padding-top: 30px;
   padding-bottom: 20px;
 }
+.header-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px 28px;
+  padding-bottom: 28px;
+}
+.header-intro .intro-copy { grid-column: 1 / -1; }
+.header-intro .intro-location { margin: 0; }
 .header-intro .profile-links {
   justify-content: flex-end;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin: 0;
+}
+@media (max-width: 760px) {
+  .header-intro { grid-template-columns: 1fr; gap: 18px; }
+  .header-intro .profile-links { justify-content: flex-start; }
 }
 .brand { gap: 6px; }
 .brand-role { font-size: 12px; }
