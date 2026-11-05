@@ -80,14 +80,14 @@
             <h2>How the work was done</h2>
             <ul><li>Designed a 3NF PostgreSQL schema across Region, Country, ItemType, SalesChannel, and Orders, with a staging-table load from 100,000 sales records.</li>
                 <li>Built an analytical layer for quarterly and regional revenue/profit, product performance, and reusable management views using SQL, indexes, CTEs, and subqueries.</li>
-                <li>Created a parallel MongoDB design for cosmetics and grocery data, using collections, aggregation queries, and indexes for loyalty analysis and product discovery.</li></ul>
+                <li>Created a parallel MongoDB design for cosmetics and grocery data, using collections, aggregation queries, and indexes for recorded item-purchase activity and product discovery.</li></ul>
           </section>
           <section class="detail-section">
             <p class="detail-label">Results</p>
             <h2>What the analysis shows</h2>
             <ul><li>The relational model separates transactional facts from region, country, product-type, and sales-channel dimensions.</li>
                 <li>On 100,000 orders, the regional profit report returned seven rows in 89 ms before indexing and 71 ms afterward. The coursework records one run in each condition.</li>
-                <li>The MongoDB counterpart demonstrates document-oriented analysis for member loyalty and ingredient-led product exploration.</li></ul>
+                <li>The grocery aggregation counts recorded item purchases per member, not shopping visits. The ingredient query finds 772 products; a separately labeled rating-at-least-4 variant finds 574.</li></ul>
           </section>
           <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
             <p class="detail-label">From the project</p>

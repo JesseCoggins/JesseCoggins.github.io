@@ -62,9 +62,9 @@
           <p>A team considering feedback triage can use the test counts to judge how much reading the classifier would create.</p>
         </section>
         <div class="detail-metrics" aria-label="Key project results">
-          <div class="detail-metric"><strong>76.0%</strong><span>Accuracy on 75 test reviews</span></div>
-              <div class="detail-metric"><strong>0.7188</strong><span>Test F1 score</span></div>
-              <div class="detail-metric"><strong>748</strong><span>Labeled reviews</span></div>
+          <div class="detail-metric"><strong>78.57%</strong><span>Accuracy on 98 test reviews</span></div>
+              <div class="detail-metric"><strong>0.7789</strong><span>Positive-class F1</span></div>
+              <div class="detail-metric"><strong>997</strong><span>Records after deduplication</span></div>
         </div>
       </div>
 
@@ -77,32 +77,40 @@
           <section class="detail-section">
             <p class="detail-label">Approach</p>
             <h2>How the work was done</h2>
-            <ul><li>Used 748 labeled IMDb reviews split into 598 training, 75 validation, and 75 test examples.</li>
-                <li>Cleaned and tokenized text, converted reviews to padded sequences, and used a 50-token limit that retained 99.3% of the reviews.</li>
+            <ul><li>Parsed 1,000 individual IMDb excerpts and removed three exact duplicate pairs. Grouped splits keep identical cleaned texts together: 799 training, 100 validation and 98 test reviews.</li>
+                <li>Fitted the vocabulary on training text only and padded sequences to 50 tokens, covering all cleaned training reviews. The saved tokenizer and preprocessing metadata accompany the model.</li>
                 <li>Trained a 100-dimension embedding and 128-unit bidirectional LSTM with a 64-unit dense layer, dropout, sigmoid output, and early stopping.</li></ul>
           </section>
           <section class="detail-section">
             <p class="detail-label">Results</p>
             <h2>What the analysis shows</h2>
-            <ul><li>On the held-out test set, accuracy was 76.0%, precision 0.8846, recall 0.6053, and F1 0.7188.</li>
-                <li>High precision means positive predictions were usually correct in this test set; lower recall means some positive reviews were missed.</li>
+            <ul><li>On the held-out test set, 77 of 98 predictions were correct: accuracy 78.57%, positive-class precision 0.7255, recall 0.8409 and F1 0.7789 at a 0.5 threshold.</li>
+                <li>The negative-review queue contained 47 reviews: 40 negative and 7 positive. It caught 40 of 54 negative reviews and missed 14.</li>
                 <li>The trained Keras model is included in the repository so it can be inspected or loaded without retraining.</li></ul>
           </section>
           <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
             <p class="detail-label">From the project</p>
-            <h2 id="visuals-heading">Why validation mattered during training</h2>
+            <h2 id="visuals-heading">Held-out errors and validation during training</h2>
             <figure class="project-figure">
-              <a class="project-image-link" href="https://raw.githubusercontent.com/JesseCoggins/sentiment-analysis-bilstm/a809dfe243ce9a60b7a433c65420846aa20da71f/assets/report-extracts/report_image_03.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Training fit and unseen reviews">
-                <img src="https://raw.githubusercontent.com/JesseCoggins/sentiment-analysis-bilstm/a809dfe243ce9a60b7a433c65420846aa20da71f/assets/report-extracts/report_image_03.png" alt="Training loss decreases while validation loss rises sharply after the third recorded epoch." width="567" height="455" loading="lazy" decoding="async" />
+              <a class="project-image-link" href="assets/images/sentiment-test-confusion.png" target="_blank" rel="noreferrer" aria-label="Open full-size held-out sentiment confusion matrix">
+                <img src="assets/images/sentiment-test-confusion.png" alt="Confusion matrix for 98 reviews: 40 negative and 37 positive classified correctly, with 14 negative and 7 positive reviews misclassified." width="864" height="720" loading="lazy" decoding="async" />
+              </a>
+              <figcaption><h3>The manual-review workload</h3><p>Negative predictions flag 47 of 98 reviews. The queue contains 40 actual negative reviews and 7 positive reviews; 14 negative reviews are missed.</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/sentiment-analysis-bilstm/blob/main/data/test_predictions.csv" target="_blank" rel="noreferrer">View paired predictions <span aria-hidden="true">↗</span></a><a href="assets/images/sentiment-test-confusion.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+              </figcaption>
+            </figure>
+            <figure class="project-figure">
+              <a class="project-image-link" href="assets/images/sentiment-training-history.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Training fit and unseen reviews">
+                <img src="assets/images/sentiment-training-history.png" alt="Training and validation curves across five epochs; validation loss selects the restored epoch 3 weights." width="1760" height="640" loading="lazy" decoding="async" />
               </a>
               <figcaption>
                 <h3>Training fit and unseen reviews</h3>
-                <p>The model continues to fit training reviews while validation loss worsens. This divergence explains why early stopping and a separate test set matter for evaluating new reviews.</p>
-                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/sentiment-analysis-bilstm/blob/main/notebooks/sentiment_bilstm.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="https://raw.githubusercontent.com/JesseCoggins/sentiment-analysis-bilstm/a809dfe243ce9a60b7a433c65420846aa20da71f/assets/report-extracts/report_image_03.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+                <p>Training continued for five epochs and restored the epoch 3 weights with the lowest validation loss. The later divergence shows why fitting the training reviews alone is not enough.</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/sentiment-analysis-bilstm/blob/main/notebooks/sentiment_bilstm.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/images/sentiment-training-history.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
               </figcaption>
             </figure>
           </section>
-          <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The 75-review test set is small, so the accuracy estimate needs confirmation on a larger independent set. The model flagged 49 of 75 IMDb test reviews as negative. Those included 34 negative and 15 positive reviews. The coursework tokenizer saw the full review vocabulary. A customer-support trial would need a vocabulary fitted on training data and evaluation on support messages.</p></aside>
+          <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The 98-review test set is small, so its accuracy needs confirmation on a larger independent set. The vocabulary was fitted on training text only, and identical cleaned texts stay in the same split. A customer-support trial would need evaluation on support messages. This study did not measure customer outcomes.</p></aside>
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
             <h2>What this makes easier to decide</h2>
@@ -112,9 +120,9 @@
 
         <aside class="detail-aside" aria-label="Project details and links">
           <h2>Project details</h2>
-          <dl class="detail-facts"><div class="detail-fact"><dt>Dataset</dt><dd>IMDb labeled sentences · 748 reviews</dd></div>
+          <dl class="detail-facts"><div class="detail-fact"><dt>Dataset</dt><dd>1,000 source reviews · 997 after exact deduplication</dd></div>
               <div class="detail-fact"><dt>Model</dt><dd>100-d embedding · 128-unit BiLSTM</dd></div>
-              <div class="detail-fact"><dt>Artifact</dt><dd>Saved Keras model included</dd></div></dl>
+              <div class="detail-fact"><dt>Artifact</dt><dd>Saved model, tokenizer and preprocessing metadata</dd></div></dl>
           <div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/jessecoggins/sentiment-analysis-bilstm" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
         </aside>
       </div>

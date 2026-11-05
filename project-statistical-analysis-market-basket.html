@@ -80,7 +80,7 @@
           <section class="detail-section">
             <p class="detail-label">Approach</p>
             <h2>How the work was done</h2>
-            <ul><li>Cleaned and validated employee-turnover records, reducing the source from 10,199 rows to 4,464 validated rows.</li>
+            <ul><li>Applied employee-turnover cleaning rules, retaining 4,464 of 10,199 records (43.8%). Missing-value, outlier and salary-consistency exclusions affect which employees remain.</li>
                 <li>Applied regression, logistic regression, PCA, and statistical tests across the notebook collection; the health-insurance analyses use ANOVA and Mann–Whitney U testing.</li>
                 <li>Encoded 8,234 retail line items into 441 baskets and mined Apriori association rules for products frequently appearing together.</li></ul>
           </section>
@@ -89,7 +89,7 @@
             <h2>What the analysis shows</h2>
             <ul><li>ANOVA found regional BMI differences (F = 39.4069, p &lt; 0.001). The Mann–Whitney U test comparing charges by smoking status returned p ≈ 4.59 × 10⁻¹²⁹.</li>
                 <li>The top Apriori rules had 1.13% support, 100% confidence, and lift 88.2; the strongest rules linked themed children’s gift items.</li>
-                <li>The employee-turnover cleaning workflow produced a validated 4,464-row output from 10,199 source rows.</li></ul>
+                <li>The employee-turnover workflow retained 4,464 rows under its stated cleaning rules. The increase in salary/hourly correlation partly follows from the consistency filter; representativeness was not established.</li></ul>
           </section>
           <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
             <p class="detail-label">From the project</p>
