@@ -59,10 +59,10 @@
       <div class="detail-overview">
         <section class="impact-panel" aria-labelledby="impact-heading">
           <p class="detail-label" id="impact-heading">Business impact</p>
-          <p>For forecasts updated each day, ARIMA reduced daily-change error relative to no change. When all 146 forecasts were issued together, no change performed slightly better.</p>
+          <p>The primary evaluation tests whether an ARIMA forecast improves on assuming no daily revenue change. For the 146 forecasts issued together, the simpler baseline had slightly lower error.</p>
         </section>
         <div class="detail-metrics" aria-label="Key project results">
-          <div class="detail-metric"><strong>0.4408</strong><span>Daily refit RMSE ($ millions)</span></div>
+          <div class="detail-metric"><strong>0.4887</strong><span>Fixed-cutoff RMSE ($ millions)</span></div>
               <div class="detail-metric"><strong>0.4860</strong><span>No-change RMSE ($ millions)</span></div>
               <div class="detail-metric"><strong>30 days</strong><span>Forward projection</span></div>
         </div>
@@ -85,7 +85,6 @@
             <p class="detail-label">Results</p>
             <h2>What the analysis shows</h2>
             <ul><li>On the 146 held-out days, ARIMA had MAE of 0.3765 and RMSE of 0.4887 million dollars of daily change. The no-change forecast had MAE of 0.3746 and RMSE of 0.4860 million.</li>
-                <li>Refitting before each next-day forecast on the same 146 test days gave ARIMA MAE 0.3531 and RMSE 0.4408 million dollars, versus 0.3746 and 0.4860 for no change. Each fit uses only observations available before its forecast.</li>
                 <li>For the 30-day projection, the notebook refits the model on all 731 revenue observations. It forecasts daily revenue levels for days 732–761 with model-based 95% prediction intervals.</li>
             </ul>
           </section>
@@ -114,10 +113,15 @@
             </figure>
           </section>
           
+          <section class="detail-section" id="daily-update-comparison">
+            <p class="detail-label">Additional comparison</p>
+            <h2>Forecasts updated each day</h2>
+            <p>A separate evaluation refits ARIMA before predicting each next day, using only observations available at that point. On the same 146 test days, MAE was 0.3531 and RMSE 0.4408 million dollars, versus 0.3746 and 0.4860 for no change. The update schedule changes which method performs better.</p>
+          </section>
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
             <h2>What this makes easier to decide</h2>
-            <p>Forecast timing should match the planning decision. Daily updated forecasts favor ARIMA in this holdout; a single batch favors no change. Monthly budgeting also needs tests of revenue levels and totals at several historical cutoffs.</p>
+            <p>For a forecast issued once at the training cutoff, no change performed slightly better. The additional daily-update comparison favored ARIMA. Monthly budgeting needs further tests of revenue levels and totals at several historical cutoffs.</p>
           </section>
         </article>
 

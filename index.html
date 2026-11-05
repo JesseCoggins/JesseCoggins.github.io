@@ -270,16 +270,16 @@
                 <button type="button" class="tag-chip" data-tag="PCA" aria-pressed="false">PCA</button>
                               <button type="button" class="tag-chip" data-tag="M.S. coursework" aria-pressed="false">M.S. coursework</button>
               </div>
-              <p class="project-description">Combines discharge-time risk stratification, K-Means patient segments, and PCA, with a sensitivity check on feature timing.</p>
-              <p class="business-impact"><span>Business impact</span> Shows how information timing changes a risk score, helping clarify which signals can guide discharge follow-up.</p>
+              <p class="project-description">Combines a Random Forest readmission classifier with K-Means patient segments and PCA.</p>
+              <p class="business-impact"><span>Business impact</span> Supports questions about discharge follow-up and patient service use; intervention benefits were not measured.</p>
             </div>
             <aside class="project-result">
-              <strong>0.999 → 0.492</strong>
-              <span class="result-label">ROC-AUC at discharge vs. without <code>Initial_days</code></span>
-              <span class="result-detail">Discharge-time model · k = 3 clusters</span>
+              <strong>97.9%</strong>
+              <span class="result-label">held-out classifier accuracy</span>
+              <span class="result-detail">0.999 ROC-AUC · k = 3 clusters</span>
               <div class="project-links">
                 <a class="case-study-link" href="project-hospital-readmission.html">Case study <span aria-hidden="true">↗</span></a>
-                <a href="https://github.com/JesseCoggins/hospital-readmission-ml#results" target="_blank" rel="noreferrer">Sensitivity check <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/JesseCoggins/hospital-readmission-ml#additional-validation-feature-timing" target="_blank" rel="noreferrer">Sensitivity check <span aria-hidden="true">↗</span></a>
                 <a href="https://github.com/jessecoggins/hospital-readmission-ml" target="_blank" rel="noreferrer">Repository <span aria-hidden="true">↗</span></a>
               </div>
             </aside>
@@ -299,11 +299,11 @@
                               <button type="button" class="tag-chip" data-tag="M.S. coursework" aria-pressed="false">M.S. coursework</button>
               </div>
               <p class="project-description">I evaluated forecasts of daily revenue changes on 146 later days and refitted the model through day 731 for a 30-day projection.</p>
-              <p class="business-impact"><span>Business impact</span> Daily updated ARIMA forecasts beat no change on this holdout; issuing all 146 forecasts together favored no change.</p>
+              <p class="business-impact"><span>Business impact</span> The 146 forecasts issued together slightly favored no change; an additional comparison tests daily updates.</p>
             </div>
             <aside class="project-result">
-              <strong>0.4408</strong>
-              <span class="result-label">daily refit RMSE ($ millions)</span>
+              <strong>0.4887</strong>
+              <span class="result-label">fixed-cutoff RMSE ($ millions)</span>
               <span class="result-detail">0.4860 RMSE with no change</span>
               <div class="project-links">
                 <a class="case-study-link" href="project-revenue-forecasting.html">Case study <span aria-hidden="true">↗</span></a>
