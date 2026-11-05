@@ -86,8 +86,8 @@
             <h2>What the analysis shows</h2>
             <ul><li>On the 146 held-out days, ARIMA had MAE of 0.3765 and RMSE of 0.4887 million dollars of daily change. The no-change forecast had MAE of 0.3746 and RMSE of 0.4860 million.</li>
                 <li>Refitting before each next-day forecast on the same 146 test days gave ARIMA MAE 0.3531 and RMSE 0.4408 million dollars, versus 0.3746 and 0.4860 for no change. Each fit uses only observations available before its forecast.</li>
-                <li>For the 30-day projection, the portfolio version refits the model on all 731 revenue observations. It forecasts daily revenue levels for days 732–761 with model-based 95% prediction intervals.</li>
-                <li>The submitted MAE was 0.3766. Correcting a one-day offset pairs the first forecast step with the first test day.</li></ul>
+                <li>For the 30-day projection, the notebook refits the model on all 731 revenue observations. It forecasts daily revenue levels for days 732–761 with model-based 95% prediction intervals.</li>
+            </ul>
           </section>
           <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
             <p class="detail-label">From the project</p>
@@ -108,7 +108,7 @@
               </a>
               <figcaption>
                 <h3>The next 30 days</h3>
-                <p>The corrected portfolio notebook refits through day 731 before projecting revenue levels. The widening interval shows how uncertainty grows over the month.</p>
+                <p>The notebook refits through day 731 before projecting revenue levels. The widening interval shows how uncertainty grows over the month.</p>
                 <div class="project-figure-links"><a href="https://github.com/JesseCoggins/revenue-forecasting-arima/blob/main/notebooks/revenue_arima_forecast.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/revenue-forward.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
               </figcaption>
             </figure>

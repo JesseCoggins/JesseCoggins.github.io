@@ -87,20 +87,20 @@
             <p class="detail-label">Results</p>
             <h2>What the analysis shows</h2>
             <ul><li>The selected Ridge alpha was 3.8; held-out test RMSE was 8.92 minutes and MSE was 79.65.</li>
-                <li>The verified portfolio pipeline logs a mean predicted delay of 4.48 minutes. The submitted run reported MSE 82.51 and a mean prediction of 4.68 minutes; the published pipeline fixes the split seed and refits the selected model. These are different implementation versions.</li>
+                <li>The pipeline logs a mean predicted delay of 4.48 minutes. A fixed split seed and an explicit refit of the selected Ridge model support reproducibility.</li>
                 <li>The API returns a route-and-schedule average. Individual flights and major disruptions can depart much later.</li></ul>
           </section>
           <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
             <p class="detail-label">From the project</p>
             <h2 id="visuals-heading">Where the delay estimates miss</h2>
             <figure class="project-figure">
-              <a class="project-image-link" href="https://raw.githubusercontent.com/JesseCoggins/flight-delay-mlops/d06a334b7465696c5935034469c8d8ecc2cb083f/assets/performance_plot.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Predicted and observed average delays">
-                <img src="https://raw.githubusercontent.com/JesseCoggins/flight-delay-mlops/d06a334b7465696c5935034469c8d8ecc2cb083f/assets/performance_plot.png" alt="Line chart with actual delays in blue and predictions in orange, with actual values varying more widely." width="640" height="480" loading="lazy" decoding="async" />
+              <a class="project-image-link" href="assets/project-visuals/flight-performance.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Predicted and observed average delays">
+                <img src="assets/project-visuals/flight-performance.png" alt="Line chart with actual delays in blue and predictions in orange, with actual values varying more widely." width="640" height="480" loading="lazy" decoding="async" />
               </a>
               <figcaption>
                 <h3>Predicted and observed average delays</h3>
-                <p>The saved coursework plot shows predictions concentrated near typical delays while observed averages have larger spikes. The horizontal axis lists evaluated samples. The held-out RMSE is 8.92 minutes.</p>
-                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/flight-delay-mlops/blob/main/notebooks/flight_delay_mlflow_tracking.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="https://raw.githubusercontent.com/JesseCoggins/flight-delay-mlops/d06a334b7465696c5935034469c8d8ecc2cb083f/assets/performance_plot.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+                <p>The held-out evaluation plot shows predictions concentrated near typical delays while observed averages have larger spikes. The horizontal axis lists evaluated samples. The held-out RMSE is 8.92 minutes.</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/flight-delay-mlops/blob/main/notebooks/flight_delay_mlflow_tracking.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/flight-performance.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
               </figcaption>
             </figure>
           </section>
