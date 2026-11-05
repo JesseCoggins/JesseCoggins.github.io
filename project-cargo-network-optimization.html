@@ -29,7 +29,7 @@
           <span class="brand-role">Data &amp; Analytics</span>
         </a>
         <nav class="profile-links" aria-label="Professional links">
-          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf?v=aligned-20261105" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
           <a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer"><span>LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span></a>
           <a class="profile-link" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer"><span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span></a>
         </nav>
@@ -47,12 +47,12 @@
         <h1>Cargo Network Optimization</h1>
         <p class="detail-lede">A linear programming model that routes cargo across a multi-node network while meeting destination demand and respecting hub and focus-city capacity.</p>
         <div class="detail-tags" aria-label="Project tags">
-          <a class="detail-tag" href="?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
-                <a class="detail-tag" href="?tag=Operations%20research#projects" aria-label="Filter homepage projects by Operations research">Operations research</a>
-                <a class="detail-tag" href="?tag=Linear%20programming#projects" aria-label="Filter homepage projects by Linear programming">Linear programming</a>
-                <a class="detail-tag" href="?tag=PuLP#projects" aria-label="Filter homepage projects by PuLP">PuLP</a>
-                <a class="detail-tag" href="?tag=Optimization#projects" aria-label="Filter homepage projects by Optimization">Optimization</a>
-                <a class="detail-tag" href="?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
+          <a class="detail-tag" href="index.html?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
+                <a class="detail-tag" href="index.html?tag=Operations%20research#projects" aria-label="Filter homepage projects by Operations research">Operations research</a>
+                <a class="detail-tag" href="index.html?tag=Linear%20programming#projects" aria-label="Filter homepage projects by Linear programming">Linear programming</a>
+                <a class="detail-tag" href="index.html?tag=PuLP#projects" aria-label="Filter homepage projects by PuLP">PuLP</a>
+                <a class="detail-tag" href="index.html?tag=Optimization#projects" aria-label="Filter homepage projects by Optimization">Optimization</a>
+                <a class="detail-tag" href="index.html?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
         </div>
       </header>
 
@@ -90,15 +90,13 @@
           </section>
           <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
             <p class="detail-label">From the project</p>
-            <h2 id="visuals-heading">Verifying the shipment plan</h2>
-            <figure class="project-figure project-figure--portrait">
-              <a class="project-image-link" href="https://raw.githubusercontent.com/JesseCoggins/cargo-network-optimization/153bc0f3fe255129ee61132fa7fb16238df658b6/assets/report-extracts/report_image_02.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Capacity, flow and demand checks">
-                <img src="https://raw.githubusercontent.com/JesseCoggins/cargo-network-optimization/153bc0f3fe255129ee61132fa7fb16238df658b6/assets/report-extracts/report_image_02.png" alt="Original notebook code and output checking both hub capacities, intermediate-city flow balance and demand satisfaction." width="665" height="949" loading="lazy" decoding="async" />
+            <h2 id="visuals-heading">Capacity use and shipment routing</h2>
+            <figure class="project-figure">
+              <a class="project-image-link" href="assets/project-visuals/cargo-shipping-plan.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: The solved shipping plan">
+                <img src="assets/project-visuals/cargo-shipping-plan.png" alt="Solved cargo plan showing CVG using 95,650 of 95,650 tons, AFW using 38,097 of 44,350 tons, and 87,502 direct versus 46,245 transfer tons." width="1903" height="693" loading="lazy" decoding="async" />
               </a>
-              <figcaption>
-                <h3>Capacity, flow and demand checks</h3>
-                <p>The saved output confirms that CVG uses all 95,650 tons of capacity, AFW uses 38,097 of 44,350 tons, and every demand center receives its required shipment.</p>
-                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/cargo-network-optimization/blob/main/notebooks/optimization.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="https://raw.githubusercontent.com/JesseCoggins/cargo-network-optimization/153bc0f3fe255129ee61132fa7fb16238df658b6/assets/report-extracts/report_image_02.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+              <figcaption><h3>The solved shipping plan</h3><p>The plan serves 133,747 tons across 65 demand centers. CVG is fully used and AFW has 6,253 tons available. The notebook separately verifies hub limits, transfer flow balance and every destination requirement.</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/cargo-network-optimization/blob/main/notebooks/optimization.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/cargo-shipping-plan.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
               </figcaption>
             </figure>
           </section>

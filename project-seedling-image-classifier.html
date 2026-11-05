@@ -29,7 +29,7 @@
           <span class="brand-role">Data &amp; Analytics</span>
         </a>
         <nav class="profile-links" aria-label="Professional links">
-          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf?v=aligned-20261105" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
           <a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer"><span>LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span></a>
           <a class="profile-link" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer"><span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span></a>
         </nav>
@@ -47,22 +47,22 @@
         <h1>Seedling Image Classifier</h1>
         <p class="detail-lede">A convolutional neural network that classifies plant seedling images into 12 species, with a trained model artifact included for inference and inspection.</p>
         <div class="detail-tags" aria-label="Project tags">
-          <a class="detail-tag" href="?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
-                <a class="detail-tag" href="?tag=Computer%20vision#projects" aria-label="Filter homepage projects by Computer vision">Computer vision</a>
-                <a class="detail-tag" href="?tag=CNN#projects" aria-label="Filter homepage projects by CNN">CNN</a>
-                <a class="detail-tag" href="?tag=Image%20classification#projects" aria-label="Filter homepage projects by Image classification">Image classification</a>
-                <a class="detail-tag" href="?tag=Deep%20learning#projects" aria-label="Filter homepage projects by Deep learning">Deep learning</a>
-                <a class="detail-tag" href="?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
+          <a class="detail-tag" href="index.html?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
+                <a class="detail-tag" href="index.html?tag=Computer%20vision#projects" aria-label="Filter homepage projects by Computer vision">Computer vision</a>
+                <a class="detail-tag" href="index.html?tag=CNN#projects" aria-label="Filter homepage projects by CNN">CNN</a>
+                <a class="detail-tag" href="index.html?tag=Image%20classification#projects" aria-label="Filter homepage projects by Image classification">Image classification</a>
+                <a class="detail-tag" href="index.html?tag=Deep%20learning#projects" aria-label="Filter homepage projects by Deep learning">Deep learning</a>
+                <a class="detail-tag" href="index.html?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
         </div>
       </header>
 
       <div class="detail-overview">
         <section class="impact-panel" aria-labelledby="impact-heading">
           <p class="detail-label" id="impact-heading">Business impact</p>
-          <p>Automates a first-pass species label to help scale image sorting, while class-level scores show where manual review matters.</p>
+          <p>Explores first-pass species sorting with expert review, while class-level scores show where labels are less reliable. Field-image performance was not tested.</p>
         </section>
         <div class="detail-metrics" aria-label="Key project results">
-          <div class="detail-metric"><strong>66.62%</strong><span>Test accuracy</span></div>
+          <div class="detail-metric"><strong>66.62%</strong><span>Accuracy on 713 test images</span></div>
               <div class="detail-metric"><strong>12</strong><span>Species classes</span></div>
               <div class="detail-metric"><strong>0.83</strong><span>Best class F1</span></div>
         </div>
@@ -77,7 +77,7 @@
           <section class="detail-section">
             <p class="detail-label">Approach</p>
             <h2>How the work was done</h2>
-            <ul><li>Prepared images for a supervised multi-class classification workflow and trained a TensorFlow/Keras CNN.</li>
+            <ul><li>Normalized 4,750 RGB images and used stratified splits of 3,325 training, 712 validation and 713 test images. Trained a TensorFlow/Keras CNN with augmentation and early stopping.</li>
                 <li>Evaluated the model on a held-out test set across 12 plant species.</li>
                 <li>Compared class-level F1 scores to identify where the classifier was more reliable and where visually similar species remained difficult.</li></ul>
           </section>
@@ -92,27 +92,25 @@
             <p class="detail-label">From the project</p>
             <h2 id="visuals-heading">The images and the classification errors</h2>
             <figure class="project-figure project-figure--portrait">
-              <a class="project-image-link" href="https://raw.githubusercontent.com/JesseCoggins/seedling-image-classifier/58ed233f1bc5091513e6b47aa306f28e35eb440c/assets/report-extracts/report_image_02.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Examples from the image dataset">
-                <img src="https://raw.githubusercontent.com/JesseCoggins/seedling-image-classifier/58ed233f1bc5091513e6b47aa306f28e35eb440c/assets/report-extracts/report_image_02.png" alt="Nine labeled photographs showing seedlings from the course image dataset." width="966" height="990" loading="lazy" decoding="async" />
+              <a class="project-image-link" href="assets/project-visuals/seedling-examples.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Examples from the image dataset">
+                <img src="assets/project-visuals/seedling-examples.png" alt="Nine labeled photographs showing seedlings from the course image dataset." width="966" height="990" loading="lazy" decoding="async" />
               </a>
               <figcaption>
                 <h3>Examples from the image dataset</h3>
-                <p>The original coursework figure shows variation in leaf shape, lighting and background. These examples give context for the 12-species classification task.</p>
-                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/seedling-image-classifier/blob/main/data/README.md" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="https://raw.githubusercontent.com/JesseCoggins/seedling-image-classifier/58ed233f1bc5091513e6b47aa306f28e35eb440c/assets/report-extracts/report_image_02.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+                <p>These labeled examples show variation in leaf shape, lighting and background. These examples give context for the 12-species classification task.</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/seedling-image-classifier/blob/main/data/README.md" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/seedling-examples.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
               </figcaption>
             </figure>
             <figure class="project-figure">
-              <a class="project-image-link" href="https://raw.githubusercontent.com/JesseCoggins/seedling-image-classifier/58ed233f1bc5091513e6b47aa306f28e35eb440c/assets/report-extracts/report_image_04.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Which species are confused">
-                <img src="https://raw.githubusercontent.com/JesseCoggins/seedling-image-classifier/58ed233f1bc5091513e6b47aa306f28e35eb440c/assets/report-extracts/report_image_04.png" alt="Confusion matrix for 12 seedling species with actual classes on rows and predicted classes on columns." width="1109" height="989" loading="lazy" decoding="async" />
+              <a class="project-image-link" href="assets/project-visuals/seedling-confusion.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Which species are confused">
+                <img src="assets/project-visuals/seedling-confusion.png" alt="Current saved confusion matrix for 713 held-out images across 12 seedling species." width="1109" height="989" loading="lazy" decoding="async" />
               </a>
-              <figcaption>
-                <h3>Which species are confused</h3>
-                <p>Diagonal cells are correct classifications. Off-diagonal counts show which labels need closer review, including confusion between Black-grass and Loose Silky-bent. The model correctly labeled 475 of 713 test images.</p>
-                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/seedling-image-classifier/blob/main/notebooks/seedling_cnn_classifier.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="https://raw.githubusercontent.com/JesseCoggins/seedling-image-classifier/58ed233f1bc5091513e6b47aa306f28e35eb440c/assets/report-extracts/report_image_04.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+              <figcaption><h3>Which species are confused</h3><p>Diagonal cells are correct classifications. Off-diagonal counts show which labels need closer review, including confusion between Black-grass and Loose Silky-bent. The model correctly labeled 475 of 713 test images.</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/seedling-image-classifier/blob/main/notebooks/seedling_cnn_classifier.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/seedling-confusion.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
               </figcaption>
             </figure>
           </section>
-          <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The repository includes the trained model. A public data archive provides the same 223 MiB training array used for the project. The setup instructions include the destination path and checksum.</p></aside>
+          <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The repository includes the trained model, class order and setup instructions for the matching 223 MiB image array. Class weights were calculated from the full label distribution. These results describe the supplied images; field-image validation is needed before using labels to guide treatment.</p></aside>
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
             <h2>What this makes easier to decide</h2>

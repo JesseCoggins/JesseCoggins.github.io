@@ -29,7 +29,7 @@
           <span class="brand-role">Data &amp; Analytics</span>
         </a>
         <nav class="profile-links" aria-label="Professional links">
-          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf?v=aligned-20261105" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
           <a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer"><span>LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span></a>
           <a class="profile-link" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer"><span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span></a>
         </nav>
@@ -47,14 +47,14 @@
         <h1>Flight Delay Prediction Pipeline</h1>
         <p class="detail-lede">A reproducible regression workflow for estimating average departure delay, packaged with versioned data, tracked experiments, and a containerized prediction API.</p>
         <div class="detail-tags" aria-label="Project tags">
-          <a class="detail-tag" href="?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
-                <a class="detail-tag" href="?tag=MLOps#projects" aria-label="Filter homepage projects by MLOps">MLOps</a>
-                <a class="detail-tag" href="?tag=DVC#projects" aria-label="Filter homepage projects by DVC">DVC</a>
-                <a class="detail-tag" href="?tag=FastAPI#projects" aria-label="Filter homepage projects by FastAPI">FastAPI</a>
-                <a class="detail-tag" href="?tag=Docker#projects" aria-label="Filter homepage projects by Docker">Docker</a>
-                <a class="detail-tag" href="?tag=MLflow#projects" aria-label="Filter homepage projects by MLflow">MLflow</a>
-                <a class="detail-tag" href="?tag=CI%2FCD#projects" aria-label="Filter homepage projects by CI/CD">CI/CD</a>
-                <a class="detail-tag" href="?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
+          <a class="detail-tag" href="index.html?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
+                <a class="detail-tag" href="index.html?tag=MLOps#projects" aria-label="Filter homepage projects by MLOps">MLOps</a>
+                <a class="detail-tag" href="index.html?tag=DVC#projects" aria-label="Filter homepage projects by DVC">DVC</a>
+                <a class="detail-tag" href="index.html?tag=FastAPI#projects" aria-label="Filter homepage projects by FastAPI">FastAPI</a>
+                <a class="detail-tag" href="index.html?tag=Docker#projects" aria-label="Filter homepage projects by Docker">Docker</a>
+                <a class="detail-tag" href="index.html?tag=MLflow#projects" aria-label="Filter homepage projects by MLflow">MLflow</a>
+                <a class="detail-tag" href="index.html?tag=CI%2FCD#projects" aria-label="Filter homepage projects by CI/CD">CI/CD</a>
+                <a class="detail-tag" href="index.html?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
         </div>
       </header>
 
@@ -79,7 +79,7 @@
           <section class="detail-section">
             <p class="detail-label">Approach</p>
             <h2>How the work was done</h2>
-            <ul><li>Prepared airline on-time data and tracked data versions with DVC.</li>
+            <ul><li>Prepared 22,580 cleaned Atlanta flight records. The CSVs are committed directly; DVC pointers record checksums, with no remote configured.</li>
                 <li>Compared Ridge regression settings across 20 alpha values; features include destination airport and scheduled departure and arrival times.</li>
                 <li>Tracked experiments in MLflow and served predictions through FastAPI in Docker, with automated GitHub Actions and unit tests.</li></ul>
           </section>
@@ -88,7 +88,7 @@
             <h2>What the analysis shows</h2>
             <ul><li>The selected Ridge alpha was 3.8; held-out test RMSE was 8.92 minutes and MSE was 79.65.</li>
                 <li>The pipeline logs a mean predicted delay of 4.48 minutes. A fixed split seed and an explicit refit of the selected Ridge model support reproducibility.</li>
-                <li>The API returns a route-and-schedule average. Individual flights and major disruptions can depart much later.</li></ul>
+                <li>The API returns a route-and-schedule average, evaluated on later dates after grouping by destination and scheduled times. Individual flights and major disruptions can depart much later.</li></ul>
           </section>
           <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
             <p class="detail-label">From the project</p>
@@ -105,6 +105,7 @@
             </figure>
           </section>
           
+          <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The sweep tested 20 Ridge penalties from 0.0 through 3.8. The best tested alpha, 3.8, is the upper boundary; a better value may lie beyond the tested range. The error measures describe grouped average delays after excluding departures delayed by an hour or more.</p></aside>
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
             <h2>What this makes easier to decide</h2>
@@ -117,7 +118,7 @@
           <dl class="detail-facts"><div class="detail-fact"><dt>Prediction target</dt><dd>Average departure delay in minutes</dd></div>
               <div class="detail-fact"><dt>Model</dt><dd>Ridge regression</dd></div>
               <div class="detail-fact"><dt>Delivery</dt><dd>DVC · MLflow · FastAPI · Docker · GitHub Actions</dd></div></dl>
-          <div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/JesseCoggins/flight-delay-mlops/blob/main/docs/kronkers-mlops-design.md" target="_blank" rel="noreferrer">Read the Kronkers grocery MLOps design <span aria-hidden="true">↗</span></a><a href="https://github.com/jessecoggins/flight-delay-mlops" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
+          <div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/JesseCoggins/flight-delay-mlops/blob/main/docs/kronkers-mlops-design.md" target="_blank" rel="noreferrer">Read the Kronkers grocery MLOps design <span aria-hidden="true">↗</span></a><a href="https://github.com/JesseCoggins/flight-delay-mlops/blob/main/docs/validation.md" target="_blank" rel="noreferrer">Review six API tests and Docker validation <span aria-hidden="true">↗</span></a><a href="https://github.com/jessecoggins/flight-delay-mlops" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
         </aside>
       </div>
 

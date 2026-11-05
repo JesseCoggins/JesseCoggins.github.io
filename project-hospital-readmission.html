@@ -29,7 +29,7 @@
           <span class="brand-role">Data &amp; Analytics</span>
         </a>
         <nav class="profile-links" aria-label="Professional links">
-          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf?v=aligned-20261105" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
           <a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer"><span>LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span></a>
           <a class="profile-link" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer"><span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span></a>
         </nav>
@@ -47,13 +47,13 @@
         <h1>Hospital Readmission Analysis</h1>
         <p class="detail-lede">A paired supervised and unsupervised analysis of hospital outcomes, combining discharge-time risk stratification with patient clustering and PCA.</p>
         <div class="detail-tags" aria-label="Project tags">
-          <a class="detail-tag" href="?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
-                <a class="detail-tag" href="?tag=Healthcare#projects" aria-label="Filter homepage projects by Healthcare">Healthcare</a>
-                <a class="detail-tag" href="?tag=Risk%20stratification#projects" aria-label="Filter homepage projects by Risk stratification">Risk stratification</a>
-                <a class="detail-tag" href="?tag=Feature%20timing#projects" aria-label="Filter homepage projects by Feature timing">Feature timing</a>
-                <a class="detail-tag" href="?tag=Clustering#projects" aria-label="Filter homepage projects by Clustering">Clustering</a>
-                <a class="detail-tag" href="?tag=PCA#projects" aria-label="Filter homepage projects by PCA">PCA</a>
-                <a class="detail-tag" href="?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
+          <a class="detail-tag" href="index.html?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
+                <a class="detail-tag" href="index.html?tag=Healthcare#projects" aria-label="Filter homepage projects by Healthcare">Healthcare</a>
+                <a class="detail-tag" href="index.html?tag=Risk%20stratification#projects" aria-label="Filter homepage projects by Risk stratification">Risk stratification</a>
+                <a class="detail-tag" href="index.html?tag=Feature%20timing#projects" aria-label="Filter homepage projects by Feature timing">Feature timing</a>
+                <a class="detail-tag" href="index.html?tag=Clustering#projects" aria-label="Filter homepage projects by Clustering">Clustering</a>
+                <a class="detail-tag" href="index.html?tag=PCA#projects" aria-label="Filter homepage projects by PCA">PCA</a>
+                <a class="detail-tag" href="index.html?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
         </div>
       </header>
 
@@ -85,19 +85,25 @@
             <p class="detail-label">Results</p>
             <h2>What the analysis shows</h2>
             <ul><li>The full discharge-time model achieved 97.9% accuracy, 96.3% precision, 98.0% recall, 0.971 F1, and 0.999 ROC-AUC.</li>
-                <li>The clinical clustering notebook uses 14 features. One group averaged 9 days in hospital, another averaged 60 days, and the oldest group averaged 74 years. These profiles describe the three groups. They do not establish future readmission risk.</li></ul>
+                <li>The separate clustering notebook uses 14 features and excludes readmission. One group averaged 9 days and $3,212 in charges; another averaged 60 days and $7,401. The oldest group averaged 74 years, and 95% reported high blood pressure. These profiles do not establish future readmission risk.</li></ul>
           </section>
           <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
             <p class="detail-label">From the project</p>
-            <h2 id="visuals-heading">Choosing the number of patient groups</h2>
+            <h2 id="visuals-heading">Model evaluation and patient groups</h2>
             <figure class="project-figure">
-              <a class="project-image-link" href="https://raw.githubusercontent.com/JesseCoggins/hospital-readmission-ml/a86a2e547fe07ce005a9751bdb7f9c92fe39bc6f/assets/clustering-report-figures/report_image_08.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: The clustering tradeoff">
-                <img src="https://raw.githubusercontent.com/JesseCoggins/hospital-readmission-ml/a86a2e547fe07ce005a9751bdb7f9c92fe39bc6f/assets/clustering-report-figures/report_image_08.png" alt="Elbow plot showing within-cluster sum of squares decreasing as the number of clusters increases from one to ten." width="713" height="470" loading="lazy" decoding="async" />
+              <a class="project-image-link" href="assets/project-visuals/hospital-evaluation.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: How performance depends on feature timing">
+                <img src="assets/project-visuals/hospital-evaluation.png" alt="ROC curves with and without completed length of stay and a full-model confusion matrix showing 929 true negatives, 21 false positives, 11 false negatives and 539 true positives." width="1670" height="724" loading="lazy" decoding="async" />
               </a>
-              <figcaption>
-                <h3>The clustering tradeoff</h3>
-                <p>The early reductions in within-group variation informed the choice of three clusters. This is evidence about grouping similar records. The separate classification analysis evaluates readmission prediction.</p>
-                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/hospital-readmission-ml/blob/main/notebooks/readmission_clustering_pca.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="https://raw.githubusercontent.com/JesseCoggins/hospital-readmission-ml/a86a2e547fe07ce005a9751bdb7f9c92fe39bc6f/assets/clustering-report-figures/report_image_08.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+              <figcaption><h3>How performance depends on feature timing</h3><p>The same held-out records give ROC-AUC 0.999 with completed length of stay and 0.492 without it. The confusion matrix describes the full model at the evaluated threshold.</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/hospital-readmission-ml/blob/main/notebooks/readmission_classification.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/hospital-evaluation.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+              </figcaption>
+            </figure>
+            <figure class="project-figure">
+              <a class="project-image-link" href="assets/project-visuals/hospital-elbow.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Choosing the number of patient groups">
+                <img src="assets/project-visuals/hospital-elbow.png" alt="Saved elbow plot from the current 14-feature clustering notebook, with within-cluster variation decreasing from one to ten groups." width="713" height="470" loading="lazy" decoding="async" />
+              </a>
+              <figcaption><h3>Choosing the number of patient groups</h3><p>The early reductions in within-group variation informed the choice of three clusters. These groups describe similar records; they do not establish future readmission risk.</p>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/hospital-readmission-ml/blob/main/notebooks/readmission_clustering_pca.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/hospital-elbow.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
               </figcaption>
             </figure>
           </section>

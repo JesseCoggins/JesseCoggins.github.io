@@ -29,7 +29,7 @@
           <span class="brand-role">Data &amp; Analytics</span>
         </a>
         <nav class="profile-links" aria-label="Professional links">
-          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf?v=aligned-20261105" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
           <a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer"><span>LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span></a>
           <a class="profile-link" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer"><span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span></a>
         </nav>
@@ -47,13 +47,13 @@
         <h1>EcoMart Relational + NoSQL Design</h1>
         <p class="detail-lede">Two complementary database designs for the EcoMart scenario: normalized PostgreSQL for transactional analytics and MongoDB collections for flexible product exploration.</p>
         <div class="detail-tags" aria-label="Project tags">
-          <a class="detail-tag" href="?tag=SQL#projects" aria-label="Filter homepage projects by SQL">SQL</a>
-                <a class="detail-tag" href="?tag=PostgreSQL#projects" aria-label="Filter homepage projects by PostgreSQL">PostgreSQL</a>
-                <a class="detail-tag" href="?tag=MongoDB#projects" aria-label="Filter homepage projects by MongoDB">MongoDB</a>
-                <a class="detail-tag" href="?tag=Data%20modeling#projects" aria-label="Filter homepage projects by Data modeling">Data modeling</a>
-                <a class="detail-tag" href="?tag=ETL#projects" aria-label="Filter homepage projects by ETL">ETL</a>
-                <a class="detail-tag" href="?tag=NoSQL#projects" aria-label="Filter homepage projects by NoSQL">NoSQL</a>
-                <a class="detail-tag" href="?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
+          <a class="detail-tag" href="index.html?tag=SQL#projects" aria-label="Filter homepage projects by SQL">SQL</a>
+                <a class="detail-tag" href="index.html?tag=PostgreSQL#projects" aria-label="Filter homepage projects by PostgreSQL">PostgreSQL</a>
+                <a class="detail-tag" href="index.html?tag=MongoDB#projects" aria-label="Filter homepage projects by MongoDB">MongoDB</a>
+                <a class="detail-tag" href="index.html?tag=Data%20modeling#projects" aria-label="Filter homepage projects by Data modeling">Data modeling</a>
+                <a class="detail-tag" href="index.html?tag=ETL#projects" aria-label="Filter homepage projects by ETL">ETL</a>
+                <a class="detail-tag" href="index.html?tag=NoSQL#projects" aria-label="Filter homepage projects by NoSQL">NoSQL</a>
+                <a class="detail-tag" href="index.html?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
         </div>
       </header>
 
@@ -85,21 +85,21 @@
           <section class="detail-section">
             <p class="detail-label">Results</p>
             <h2>What the analysis shows</h2>
-            <ul><li>The relational model separates transactional facts from region, country, product-type, and sales-channel dimensions.</li>
-                <li>On 100,000 orders, the regional profit report returned seven rows in 89 ms before indexing and 71 ms afterward. The coursework records one run in each condition.</li>
+            <ul><li>The regional report totals $10.31 billion for Sub-Saharan Africa and $10.08 billion for Europe, the two largest modeled profit totals in the dataset. These are dataset aggregations, not profit improvements caused by the database.</li>
+                <li>On 100,000 orders, the regional profit report returned seven rows in 89 ms before indexing and 71 ms afterward. Each query was timed once in each condition; repeated runs under comparable conditions would be needed to establish a repeatable speedup.</li>
                 <li>The grocery aggregation counts recorded item purchases per member, not shopping visits. The ingredient query finds 772 products; a separately labeled rating-at-least-4 variant finds 574.</li></ul>
           </section>
           <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
             <p class="detail-label">From the project</p>
             <h2 id="visuals-heading">How the reporting tables connect</h2>
             <figure class="project-figure project-figure--schema">
-              <a class="project-image-link" href="https://raw.githubusercontent.com/JesseCoggins/ecomart-relational-nosql-database-design/cd508bd568577c72aa984a54e216a02784145254/assets/relational-schema.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Five tables with shared definitions">
-                <img src="https://raw.githubusercontent.com/JesseCoggins/ecomart-relational-nosql-database-design/cd508bd568577c72aa984a54e216a02784145254/assets/relational-schema.png" alt="Entity-relationship diagram connecting orders to country, item type and sales channel, and country to region." width="1629" height="1260" loading="lazy" decoding="async" />
+              <a class="project-image-link" href="assets/project-visuals/ecomart-schema.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Five tables with shared definitions">
+                <img src="assets/project-visuals/ecomart-schema.png" alt="Entity-relationship diagram connecting orders to country, item type and sales channel, and country to region." width="1629" height="1260" loading="lazy" decoding="async" />
               </a>
               <figcaption>
                 <h3>Five tables with shared definitions</h3>
                 <p>The relationships give the quarterly, regional and product reports a consistent structure. The SQL schema provides the complete field definitions.</p>
-                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/ecomart-relational-nosql-database-design/blob/main/sql/02_schema.sql" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="https://raw.githubusercontent.com/JesseCoggins/ecomart-relational-nosql-database-design/cd508bd568577c72aa984a54e216a02784145254/assets/relational-schema.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
+                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/ecomart-relational-nosql-database-design/blob/main/sql/02_schema.sql" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/ecomart-schema.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
               </figcaption>
             </figure>
           </section>

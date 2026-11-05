@@ -29,7 +29,7 @@
           <span class="brand-role">Data &amp; Analytics</span>
         </a>
         <nav class="profile-links" aria-label="Professional links">
-          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf?v=aligned-20261105" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
           <a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer"><span>LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span></a>
           <a class="profile-link" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer"><span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span></a>
         </nav>
@@ -47,18 +47,18 @@
         <h1>Loan Default Risk Capstone</h1>
         <p class="detail-lede">A class-weighted Random Forest workflow that evaluates how borrower financial attributes distinguish default risk in historical loan data.</p>
         <div class="detail-tags" aria-label="Project tags">
-          <a class="detail-tag" href="?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
-                <a class="detail-tag" href="?tag=Classification#projects" aria-label="Filter homepage projects by Classification">Classification</a>
-                <a class="detail-tag" href="?tag=Credit%20risk#projects" aria-label="Filter homepage projects by Credit risk">Credit risk</a>
-                <a class="detail-tag" href="?tag=Cross-validation#projects" aria-label="Filter homepage projects by Cross-validation">Cross-validation</a>
-                <a class="detail-tag" href="?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
+          <a class="detail-tag" href="index.html?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
+                <a class="detail-tag" href="index.html?tag=Classification#projects" aria-label="Filter homepage projects by Classification">Classification</a>
+                <a class="detail-tag" href="index.html?tag=Credit%20risk#projects" aria-label="Filter homepage projects by Credit risk">Credit risk</a>
+                <a class="detail-tag" href="index.html?tag=Cross-validation#projects" aria-label="Filter homepage projects by Cross-validation">Cross-validation</a>
+                <a class="detail-tag" href="index.html?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
         </div>
       </header>
 
       <div class="detail-overview">
         <section class="impact-panel" aria-labelledby="impact-heading">
           <p class="detail-label" id="impact-heading">Business impact</p>
-          <p>Supports consistent risk comparisons and helps route higher-risk applications for closer human review.</p>
+          <p>Shows the review workload and missed defaults an underwriting team would need to weigh before trying a risk-score pilot.</p>
         </section>
         <div class="detail-metrics" aria-label="Key project results">
           <div class="detail-metric"><strong>0.737</strong><span>Held-out ROC-AUC</span></div>
@@ -71,14 +71,14 @@
         <article class="detail-story">
           <section class="detail-section">
             <p class="detail-label">Business question</p>
-            <h2>How well can financial characteristics distinguish loan default risk before an underwriting decision?</h2>
+            <h2>How well do borrower and loan attributes distinguish default status in historical data?</h2>
           </section>
           <section class="detail-section">
             <p class="detail-label">Approach</p>
             <h2>How the work was done</h2>
             <ul><li>Of 148,670 source records, 121,447 had complete values. The split assigned 85,012 to training, 18,217 to validation and 18,218 to testing.</li>
                 <li>Selected 13 predictors plus the Status target, one-hot encoded eight categorical variables, and used a stratified 70/15/15 train-validation-test split.</li>
-                <li>Trained a balanced Random Forest, then tuned 48 parameter candidates with 5-fold GridSearchCV on ROC-AUC and evaluated the selected model on the untouched test set.</li></ul>
+                <li>Trained a class-weighted Random Forest, searched 48 parameter combinations with five-fold cross-validation on ROC-AUC, and evaluated the selected 500-tree model on the untouched test set.</li></ul>
           </section>
           <section class="detail-section">
             <p class="detail-label">Results</p>
@@ -102,7 +102,7 @@
               </figcaption>
             </figure>
           </section>
-          <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The 0.737 ROC-AUC summarizes ranking performance across thresholds. Recall at the selected test threshold is 26.5%, so it should not be read as a complete default-detection system.</p></aside>
+          <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The 0.737 ROC-AUC summarizes ranking across thresholds; default recall at the tested threshold is 26.5%. Complete-case filtering may change which borrowers are represented. External validation and subgroup checks were not performed, and avoided lending losses were not measured.</p></aside>
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
             <h2>What this makes easier to decide</h2>
@@ -115,7 +115,7 @@
           <dl class="detail-facts"><div class="detail-fact"><dt>Source data</dt><dd>148,670 records · 34 columns</dd></div>
               <div class="detail-fact"><dt>Modeling data</dt><dd>121,447 complete records</dd></div>
               <div class="detail-fact"><dt>Method</dt><dd>Class-weighted Random Forest · 5-fold CV</dd></div></dl>
-          <div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/JesseCoggins/loan-default-risk-capstone/blob/main/docs/loan-default-presentation.pdf" target="_blank" rel="noreferrer">View the presentation <span aria-hidden="true">↗</span></a><a href="https://github.com/JesseCoggins/loan-default-risk-capstone/blob/main/docs/loan-default-report.pdf" target="_blank" rel="noreferrer">Read the report <span aria-hidden="true">↗</span></a><a href="https://github.com/jessecoggins/loan-default-risk-capstone" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
+          <div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/JesseCoggins/loan-default-risk-capstone/blob/main/docs/loan-default-presentation.pdf" target="_blank" rel="noreferrer">View the presentation <span aria-hidden="true">↗</span></a><a href="https://github.com/JesseCoggins/loan-default-risk-capstone/blob/main/docs/loan-default-report.pdf" target="_blank" rel="noreferrer">Read the report <span aria-hidden="true">↗</span></a><a href="https://github.com/JesseCoggins/loan-default-risk-capstone/blob/main/assets/loan-model-evaluation.png" target="_blank" rel="noreferrer">Inspect the ROC curve and confusion matrix <span aria-hidden="true">↗</span></a><a href="https://github.com/jessecoggins/loan-default-risk-capstone" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
         </aside>
       </div>
 
