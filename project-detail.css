@@ -619,3 +619,31 @@ a:focus-visible, summary:focus-visible {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+
+/* Use the homepage project-name lettering for every summary heading. */
+.detail-page h1,
+.detail-page h2,
+.detail-page h3 {
+  font-family: var(--serif);
+  letter-spacing: -.015em;
+  word-spacing: -.11em;
+}
+.detail-page [data-press].is-pressed {
+  display: block;
+  text-shadow: none;
+}
+.detail-page [data-press] .pc {
+  display: block;
+  max-width: none;
+  pointer-events: none;
+}
+.detail-page [data-press].is-pressed .pt {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
