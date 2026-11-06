@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=readability-20261104" />
-    <link rel="stylesheet" href="project-detail.css?v=source-sans-20261106" />
+    <link rel="stylesheet" href="project-detail.css?v=tight-headings-20261106" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to project summary</a>
@@ -73,31 +73,31 @@
         <article class="detail-story">
           <section class="detail-section">
             <p class="detail-label">Business question</p>
-            <h2>How should transactional and product data be structured to support reliable reporting and flexible exploration?</h2>
+            <h2 data-press="title">How should transactional and product data be structured to support reliable reporting and flexible exploration?</h2>
           </section>
           <section class="detail-section">
             <p class="detail-label">Approach</p>
-            <h2>How the work was done</h2>
+            <h2 data-press="title">How the work was done</h2>
             <ul><li>Designed a 3NF PostgreSQL schema across Region, Country, ItemType, SalesChannel, and Orders, with a staging-table load from 100,000 sales records.</li>
                 <li>Built an analytical layer for quarterly and regional revenue/profit, product performance, and reusable management views using SQL, indexes, CTEs, and subqueries.</li>
                 <li>Created a parallel MongoDB design for cosmetics and grocery data, using collections, aggregation queries, and indexes for recorded item-purchase activity and product discovery.</li></ul>
           </section>
           <section class="detail-section">
             <p class="detail-label">Results</p>
-            <h2>What the analysis shows</h2>
+            <h2 data-press="title">What the analysis shows</h2>
             <ul><li>The regional report totals $10.31 billion for Sub-Saharan Africa and $10.08 billion for Europe, the two largest modeled profit totals in the dataset. These are dataset aggregations, not profit improvements caused by the database.</li>
                 <li>On 100,000 orders, the regional profit report returned seven rows in 89 ms before indexing and 71 ms afterward. Each query was timed once in each condition; repeated runs under comparable conditions would be needed to establish a repeatable speedup.</li>
                 <li>The grocery aggregation counts recorded item purchases per member, not shopping visits. The ingredient query finds 772 products; a separately labeled rating-at-least-4 variant finds 574.</li></ul>
           </section>
           <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
             <p class="detail-label">From the project</p>
-            <h2 id="visuals-heading">How the reporting tables connect</h2>
+            <h2 id="visuals-heading" data-press="title">How the reporting tables connect</h2>
             <figure class="project-figure project-figure--schema">
               <a class="project-image-link" href="assets/project-visuals/ecomart-schema.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Five tables with shared definitions">
                 <img src="assets/project-visuals/ecomart-schema.png" alt="Entity-relationship diagram connecting orders to country, item type and sales channel, and country to region." width="1629" height="1260" loading="lazy" decoding="async" />
               </a>
               <figcaption>
-                <h3>Five tables with shared definitions</h3>
+                <h3 data-press="title">Five tables with shared definitions</h3>
                 <p>The relationships give the quarterly, regional and product reports a consistent structure. The SQL schema provides the complete field definitions.</p>
                 <div class="project-figure-links"><a href="https://github.com/JesseCoggins/ecomart-relational-nosql-database-design/blob/main/sql/02_schema.sql" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/ecomart-schema.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
               </figcaption>
@@ -106,13 +106,13 @@
           
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
-            <h2>What this makes easier to decide</h2>
+            <h2 data-press="title">What this makes easier to decide</h2>
             <p>The paired designs show how data structure follows the question: normalized relational tables support repeatable transaction reporting, while document collections allow more flexible product-level exploration.</p>
           </section>
         </article>
 
         <aside class="detail-aside" aria-label="Project details and links">
-          <h2>Project details</h2>
+          <h2 data-press="title">Project details</h2>
           <dl class="detail-facts"><div class="detail-fact"><dt>Relational model</dt><dd>PostgreSQL · 3NF · five tables</dd></div>
               <div class="detail-fact"><dt>Sales data</dt><dd>100,000 transactional rows</dd></div>
               <div class="detail-fact"><dt>Document model</dt><dd>MongoDB collections and aggregation queries</dd></div></dl>
