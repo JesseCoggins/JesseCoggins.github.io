@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=readability-20261104" />
-    <link rel="stylesheet" href="project-detail.css?v=source-sans-20261106" />
+    <link rel="stylesheet" href="project-detail.css?v=tight-headings-20261106" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to project summary</a>
@@ -72,30 +72,30 @@
         <article class="detail-story">
           <section class="detail-section">
             <p class="detail-label">Business question</p>
-            <h2>Can a compact recurrent neural network classify sentiment in short movie reviews?</h2>
+            <h2 data-press="title">Can a compact recurrent neural network classify sentiment in short movie reviews?</h2>
           </section>
           <section class="detail-section">
             <p class="detail-label">Approach</p>
-            <h2>How the work was done</h2>
+            <h2 data-press="title">How the work was done</h2>
             <ul><li>Parsed 1,000 individual IMDb excerpts and removed three exact duplicate pairs. Grouped splits keep identical cleaned texts together: 799 training, 100 validation and 98 test reviews.</li>
                 <li>Fitted the vocabulary on training text only and padded sequences to 50 tokens, covering all cleaned training reviews. The saved tokenizer and preprocessing metadata accompany the model.</li>
                 <li>Trained a 100-dimension embedding and 128-unit bidirectional LSTM with a 64-unit dense layer, dropout, sigmoid output, and early stopping.</li></ul>
           </section>
           <section class="detail-section">
             <p class="detail-label">Results</p>
-            <h2>What the analysis shows</h2>
+            <h2 data-press="title">What the analysis shows</h2>
             <ul><li>On the held-out test set, 77 of 98 predictions were correct: accuracy 78.57%, positive-class precision 0.7255, recall 0.8409 and F1 0.7789 at a 0.5 threshold.</li>
                 <li>The negative-review queue contained 47 reviews: 40 negative and 7 positive. It caught 40 of 54 negative reviews and missed 14.</li>
                 <li>The trained Keras model is included in the repository so it can be inspected or loaded without retraining.</li></ul>
           </section>
           <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
             <p class="detail-label">From the project</p>
-            <h2 id="visuals-heading">Held-out errors and validation during training</h2>
+            <h2 id="visuals-heading" data-press="title">Held-out errors and validation during training</h2>
             <figure class="project-figure">
               <a class="project-image-link" href="assets/images/sentiment-test-confusion.png" target="_blank" rel="noreferrer" aria-label="Open full-size held-out sentiment confusion matrix">
                 <img src="assets/images/sentiment-test-confusion.png" alt="Confusion matrix for 98 reviews: 40 negative and 37 positive classified correctly, with 14 negative and 7 positive reviews misclassified." width="864" height="720" loading="lazy" decoding="async" />
               </a>
-              <figcaption><h3>The manual-review workload</h3><p>Negative predictions flag 47 of 98 reviews. The queue contains 40 actual negative reviews and 7 positive reviews; 14 negative reviews are missed.</p>
+              <figcaption><h3 data-press="title">The manual-review workload</h3><p>Negative predictions flag 47 of 98 reviews. The queue contains 40 actual negative reviews and 7 positive reviews; 14 negative reviews are missed.</p>
                 <div class="project-figure-links"><a href="https://github.com/JesseCoggins/sentiment-analysis-bilstm/blob/main/data/test_predictions.csv" target="_blank" rel="noreferrer">View paired predictions <span aria-hidden="true">↗</span></a><a href="assets/images/sentiment-test-confusion.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
               </figcaption>
             </figure>
@@ -104,7 +104,7 @@
                 <img src="assets/images/sentiment-training-history.png" alt="Training and validation curves across five epochs; validation loss selects the restored epoch 3 weights." width="1760" height="640" loading="lazy" decoding="async" />
               </a>
               <figcaption>
-                <h3>Training fit and unseen reviews</h3>
+                <h3 data-press="title">Training fit and unseen reviews</h3>
                 <p>Training continued for five epochs and restored the epoch 3 weights with the lowest validation loss. The later divergence shows why fitting the training reviews alone is not enough.</p>
                 <div class="project-figure-links"><a href="https://github.com/JesseCoggins/sentiment-analysis-bilstm/blob/main/notebooks/sentiment_bilstm.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/images/sentiment-training-history.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
               </figcaption>
@@ -113,13 +113,13 @@
           <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The 98-review test set is small, so its accuracy needs confirmation on a larger independent set. The vocabulary was fitted on training text only, and identical cleaned texts stay in the same split. A customer-support trial would need evaluation on support messages. This study did not measure customer outcomes.</p></aside>
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
-            <h2>What this makes easier to decide</h2>
+            <h2 data-press="title">What this makes easier to decide</h2>
             <p>The model offers a repeatable way to summarize sentiment from text, with a clear precision-recall tradeoff to consider before using the labels for customer-experience monitoring.</p>
           </section>
         </article>
 
         <aside class="detail-aside" aria-label="Project details and links">
-          <h2>Project details</h2>
+          <h2 data-press="title">Project details</h2>
           <dl class="detail-facts"><div class="detail-fact"><dt>Dataset</dt><dd>1,000 source reviews · 997 after exact deduplication</dd></div>
               <div class="detail-fact"><dt>Model</dt><dd>100-d embedding · 128-unit BiLSTM</dd></div>
               <div class="detail-fact"><dt>Artifact</dt><dd>Saved model, tokenizer and preprocessing metadata</dd></div></dl>
