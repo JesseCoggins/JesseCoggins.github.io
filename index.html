@@ -68,6 +68,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 <link href="styles.css?v=reference-theme-20261106" rel="stylesheet"/>
 <script defer="" src="portfolio.js"></script>
+<style id="homepage-paper-texture">
+/* Texture is limited to this homepage; shared project styles stay unchanged. */
+body { position: relative; isolation: isolate; }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("film-paper.png") repeat;
+  background-size: 980px 560px;
+  filter: grayscale(1);
+  mix-blend-mode: multiply;
+  opacity: .7;
+}
+@media print { body::before { display: none; } }
+</style>
 </head>
 <body>
 <a class="skip-link" href="#projects">Skip to projects</a>
