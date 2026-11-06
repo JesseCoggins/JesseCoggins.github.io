@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=readability-20261104" />
-    <link rel="stylesheet" href="project-detail.css?v=source-sans-20261106" />
+    <link rel="stylesheet" href="project-detail.css?v=tight-headings-20261106" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to project summary</a>
@@ -75,31 +75,31 @@
         <article class="detail-story">
           <section class="detail-section">
             <p class="detail-label">Business question</p>
-            <h2>What useful patterns emerge when business, health, and retail datasets are cleaned, modeled, and tested with different analytical methods?</h2>
+            <h2 data-press="title">What useful patterns emerge when business, health, and retail datasets are cleaned, modeled, and tested with different analytical methods?</h2>
           </section>
           <section class="detail-section">
             <p class="detail-label">Approach</p>
-            <h2>How the work was done</h2>
+            <h2 data-press="title">How the work was done</h2>
             <ul><li>Applied employee-turnover cleaning rules, retaining 4,464 of 10,199 records (43.8%). Missing-value, outlier and salary-consistency exclusions affect which employees remain.</li>
                 <li>Applied regression, logistic regression, PCA and statistical tests. The insurance tests use 1,328 records after excluding ten low health-score records with the stated IQR rule.</li>
                 <li>Started with 8,234 retail line items, grouped orders into 441 baskets and mined Apriori associations. The business-finance workflow also exports 40 state summaries and defines its additional ratio as long-term debt divided by revenue.</li></ul>
           </section>
           <section class="detail-section">
             <p class="detail-label">Results</p>
-            <h2>What the analysis shows</h2>
+            <h2 data-press="title">What the analysis shows</h2>
             <ul><li>ANOVA found regional BMI differences (F = 39.4069, p &lt; 0.001). The Mann–Whitney U test comparing charges by smoking status returned p ≈ 4.59 × 10⁻¹²⁹.</li>
                 <li>The top Apriori rules linked themed children’s gift items, with 100% confidence and lift 88.2. Their 1.13% support represents only five of 441 baskets, so they suggest a small merchandising trial.</li>
                 <li>The employee-turnover workflow retained 4,464 rows under its stated cleaning rules. The increase in salary/hourly correlation partly follows from the consistency filter; representativeness was not established.</li></ul>
           </section>
           <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
             <p class="detail-label">From the project</p>
-            <h2 id="visuals-heading">Inspecting the housing models</h2>
+            <h2 id="visuals-heading" data-press="title">Inspecting the housing models</h2>
             <figure class="project-figure">
               <a class="project-image-link" href="assets/project-visuals/housing-residuals.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Checking the price model’s errors">
                 <img src="assets/project-visuals/housing-residuals.png" alt="Scatterplot of home-price residuals against fitted prices, showing a wide spread around the zero line." width="733" height="547" loading="lazy" decoding="async" />
               </a>
               <figcaption>
-                <h3>Checking the price model’s errors</h3>
+                <h3 data-press="title">Checking the price model’s errors</h3>
                 <p>The spread and large residuals show where individual price estimates can miss. This plot checks the model using square footage and school rating, which explained 35.4% of training-set price variance.</p>
                 <div class="project-figure-links"><a href="https://github.com/JesseCoggins/statistical-analysis-and-market-basket/blob/main/notebooks/linear_regression.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/housing-residuals.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
               </figcaption>
@@ -109,7 +109,7 @@
                 <img src="assets/project-visuals/housing-scree.png" alt="Scree plot showing explained predictor variance declining across thirteen principal components." width="790" height="490" loading="lazy" decoding="async" />
               </a>
               <figcaption>
-                <h3>Choosing a smaller representation</h3>
+                <h3 data-press="title">Choosing a smaller representation</h3>
                 <p>The first components capture the largest shares of variation in the predictors. This plot helps assess dimension reduction before examining the regression on home price.</p>
                 <div class="project-figure-links"><a href="https://github.com/JesseCoggins/statistical-analysis-and-market-basket/blob/main/notebooks/pca_analysis.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/housing-scree.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
               </figcaption>
@@ -117,19 +117,19 @@
           </section>
           <section class="detail-section">
             <p class="detail-label">Housing analysis</p>
-            <h2>Three models on 7,000 properties</h2>
+            <h2 data-press="title">Three models on 7,000 properties</h2>
             <p>The final price model uses square footage and school rating and explained 35.4% of training-set price variance. The size-only comparison explained 29.5%. The PCA regression explained 62.9% on its training set. A separate logistic model correctly classified 67.21% of held-out properties as luxury or non-luxury. PCA preprocessing was fitted before the split, so its test error remains exploratory.</p>
           </section>
           <aside class="detail-note"><p class="detail-label">Scope and context</p><p>Association-rule confidence is conditional on the observed baskets. The 1.13% support is useful context when judging how broadly a top rule may apply.</p></aside>
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
-            <h2>What this makes easier to decide</h2>
+            <h2 data-press="title">What this makes easier to decide</h2>
             <p>The market-basket rules create specific bundling and cross-sell hypotheses for merchandising teams to explore. Their 1.13% support describes a relatively narrow slice of the baskets, so the rules are best used to target experiments rather than assumed to generalize.</p>
           </section>
         </article>
 
         <aside class="detail-aside" aria-label="Project details and links">
-          <h2>Project details</h2>
+          <h2 data-press="title">Project details</h2>
           <dl class="detail-facts"><div class="detail-fact"><dt>Collection</dt><dd>Seven analytics notebooks</dd></div>
               <div class="detail-fact"><dt>Market basket</dt><dd>8,234 line items · 441 baskets</dd></div>
               <div class="detail-fact"><dt>Methods</dt><dd>Regression · PCA · hypothesis tests · Apriori</dd></div></dl>
