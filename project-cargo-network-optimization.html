@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=readability-20261104" />
-    <link rel="stylesheet" href="project-detail.css?v=source-sans-20261106" />
+    <link rel="stylesheet" href="project-detail.css?v=tight-headings-20261106" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to project summary</a>
@@ -72,30 +72,30 @@
         <article class="detail-story">
           <section class="detail-section">
             <p class="detail-label">Business question</p>
-            <h2>How should cargo move through a multi-node network to satisfy demand at minimum modeled shipping cost?</h2>
+            <h2 data-press="title">How should cargo move through a multi-node network to satisfy demand at minimum modeled shipping cost?</h2>
           </section>
           <section class="detail-section">
             <p class="detail-label">Approach</p>
-            <h2>How the work was done</h2>
+            <h2 data-press="title">How the work was done</h2>
             <ul><li>Represented shipment quantities across hubs, focus cities, and downstream demand centers as decision variables.</li>
                 <li>Minimized total shipping cost while enforcing hub capacity, focus-city processing capacity, demand satisfaction, flow balance, and non-negativity.</li>
                 <li>Solved the model with PuLP and checked each saved flow against the network constraints.</li></ul>
           </section>
           <section class="detail-section">
             <p class="detail-label">Results</p>
-            <h2>What the analysis shows</h2>
+            <h2 data-press="title">What the analysis shows</h2>
             <ul><li>The solver returned an optimal modeled cost of $200,863.75.</li>
                 <li>CVG was fully utilized at 95,650 tons; AFW carried 38,097 of 44,350 available tons.</li>
                 <li>Saved verification outputs show hub, focus-city, demand, and flow-balance constraints were satisfied.</li></ul>
           </section>
           <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
             <p class="detail-label">From the project</p>
-            <h2 id="visuals-heading">Capacity use and shipment routing</h2>
+            <h2 id="visuals-heading" data-press="title">Capacity use and shipment routing</h2>
             <figure class="project-figure">
               <a class="project-image-link" href="assets/project-visuals/cargo-shipping-plan.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: The solved shipping plan">
                 <img src="assets/project-visuals/cargo-shipping-plan.png" alt="Solved cargo plan showing CVG using 95,650 of 95,650 tons, AFW using 38,097 of 44,350 tons, and 87,502 direct versus 46,245 transfer tons." width="1903" height="693" loading="lazy" decoding="async" />
               </a>
-              <figcaption><h3>The solved shipping plan</h3><p>The plan serves 133,747 tons across 65 demand centers. CVG is fully used and AFW has 6,253 tons available. The notebook separately verifies hub limits, transfer flow balance and every destination requirement.</p>
+              <figcaption><h3 data-press="title">The solved shipping plan</h3><p>The plan serves 133,747 tons across 65 demand centers. CVG is fully used and AFW has 6,253 tons available. The notebook separately verifies hub limits, transfer flow balance and every destination requirement.</p>
                 <div class="project-figure-links"><a href="https://github.com/JesseCoggins/cargo-network-optimization/blob/main/notebooks/optimization.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/cargo-shipping-plan.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
               </figcaption>
             </figure>
@@ -103,13 +103,13 @@
           <aside class="detail-note"><p class="detail-label">Scope and context</p><p>The $200,863.75 value is the model’s optimized objective for the provided network inputs; it is not a measured real-world savings figure.</p></aside>
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
-            <h2>What this makes easier to decide</h2>
+            <h2 data-press="title">What this makes easier to decide</h2>
             <p>The model gives planners a costed feasible routing baseline for comparing network decisions. The total is the optimization result under the stated model inputs and constraints.</p>
           </section>
         </article>
 
         <aside class="detail-aside" aria-label="Project details and links">
-          <h2>Project details</h2>
+          <h2 data-press="title">Project details</h2>
           <dl class="detail-facts"><div class="detail-fact"><dt>Method</dt><dd>Linear programming</dd></div>
               <div class="detail-fact"><dt>Objective</dt><dd>Minimize modeled shipping cost</dd></div>
               <div class="detail-fact"><dt>Solver</dt><dd>PuLP · optimal solution</dd></div></dl>
