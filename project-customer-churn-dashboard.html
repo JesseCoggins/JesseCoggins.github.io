@@ -1,147 +1,142 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Customer Churn Dashboard — Jesse Coggins</title>
-    <meta name="description" content="An executive-facing Tableau dashboard that organizes churn by contract type, income, geography, and payment method, with interactive contract and state filters." />
-    <meta name="author" content="Jesse Coggins" />
-    <meta name="theme-color" content="#f3f0e6" />
-    <link rel="canonical" href="https://jessecoggins.github.io/project-customer-churn-dashboard.html" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Customer Churn Dashboard — Jesse Coggins" />
-    <meta property="og:description" content="An executive-facing Tableau dashboard that organizes churn by contract type, income, geography, and payment method, with interactive contract and state filters." />
-    <meta property="og:url" content="https://jessecoggins.github.io/project-customer-churn-dashboard.html" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="shortcut icon" href="assets/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=readability-20261104" />
-    <link rel="stylesheet" href="project-detail.css?v=tight-headings-20261106" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to project summary</a>
-    <header class="site-header" id="top">
-      <div class="container header-inner">
-        <a class="brand" href="index.html#top" aria-label="Jesse Coggins home">
-          <span class="brand-name">Jesse Coggins</span>
-          <span class="brand-role">Data &amp; Analytics</span>
-        </a>
-        <nav class="profile-links" aria-label="Professional links">
-          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf?v=aligned-20261105" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
-          <a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer"><span>LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span></a>
-          <a class="profile-link" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer"><span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span></a>
-        </nav>
-      </div>
-    </header>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Customer Churn Dashboard — Jesse Coggins</title>
+<meta content="An executive-facing Tableau dashboard that organizes churn by contract type, income, geography, and payment method, with interactive contract and state filters." name="description"/>
+<meta content="Jesse Coggins" name="author"/>
+<meta content="#f3f0e6" name="theme-color"/>
+<link href="https://jessecoggins.github.io/project-customer-churn-dashboard.html" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="Customer Churn Dashboard — Jesse Coggins" property="og:title"/>
+<meta content="An executive-facing Tableau dashboard that organizes churn by contract type, income, geography, and payment method, with interactive contract and state filters." property="og:description"/>
+<meta content="https://jessecoggins.github.io/project-customer-churn-dashboard.html" property="og:url"/>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="assets/favicon.svg" rel="shortcut icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css?v=reference-theme-20261106" rel="stylesheet"/>
+<link href="project-detail.css?v=reference-theme-20261106" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to project summary</a>
+<header class="site-header" id="top">
+<div class="container header-inner">
+<a aria-label="Jesse Coggins home" class="brand" href="index.html#top">
+<span class="brand-name">Jesse Coggins</span>
+<span class="brand-role">Data &amp; Analytics</span>
+</a>
+<nav aria-label="Professional links" class="profile-links">
+<a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf?v=aligned-20261105" rel="noreferrer" target="_blank"><span>Resume</span><span aria-hidden="true" class="link-arrow">↗</span></a>
+<a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" rel="noreferrer" target="_blank"><span>LinkedIn</span><span aria-hidden="true" class="link-arrow">↗</span></a>
+<a class="profile-link" href="https://github.com/jessecoggins" rel="noreferrer" target="_blank"><span>GitHub</span><span aria-hidden="true" class="link-arrow">↗</span></a>
+</nav>
+</div>
+</header>
+<main class="container detail-page" id="main">
+<a class="detail-back" href="index.html#projects"><span aria-hidden="true">←</span> All projects</a>
+<header class="detail-hero">
+<div class="detail-meta">
+<span>Analytics &amp; BI</span><span class="meta-divider">/</span><span>Dashboard</span>
+<span class="meta-divider">/</span><span>Project 01 of 10</span>
+<span class="coursework">M.S. coursework</span>
+</div>
+<h1>Customer Churn Dashboard</h1>
+<p class="detail-lede">An executive-facing Tableau dashboard that organizes churn by contract type, income, geography, and payment method, with interactive contract and state filters.</p>
+<div aria-label="Project tags" class="detail-tags">
+<a aria-label="Filter homepage projects by Tableau" class="detail-tag" href="index.html?tag=Tableau#projects">Tableau</a>
+<a aria-label="Filter homepage projects by KPI reporting" class="detail-tag" href="index.html?tag=KPI%20reporting#projects">KPI reporting</a>
+<a aria-label="Filter homepage projects by Segmentation" class="detail-tag" href="index.html?tag=Segmentation#projects">Segmentation</a>
+<a aria-label="Filter homepage projects by Customer retention" class="detail-tag" href="index.html?tag=Customer%20retention#projects">Customer retention</a>
+<a aria-label="Filter homepage projects by M.S. coursework" class="detail-tag" href="index.html?tag=M.S.%20coursework#projects">M.S. coursework</a>
+</div>
+</header>
+<div class="detail-overview">
+<section aria-labelledby="impact-heading" class="impact-panel">
+<p class="detail-label" id="impact-heading">Business impact</p>
+<p>Gives leadership a consistent view of churn by segment to guide retention review and focus follow-up.</p>
+</section>
+<div aria-label="Key project results" class="detail-metrics">
+<div class="detail-metric"><strong>26.50%</strong><span>Overall churn</span></div>
+<div class="detail-metric"><strong>$172.62</strong><span>Average monthly charge</span></div>
+<div class="detail-metric"><strong>4</strong><span>Focused visualizations</span></div>
+</div>
+</div>
+<div class="detail-content">
+<article class="detail-story">
+<section class="detail-section">
+<p class="detail-label">Business question</p>
+<h2>Who is churning, where is churn concentrated, and which patterns deserve a closer look?</h2>
+</section>
+<section class="detail-section">
+<p class="detail-label">Approach</p>
+<h2>How the work was done</h2>
+<ul><li>Built four views around churn by income, contract type, state, and payment method.</li>
+<li>Added interactive Contract and State filters plus two headline KPIs for quick review.</li>
+<li>Used numeric labels and contrasting colors and an executive-facing visual sequence.</li></ul>
+</section>
+<section class="detail-section">
+<p class="detail-label">Results</p>
+<h2>What the analysis shows</h2>
+<ul><li>The dashboard reports 26.50% overall churn and $172.62 average monthly charge.</li>
+<li>Month-to-month churn was 37.28%, compared with 14.61% for one-year contracts and 12.65% for two-year contracts. Each rate uses the customers on that contract as its denominator.</li>
+<li>State and payment views show shares of churned customers. The income chart shows customer distribution, not evidence that lower-income customers face higher churn probability.</li></ul>
+</section>
+<section aria-labelledby="visuals-heading" class="detail-section project-visuals" id="project-visuals">
+<p class="detail-label">From the project</p>
+<h2 id="visuals-heading">From the dashboard to a retention decision</h2>
+<figure class="project-figure">
+<a aria-label="Open full-size image: The executive view" class="project-image-link" href="assets/project-visuals/churn-dashboard.png?v=7d95e6cde59" rel="noreferrer" target="_blank">
+<img alt="Tableau dashboard showing income distribution, within-contract churn rates, and churned-customer shares by state and payment method." decoding="async" height="1070" loading="lazy" src="assets/project-visuals/churn-dashboard.png?v=7d95e6cde59" width="1212"/>
+</a>
+<figcaption>
+<h3>The executive view</h3>
+<p>The dashboard distinguishes within-contract churn rates from shares of churned customers by state and payment method. The income view shows the customer distribution. Filters support comparison by state and contract.</p>
+<div class="project-figure-links"><a href="https://public.tableau.com/app/profile/jesse.coggins6637/viz/ChurnRateDashboard_17756852469330/CustomerChurnDashboardKeyTrendsbyIncomeRegionContractPayment" rel="noreferrer" target="_blank">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/churn-dashboard.png?v=7d95e6cde59" rel="noreferrer" target="_blank">Open full size <span aria-hidden="true">↗</span></a></div>
+</figcaption>
+</figure>
+<figure class="project-figure">
+<a aria-label="Open full-size image: Where to test an offer" class="project-image-link" href="assets/project-visuals/churn-contract.png" rel="noreferrer" target="_blank">
+<img alt="Horizontal bars showing churn of 37.3 percent for month-to-month contracts, 14.6 percent for one-year and 12.7 percent for two-year contracts." decoding="async" height="610" loading="lazy" src="assets/project-visuals/churn-contract.png" width="1112"/>
+</a>
+<figcaption>
+<h3>Where to test an offer</h3>
+<p>Month-to-month customers had the highest churn rate. Each percentage uses all customers on that contract as its denominator. A retention experiment could test whether an offer changes that rate.</p>
+<div class="project-figure-links"><a href="https://github.com/JesseCoggins/customer-churn-dashboard/blob/main/docs/technical-walkthrough.md" rel="noreferrer" target="_blank">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/churn-contract.png" rel="noreferrer" target="_blank">Open full size <span aria-hidden="true">↗</span></a></div>
+</figcaption>
+</figure>
+</section>
+<aside class="detail-note"><p class="detail-label">Reading the measures</p><p>Electronic checks account for 36.34% of churned customers, while 28.34% of electronic-check users churned. Texas contributes 6.53% of churners, while its within-state rate is 28.69%. A group's share of churners and its within-group churn rate answer different questions.</p></aside>
+<section class="detail-section" style="margin-top:20px">
+<p class="detail-label">Business relevance</p>
+<h2>What this makes easier to decide</h2>
+<p>A shared dashboard gives retention teams a clearer starting point for comparing cohorts before deciding where to investigate or test an offer.</p>
+</section>
+</article>
+<aside aria-label="Project details and links" class="detail-aside">
+<h2>Project details</h2>
+<dl class="detail-facts"><div class="detail-fact"><dt>Audience</dt><dd>Business leadership and retention teams</dd></div>
+<div class="detail-fact"><dt>Data</dt><dd>Customer churn records with contract, state, income, and payment attributes</dd></div>
+<div class="detail-fact"><dt>Tool</dt><dd>Tableau Public</dd></div></dl>
+<div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/JesseCoggins/customer-churn-dashboard/blob/main/docs/technical-walkthrough.md" rel="noreferrer" target="_blank">Follow the technical walkthrough <span aria-hidden="true">↗</span></a><a href="https://public.tableau.com/app/profile/jesse.coggins6637/viz/ChurnRateDashboard_17756852469330/CustomerChurnDashboardKeyTrendsbyIncomeRegionContractPayment" rel="noreferrer" target="_blank">Open Tableau Public dashboard <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/jessecoggins/customer-churn-dashboard" rel="noreferrer" target="_blank">View GitHub repository <span aria-hidden="true">↗</span></a></div>
+</aside>
+</div>
+<nav aria-label="Other projects" class="detail-pagination">
+<a href="project-loan-default-risk.html"><span>Next project →</span><strong>Loan Default Risk Capstone</strong></a>
+</nav>
+</main>
+<footer class="detail-footer">
+<div class="container footer-inner">
+<a href="mailto:jessecoggins21@gmail.com">jessecoggins21@gmail.com <span aria-hidden="true">↗</span></a>
+<span>Jesse Coggins · 2026</span>
+<a href="index.html#projects">All projects ↑</a>
+</div>
+</footer>
 
-    <main id="main" class="container detail-page">
-      <a class="detail-back" href="index.html#projects"><span aria-hidden="true">←</span> All projects</a>
-      <header class="detail-hero">
-        <div class="detail-meta">
-          <span>Analytics &amp; BI</span><span class="meta-divider">/</span><span>Dashboard</span>
-          <span class="meta-divider">/</span><span>Project 01 of 10</span>
-          <span class="coursework">M.S. coursework</span>
-        </div>
-        <h1 data-press="title">Customer Churn Dashboard</h1>
-        <p class="detail-lede">An executive-facing Tableau dashboard that organizes churn by contract type, income, geography, and payment method, with interactive contract and state filters.</p>
-        <div class="detail-tags" aria-label="Project tags">
-          <a class="detail-tag" href="index.html?tag=Tableau#projects" aria-label="Filter homepage projects by Tableau">Tableau</a>
-                <a class="detail-tag" href="index.html?tag=KPI%20reporting#projects" aria-label="Filter homepage projects by KPI reporting">KPI reporting</a>
-                <a class="detail-tag" href="index.html?tag=Segmentation#projects" aria-label="Filter homepage projects by Segmentation">Segmentation</a>
-                <a class="detail-tag" href="index.html?tag=Customer%20retention#projects" aria-label="Filter homepage projects by Customer retention">Customer retention</a>
-                <a class="detail-tag" href="index.html?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
-        </div>
-      </header>
-
-      <div class="detail-overview">
-        <section class="impact-panel" aria-labelledby="impact-heading">
-          <p class="detail-label" id="impact-heading">Business impact</p>
-          <p>Gives leadership a consistent view of churn by segment to guide retention review and focus follow-up.</p>
-        </section>
-        <div class="detail-metrics" aria-label="Key project results">
-          <div class="detail-metric"><strong>26.50%</strong><span>Overall churn</span></div>
-              <div class="detail-metric"><strong>$172.62</strong><span>Average monthly charge</span></div>
-              <div class="detail-metric"><strong>4</strong><span>Focused visualizations</span></div>
-        </div>
-      </div>
-
-      <div class="detail-content">
-        <article class="detail-story">
-          <section class="detail-section">
-            <p class="detail-label">Business question</p>
-            <h2 data-press="title">Who is churning, where is churn concentrated, and which patterns deserve a closer look?</h2>
-          </section>
-          <section class="detail-section">
-            <p class="detail-label">Approach</p>
-            <h2 data-press="title">How the work was done</h2>
-            <ul><li>Built four views around churn by income, contract type, state, and payment method.</li>
-                <li>Added interactive Contract and State filters plus two headline KPIs for quick review.</li>
-                <li>Used numeric labels and contrasting colors and an executive-facing visual sequence.</li></ul>
-          </section>
-          <section class="detail-section">
-            <p class="detail-label">Results</p>
-            <h2 data-press="title">What the analysis shows</h2>
-            <ul><li>The dashboard reports 26.50% overall churn and $172.62 average monthly charge.</li>
-                <li>Month-to-month churn was 37.28%, compared with 14.61% for one-year contracts and 12.65% for two-year contracts. Each rate uses the customers on that contract as its denominator.</li>
-                <li>State and payment views show shares of churned customers. The income chart shows customer distribution, not evidence that lower-income customers face higher churn probability.</li></ul>
-          </section>
-          <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
-            <p class="detail-label">From the project</p>
-            <h2 id="visuals-heading" data-press="title">From the dashboard to a retention decision</h2>
-            <figure class="project-figure">
-              <a class="project-image-link" href="assets/project-visuals/churn-dashboard.png?v=7d95e6cde59" target="_blank" rel="noreferrer" aria-label="Open full-size image: The executive view">
-                <img src="assets/project-visuals/churn-dashboard.png?v=7d95e6cde59" alt="Tableau dashboard showing income distribution, within-contract churn rates, and churned-customer shares by state and payment method." width="1212" height="1070" loading="lazy" decoding="async" />
-              </a>
-              <figcaption>
-                <h3 data-press="title">The executive view</h3>
-                <p>The dashboard distinguishes within-contract churn rates from shares of churned customers by state and payment method. The income view shows the customer distribution. Filters support comparison by state and contract.</p>
-                <div class="project-figure-links"><a href="https://public.tableau.com/app/profile/jesse.coggins6637/viz/ChurnRateDashboard_17756852469330/CustomerChurnDashboardKeyTrendsbyIncomeRegionContractPayment" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/churn-dashboard.png?v=7d95e6cde59" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
-              </figcaption>
-            </figure>
-            <figure class="project-figure">
-              <a class="project-image-link" href="assets/project-visuals/churn-contract.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Where to test an offer">
-                <img src="assets/project-visuals/churn-contract.png" alt="Horizontal bars showing churn of 37.3 percent for month-to-month contracts, 14.6 percent for one-year and 12.7 percent for two-year contracts." width="1112" height="610" loading="lazy" decoding="async" />
-              </a>
-              <figcaption>
-                <h3 data-press="title">Where to test an offer</h3>
-                <p>Month-to-month customers had the highest churn rate. Each percentage uses all customers on that contract as its denominator. A retention experiment could test whether an offer changes that rate.</p>
-                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/customer-churn-dashboard/blob/main/docs/technical-walkthrough.md" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/churn-contract.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
-              </figcaption>
-            </figure>
-          </section>
-          
-          <aside class="detail-note"><p class="detail-label">Reading the measures</p><p>Electronic checks account for 36.34% of churned customers, while 28.34% of electronic-check users churned. Texas contributes 6.53% of churners, while its within-state rate is 28.69%. A group's share of churners and its within-group churn rate answer different questions.</p></aside>
-          <section class="detail-section" style="margin-top:20px">
-            <p class="detail-label">Business relevance</p>
-            <h2 data-press="title">What this makes easier to decide</h2>
-            <p>A shared dashboard gives retention teams a clearer starting point for comparing cohorts before deciding where to investigate or test an offer.</p>
-          </section>
-        </article>
-
-        <aside class="detail-aside" aria-label="Project details and links">
-          <h2 data-press="title">Project details</h2>
-          <dl class="detail-facts"><div class="detail-fact"><dt>Audience</dt><dd>Business leadership and retention teams</dd></div>
-              <div class="detail-fact"><dt>Data</dt><dd>Customer churn records with contract, state, income, and payment attributes</dd></div>
-              <div class="detail-fact"><dt>Tool</dt><dd>Tableau Public</dd></div></dl>
-          <div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/JesseCoggins/customer-churn-dashboard/blob/main/docs/technical-walkthrough.md" target="_blank" rel="noreferrer">Follow the technical walkthrough <span aria-hidden="true">↗</span></a><a href="https://public.tableau.com/app/profile/jesse.coggins6637/viz/ChurnRateDashboard_17756852469330/CustomerChurnDashboardKeyTrendsbyIncomeRegionContractPayment" target="_blank" rel="noreferrer">Open Tableau Public dashboard <span aria-hidden="true">↗</span></a>
-              <a href="https://github.com/jessecoggins/customer-churn-dashboard" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
-        </aside>
-      </div>
-
-      <nav class="detail-pagination" aria-label="Other projects">
-        <a href="project-loan-default-risk.html"><span>Next project →</span><strong>Loan Default Risk Capstone</strong></a>
-      </nav>
-    </main>
-
-    <footer class="detail-footer">
-      <div class="container footer-inner">
-        <a href="mailto:jessecoggins21@gmail.com">jessecoggins21@gmail.com <span aria-hidden="true">↗</span></a>
-        <span>Jesse Coggins · 2026</span>
-        <a href="index.html#projects">All projects ↑</a>
-      </div>
-    </footer>
-    <script defer src="summary-letterpress.js?v=titles-20261105"></script>
-  </body>
+</body>
 </html>
+

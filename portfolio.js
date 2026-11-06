@@ -1,5 +1,5 @@
 (() => {
-  const cards = Array.from(document.querySelectorAll(".project-record"));
+  const cards = Array.from(document.querySelectorAll(".project-row"));
   const projectGrid = document.getElementById("project-grid");
   const categoryRoot = document.getElementById("category-filters");
   const tagRoot = document.getElementById("tag-filters");
@@ -27,7 +27,7 @@
   const normalize = (value) => value.toLocaleLowerCase().trim();
 
   const matchesQuery = (card) =>
-    !state.query || normalize(card.textContent + " " + card.dataset.tags).includes(normalize(state.query));
+    !state.query || normalize(card.textContent).includes(normalize(state.query));
   const matchesCategory = (card) =>
     state.category === "All projects" || card.dataset.category === state.category;
   const matchesTags = (card) => {
@@ -170,9 +170,6 @@
   }
 
   function render() {
-    const focused = document.activeElement;
-    const focusTag = focused?.closest("#tag-filters") ? focused.dataset.tag : null;
-    const focusArea = focused?.closest("#category-filters") ? focused.textContent.replace(/\d+$/, "").trim() : null;
     const visible = resultSet();
     const sorted = [...cards];
 
@@ -191,6 +188,9 @@
     sorted.forEach((card) => projectGrid.append(card));
     cards.forEach((card) => {
       card.hidden = !visible.includes(card);
+      card.querySelectorAll(".tag-chip").forEach((button) => {
+        button.setAttribute("aria-pressed", String(state.tags.has(button.dataset.tag)));
+      });
     });
 
     count.textContent = visible.length + " of " + cards.length + " projects";
@@ -199,8 +199,6 @@
     renderTags();
     renderActiveFilters();
     syncUrl();
-    if (focusTag) tagRoot.querySelector('[data-tag="' + CSS.escape(focusTag) + '"]')?.focus();
-    if (focusArea) [...categoryRoot.children].find((button) => button.querySelector("span")?.textContent === focusArea)?.focus();
   }
 
   function clearFilters() {
@@ -250,11 +248,14 @@
   document.getElementById("empty-clear").addEventListener("click", clearFilters);
 
   cards.forEach((card) => {
-    card.addEventListener("click", (event) => {
-      if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-      if (event.target.closest("a, button, input, select, summary") || window.getSelection()?.toString()) return;
-      const link = card.querySelector(".project-summary-link");
-      if (link) window.location.assign(link.href);
+    card.querySelectorAll(".tag-chip").forEach((button) => {
+      button.addEventListener("click", () => {
+        const tag = button.dataset.tag;
+        if (state.tags.has(tag)) state.tags.delete(tag);
+        else state.tags.add(tag);
+        render();
+        tagRoot.querySelector('[data-tag="' + CSS.escape(tag) + '"]')?.focus();
+      });
     });
   });
 
@@ -294,6 +295,5 @@
     button.setAttribute("aria-pressed", String(button.dataset.match === state.match)),
   );
   document.getElementById("current-year").textContent = String(new Date().getFullYear());
-  document.getElementById("advanced-filters").open = state.tags.size > 0;
   render();
 })();

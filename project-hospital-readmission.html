@@ -1,146 +1,142 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hospital Readmission Analysis — Jesse Coggins</title>
-    <meta name="description" content="A paired supervised and unsupervised analysis of hospital outcomes, combining discharge-time risk stratification with patient clustering and PCA." />
-    <meta name="author" content="Jesse Coggins" />
-    <meta name="theme-color" content="#f3f0e6" />
-    <link rel="canonical" href="https://jessecoggins.github.io/project-hospital-readmission.html" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Hospital Readmission Analysis — Jesse Coggins" />
-    <meta property="og:description" content="A paired supervised and unsupervised analysis of hospital outcomes, combining discharge-time risk stratification with patient clustering and PCA." />
-    <meta property="og:url" content="https://jessecoggins.github.io/project-hospital-readmission.html" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="shortcut icon" href="assets/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=readability-20261104" />
-    <link rel="stylesheet" href="project-detail.css?v=tight-headings-20261106" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to project summary</a>
-    <header class="site-header" id="top">
-      <div class="container header-inner">
-        <a class="brand" href="index.html#top" aria-label="Jesse Coggins home">
-          <span class="brand-name">Jesse Coggins</span>
-          <span class="brand-role">Data &amp; Analytics</span>
-        </a>
-        <nav class="profile-links" aria-label="Professional links">
-          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf?v=aligned-20261105" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
-          <a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer"><span>LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span></a>
-          <a class="profile-link" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer"><span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span></a>
-        </nav>
-      </div>
-    </header>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hospital Readmission Analysis — Jesse Coggins</title>
+<meta content="A paired supervised and unsupervised analysis of hospital outcomes, combining discharge-time risk stratification with patient clustering and PCA." name="description"/>
+<meta content="Jesse Coggins" name="author"/>
+<meta content="#f3f0e6" name="theme-color"/>
+<link href="https://jessecoggins.github.io/project-hospital-readmission.html" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="Hospital Readmission Analysis — Jesse Coggins" property="og:title"/>
+<meta content="A paired supervised and unsupervised analysis of hospital outcomes, combining discharge-time risk stratification with patient clustering and PCA." property="og:description"/>
+<meta content="https://jessecoggins.github.io/project-hospital-readmission.html" property="og:url"/>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="assets/favicon.svg" rel="shortcut icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css?v=reference-theme-20261106" rel="stylesheet"/>
+<link href="project-detail.css?v=reference-theme-20261106" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to project summary</a>
+<header class="site-header" id="top">
+<div class="container header-inner">
+<a aria-label="Jesse Coggins home" class="brand" href="index.html#top">
+<span class="brand-name">Jesse Coggins</span>
+<span class="brand-role">Data &amp; Analytics</span>
+</a>
+<nav aria-label="Professional links" class="profile-links">
+<a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf?v=aligned-20261105" rel="noreferrer" target="_blank"><span>Resume</span><span aria-hidden="true" class="link-arrow">↗</span></a>
+<a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" rel="noreferrer" target="_blank"><span>LinkedIn</span><span aria-hidden="true" class="link-arrow">↗</span></a>
+<a class="profile-link" href="https://github.com/jessecoggins" rel="noreferrer" target="_blank"><span>GitHub</span><span aria-hidden="true" class="link-arrow">↗</span></a>
+</nav>
+</div>
+</header>
+<main class="container detail-page" id="main">
+<a class="detail-back" href="index.html#projects"><span aria-hidden="true">←</span> All projects</a>
+<header class="detail-hero">
+<div class="detail-meta">
+<span>Machine Learning</span><span class="meta-divider">/</span><span>Healthcare analysis</span>
+<span class="meta-divider">/</span><span>Project 04 of 10</span>
+<span class="coursework">M.S. coursework</span>
+</div>
+<h1>Hospital Readmission Analysis</h1>
+<p class="detail-lede">A paired supervised and unsupervised analysis of hospital outcomes, combining discharge-time risk stratification with patient clustering and PCA.</p>
+<div aria-label="Project tags" class="detail-tags">
+<a aria-label="Filter homepage projects by Python" class="detail-tag" href="index.html?tag=Python#projects">Python</a>
+<a aria-label="Filter homepage projects by Healthcare" class="detail-tag" href="index.html?tag=Healthcare#projects">Healthcare</a>
+<a aria-label="Filter homepage projects by Risk stratification" class="detail-tag" href="index.html?tag=Risk%20stratification#projects">Risk stratification</a>
+<a aria-label="Filter homepage projects by Feature timing" class="detail-tag" href="index.html?tag=Feature%20timing#projects">Feature timing</a>
+<a aria-label="Filter homepage projects by Clustering" class="detail-tag" href="index.html?tag=Clustering#projects">Clustering</a>
+<a aria-label="Filter homepage projects by PCA" class="detail-tag" href="index.html?tag=PCA#projects">PCA</a>
+<a aria-label="Filter homepage projects by M.S. coursework" class="detail-tag" href="index.html?tag=M.S.%20coursework#projects">M.S. coursework</a>
+</div>
+</header>
+<div class="detail-overview">
+<section aria-labelledby="impact-heading" class="impact-panel">
+<p class="detail-label" id="impact-heading">Business impact</p>
+<p>Combines a discharge-time readmission classifier with patient segments to inform questions about follow-up and hospital service use. The study did not test an intervention.</p>
+</section>
+<div aria-label="Key project results" class="detail-metrics">
+<div class="detail-metric"><strong>0.999</strong><span>ROC-AUC at discharge</span></div>
+<div class="detail-metric"><strong>97.9%</strong><span>Held-out classifier accuracy</span></div>
+<div class="detail-metric"><strong>k = 3</strong><span>Patient segments</span></div>
+</div>
+</div>
+<div class="detail-content">
+<article class="detail-story">
+<section class="detail-section">
+<p class="detail-label">Business question</p>
+<h2>How well can hospital records classify readmission, and what patient groups emerge from clustering?</h2>
+</section>
+<section class="detail-section">
+<p class="detail-label">Approach</p>
+<h2>How the work was done</h2>
+<ul><li>Compared 216 Random Forest parameter combinations with five-fold cross-validation, then evaluated the selected forest on a held-out test set.</li>
+<li>Used the Elbow Method to select three K-Means segments, then applied PCA to inspect cluster separation and profiles.</li></ul>
+</section>
+<section class="detail-section">
+<p class="detail-label">Results</p>
+<h2>What the analysis shows</h2>
+<ul><li>The full discharge-time model achieved 97.9% accuracy, 96.3% precision, 98.0% recall, 0.971 F1, and 0.999 ROC-AUC.</li>
+<li>The separate clustering notebook uses 14 features and excludes readmission. One group averaged 9 days and $3,212 in charges; another averaged 60 days and $7,401. The oldest group averaged 74 years, and 95% reported high blood pressure. These profiles do not establish future readmission risk.</li></ul>
+</section>
+<section aria-labelledby="visuals-heading" class="detail-section project-visuals" id="project-visuals">
+<p class="detail-label">From the project</p>
+<h2 id="visuals-heading">Model evaluation and patient groups</h2>
+<figure class="project-figure">
+<a aria-label="Open full-size image: How performance depends on feature timing" class="project-image-link" href="assets/project-visuals/hospital-evaluation.png" rel="noreferrer" target="_blank">
+<img alt="ROC curves with and without completed length of stay and a full-model confusion matrix showing 929 true negatives, 21 false positives, 11 false negatives and 539 true positives." decoding="async" height="724" loading="lazy" src="assets/project-visuals/hospital-evaluation.png" width="1670"/>
+</a>
+<figcaption><h3>How performance depends on feature timing</h3><p>The same held-out records give ROC-AUC 0.999 with completed length of stay and 0.492 without it. The confusion matrix describes the full model at the evaluated threshold.</p>
+<div class="project-figure-links"><a href="https://github.com/JesseCoggins/hospital-readmission-ml/blob/main/notebooks/readmission_classification.ipynb" rel="noreferrer" target="_blank">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/hospital-evaluation.png" rel="noreferrer" target="_blank">Open full size <span aria-hidden="true">↗</span></a></div>
+</figcaption>
+</figure>
+<figure class="project-figure">
+<a aria-label="Open full-size image: Choosing the number of patient groups" class="project-image-link" href="assets/project-visuals/hospital-elbow.png" rel="noreferrer" target="_blank">
+<img alt="Saved elbow plot from the current 14-feature clustering notebook, with within-cluster variation decreasing from one to ten groups." decoding="async" height="470" loading="lazy" src="assets/project-visuals/hospital-elbow.png" width="713"/>
+</a>
+<figcaption><h3>Choosing the number of patient groups</h3><p>The early reductions in within-group variation informed the choice of three clusters. These groups describe similar records; they do not establish future readmission risk.</p>
+<div class="project-figure-links"><a href="https://github.com/JesseCoggins/hospital-readmission-ml/blob/main/notebooks/readmission_clustering_pca.ipynb" rel="noreferrer" target="_blank">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/hospital-elbow.png" rel="noreferrer" target="_blank">Open full size <span aria-hidden="true">↗</span></a></div>
+</figcaption>
+</figure>
+</section>
+<section class="detail-section" id="feature-timing">
+<p class="detail-label">Additional validation</p>
+<h2>Feature timing at discharge</h2>
+<p>Initial_days records completed length of stay, available at discharge. A sensitivity check removes that feature and repeats the selected-model evaluation. ROC-AUC falls from 0.999 to 0.492, near chance. This limits the full model to discharge-time analysis; decisions at admission need a model validated on information available then.</p>
+</section>
+<section class="detail-section" style="margin-top:20px">
+<p class="detail-label">Business relevance</p>
+<h2>What this makes easier to decide</h2>
+<p>The classifier provides a way to rank records for discharge-time review, while cluster profiles help explore differences in service use. Neither analysis establishes that follow-up will reduce readmissions.</p>
+</section>
+</article>
+<aside aria-label="Project details and links" class="detail-aside">
+<h2>Project details</h2>
+<dl class="detail-facts"><div class="detail-fact"><dt>Supervised method</dt><dd>Random Forest classification</dd></div>
+<div class="detail-fact"><dt>Unsupervised methods</dt><dd>K-Means · PCA</dd></div>
+<div class="detail-fact"><dt>Segmentation</dt><dd>3 patient clusters</dd></div></dl>
+<div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/JesseCoggins/hospital-readmission-ml#additional-validation-feature-timing" rel="noreferrer" target="_blank">Read the sensitivity check <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/jessecoggins/hospital-readmission-ml" rel="noreferrer" target="_blank">View GitHub repository <span aria-hidden="true">↗</span></a></div>
+</aside>
+</div>
+<nav aria-label="Other projects" class="detail-pagination">
+<a href="project-flight-delay-prediction.html"><span>← Previous project</span><strong>Flight Delay Prediction Pipeline</strong></a><a href="project-revenue-forecasting.html"><span>Next project →</span><strong>Revenue Forecasting with ARIMA</strong></a>
+</nav>
+</main>
+<footer class="detail-footer">
+<div class="container footer-inner">
+<a href="mailto:jessecoggins21@gmail.com">jessecoggins21@gmail.com <span aria-hidden="true">↗</span></a>
+<span>Jesse Coggins · 2026</span>
+<a href="index.html#projects">All projects ↑</a>
+</div>
+</footer>
 
-    <main id="main" class="container detail-page">
-      <a class="detail-back" href="index.html#projects"><span aria-hidden="true">←</span> All projects</a>
-      <header class="detail-hero">
-        <div class="detail-meta">
-          <span>Machine Learning</span><span class="meta-divider">/</span><span>Healthcare analysis</span>
-          <span class="meta-divider">/</span><span>Project 04 of 10</span>
-          <span class="coursework">M.S. coursework</span>
-        </div>
-        <h1 data-press="title">Hospital Readmission Analysis</h1>
-        <p class="detail-lede">A paired supervised and unsupervised analysis of hospital outcomes, combining discharge-time risk stratification with patient clustering and PCA.</p>
-        <div class="detail-tags" aria-label="Project tags">
-          <a class="detail-tag" href="index.html?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
-                <a class="detail-tag" href="index.html?tag=Healthcare#projects" aria-label="Filter homepage projects by Healthcare">Healthcare</a>
-                <a class="detail-tag" href="index.html?tag=Risk%20stratification#projects" aria-label="Filter homepage projects by Risk stratification">Risk stratification</a>
-                <a class="detail-tag" href="index.html?tag=Feature%20timing#projects" aria-label="Filter homepage projects by Feature timing">Feature timing</a>
-                <a class="detail-tag" href="index.html?tag=Clustering#projects" aria-label="Filter homepage projects by Clustering">Clustering</a>
-                <a class="detail-tag" href="index.html?tag=PCA#projects" aria-label="Filter homepage projects by PCA">PCA</a>
-                <a class="detail-tag" href="index.html?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
-        </div>
-      </header>
-
-      <div class="detail-overview">
-        <section class="impact-panel" aria-labelledby="impact-heading">
-          <p class="detail-label" id="impact-heading">Business impact</p>
-          <p>Combines a discharge-time readmission classifier with patient segments to inform questions about follow-up and hospital service use. The study did not test an intervention.</p>
-        </section>
-        <div class="detail-metrics" aria-label="Key project results">
-          <div class="detail-metric"><strong>0.999</strong><span>ROC-AUC at discharge</span></div>
-              <div class="detail-metric"><strong>97.9%</strong><span>Held-out classifier accuracy</span></div>
-              <div class="detail-metric"><strong>k = 3</strong><span>Patient segments</span></div>
-        </div>
-      </div>
-
-      <div class="detail-content">
-        <article class="detail-story">
-          <section class="detail-section">
-            <p class="detail-label">Business question</p>
-            <h2 data-press="title">How well can hospital records classify readmission, and what patient groups emerge from clustering?</h2>
-          </section>
-          <section class="detail-section">
-            <p class="detail-label">Approach</p>
-            <h2 data-press="title">How the work was done</h2>
-            <ul><li>Compared 216 Random Forest parameter combinations with five-fold cross-validation, then evaluated the selected forest on a held-out test set.</li>
-                <li>Used the Elbow Method to select three K-Means segments, then applied PCA to inspect cluster separation and profiles.</li></ul>
-          </section>
-          <section class="detail-section">
-            <p class="detail-label">Results</p>
-            <h2 data-press="title">What the analysis shows</h2>
-            <ul><li>The full discharge-time model achieved 97.9% accuracy, 96.3% precision, 98.0% recall, 0.971 F1, and 0.999 ROC-AUC.</li>
-                <li>The separate clustering notebook uses 14 features and excludes readmission. One group averaged 9 days and $3,212 in charges; another averaged 60 days and $7,401. The oldest group averaged 74 years, and 95% reported high blood pressure. These profiles do not establish future readmission risk.</li></ul>
-          </section>
-          <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
-            <p class="detail-label">From the project</p>
-            <h2 id="visuals-heading" data-press="title">Model evaluation and patient groups</h2>
-            <figure class="project-figure">
-              <a class="project-image-link" href="assets/project-visuals/hospital-evaluation.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: How performance depends on feature timing">
-                <img src="assets/project-visuals/hospital-evaluation.png" alt="ROC curves with and without completed length of stay and a full-model confusion matrix showing 929 true negatives, 21 false positives, 11 false negatives and 539 true positives." width="1670" height="724" loading="lazy" decoding="async" />
-              </a>
-              <figcaption><h3 data-press="title">How performance depends on feature timing</h3><p>The same held-out records give ROC-AUC 0.999 with completed length of stay and 0.492 without it. The confusion matrix describes the full model at the evaluated threshold.</p>
-                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/hospital-readmission-ml/blob/main/notebooks/readmission_classification.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/hospital-evaluation.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
-              </figcaption>
-            </figure>
-            <figure class="project-figure">
-              <a class="project-image-link" href="assets/project-visuals/hospital-elbow.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Choosing the number of patient groups">
-                <img src="assets/project-visuals/hospital-elbow.png" alt="Saved elbow plot from the current 14-feature clustering notebook, with within-cluster variation decreasing from one to ten groups." width="713" height="470" loading="lazy" decoding="async" />
-              </a>
-              <figcaption><h3 data-press="title">Choosing the number of patient groups</h3><p>The early reductions in within-group variation informed the choice of three clusters. These groups describe similar records; they do not establish future readmission risk.</p>
-                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/hospital-readmission-ml/blob/main/notebooks/readmission_clustering_pca.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/hospital-elbow.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
-              </figcaption>
-            </figure>
-          </section>
-          <section class="detail-section" id="feature-timing">
-            <p class="detail-label">Additional validation</p>
-            <h2 data-press="title">Feature timing at discharge</h2>
-            <p>Initial_days records completed length of stay, available at discharge. A sensitivity check removes that feature and repeats the selected-model evaluation. ROC-AUC falls from 0.999 to 0.492, near chance. This limits the full model to discharge-time analysis; decisions at admission need a model validated on information available then.</p>
-          </section>
-          <section class="detail-section" style="margin-top:20px">
-            <p class="detail-label">Business relevance</p>
-            <h2 data-press="title">What this makes easier to decide</h2>
-            <p>The classifier provides a way to rank records for discharge-time review, while cluster profiles help explore differences in service use. Neither analysis establishes that follow-up will reduce readmissions.</p>
-          </section>
-        </article>
-
-        <aside class="detail-aside" aria-label="Project details and links">
-          <h2 data-press="title">Project details</h2>
-          <dl class="detail-facts"><div class="detail-fact"><dt>Supervised method</dt><dd>Random Forest classification</dd></div>
-              <div class="detail-fact"><dt>Unsupervised methods</dt><dd>K-Means · PCA</dd></div>
-              <div class="detail-fact"><dt>Segmentation</dt><dd>3 patient clusters</dd></div></dl>
-          <div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/JesseCoggins/hospital-readmission-ml#additional-validation-feature-timing" target="_blank" rel="noreferrer">Read the sensitivity check <span aria-hidden="true">↗</span></a>
-              <a href="https://github.com/jessecoggins/hospital-readmission-ml" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
-        </aside>
-      </div>
-
-      <nav class="detail-pagination" aria-label="Other projects">
-        <a href="project-flight-delay-prediction.html"><span>← Previous project</span><strong>Flight Delay Prediction Pipeline</strong></a><a href="project-revenue-forecasting.html"><span>Next project →</span><strong>Revenue Forecasting with ARIMA</strong></a>
-      </nav>
-    </main>
-
-    <footer class="detail-footer">
-      <div class="container footer-inner">
-        <a href="mailto:jessecoggins21@gmail.com">jessecoggins21@gmail.com <span aria-hidden="true">↗</span></a>
-        <span>Jesse Coggins · 2026</span>
-        <a href="index.html#projects">All projects ↑</a>
-      </div>
-    </footer>
-    <script defer src="summary-letterpress.js?v=titles-20261105"></script>
-  </body>
+</body>
 </html>
+

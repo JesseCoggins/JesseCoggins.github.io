@@ -1,151 +1,146 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Revenue Forecasting with ARIMA — Jesse Coggins</title>
-    <meta name="description" content="I used 731 daily hospital revenue observations to evaluate an ARIMA forecast against a no-change baseline and project revenue for the next 30 days." />
-    <meta name="author" content="Jesse Coggins" />
-    <meta name="theme-color" content="#f3f0e6" />
-    <link rel="canonical" href="https://jessecoggins.github.io/project-revenue-forecasting.html" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Revenue Forecasting with ARIMA — Jesse Coggins" />
-    <meta property="og:description" content="I used 731 daily hospital revenue observations to evaluate an ARIMA forecast against a no-change baseline and project revenue for the next 30 days." />
-    <meta property="og:url" content="https://jessecoggins.github.io/project-revenue-forecasting.html" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="shortcut icon" href="assets/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=readability-20261104" />
-    <link rel="stylesheet" href="project-detail.css?v=tight-headings-20261106" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to project summary</a>
-    <header class="site-header" id="top">
-      <div class="container header-inner">
-        <a class="brand" href="index.html#top" aria-label="Jesse Coggins home">
-          <span class="brand-name">Jesse Coggins</span>
-          <span class="brand-role">Data &amp; Analytics</span>
-        </a>
-        <nav class="profile-links" aria-label="Professional links">
-          <a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf?v=aligned-20261105" target="_blank" rel="noreferrer"><span>Resume</span><span class="link-arrow" aria-hidden="true">↗</span></a>
-          <a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer"><span>LinkedIn</span><span class="link-arrow" aria-hidden="true">↗</span></a>
-          <a class="profile-link" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer"><span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span></a>
-        </nav>
-      </div>
-    </header>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Revenue Forecasting with ARIMA — Jesse Coggins</title>
+<meta content="I used 731 daily hospital revenue observations to evaluate an ARIMA forecast against a no-change baseline and project revenue for the next 30 days." name="description"/>
+<meta content="Jesse Coggins" name="author"/>
+<meta content="#f3f0e6" name="theme-color"/>
+<link href="https://jessecoggins.github.io/project-revenue-forecasting.html" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="Revenue Forecasting with ARIMA — Jesse Coggins" property="og:title"/>
+<meta content="I used 731 daily hospital revenue observations to evaluate an ARIMA forecast against a no-change baseline and project revenue for the next 30 days." property="og:description"/>
+<meta content="https://jessecoggins.github.io/project-revenue-forecasting.html" property="og:url"/>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="assets/favicon.svg" rel="shortcut icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css?v=reference-theme-20261106" rel="stylesheet"/>
+<link href="project-detail.css?v=reference-theme-20261106" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to project summary</a>
+<header class="site-header" id="top">
+<div class="container header-inner">
+<a aria-label="Jesse Coggins home" class="brand" href="index.html#top">
+<span class="brand-name">Jesse Coggins</span>
+<span class="brand-role">Data &amp; Analytics</span>
+</a>
+<nav aria-label="Professional links" class="profile-links">
+<a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf?v=aligned-20261105" rel="noreferrer" target="_blank"><span>Resume</span><span aria-hidden="true" class="link-arrow">↗</span></a>
+<a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" rel="noreferrer" target="_blank"><span>LinkedIn</span><span aria-hidden="true" class="link-arrow">↗</span></a>
+<a class="profile-link" href="https://github.com/jessecoggins" rel="noreferrer" target="_blank"><span>GitHub</span><span aria-hidden="true" class="link-arrow">↗</span></a>
+</nav>
+</div>
+</header>
+<main class="container detail-page" id="main">
+<a class="detail-back" href="index.html#projects"><span aria-hidden="true">←</span> All projects</a>
+<header class="detail-hero">
+<div class="detail-meta">
+<span>Forecasting</span><span class="meta-divider">/</span><span>Time series</span>
+<span class="meta-divider">/</span><span>Project 05 of 10</span>
+<span class="coursework">M.S. coursework</span>
+</div>
+<h1>Revenue Forecasting with ARIMA</h1>
+<p class="detail-lede">I used 731 daily hospital revenue observations to evaluate an ARIMA forecast against a no-change baseline and project revenue for the next 30 days.</p>
+<div aria-label="Project tags" class="detail-tags">
+<a aria-label="Filter homepage projects by Python" class="detail-tag" href="index.html?tag=Python#projects">Python</a>
+<a aria-label="Filter homepage projects by Forecasting" class="detail-tag" href="index.html?tag=Forecasting#projects">Forecasting</a>
+<a aria-label="Filter homepage projects by Time series" class="detail-tag" href="index.html?tag=Time%20series#projects">Time series</a>
+<a aria-label="Filter homepage projects by ARIMA" class="detail-tag" href="index.html?tag=ARIMA#projects">ARIMA</a>
+<a aria-label="Filter homepage projects by Statistics" class="detail-tag" href="index.html?tag=Statistics#projects">Statistics</a>
+<a aria-label="Filter homepage projects by M.S. coursework" class="detail-tag" href="index.html?tag=M.S.%20coursework#projects">M.S. coursework</a>
+</div>
+</header>
+<div class="detail-overview">
+<section aria-labelledby="impact-heading" class="impact-panel">
+<p class="detail-label" id="impact-heading">Business impact</p>
+<p>The primary evaluation tests whether an ARIMA forecast improves on assuming no daily revenue change. For the 146 forecasts issued together, the simpler baseline had slightly lower error.</p>
+</section>
+<div aria-label="Key project results" class="detail-metrics">
+<div class="detail-metric"><strong>0.4887</strong><span>Daily-change RMSE ($ millions)</span></div>
+<div class="detail-metric"><strong>0.4860</strong><span>No-change RMSE ($ millions)</span></div>
+<div class="detail-metric"><strong>30 days</strong><span>Forward projection</span></div>
+</div>
+</div>
+<div class="detail-content">
+<article class="detail-story">
+<section class="detail-section">
+<p class="detail-label">Business question</p>
+<h2>Can daily revenue history support an accurate short-term forecast for a hospital in its first two years of operation?</h2>
+</section>
+<section class="detail-section">
+<p class="detail-label">Approach</p>
+<h2>How the work was done</h2>
+<ul><li>Reviewed 731 daily observations for continuity, visualized the series, and ran an Augmented Dickey-Fuller stationarity test.</li>
+<li>First-differenced the series; the post-difference ADF p-value was 5.11e-30, compared with 0.1997 before differencing.</li>
+<li>Fit an AR(1) model to 584 daily changes. From day 585, forecast changes for days 586–731 and compare them with assuming zero change each day.</li></ul>
+</section>
+<section class="detail-section">
+<p class="detail-label">Results</p>
+<h2>What the analysis shows</h2>
+<ul><li>On the 146 held-out days, ARIMA had MAE of 0.3765 and RMSE of 0.4887 million dollars of daily change. The no-change forecast had MAE of 0.3746 and RMSE of 0.4860 million.</li>
+<li>For the 30-day projection, the notebook refits the model on all 731 revenue observations. It forecasts daily revenue levels for days 732–761 with model-based 95% prediction intervals.</li>
+</ul>
+</section>
+<section aria-labelledby="visuals-heading" class="detail-section project-visuals" id="project-visuals">
+<p class="detail-label">From the project</p>
+<h2 id="visuals-heading">Forecast error and uncertainty</h2>
+<figure class="project-figure">
+<a aria-label="Open full-size image: The chronological holdout" class="project-image-link" href="assets/project-visuals/revenue-holdout.png" rel="noreferrer" target="_blank">
+<img alt="Observed daily revenue changes and ARIMA predictions for days 586 through 731, with individual 95 percent prediction intervals." decoding="async" height="490" loading="lazy" src="assets/project-visuals/revenue-holdout.png" width="990"/>
+</a>
+<figcaption>
+<h3>The forecasts issued together</h3>
+<p>These are the 146 forecasts used for evaluation, all issued at day 585. Assuming no daily change gave slightly lower MAE and RMSE. Values are in millions of dollars.</p>
+<div class="project-figure-links"><a href="https://github.com/JesseCoggins/revenue-forecasting-arima/blob/main/notebooks/revenue_arima_forecast.ipynb" rel="noreferrer" target="_blank">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/revenue-holdout.png" rel="noreferrer" target="_blank">Open full size <span aria-hidden="true">↗</span></a></div>
+</figcaption>
+</figure>
+<figure class="project-figure">
+<a aria-label="Open full-size image: The next 30 days" class="project-image-link" href="assets/project-visuals/revenue-forward.png" rel="noreferrer" target="_blank">
+<img alt="Revenue forecast for days 732 through 761 with widening 95 percent prediction intervals after the final observed day." decoding="async" height="490" loading="lazy" src="assets/project-visuals/revenue-forward.png" width="989"/>
+</a>
+<figcaption>
+<h3>The next 30 days</h3>
+<p>The notebook refits through day 731 before projecting revenue levels. The widening interval shows how uncertainty grows over the month.</p>
+<div class="project-figure-links"><a href="https://github.com/JesseCoggins/revenue-forecasting-arima/blob/main/notebooks/revenue_arima_forecast.ipynb" rel="noreferrer" target="_blank">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/revenue-forward.png" rel="noreferrer" target="_blank">Open full size <span aria-hidden="true">↗</span></a></div>
+</figcaption>
+</figure>
+</section>
+<section class="detail-section" id="daily-update-comparison">
+<p class="detail-label">Additional comparison</p>
+<h2>Forecasts updated each day</h2>
+<p>A separate evaluation refits ARIMA before predicting each next day, using only observations available at that point. On the same 146 test days, MAE was 0.3531 and RMSE 0.4408 million dollars of daily change, versus 0.3746 and 0.4860 for no change. The update schedule changes which method performs better.</p>
+</section>
+<section class="detail-section" style="margin-top:20px">
+<p class="detail-label">Business relevance</p>
+<h2>What this makes easier to decide</h2>
+<p>For a forecast issued once at the training cutoff, no change performed slightly better. The additional daily-update comparison favored ARIMA. Monthly budgeting needs further tests of revenue levels and totals at several historical cutoffs.</p>
+</section>
+</article>
+<aside aria-label="Project details and links" class="detail-aside">
+<h2>Project details</h2>
+<dl class="detail-facts"><div class="detail-fact"><dt>Dataset</dt><dd>731 daily revenue observations</dd></div>
+<div class="detail-fact"><dt>Evaluation split</dt><dd>584 train · 146 test after differencing</dd></div>
+<div class="detail-fact"><dt>Model</dt><dd>AR(1) on daily changes · ARIMA(1,1,0) with drift on levels</dd></div></dl>
+<div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/jessecoggins/revenue-forecasting-arima" rel="noreferrer" target="_blank">View GitHub repository <span aria-hidden="true">↗</span></a></div>
+</aside>
+</div>
+<nav aria-label="Other projects" class="detail-pagination">
+<a href="project-hospital-readmission.html"><span>← Previous project</span><strong>Hospital Readmission Analysis</strong></a><a href="project-ecomart-database-design.html"><span>Next project →</span><strong>EcoMart Relational + NoSQL Design</strong></a>
+</nav>
+</main>
+<footer class="detail-footer">
+<div class="container footer-inner">
+<a href="mailto:jessecoggins21@gmail.com">jessecoggins21@gmail.com <span aria-hidden="true">↗</span></a>
+<span>Jesse Coggins · 2026</span>
+<a href="index.html#projects">All projects ↑</a>
+</div>
+</footer>
 
-    <main id="main" class="container detail-page">
-      <a class="detail-back" href="index.html#projects"><span aria-hidden="true">←</span> All projects</a>
-      <header class="detail-hero">
-        <div class="detail-meta">
-          <span>Forecasting</span><span class="meta-divider">/</span><span>Time series</span>
-          <span class="meta-divider">/</span><span>Project 05 of 10</span>
-          <span class="coursework">M.S. coursework</span>
-        </div>
-        <h1 data-press="title">Revenue Forecasting with ARIMA</h1>
-        <p class="detail-lede">I used 731 daily hospital revenue observations to evaluate an ARIMA forecast against a no-change baseline and project revenue for the next 30 days.</p>
-        <div class="detail-tags" aria-label="Project tags">
-          <a class="detail-tag" href="index.html?tag=Python#projects" aria-label="Filter homepage projects by Python">Python</a>
-                <a class="detail-tag" href="index.html?tag=Forecasting#projects" aria-label="Filter homepage projects by Forecasting">Forecasting</a>
-                <a class="detail-tag" href="index.html?tag=Time%20series#projects" aria-label="Filter homepage projects by Time series">Time series</a>
-                <a class="detail-tag" href="index.html?tag=ARIMA#projects" aria-label="Filter homepage projects by ARIMA">ARIMA</a>
-                <a class="detail-tag" href="index.html?tag=Statistics#projects" aria-label="Filter homepage projects by Statistics">Statistics</a>
-                <a class="detail-tag" href="index.html?tag=M.S.%20coursework#projects" aria-label="Filter homepage projects by M.S. coursework">M.S. coursework</a>
-        </div>
-      </header>
-
-      <div class="detail-overview">
-        <section class="impact-panel" aria-labelledby="impact-heading">
-          <p class="detail-label" id="impact-heading">Business impact</p>
-          <p>The primary evaluation tests whether an ARIMA forecast improves on assuming no daily revenue change. For the 146 forecasts issued together, the simpler baseline had slightly lower error.</p>
-        </section>
-        <div class="detail-metrics" aria-label="Key project results">
-          <div class="detail-metric"><strong>0.4887</strong><span>Daily-change RMSE ($ millions)</span></div>
-              <div class="detail-metric"><strong>0.4860</strong><span>No-change RMSE ($ millions)</span></div>
-              <div class="detail-metric"><strong>30 days</strong><span>Forward projection</span></div>
-        </div>
-      </div>
-
-      <div class="detail-content">
-        <article class="detail-story">
-          <section class="detail-section">
-            <p class="detail-label">Business question</p>
-            <h2 data-press="title">Can daily revenue history support an accurate short-term forecast for a hospital in its first two years of operation?</h2>
-          </section>
-          <section class="detail-section">
-            <p class="detail-label">Approach</p>
-            <h2 data-press="title">How the work was done</h2>
-            <ul><li>Reviewed 731 daily observations for continuity, visualized the series, and ran an Augmented Dickey-Fuller stationarity test.</li>
-                <li>First-differenced the series; the post-difference ADF p-value was 5.11e-30, compared with 0.1997 before differencing.</li>
-                <li>Fit an AR(1) model to 584 daily changes. From day 585, forecast changes for days 586–731 and compare them with assuming zero change each day.</li></ul>
-          </section>
-          <section class="detail-section">
-            <p class="detail-label">Results</p>
-            <h2 data-press="title">What the analysis shows</h2>
-            <ul><li>On the 146 held-out days, ARIMA had MAE of 0.3765 and RMSE of 0.4887 million dollars of daily change. The no-change forecast had MAE of 0.3746 and RMSE of 0.4860 million.</li>
-                <li>For the 30-day projection, the notebook refits the model on all 731 revenue observations. It forecasts daily revenue levels for days 732–761 with model-based 95% prediction intervals.</li>
-            </ul>
-          </section>
-          <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
-            <p class="detail-label">From the project</p>
-            <h2 id="visuals-heading" data-press="title">Forecast error and uncertainty</h2>
-            <figure class="project-figure">
-              <a class="project-image-link" href="assets/project-visuals/revenue-holdout.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: The chronological holdout">
-                <img src="assets/project-visuals/revenue-holdout.png" alt="Observed daily revenue changes and ARIMA predictions for days 586 through 731, with individual 95 percent prediction intervals." width="990" height="490" loading="lazy" decoding="async" />
-              </a>
-              <figcaption>
-                <h3 data-press="title">The forecasts issued together</h3>
-                <p>These are the 146 forecasts used for evaluation, all issued at day 585. Assuming no daily change gave slightly lower MAE and RMSE. Values are in millions of dollars.</p>
-                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/revenue-forecasting-arima/blob/main/notebooks/revenue_arima_forecast.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/revenue-holdout.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
-              </figcaption>
-            </figure>
-            <figure class="project-figure">
-              <a class="project-image-link" href="assets/project-visuals/revenue-forward.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: The next 30 days">
-                <img src="assets/project-visuals/revenue-forward.png" alt="Revenue forecast for days 732 through 761 with widening 95 percent prediction intervals after the final observed day." width="989" height="490" loading="lazy" decoding="async" />
-              </a>
-              <figcaption>
-                <h3 data-press="title">The next 30 days</h3>
-                <p>The notebook refits through day 731 before projecting revenue levels. The widening interval shows how uncertainty grows over the month.</p>
-                <div class="project-figure-links"><a href="https://github.com/JesseCoggins/revenue-forecasting-arima/blob/main/notebooks/revenue_arima_forecast.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/revenue-forward.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
-              </figcaption>
-            </figure>
-          </section>
-          
-          <section class="detail-section" id="daily-update-comparison">
-            <p class="detail-label">Additional comparison</p>
-            <h2 data-press="title">Forecasts updated each day</h2>
-            <p>A separate evaluation refits ARIMA before predicting each next day, using only observations available at that point. On the same 146 test days, MAE was 0.3531 and RMSE 0.4408 million dollars of daily change, versus 0.3746 and 0.4860 for no change. The update schedule changes which method performs better.</p>
-          </section>
-          <section class="detail-section" style="margin-top:20px">
-            <p class="detail-label">Business relevance</p>
-            <h2 data-press="title">What this makes easier to decide</h2>
-            <p>For a forecast issued once at the training cutoff, no change performed slightly better. The additional daily-update comparison favored ARIMA. Monthly budgeting needs further tests of revenue levels and totals at several historical cutoffs.</p>
-          </section>
-        </article>
-
-        <aside class="detail-aside" aria-label="Project details and links">
-          <h2 data-press="title">Project details</h2>
-          <dl class="detail-facts"><div class="detail-fact"><dt>Dataset</dt><dd>731 daily revenue observations</dd></div>
-              <div class="detail-fact"><dt>Evaluation split</dt><dd>584 train · 146 test after differencing</dd></div>
-              <div class="detail-fact"><dt>Model</dt><dd>AR(1) on daily changes · ARIMA(1,1,0) with drift on levels</dd></div></dl>
-          <div class="detail-resource-links"><a href="#project-visuals">See project visuals <span aria-hidden="true">↓</span></a><a href="https://github.com/jessecoggins/revenue-forecasting-arima" target="_blank" rel="noreferrer">View GitHub repository <span aria-hidden="true">↗</span></a></div>
-        </aside>
-      </div>
-
-      <nav class="detail-pagination" aria-label="Other projects">
-        <a href="project-hospital-readmission.html"><span>← Previous project</span><strong>Hospital Readmission Analysis</strong></a><a href="project-ecomart-database-design.html"><span>Next project →</span><strong>EcoMart Relational + NoSQL Design</strong></a>
-      </nav>
-    </main>
-
-    <footer class="detail-footer">
-      <div class="container footer-inner">
-        <a href="mailto:jessecoggins21@gmail.com">jessecoggins21@gmail.com <span aria-hidden="true">↗</span></a>
-        <span>Jesse Coggins · 2026</span>
-        <a href="index.html#projects">All projects ↑</a>
-      </div>
-    </footer>
-    <script defer src="summary-letterpress.js?v=titles-20261105"></script>
-  </body>
+</body>
 </html>
+

@@ -1,580 +1,425 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Jesse Coggins — Data &amp; Analytics</title>
-<meta name="description" content="Jesse Coggins, data professional with an M.S. in Data Analytics. From raw data to reliable insights and practical solutions. Gadsden, Alabama · Open to Remote.">
-<meta name="author" content="Jesse Coggins">
-<meta name="theme-color" content="#e3e3ee">
-<link rel="canonical" href="https://jessecoggins.github.io/">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="shortcut icon" href="assets/favicon.svg">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jesse Coggins — Data &amp; Analytics">
-<meta property="og:description" content="Jesse Coggins, data professional with an M.S. in Data Analytics. From raw data to reliable insights and practical solutions. Gadsden, Alabama · Open to Remote.">
-<meta property="og:url" content="https://jessecoggins.github.io/">
-<meta property="og:image" content="https://jessecoggins.github.io/assets/social-preview.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="2400">
-<meta property="og:image:height" content="1260">
-<meta property="og:image:alt" content="Jesse Coggins — Project Portfolio">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Jesse Coggins — Data &amp; Analytics">
-<meta name="twitter:description" content="Jesse Coggins, data professional with an M.S. in Data Analytics. From raw data to reliable insights and practical solutions. Gadsden, Alabama · Open to Remote.">
-<meta name="twitter:image" content="https://jessecoggins.github.io/assets/social-preview.png">
-<meta name="twitter:image:alt" content="Jesse Coggins — Project Portfolio">
+<meta content="Jesse Coggins, data professional with an M.S. in Data Analytics. From raw data to reliable insights and practical solutions. Gadsden, Alabama · Open to Remote." name="description"/>
+<meta content="Jesse Coggins" name="author"/>
+<meta content="#f3f0e6" name="theme-color"/>
+<link href="https://jessecoggins.github.io/" rel="canonical"/>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="assets/favicon.svg" rel="shortcut icon"/>
+<meta content="website" property="og:type"/>
+<meta content="Jesse Coggins — Data &amp; Analytics" property="og:title"/>
+<meta content="Jesse Coggins, data professional with an M.S. in Data Analytics. From raw data to reliable insights and practical solutions. Gadsden, Alabama · Open to Remote." property="og:description"/>
+<meta content="https://jessecoggins.github.io/" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Jesse Coggins — Data &amp; Analytics" name="twitter:title"/>
+<meta content="Jesse Coggins, data professional with an M.S. in Data Analytics. From raw data to reliable insights and practical solutions. Gadsden, Alabama · Open to Remote." name="twitter:description"/>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfilePage","name":"Jesse Coggins Portfolio","url":"https://jessecoggins.github.io/","description":"Project portfolio by Jesse Coggins across analytics, machine learning, data systems, forecasting, and optimization.","mainEntity":{"@type":"Person","name":"Jesse Coggins","url":"https://jessecoggins.github.io/","alumniOf":{"@type":"CollegeOrUniversity","name":"Western Governors University"},"knowsAbout":["Data analytics","Business intelligence","Machine learning","Forecasting","Database design","Operations research","MLOps"],"sameAs":["https://github.com/jessecoggins","https://www.linkedin.com/in/jessecoggins"]}}
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KCZHKZH9K4"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-KCZHKZH9K4');</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-@font-face {
-  font-family: "AllenCopperplate";
-  src: url("./fonts/Copperplate%20Gothic%20Std%2030%20BC.otf") format("opentype");
-  font-weight: 400; font-style: normal; font-display: swap;
-}
-:root {
-  --paper: #e3e3ee;
-  --sheet: rgba(246, 246, 250, .50);
-  --sheet-hover: rgba(250, 250, 253, .78);
-  --ink: #3f3b3e;
-  --ink-2: #565257;
-  --muted: #645f66;
-  --line: rgba(63, 59, 62, .22);
-  --line-strong: rgba(63, 59, 62, .42);
-  --press: #4a4649;
-  --sans: "Source Sans 3", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --serif: "AllenCopperplate", Copperplate, "Copperplate Gothic Light", Georgia, serif;
-  --w: 1160px;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--paper) url("./film-paper.png") repeat;
-  background-size: 980px 560px;
-  color: var(--ink);
-  font: 400 16px/1.62 var(--sans);
-  -webkit-font-smoothing: antialiased;
-  font-variant-numeric: tabular-nums;
-}
-a { color: inherit; }
-.wrap { width: min(100% - 48px, var(--w)); margin-inline: auto; }
-.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.skip { position: absolute; left: 16px; top: -48px; z-index: 10; padding: 10px 14px; background: var(--ink); color: #f1f1f5; border-radius: 2px; }
-.skip:focus { top: 12px; }
-:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
-
-/* Letterpress lettering: pressed ink with a light lip below and a faint shadow above. */
-.press {
-  font-family: var(--serif);
-  font-weight: 400;
-  color: var(--press);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .75), 0 -.5px 0 rgba(30, 26, 28, .22);
-}
-
-/* Top bar */
-.topbar { border-bottom: 1px solid var(--line-strong); box-shadow: 0 1px 0 rgba(255,255,255,.55); }
-.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 68px; }
-.mark { font-size: 22px; letter-spacing: .02em; text-decoration: none; line-height: 1; }
-.topnav { display: flex; flex-wrap: wrap; gap: 4px 26px; }
-.topnav a { font-size: 13px; font-weight: 500; color: var(--ink-2); text-decoration: none; padding: 6px 0; border-bottom: 1px solid transparent; }
-.topnav a:hover { color: var(--ink); border-bottom-color: var(--ink); }
-
-/* Title block */
-.hero { text-align: center; padding: 84px 0 76px; }
-.eyebrow { margin: 0 0 20px; font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
-.hero h1 { margin: 0; font-size: clamp(46px, 8vw, 84px); line-height: 1.02; letter-spacing: .01em; }
-.hero .role { margin: 14px 0 0; font-size: clamp(22px, 3.4vw, 34px); line-height: 1.2; letter-spacing: .02em; }
-.rule { width: 72px; height: 0; margin: 34px auto 30px; border-top: 1px solid var(--line-strong); box-shadow: 0 1px 0 rgba(255,255,255,.6); }
-.intro { max-width: 640px; margin: 0 auto; font-size: 17px; line-height: 1.7; color: var(--ink); }
-.where { margin: 18px 0 0; font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-.cta { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 34px; }
-.btn .ar { width: 12px; height: 12px; stroke-width: 1.6; }
-.btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.btn { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 20px; border: 1px solid var(--ink); font-size: 14px; font-weight: 600; text-decoration: none; background: transparent; color: var(--ink); transition: background .15s, color .15s; }
-.btn:hover { background: rgba(255,255,255,.5); }
-.btn.solid { background: var(--ink); color: #f2f2f6; }
-.btn.solid:hover { background: #2e2a2d; }
-
-/* Projects */
-.projects { padding: 0 0 96px; }
-.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--line-strong); box-shadow: 0 1px 0 rgba(255,255,255,.55); }
-.section-head h2 { margin: 0; font-size: 36px; line-height: 1.1; letter-spacing: .03em; }
-.count { font-size: 14px; color: var(--muted); }
-.tools-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin: 24px 0 28px; }
-.search { flex: 1 1 280px; min-width: 0; display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 14px; border: 1px solid var(--line-strong); background: rgba(250,250,253,.6); box-shadow: inset 1px 1px 2px rgba(60,56,58,.10); }
-.search svg { width: 16px; height: 16px; flex: none; fill: none; stroke: var(--muted); stroke-width: 2; stroke-linecap: round; }
-.search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; font: inherit; font-size: 14px; color: var(--ink); }
-.search input::placeholder { color: var(--muted); }
-.search:focus-within { outline: 2px solid var(--ink); outline-offset: 2px; }
-.pills { display: flex; flex-wrap: wrap; gap: 8px; }
-.pill { min-height: 40px; padding: 0 14px; border: 1px solid var(--line-strong); background: rgba(250,250,253,.45); color: var(--ink); font: 500 14px var(--sans); cursor: pointer; }
-.pill .n { margin-left: 4px; opacity: .6; }
-.pill:hover { background: rgba(255,255,255,.8); }
-.pill[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #f2f2f6; }
-
-.sortbox { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--muted); }
-.sortbox select { min-height: 44px; padding: 0 34px 0 12px; border: 1px solid var(--line-strong); background: rgba(250,250,253,.6); color: var(--ink); font: 500 13px var(--sans); }
-.filter-foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin: 4px 0 22px; font-size: 13px; }
-.filter-foot summary { cursor: pointer; font-weight: 600; color: var(--ink-2); }
-.filter-foot button.clear { border: 0; background: none; padding: 6px 0; font: 500 13px var(--sans); color: var(--ink-2); text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
-.filter-foot button.clear:hover { color: var(--ink); }
-.more { flex: 1; }
-.tagbox { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 4px; }
-.tag { min-height: 32px; padding: 0 11px; border: 1px solid var(--line); background: rgba(250,250,253,.45); font: 500 12px var(--sans); color: var(--ink); cursor: pointer; }
-.tag:hover { background: rgba(255,255,255,.8); }
-.tag[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #f2f2f6; }
-
-table.ptable { width: 100%; border-collapse: collapse; table-layout: fixed; text-align: left; }
-.ptable thead { border-block: 1px solid var(--line-strong); }
-.ptable thead th { padding: 15px 16px; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-.ptable thead th:nth-child(1) { width: 9%; }
-.ptable thead th:nth-child(2) { width: 27%; }
-.ptable thead th:nth-child(3) { width: 24%; }
-.ptable thead th:nth-child(4) { width: 25%; }
-.ptable thead th:nth-child(5) { width: 15%; }
-.ptable thead th:first-child, .project > :first-child { padding-left: 4px; }
-.project { border-bottom: 1px solid var(--line); transition: background .18s; }
-.project[hidden] { display: none; }
-.project:hover, .project:focus-within { background: rgba(255,255,255,.34); }
-.project > th, .project > td { padding: 26px 16px; vertical-align: top; text-align: left; }
-.c-id { font-size: 13px; font-weight: 500; letter-spacing: .06em; color: var(--muted); white-space: nowrap; }
-.project-title { margin: 0 0 10px; font-family: var(--serif); font-weight: 400; font-size: 24px; line-height: 1.18; letter-spacing: .015em; color: var(--press); text-shadow: 0 1px 0 rgba(255,255,255,.7); }
-.project-title a { text-decoration: none; }
-.project-title a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
-.area { margin: 0 0 6px; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
-.tools { margin: 0 0 6px; font-size: 14px; line-height: 1.5; color: var(--ink); }
-.course { margin: 0; font-size: 13px; color: var(--muted); }
-.c-find strong { display: block; font-size: 22px; font-weight: 700; line-height: 1.25; letter-spacing: -.005em; color: var(--ink); }
-.c-find p { margin: 8px 0 0; font-size: 15px; line-height: 1.6; color: var(--ink-2); }
-.c-imp { font-size: 15px; line-height: 1.6; color: var(--ink); }
-.links { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
- .links a { display: inline-flex; align-items: center; gap: 5px; min-height: 28px; font-size: 14px; font-weight: 500; color: var(--ink-2); text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 5px; }
-.links a.primary { font-weight: 700; color: var(--ink); text-decoration-color: var(--ink); }
-.links a:hover { color: var(--ink); text-decoration-color: var(--ink); }
-.ar { width: 11px; height: 11px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.empty { padding: 48px 0; text-align: center; color: var(--muted); }
-
-/* Footer */
-.foot { border-top: 1px solid var(--line-strong); box-shadow: 0 -1px 0 rgba(255,255,255,.5); }
-.foot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; padding: 28px 0 36px; font-size: 13px; color: var(--muted); }
-.foot a { text-decoration-color: var(--line-strong); text-underline-offset: 4px; }
-.foot a:hover { color: var(--ink); }
-
-@media (max-width: 980px) {
-  .ptable thead th, .project > th, .project > td { padding-inline: 10px; }
-  .ptable thead th:nth-child(1) { width: 10%; }
-  .ptable thead th:nth-child(2) { width: 28%; }
-  .ptable thead th:nth-child(5) { width: 16%; }
-  .project-title { font-size: 21px; }
-}
-@media (max-width: 820px) {
-  .hero { padding: 60px 0 56px; }
-  .ptable, .ptable tbody { display: block; }
-  .ptable thead { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); border: 0; }
-  .project { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 28px; padding: 26px 0; }
-  .project > th, .project > td { padding: 0; }
-  .c-id { grid-column: 1 / -1; }
-  .c-proj { grid-column: 1 / -1; }
-  .c-links { grid-column: 1 / -1; }
-  .project > [data-label="Key findings"]::before, .project > [data-label="Business impact"]::before, .project > [data-label="Links"]::before {
-    content: attr(data-label); display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-  .links { flex-direction: row; flex-wrap: wrap; gap: 6px 22px; }
-}
-@media (max-width: 560px) {
-  .wrap { width: min(100% - 32px, var(--w)); }
-  .topbar .wrap { min-height: 60px; }
-  .mark { font-size: 19px; }
-  .topnav a:not(:first-child) { display: none; }
-  .intro { font-size: 16px; }
-  .btn { flex: 1 1 calc(50% - 6px); justify-content: center; }
-  .btn.solid { flex-basis: 100%; }
-  .project { grid-template-columns: 1fr; }
-  .project-title { font-size: 24px; }
-  .section-head h2 { font-size: 30px; }
-  .sortbox { width: 100%; }
-  .sortbox select { flex: 1; }
-}
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
-
-/* Compact masthead (layout of the live site) */
-.hero { text-align: left; padding: 44px 0 34px; border-bottom: 1px solid var(--line-strong); box-shadow: 0 1px 0 rgba(255,255,255,.55); margin-bottom: 0; }
-.hero h1 { font-size: clamp(46px, 6.4vw, 72px); line-height: 1.04; }
-.hero .role { margin: 8px 0 0; font-size: clamp(20px, 2.4vw, 26px); }
-.hero .intro { margin: 22px 0 0; max-width: 660px; text-align: left; font-size: 17px; }
-.hero-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px; margin-top: 26px; }
-.hero-foot .where { margin: 0; }
-.hero-foot .cta { margin: 0; justify-content: flex-end; }
-.projects { padding-top: 40px; }
-.pc { display: block; pointer-events: none; }
-.is-pressed { -webkit-text-stroke: 0; text-shadow: none; }
-.is-pressed .pt { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.project-title a.is-pressed { display: block; text-decoration: none; }
-.project-title a:hover .pc { opacity: .72; }
-.hero h1.is-pressed, .hero .role.is-pressed { display: block; }
-@media (max-width: 820px) { .hero { padding: 32px 0 28px; } .hero-foot .cta { justify-content: flex-start; } }
-@media (max-width: 560px) { .hero .intro { font-size: 16px; } .hero-foot { margin-top: 20px; } }
-
-/* Centered masthead, outlined buttons (no filled Resume) */
-.hero { text-align: center; }
-.hero .intro { margin: 22px auto 0; text-align: center; }
-.hero-foot { flex-direction: column; justify-content: center; gap: 22px; margin-top: 24px; }
-.hero-foot .where { order: 1; }
-.hero-foot .cta { order: 2; justify-content: center; }
-.btn.solid, .btn.solid:hover { background: transparent; color: var(--ink); }
-.btn { background: rgba(250,250,253,.35); }
-.btn:hover { background: rgba(255,255,255,.75); border-color: var(--ink); }
-@media (max-width: 820px) { .hero-foot .cta { justify-content: center; } }
-@media (max-width: 560px) { .btn.solid { flex-basis: calc(50% - 6px); } .hero-foot .cta .btn:first-child { flex-basis: 100%; } }
-
-/* Compact header + centered Projects heading */
-.hero { padding: 26px 0 22px; }
-.hero h1 { font-size: min(4.55vw, 72.072px); line-height: .9; }
-.hero .role { margin: clamp(-5px, -0.35vw, -1px) 0 0; font-size: min(3.325vw, 52.668px); line-height: .86; }
-.hero .intro { text-wrap: balance; margin: 14px auto 0; font-size: 18px; line-height: 1.6; max-width: 700px; }
-.hero-foot { gap: 14px; margin-top: 16px; }
-.btn { min-height: 40px; padding: 0 16px; font-size: 14px; }
-.projects { padding-top: 26px; }
-.section-head { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding-bottom: 12px; }
-.section-head h2 { grid-column: 2; font-size: 32px; justify-self: center; }
-.section-head .count { grid-column: 3; justify-self: end; }
-.tools-row { margin: 18px 0 14px; }
-.filter-foot { margin: 2px 0 14px; }
-@media (max-width: 820px) { .hero { padding: 22px 0 20px; } }
-@media (max-width: 560px) {
-  .section-head { grid-template-columns: 1fr; row-gap: 4px; justify-items: center; }
-  .section-head h2, .section-head .count { grid-column: 1; justify-self: center; }
-  .hero .intro { font-size: 15.5px; }
-}
-</style>
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "name": "Jesse Coggins Portfolio",
+        "url": "https://jessecoggins.github.io/",
+        "description": "Project portfolio by Jesse Coggins across analytics, machine learning, data systems, forecasting, and optimization.",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Jesse Coggins",
+          "url": "https://jessecoggins.github.io/",
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Western Governors University"
+          },
+          "knowsAbout": [
+            "Data analytics",
+            "Business intelligence",
+            "Machine learning",
+            "Forecasting",
+            "Database design",
+            "Operations research",
+            "MLOps"
+          ],
+          "sameAs": [
+            "https://github.com/jessecoggins",
+            "https://www.linkedin.com/in/jessecoggins"
+          ]
+        }
+      }
+    </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KCZHKZH9K4"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KCZHKZH9K4');
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css?v=reference-theme-20261106" rel="stylesheet"/>
+<script defer="" src="portfolio.js"></script>
 </head>
 <body>
-<a class="skip" href="#projects">Skip to projects</a>
-
-<header class="hero wrap" id="top">
-  <h1 class="press" data-press="h1">Jesse COGGINS</h1>
-  <p class="role press" data-press="role">Data Analytics</p>
-  <p class="intro">I’m a data professional with an M.S. in Data Analytics. I work from raw sources to databases, queries, and visualizations, turning data into practical solutions for people, teams, and businesses.</p>
-  <div class="hero-foot">
-    <p class="where">Gadsden, Alabama &nbsp;·&nbsp; Open to Remote</p>
-    <div class="cta">
-    <a class="btn" href="https://jessecoggins.github.io/assets/resume/Jesse_Coggins_Resume.pdf" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg>Resume <svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
-    <a class="btn" href="https://www.linkedin.com/in/jessecoggins" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn <svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
-    <a class="btn" href="https://github.com/jessecoggins" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-1-2.6c3.3-.4 6.7-1.6 6.7-7.2a5.6 5.6 0 0 0-1.5-3.9 5.2 5.2 0 0 0-.1-3.9s-1.2-.4-4 1.5a13.8 13.8 0 0 0-7.2 0C5.1.1 3.9.5 3.9.5a5.2 5.2 0 0 0-.1 3.9 5.6 5.6 0 0 0-1.5 3.9c0 5.6 3.4 6.8 6.7 7.2a3.4 3.4 0 0 0-1 2.6V22"/></svg>GitHub <svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
-  </div>
-  </div>
+<a class="skip-link" href="#projects">Skip to projects</a>
+<header class="site-header" id="top">
+<div class="container header-inner">
+<a aria-label="Jesse Coggins home" class="brand" href="#top">
+<h1 class="brand-name">Jesse Coggins</h1>
+<span class="brand-role">Data &amp; Analytics</span>
+</a>
+</div>
+<div class="container header-intro">
+<div class="intro-copy">
+<p>I’m a data professional with an M.S. in Data Analytics. I work with data at every stage, from raw sources to databases, queries, and visualizations.</p>
+<p>I make sure every result is validated for accuracy so people can rely on it. What I enjoy most is turning data into real solutions that help people, teams, and businesses perform their best.</p>
+</div>
+<p class="intro-location">Gadsden, Alabama <span aria-hidden="true">·</span> Open to Remote</p>
+<nav aria-label="Professional links" class="profile-links">
+<a class="profile-link" href="assets/resume/Jesse_Coggins_Resume.pdf?v=aligned-20261105" rel="noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h6"></path></svg>
+<span>Resume</span><span aria-hidden="true" class="link-arrow">↗</span>
+</a>
+<a class="profile-link" href="https://www.linkedin.com/in/jessecoggins" rel="noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg>
+<span>LinkedIn</span><span aria-hidden="true" class="link-arrow">↗</span>
+</a>
+<a class="profile-link" href="https://github.com/jessecoggins" rel="noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-1-2.6c3.3-.4 6.7-1.6 6.7-7.2a5.6 5.6 0 0 0-1.5-3.9 5.2 5.2 0 0 0-.1-3.9s-1.2-.4-4 1.5a13.8 13.8 0 0 0-7.2 0C5.1.1 3.9.5 3.9.5a5.2 5.2 0 0 0-.1 3.9 5.6 5.6 0 0 0-1.5 3.9c0 5.6 3.4 6.8 6.7 7.2a3.4 3.4 0 0 0-1 2.6V22"></path></svg>
+<span>GitHub</span><span aria-hidden="true" class="link-arrow">↗</span>
+</a>
+</nav>
+</div>
 </header>
-
-<main class="wrap projects" id="projects">
-  <div class="section-head">
-    <h2 class="press" data-press="title">Projects</h2>
-    <p class="count" id="count" aria-live="polite">10 of 10 projects</p>
-  </div>
-  <div class="tools-row">
-    <label class="search">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
-      <span class="sr-only">Search projects</span>
-      <input id="q" type="search" autocomplete="off" placeholder="Search projects, methods, and tools">
-    </label>
-    <label class="sortbox">Sort
-      <select id="sort" aria-label="Sort projects">
-        <option value="featured">Featured order</option>
-        <option value="title">Title A to Z</option>
-        <option value="cat">Project area</option>
-      </select>
-    </label>
-    <div class="pills" role="group" aria-label="Filter by project area" style="flex-basis:100%">
-      <button type="button" class="pill" data-cat="" aria-pressed="true">All projects <span class="n">10</span></button>
-      <button type="button" class="pill" data-cat="Analytics &amp; BI" aria-pressed="false">Analytics &amp; BI <span class="n">1</span></button><button type="button" class="pill" data-cat="Machine Learning" aria-pressed="false">Machine Learning <span class="n">5</span></button><button type="button" class="pill" data-cat="Forecasting" aria-pressed="false">Forecasting <span class="n">1</span></button><button type="button" class="pill" data-cat="Data Systems" aria-pressed="false">Data Systems <span class="n">1</span></button><button type="button" class="pill" data-cat="Statistics &amp; Optimization" aria-pressed="false">Statistics &amp; Optimization <span class="n">2</span></button>
-    </div>
-  </div>
-  <div class="filter-foot">
-    <details class="more"><summary>More filters</summary><div class="tagbox" role="group" aria-label="Filter by tag"><button type="button" class="tag" data-tag="Apriori" aria-pressed="false">Apriori</button><button type="button" class="tag" data-tag="ARIMA" aria-pressed="false">ARIMA</button><button type="button" class="tag" data-tag="BiLSTM" aria-pressed="false">BiLSTM</button><button type="button" class="tag" data-tag="CI/CD" aria-pressed="false">CI/CD</button><button type="button" class="tag" data-tag="Classification" aria-pressed="false">Classification</button><button type="button" class="tag" data-tag="Clustering" aria-pressed="false">Clustering</button><button type="button" class="tag" data-tag="CNN" aria-pressed="false">CNN</button><button type="button" class="tag" data-tag="Computer vision" aria-pressed="false">Computer vision</button><button type="button" class="tag" data-tag="Credit risk" aria-pressed="false">Credit risk</button><button type="button" class="tag" data-tag="Cross-validation" aria-pressed="false">Cross-validation</button><button type="button" class="tag" data-tag="Customer retention" aria-pressed="false">Customer retention</button><button type="button" class="tag" data-tag="Data modeling" aria-pressed="false">Data modeling</button><button type="button" class="tag" data-tag="Deep learning" aria-pressed="false">Deep learning</button><button type="button" class="tag" data-tag="Docker" aria-pressed="false">Docker</button><button type="button" class="tag" data-tag="DVC" aria-pressed="false">DVC</button><button type="button" class="tag" data-tag="ETL" aria-pressed="false">ETL</button><button type="button" class="tag" data-tag="FastAPI" aria-pressed="false">FastAPI</button><button type="button" class="tag" data-tag="Feature timing" aria-pressed="false">Feature timing</button><button type="button" class="tag" data-tag="Forecasting" aria-pressed="false">Forecasting</button><button type="button" class="tag" data-tag="Healthcare" aria-pressed="false">Healthcare</button><button type="button" class="tag" data-tag="Housing" aria-pressed="false">Housing</button><button type="button" class="tag" data-tag="Hypothesis testing" aria-pressed="false">Hypothesis testing</button><button type="button" class="tag" data-tag="Image classification" aria-pressed="false">Image classification</button><button type="button" class="tag" data-tag="KPI reporting" aria-pressed="false">KPI reporting</button><button type="button" class="tag" data-tag="Linear programming" aria-pressed="false">Linear programming</button><button type="button" class="tag" data-tag="Market basket" aria-pressed="false">Market basket</button><button type="button" class="tag" data-tag="MLflow" aria-pressed="false">MLflow</button><button type="button" class="tag" data-tag="MLOps" aria-pressed="false">MLOps</button><button type="button" class="tag" data-tag="MongoDB" aria-pressed="false">MongoDB</button><button type="button" class="tag" data-tag="NLP" aria-pressed="false">NLP</button><button type="button" class="tag" data-tag="NoSQL" aria-pressed="false">NoSQL</button><button type="button" class="tag" data-tag="Operations research" aria-pressed="false">Operations research</button><button type="button" class="tag" data-tag="Optimization" aria-pressed="false">Optimization</button><button type="button" class="tag" data-tag="PCA" aria-pressed="false">PCA</button><button type="button" class="tag" data-tag="PostgreSQL" aria-pressed="false">PostgreSQL</button><button type="button" class="tag" data-tag="PuLP" aria-pressed="false">PuLP</button><button type="button" class="tag" data-tag="Python" aria-pressed="false">Python</button><button type="button" class="tag" data-tag="Regression" aria-pressed="false">Regression</button><button type="button" class="tag" data-tag="Retail" aria-pressed="false">Retail</button><button type="button" class="tag" data-tag="Risk stratification" aria-pressed="false">Risk stratification</button><button type="button" class="tag" data-tag="Segmentation" aria-pressed="false">Segmentation</button><button type="button" class="tag" data-tag="SQL" aria-pressed="false">SQL</button><button type="button" class="tag" data-tag="Statistics" aria-pressed="false">Statistics</button><button type="button" class="tag" data-tag="Tableau" aria-pressed="false">Tableau</button><button type="button" class="tag" data-tag="Text analytics" aria-pressed="false">Text analytics</button><button type="button" class="tag" data-tag="Time series" aria-pressed="false">Time series</button></div></details>
-    <button type="button" class="clear" id="clear">Clear filters</button>
-  </div>
-  <table class="ptable">
-    <caption class="sr-only">Project portfolio: ID, project, key findings, business impact and links.</caption>
-    <thead><tr><th scope="col">ID</th><th scope="col">Project</th><th scope="col">Key findings</th><th scope="col">Business impact</th><th scope="col">Links</th></tr></thead>
-    <tbody id="grid"><tr class="project" data-cat="Analytics &amp; BI" data-tags="Tableau|KPI reporting|Segmentation|Customer retention|M.S. coursework" data-title="Customer Churn Dashboard" data-index="1" data-search="customer churn dashboard analytics &amp; bi tableau · kpi reporting · segmentation 37.3% vs. 12.7% churn for month-to-month vs. two-year contracts. prioritize a retention experiment for month-to-month customers. tableau kpi reporting segmentation customer retention m.s. coursework">
-<th scope="row" class="c-id" data-label="ID">PRJ-001</th>
-<td class="c-proj" data-label="Project"><h3 class="project-title"><a href="https://jessecoggins.github.io/project-customer-churn-dashboard.html" data-press="title">Customer Churn Dashboard</a></h3><p class="area">Analytics &amp; BI</p><p class="tools">Tableau · KPI reporting · Segmentation</p><p class="course">M.S. coursework</p></td>
-<td class="c-find" data-label="Key findings"><strong>37.3% vs. 12.7%</strong><p>Churn for month-to-month vs. two-year contracts.</p></td>
-<td class="c-imp" data-label="Business impact">Prioritize a retention experiment for month-to-month customers.</td>
-<td class="c-links" data-label="Links"><div class="links"><a class=primary href="https://jessecoggins.github.io/project-customer-churn-dashboard.html" aria-label="Summary: Customer Churn Dashboard">Summary<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a><a href="https://public.tableau.com/app/profile/jesse.coggins6637/viz/ChurnRateDashboard_17756852469330/CustomerChurnDashboardKeyTrendsbyIncomeRegionContractPayment" target=_blank rel=noreferrer aria-label="Tableau: Customer Churn Dashboard">Tableau<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a><a href="https://github.com/jessecoggins/customer-churn-dashboard" target=_blank rel=noreferrer aria-label="Code: Customer Churn Dashboard">Code<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div></td>
-</tr><tr class="project" data-cat="Machine Learning" data-tags="Python|Classification|Credit risk|Cross-validation|M.S. coursework" data-title="Loan Default Risk Capstone" data-index="2" data-search="loan default risk capstone machine learning python · classification · cross-validation 0.737 roc-auc 26.5% default recall at the tested threshold. estimate underwriting workload: 1,380 flagged test loans contained 787 defaults. python classification credit risk cross-validation m.s. coursework">
-<th scope="row" class="c-id" data-label="ID">PRJ-002</th>
-<td class="c-proj" data-label="Project"><h3 class="project-title"><a href="https://jessecoggins.github.io/project-loan-default-risk.html" data-press="title">Loan Default Risk Capstone</a></h3><p class="area">Machine Learning</p><p class="tools">Python · Classification · Cross-validation</p><p class="course">M.S. coursework</p></td>
-<td class="c-find" data-label="Key findings"><strong>0.737 ROC-AUC</strong><p>26.5% default recall at the tested threshold.</p></td>
-<td class="c-imp" data-label="Business impact">Estimate underwriting workload: 1,380 flagged test loans contained 787 defaults.</td>
-<td class="c-links" data-label="Links"><div class="links"><a class=primary href="https://jessecoggins.github.io/project-loan-default-risk.html" aria-label="Summary: Loan Default Risk Capstone">Summary<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a><a href="https://github.com/jessecoggins/loan-default-risk-capstone" target=_blank rel=noreferrer aria-label="Code: Loan Default Risk Capstone">Code<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div></td>
-</tr><tr class="project" data-cat="Machine Learning" data-tags="Python|MLOps|DVC|MLflow|FastAPI|Docker|CI/CD|M.S. coursework" data-title="Flight Delay Prediction Pipeline" data-index="3" data-search="flight delay prediction pipeline machine learning python · fastapi · docker 8.92-minute rmse held-out atlanta flights; delays of 60 minutes or more excluded. compare average departure delays by route and schedule within the evaluated range. python mlops dvc mlflow fastapi docker ci/cd m.s. coursework">
-<th scope="row" class="c-id" data-label="ID">PRJ-003</th>
-<td class="c-proj" data-label="Project"><h3 class="project-title"><a href="https://jessecoggins.github.io/project-flight-delay-prediction.html" data-press="title">Flight Delay Prediction Pipeline</a></h3><p class="area">Machine Learning</p><p class="tools">Python · FastAPI · Docker</p><p class="course">M.S. coursework</p></td>
-<td class="c-find" data-label="Key findings"><strong>8.92-minute RMSE</strong><p>Held-out Atlanta flights; delays of 60 minutes or more excluded.</p></td>
-<td class="c-imp" data-label="Business impact">Compare average departure delays by route and schedule within the evaluated range.</td>
-<td class="c-links" data-label="Links"><div class="links"><a class=primary href="https://jessecoggins.github.io/project-flight-delay-prediction.html" aria-label="Summary: Flight Delay Prediction Pipeline">Summary<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a><a href="https://github.com/jessecoggins/flight-delay-mlops" target=_blank rel=noreferrer aria-label="Code: Flight Delay Prediction Pipeline">Code<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div></td>
-</tr><tr class="project" data-cat="Machine Learning" data-tags="Python|Healthcare|Risk stratification|Feature timing|Clustering|PCA|M.S. coursework" data-title="Hospital Readmission Analysis" data-index="4" data-search="hospital readmission analysis machine learning python · classification · feature timing 0.999 → 0.492 roc-auc when completed length of stay is removed. check feature availability before using a model for admission-time decisions. python healthcare risk stratification feature timing clustering pca m.s. coursework">
-<th scope="row" class="c-id" data-label="ID">PRJ-004</th>
-<td class="c-proj" data-label="Project"><h3 class="project-title"><a href="https://jessecoggins.github.io/project-hospital-readmission.html" data-press="title">Hospital Readmission Analysis</a></h3><p class="area">Machine Learning</p><p class="tools">Python · Classification · Feature timing</p><p class="course">M.S. coursework</p></td>
-<td class="c-find" data-label="Key findings"><strong>0.999 → 0.492</strong><p>ROC-AUC when completed length of stay is removed.</p></td>
-<td class="c-imp" data-label="Business impact">Check feature availability before using a model for admission-time decisions.</td>
-<td class="c-links" data-label="Links"><div class="links"><a class=primary href="https://jessecoggins.github.io/project-hospital-readmission.html" aria-label="Summary: Hospital Readmission Analysis">Summary<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a><a href="https://github.com/jessecoggins/hospital-readmission-ml#additional-validation-feature-timing" target=_blank rel=noreferrer aria-label="Timing check: Hospital Readmission Analysis">Timing check<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a><a href="https://github.com/jessecoggins/hospital-readmission-ml" target=_blank rel=noreferrer aria-label="Code: Hospital Readmission Analysis">Code<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div></td>
-</tr><tr class="project" data-cat="Forecasting" data-tags="Python|Forecasting|Time series|ARIMA|Statistics|M.S. coursework" data-title="Revenue Forecasting with ARIMA" data-index="5" data-search="revenue forecasting with arima forecasting python · arima · time series forecast cadence matters daily refitting favored arima; one-batch forecasting favored no change. match forecast evaluation to the planning schedule before choosing a model. python forecasting time series arima statistics m.s. coursework">
-<th scope="row" class="c-id" data-label="ID">PRJ-005</th>
-<td class="c-proj" data-label="Project"><h3 class="project-title"><a href="https://jessecoggins.github.io/project-revenue-forecasting.html" data-press="title">Revenue Forecasting with ARIMA</a></h3><p class="area">Forecasting</p><p class="tools">Python · ARIMA · Time series</p><p class="course">M.S. coursework</p></td>
-<td class="c-find" data-label="Key findings"><strong>Forecast cadence matters</strong><p>Daily refitting favored ARIMA; one-batch forecasting favored no change.</p></td>
-<td class="c-imp" data-label="Business impact">Match forecast evaluation to the planning schedule before choosing a model.</td>
-<td class="c-links" data-label="Links"><div class="links"><a class=primary href="https://jessecoggins.github.io/project-revenue-forecasting.html" aria-label="Summary: Revenue Forecasting with ARIMA">Summary<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a><a href="https://github.com/jessecoggins/revenue-forecasting-arima" target=_blank rel=noreferrer aria-label="Code: Revenue Forecasting with ARIMA">Code<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div></td>
-</tr><tr class="project" data-cat="Data Systems" data-tags="SQL|PostgreSQL|MongoDB|Data modeling|ETL|NoSQL|M.S. coursework" data-title="EcoMart Relational + NoSQL Design" data-index="6" data-search="ecomart relational + nosql design data systems postgresql · mongodb · etl sub-saharan africa leads $10.31b total profit in the supplied dataset; europe follows at $10.08b. compare regional profitability and investigate the largest contributors. sql postgresql mongodb data modeling etl nosql m.s. coursework">
-<th scope="row" class="c-id" data-label="ID">PRJ-006</th>
-<td class="c-proj" data-label="Project"><h3 class="project-title"><a href="https://jessecoggins.github.io/project-ecomart-database-design.html" data-press="title">EcoMart Relational + NoSQL Design</a></h3><p class="area">Data Systems</p><p class="tools">PostgreSQL · MongoDB · ETL</p><p class="course">M.S. coursework</p></td>
-<td class="c-find" data-label="Key findings"><strong>Sub-Saharan Africa leads</strong><p>$10.31B total profit in the supplied dataset; Europe follows at $10.08B.</p></td>
-<td class="c-imp" data-label="Business impact">Compare regional profitability and investigate the largest contributors.</td>
-<td class="c-links" data-label="Links"><div class="links"><a class=primary href="https://jessecoggins.github.io/project-ecomart-database-design.html" aria-label="Summary: EcoMart Relational + NoSQL Design">Summary<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a><a href="https://github.com/jessecoggins/ecomart-relational-nosql-database-design" target=_blank rel=noreferrer aria-label="Code: EcoMart Relational + NoSQL Design">Code<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div></td>
-</tr><tr class="project" data-cat="Machine Learning" data-tags="Python|NLP|Deep learning|BiLSTM|Text analytics|M.S. coursework" data-title="Sentiment Analysis with BiLSTM" data-index="7" data-search="sentiment analysis with bilstm machine learning python · nlp · bilstm 78.57% accuracy 98 held-out reviews; 0.779 f1 for positive reviews. explore a review queue while checking false alarms and missed negative reviews. python nlp deep learning bilstm text analytics m.s. coursework">
-<th scope="row" class="c-id" data-label="ID">PRJ-007</th>
-<td class="c-proj" data-label="Project"><h3 class="project-title"><a href="https://jessecoggins.github.io/project-sentiment-analysis-bilstm.html" data-press="title">Sentiment Analysis with BiLSTM</a></h3><p class="area">Machine Learning</p><p class="tools">Python · NLP · BiLSTM</p><p class="course">M.S. coursework</p></td>
-<td class="c-find" data-label="Key findings"><strong>78.57% accuracy</strong><p>98 held-out reviews; 0.779 F1 for positive reviews.</p></td>
-<td class="c-imp" data-label="Business impact">Explore a review queue while checking false alarms and missed negative reviews.</td>
-<td class="c-links" data-label="Links"><div class="links"><a class=primary href="https://jessecoggins.github.io/project-sentiment-analysis-bilstm.html" aria-label="Summary: Sentiment Analysis with BiLSTM">Summary<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a><a href="https://github.com/jessecoggins/sentiment-analysis-bilstm" target=_blank rel=noreferrer aria-label="Code: Sentiment Analysis with BiLSTM">Code<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div></td>
-</tr><tr class="project" data-cat="Machine Learning" data-tags="Python|Computer vision|CNN|Image classification|Deep learning|M.S. coursework" data-title="Seedling Image Classifier" data-index="8" data-search="seedling image classifier machine learning python · cnn · computer vision 66.62% accuracy 713 held-out seedling images across 12 species. explore species sorting with expert review; field performance remains untested. python computer vision cnn image classification deep learning m.s. coursework">
-<th scope="row" class="c-id" data-label="ID">PRJ-008</th>
-<td class="c-proj" data-label="Project"><h3 class="project-title"><a href="https://jessecoggins.github.io/project-seedling-image-classifier.html" data-press="title">Seedling Image Classifier</a></h3><p class="area">Machine Learning</p><p class="tools">Python · CNN · Computer vision</p><p class="course">M.S. coursework</p></td>
-<td class="c-find" data-label="Key findings"><strong>66.62% accuracy</strong><p>713 held-out seedling images across 12 species.</p></td>
-<td class="c-imp" data-label="Business impact">Explore species sorting with expert review; field performance remains untested.</td>
-<td class="c-links" data-label="Links"><div class="links"><a class=primary href="https://jessecoggins.github.io/project-seedling-image-classifier.html" aria-label="Summary: Seedling Image Classifier">Summary<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a><a href="https://github.com/jessecoggins/seedling-image-classifier" target=_blank rel=noreferrer aria-label="Code: Seedling Image Classifier">Code<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div></td>
-</tr><tr class="project" data-cat="Statistics &amp; Optimization" data-tags="Python|Statistics|Regression|PCA|Housing|Hypothesis testing|Market basket|Apriori|Retail|M.S. coursework" data-title="Statistical Analysis + Market Basket" data-index="9" data-search="statistical analysis + market basket statistics &amp; optimization python · statistics · apriori 88.2 association lift observed co-occurrence relative to independence; only 5 of 441 baskets. choose product combinations for small merchandising trials. python statistics regression pca housing hypothesis testing market basket apriori retail m.s. coursework">
-<th scope="row" class="c-id" data-label="ID">PRJ-009</th>
-<td class="c-proj" data-label="Project"><h3 class="project-title"><a href="https://jessecoggins.github.io/project-statistical-analysis-market-basket.html" data-press="title">Statistical Analysis + Market Basket</a></h3><p class="area">Statistics &amp; Optimization</p><p class="tools">Python · Statistics · Apriori</p><p class="course">M.S. coursework</p></td>
-<td class="c-find" data-label="Key findings"><strong>88.2 association lift</strong><p>Observed co-occurrence relative to independence; only 5 of 441 baskets.</p></td>
-<td class="c-imp" data-label="Business impact">Choose product combinations for small merchandising trials.</td>
-<td class="c-links" data-label="Links"><div class="links"><a class=primary href="https://jessecoggins.github.io/project-statistical-analysis-market-basket.html" aria-label="Summary: Statistical Analysis + Market Basket">Summary<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a><a href="https://github.com/jessecoggins/statistical-analysis-and-market-basket" target=_blank rel=noreferrer aria-label="Code: Statistical Analysis + Market Basket">Code<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div></td>
-</tr><tr class="project" data-cat="Statistics &amp; Optimization" data-tags="Python|Operations research|Linear programming|PuLP|Optimization|M.S. coursework" data-title="Cargo Network Optimization" data-index="10" data-search="cargo network optimization statistics &amp; optimization python · pulp · linear programming $200,863.75 modeled minimum feasible shipping cost; savings were not measured. compare feasible shipping plans under hub capacity and demand constraints. python operations research linear programming pulp optimization m.s. coursework">
-<th scope="row" class="c-id" data-label="ID">PRJ-010</th>
-<td class="c-proj" data-label="Project"><h3 class="project-title"><a href="https://jessecoggins.github.io/project-cargo-network-optimization.html" data-press="title">Cargo Network Optimization</a></h3><p class="area">Statistics &amp; Optimization</p><p class="tools">Python · PuLP · Linear programming</p><p class="course">M.S. coursework</p></td>
-<td class="c-find" data-label="Key findings"><strong>$200,863.75</strong><p>Modeled minimum feasible shipping cost; savings were not measured.</p></td>
-<td class="c-imp" data-label="Business impact">Compare feasible shipping plans under hub capacity and demand constraints.</td>
-<td class="c-links" data-label="Links"><div class="links"><a class=primary href="https://jessecoggins.github.io/project-cargo-network-optimization.html" aria-label="Summary: Cargo Network Optimization">Summary<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a><a href="https://github.com/jessecoggins/cargo-network-optimization" target=_blank rel=noreferrer aria-label="Code: Cargo Network Optimization">Code<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div></td>
-</tr></tbody>
-  </table>
-  <p class="empty" id="empty" hidden>No projects match those filters.</p>
+<main class="container">
+<section aria-labelledby="projects-heading" class="projects-section" id="projects">
+<div class="section-title-row">
+<h2 id="projects-heading">Projects</h2>
+<span class="collection-count">10 projects</span>
+</div>
+<div aria-label="Search and filter projects" class="project-tools">
+<div class="search-sort-row">
+<label class="search-box">
+<svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+<span class="sr-only">Search projects</span>
+<input autocomplete="off" id="project-search" placeholder="Search projects, methods, and tools" type="search"/>
+<kbd aria-hidden="true">/</kbd>
+</label>
+<label class="sort-box">
+<span>Sort</span>
+<select aria-label="Sort projects" id="project-sort">
+<option value="featured">Featured order</option>
+<option value="title-asc">Title A–Z</option>
+<option value="category">Project area</option>
+</select>
+</label>
+</div>
+<div class="filter-group">
+<p class="filter-label">Project area</p>
+<div aria-label="Filter by project area" class="filter-list" id="category-filters"></div>
+</div>
+<div class="filter-group tag-group">
+<div class="tag-heading">
+<p class="filter-label">Tags</p>
+<label class="tag-search">
+<svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+<span class="sr-only">Search tags</span>
+<input autocomplete="off" id="tag-search" placeholder="Find a tag" type="search"/>
+</label>
+</div>
+<div aria-label="Filter by tags" class="filter-list tag-filter-list" id="tag-filters"></div>
+<button class="show-more-tags" hidden="" id="show-more-tags" type="button">Show all tags</button>
+</div>
+<div class="match-controls" hidden="" id="match-controls">
+<span>Match selected tags</span>
+<div aria-label="How selected tags should match" class="segmented-control" role="group">
+<button aria-pressed="true" data-match="all" type="button">All</button>
+<button aria-pressed="false" data-match="any" type="button">Any</button>
+</div>
+</div>
+<div class="active-filters" hidden="" id="active-filters">
+<div class="active-filter-chips" id="active-filter-chips"></div>
+</div>
+<div class="results-row">
+<p aria-live="polite" id="result-count">10 projects</p>
+<button class="clear-filters" id="clear-filters" type="button">Clear filters</button>
+</div>
+</div>
+<div class="project-list" id="project-grid">
+<article class="project-row" data-category="Analytics &amp; BI" data-index="1" data-project-id="PRJ-001" data-tags="Tableau|KPI reporting|Segmentation|Customer retention|M.S. coursework" data-title="Customer Churn Dashboard">
+<span aria-hidden="true" class="project-number">01</span>
+<div class="project-main">
+<div class="project-kicker"><span>Analytics &amp; BI</span><span class="kicker-divider">/</span><span>Dashboard</span></div>
+<h3><a aria-label="Open project summary: Customer Churn Dashboard" class="project-row-link" href="project-customer-churn-dashboard.html">Customer Churn Dashboard</a></h3>
+<div aria-label="Project tags" class="project-tags">
+<button aria-pressed="false" class="tag-chip" data-tag="Tableau" type="button">Tableau</button>
+<button aria-pressed="false" class="tag-chip" data-tag="KPI reporting" type="button">KPI reporting</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Segmentation" type="button">Segmentation</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Customer retention" type="button">Customer retention</button>
+<button aria-pressed="false" class="tag-chip" data-tag="M.S. coursework" type="button">M.S. coursework</button>
+</div>
+<p class="project-description">Contract, income, state and payment views with clearly defined measures.</p>
+<p class="business-impact"><span>Business impact</span> Prioritize a retention experiment for month-to-month customers.</p>
+</div>
+<aside class="project-result">
+<strong>37.3% vs. 12.7%</strong>
+<span class="result-label">Churn for month-to-month vs. two-year contracts.</span>
+<div class="project-links">
+<a class="case-study-link" href="project-customer-churn-dashboard.html">Case study <span aria-hidden="true">↗</span></a>
+<a class="tableau-link" href="https://public.tableau.com/app/profile/jesse.coggins6637/viz/ChurnRateDashboard_17756852469330/CustomerChurnDashboardKeyTrendsbyIncomeRegionContractPayment" rel="noreferrer" target="_blank">Tableau Public <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/jessecoggins/customer-churn-dashboard" rel="noreferrer" target="_blank">Repository <span aria-hidden="true">↗</span></a>
+</div>
+</aside>
+</article>
+<article class="project-row" data-category="Machine Learning" data-index="2" data-project-id="PRJ-002" data-tags="Python|Classification|Credit risk|Cross-validation|M.S. coursework" data-title="Loan Default Risk Capstone">
+<span aria-hidden="true" class="project-number">02</span>
+<div class="project-main">
+<div class="project-kicker"><span>Machine Learning</span><span class="kicker-divider">/</span><span>Classification</span></div>
+<h3><a aria-label="Open project summary: Loan Default Risk Capstone" class="project-row-link" href="project-loan-default-risk.html">Loan Default Risk Capstone</a></h3>
+<div aria-label="Project tags" class="project-tags">
+<button aria-pressed="false" class="tag-chip" data-tag="Python" type="button">Python</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Classification" type="button">Classification</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Credit risk" type="button">Credit risk</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Cross-validation" type="button">Cross-validation</button>
+<button aria-pressed="false" class="tag-chip" data-tag="M.S. coursework" type="button">M.S. coursework</button>
+</div>
+<p class="project-description">A class-weighted Random Forest evaluated on 18,218 held-out loans.</p>
+<p class="business-impact"><span>Business impact</span> Estimate underwriting workload: 1,380 flagged test loans contained 787 defaults.</p>
+</div>
+<aside class="project-result">
+<strong>0.737 ROC-AUC</strong>
+<span class="result-label">26.5% default recall at the tested threshold.</span>
+<div class="project-links">
+<a class="case-study-link" href="project-loan-default-risk.html">Case study <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/jessecoggins/loan-default-risk-capstone" rel="noreferrer" target="_blank">Repository <span aria-hidden="true">↗</span></a>
+</div>
+</aside>
+</article>
+<article class="project-row" data-category="Machine Learning" data-index="3" data-project-id="PRJ-003" data-tags="Python|MLOps|DVC|MLflow|FastAPI|Docker|CI/CD|M.S. coursework" data-title="Flight Delay Prediction Pipeline">
+<span aria-hidden="true" class="project-number">03</span>
+<div class="project-main">
+<div class="project-kicker"><span>Machine Learning</span><span class="kicker-divider">/</span><span>MLOps &amp; delivery</span></div>
+<h3><a aria-label="Open project summary: Flight Delay Prediction Pipeline" class="project-row-link" href="project-flight-delay-prediction.html">Flight Delay Prediction Pipeline</a></h3>
+<div aria-label="Project tags" class="project-tags">
+<button aria-pressed="false" class="tag-chip" data-tag="Python" type="button">Python</button>
+<button aria-pressed="false" class="tag-chip" data-tag="MLOps" type="button">MLOps</button>
+<button aria-pressed="false" class="tag-chip" data-tag="DVC" type="button">DVC</button>
+<button aria-pressed="false" class="tag-chip" data-tag="FastAPI" type="button">FastAPI</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Docker" type="button">Docker</button>
+<button aria-pressed="false" class="tag-chip" data-tag="MLflow" type="button">MLflow</button>
+<button aria-pressed="false" class="tag-chip" data-tag="CI/CD" type="button">CI/CD</button>
+<button aria-pressed="false" class="tag-chip" data-tag="M.S. coursework" type="button">M.S. coursework</button>
+</div>
+<p class="project-description">A tracked training pipeline, prediction API and automated GitHub Actions checks.</p>
+<p class="business-impact"><span>Business impact</span> Compare average departure delays by route and schedule within the evaluated range.</p>
+</div>
+<aside class="project-result">
+<strong>8.92-minute RMSE</strong>
+<span class="result-label">Held-out Atlanta flights; delays of 60 minutes or more excluded.</span>
+<div class="project-links">
+<a class="case-study-link" href="project-flight-delay-prediction.html">Case study <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/jessecoggins/flight-delay-mlops" rel="noreferrer" target="_blank">Repository <span aria-hidden="true">↗</span></a>
+</div>
+</aside>
+</article>
+<article class="project-row" data-category="Machine Learning" data-index="4" data-project-id="PRJ-004" data-tags="Python|Healthcare|Risk stratification|Feature timing|Clustering|PCA|M.S. coursework" data-title="Hospital Readmission Analysis">
+<span aria-hidden="true" class="project-number">04</span>
+<div class="project-main">
+<div class="project-kicker"><span>Machine Learning</span><span class="kicker-divider">/</span><span>Healthcare analysis</span></div>
+<h3><a aria-label="Open project summary: Hospital Readmission Analysis" class="project-row-link" href="project-hospital-readmission.html">Hospital Readmission Analysis</a></h3>
+<div aria-label="Project tags" class="project-tags">
+<button aria-pressed="false" class="tag-chip" data-tag="Python" type="button">Python</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Healthcare" type="button">Healthcare</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Risk stratification" type="button">Risk stratification</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Feature timing" type="button">Feature timing</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Clustering" type="button">Clustering</button>
+<button aria-pressed="false" class="tag-chip" data-tag="PCA" type="button">PCA</button>
+<button aria-pressed="false" class="tag-chip" data-tag="M.S. coursework" type="button">M.S. coursework</button>
+</div>
+<p class="project-description">Readmission classification and patient-service clustering, with a feature-timing check.</p>
+<p class="business-impact"><span>Business impact</span> Check feature availability before using a model for admission-time decisions.</p>
+</div>
+<aside class="project-result">
+<strong>0.999 → 0.492</strong>
+<span class="result-label">ROC-AUC when completed length of stay is removed.</span>
+<div class="project-links">
+<a class="case-study-link" href="project-hospital-readmission.html">Case study <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/jessecoggins/hospital-readmission-ml#additional-validation-feature-timing" rel="noreferrer" target="_blank">Sensitivity check <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/jessecoggins/hospital-readmission-ml" rel="noreferrer" target="_blank">Repository <span aria-hidden="true">↗</span></a>
+</div>
+</aside>
+</article>
+<article class="project-row" data-category="Forecasting" data-index="5" data-project-id="PRJ-005" data-tags="Python|Forecasting|Time series|ARIMA|Statistics|M.S. coursework" data-title="Revenue Forecasting with ARIMA">
+<span aria-hidden="true" class="project-number">05</span>
+<div class="project-main">
+<div class="project-kicker"><span>Forecasting</span><span class="kicker-divider">/</span><span>Time series</span></div>
+<h3><a aria-label="Open project summary: Revenue Forecasting with ARIMA" class="project-row-link" href="project-revenue-forecasting.html">Revenue Forecasting with ARIMA</a></h3>
+<div aria-label="Project tags" class="project-tags">
+<button aria-pressed="false" class="tag-chip" data-tag="Python" type="button">Python</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Forecasting" type="button">Forecasting</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Time series" type="button">Time series</button>
+<button aria-pressed="false" class="tag-chip" data-tag="ARIMA" type="button">ARIMA</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Statistics" type="button">Statistics</button>
+<button aria-pressed="false" class="tag-chip" data-tag="M.S. coursework" type="button">M.S. coursework</button>
+</div>
+<p class="project-description">Daily revenue-change forecasts compared with a no-change baseline.</p>
+<p class="business-impact"><span>Business impact</span> Match forecast evaluation to the planning schedule before choosing a model.</p>
+</div>
+<aside class="project-result">
+<strong>Forecast cadence matters</strong>
+<span class="result-label">Daily refitting favored ARIMA; one-batch forecasting favored no change.</span>
+<div class="project-links">
+<a class="case-study-link" href="project-revenue-forecasting.html">Case study <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/jessecoggins/revenue-forecasting-arima" rel="noreferrer" target="_blank">Repository <span aria-hidden="true">↗</span></a>
+</div>
+</aside>
+</article>
+<article class="project-row" data-category="Data Systems" data-index="6" data-project-id="PRJ-006" data-tags="SQL|PostgreSQL|MongoDB|Data modeling|ETL|NoSQL|M.S. coursework" data-title="EcoMart Relational + NoSQL Design">
+<span aria-hidden="true" class="project-number">06</span>
+<div class="project-main">
+<div class="project-kicker"><span>Data Systems</span><span class="kicker-divider">/</span><span>Relational &amp; NoSQL</span></div>
+<h3><a aria-label="Open project summary: EcoMart Relational + NoSQL Design" class="project-row-link" href="project-ecomart-database-design.html">EcoMart Relational + NoSQL Design</a></h3>
+<div aria-label="Project tags" class="project-tags">
+<button aria-pressed="false" class="tag-chip" data-tag="SQL" type="button">SQL</button>
+<button aria-pressed="false" class="tag-chip" data-tag="PostgreSQL" type="button">PostgreSQL</button>
+<button aria-pressed="false" class="tag-chip" data-tag="MongoDB" type="button">MongoDB</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Data modeling" type="button">Data modeling</button>
+<button aria-pressed="false" class="tag-chip" data-tag="ETL" type="button">ETL</button>
+<button aria-pressed="false" class="tag-chip" data-tag="NoSQL" type="button">NoSQL</button>
+<button aria-pressed="false" class="tag-chip" data-tag="M.S. coursework" type="button">M.S. coursework</button>
+</div>
+<p class="project-description">Relational and document database designs for 100,000 sales records.</p>
+<p class="business-impact"><span>Business impact</span> Compare regional profitability and investigate the largest contributors.</p>
+</div>
+<aside class="project-result">
+<strong>Sub-Saharan Africa leads</strong>
+<span class="result-label">$10.31B total profit in the supplied dataset; Europe follows at $10.08B.</span>
+<div class="project-links">
+<a class="case-study-link" href="project-ecomart-database-design.html">Case study <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/jessecoggins/ecomart-relational-nosql-database-design" rel="noreferrer" target="_blank">Repository <span aria-hidden="true">↗</span></a>
+</div>
+</aside>
+</article>
+<article class="project-row" data-category="Machine Learning" data-index="7" data-project-id="PRJ-007" data-tags="Python|NLP|Deep learning|BiLSTM|Text analytics|M.S. coursework" data-title="Sentiment Analysis with BiLSTM">
+<span aria-hidden="true" class="project-number">07</span>
+<div class="project-main">
+<div class="project-kicker"><span>Machine Learning</span><span class="kicker-divider">/</span><span>Natural language processing</span></div>
+<h3><a aria-label="Open project summary: Sentiment Analysis with BiLSTM" class="project-row-link" href="project-sentiment-analysis-bilstm.html">Sentiment Analysis with BiLSTM</a></h3>
+<div aria-label="Project tags" class="project-tags">
+<button aria-pressed="false" class="tag-chip" data-tag="Python" type="button">Python</button>
+<button aria-pressed="false" class="tag-chip" data-tag="NLP" type="button">NLP</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Deep learning" type="button">Deep learning</button>
+<button aria-pressed="false" class="tag-chip" data-tag="BiLSTM" type="button">BiLSTM</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Text analytics" type="button">Text analytics</button>
+<button aria-pressed="false" class="tag-chip" data-tag="M.S. coursework" type="button">M.S. coursework</button>
+</div>
+<p class="project-description">A movie-review classifier with grouped data splitting and training-only tokenization.</p>
+<p class="business-impact"><span>Business impact</span> Explore a review queue while checking false alarms and missed negative reviews.</p>
+</div>
+<aside class="project-result">
+<strong>78.57% accuracy</strong>
+<span class="result-label">98 held-out reviews; 0.779 F1 for positive reviews.</span>
+<div class="project-links">
+<a class="case-study-link" href="project-sentiment-analysis-bilstm.html">Case study <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/jessecoggins/sentiment-analysis-bilstm" rel="noreferrer" target="_blank">Repository <span aria-hidden="true">↗</span></a>
+</div>
+</aside>
+</article>
+<article class="project-row" data-category="Machine Learning" data-index="8" data-project-id="PRJ-008" data-tags="Python|Computer vision|CNN|Image classification|Deep learning|M.S. coursework" data-title="Seedling Image Classifier">
+<span aria-hidden="true" class="project-number">08</span>
+<div class="project-main">
+<div class="project-kicker"><span>Machine Learning</span><span class="kicker-divider">/</span><span>Computer vision</span></div>
+<h3><a aria-label="Open project summary: Seedling Image Classifier" class="project-row-link" href="project-seedling-image-classifier.html">Seedling Image Classifier</a></h3>
+<div aria-label="Project tags" class="project-tags">
+<button aria-pressed="false" class="tag-chip" data-tag="Python" type="button">Python</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Computer vision" type="button">Computer vision</button>
+<button aria-pressed="false" class="tag-chip" data-tag="CNN" type="button">CNN</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Image classification" type="button">Image classification</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Deep learning" type="button">Deep learning</button>
+<button aria-pressed="false" class="tag-chip" data-tag="M.S. coursework" type="button">M.S. coursework</button>
+</div>
+<p class="project-description">A twelve-species image classifier with the trained model available for inspection.</p>
+<p class="business-impact"><span>Business impact</span> Explore species sorting with expert review; field performance remains untested.</p>
+</div>
+<aside class="project-result">
+<strong>66.62% accuracy</strong>
+<span class="result-label">713 held-out seedling images across 12 species.</span>
+<div class="project-links">
+<a class="case-study-link" href="project-seedling-image-classifier.html">Case study <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/jessecoggins/seedling-image-classifier" rel="noreferrer" target="_blank">Repository <span aria-hidden="true">↗</span></a>
+</div>
+</aside>
+</article>
+<article class="project-row" data-category="Statistics &amp; Optimization" data-index="9" data-project-id="PRJ-009" data-tags="Python|Statistics|Regression|PCA|Housing|Hypothesis testing|Market basket|Apriori|Retail|M.S. coursework" data-title="Statistical Analysis + Market Basket">
+<span aria-hidden="true" class="project-number">09</span>
+<div class="project-main">
+<div class="project-kicker"><span>Statistics &amp; Optimization</span><span class="kicker-divider">/</span><span>Retail analysis</span></div>
+<h3><a aria-label="Open project summary: Statistical Analysis + Market Basket" class="project-row-link" href="project-statistical-analysis-market-basket.html">Statistical Analysis + Market Basket</a></h3>
+<div aria-label="Project tags" class="project-tags">
+<button aria-pressed="false" class="tag-chip" data-tag="Python" type="button">Python</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Statistics" type="button">Statistics</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Regression" type="button">Regression</button>
+<button aria-pressed="false" class="tag-chip" data-tag="PCA" type="button">PCA</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Housing" type="button">Housing</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Hypothesis testing" type="button">Hypothesis testing</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Market basket" type="button">Market basket</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Apriori" type="button">Apriori</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Retail" type="button">Retail</button>
+<button aria-pressed="false" class="tag-chip" data-tag="M.S. coursework" type="button">M.S. coursework</button>
+</div>
+<p class="project-description">Seven analyses spanning housing, finance, insurance and retail baskets.</p>
+<p class="business-impact"><span>Business impact</span> Choose product combinations for small merchandising trials.</p>
+</div>
+<aside class="project-result">
+<strong>88.2 association lift</strong>
+<span class="result-label">Observed co-occurrence relative to independence; only 5 of 441 baskets.</span>
+<div class="project-links">
+<a class="case-study-link" href="project-statistical-analysis-market-basket.html">Case study <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/jessecoggins/statistical-analysis-and-market-basket" rel="noreferrer" target="_blank">Repository <span aria-hidden="true">↗</span></a>
+</div>
+</aside>
+</article>
+<article class="project-row" data-category="Statistics &amp; Optimization" data-index="10" data-project-id="PRJ-010" data-tags="Python|Operations research|Linear programming|PuLP|Optimization|M.S. coursework" data-title="Cargo Network Optimization">
+<span aria-hidden="true" class="project-number">10</span>
+<div class="project-main">
+<div class="project-kicker"><span>Statistics &amp; Optimization</span><span class="kicker-divider">/</span><span>Operations research</span></div>
+<h3><a aria-label="Open project summary: Cargo Network Optimization" class="project-row-link" href="project-cargo-network-optimization.html">Cargo Network Optimization</a></h3>
+<div aria-label="Project tags" class="project-tags">
+<button aria-pressed="false" class="tag-chip" data-tag="Python" type="button">Python</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Operations research" type="button">Operations research</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Linear programming" type="button">Linear programming</button>
+<button aria-pressed="false" class="tag-chip" data-tag="PuLP" type="button">PuLP</button>
+<button aria-pressed="false" class="tag-chip" data-tag="Optimization" type="button">Optimization</button>
+<button aria-pressed="false" class="tag-chip" data-tag="M.S. coursework" type="button">M.S. coursework</button>
+</div>
+<p class="project-description">A transshipment model with capacity constraints and flow-feasibility checks.</p>
+<p class="business-impact"><span>Business impact</span> Compare feasible shipping plans under hub capacity and demand constraints.</p>
+</div>
+<aside class="project-result">
+<strong>$200,863.75</strong>
+<span class="result-label">Modeled minimum feasible shipping cost; savings were not measured.</span>
+<div class="project-links">
+<a class="case-study-link" href="project-cargo-network-optimization.html">Case study <span aria-hidden="true">↗</span></a>
+<a href="https://github.com/jessecoggins/cargo-network-optimization" rel="noreferrer" target="_blank">Repository <span aria-hidden="true">↗</span></a>
+</div>
+</aside>
+</article>
+</div>
+<div class="no-results" hidden="" id="no-results">
+<p>No projects match those filters.</p>
+<button class="clear-filters" id="empty-clear" type="button">Clear filters</button>
+</div>
+</section>
 </main>
-
-<footer class="foot">
-  <div class="wrap">
-    <a href="mailto:jessecoggins21@gmail.com">jessecoggins21@gmail.com</a>
-    <span>Jesse Coggins &nbsp;·&nbsp; <a href="#top">Back to top ↑</a></span>
-  </div>
+<footer class="site-footer">
+<div class="container footer-inner">
+<a href="mailto:jessecoggins21@gmail.com">jessecoggins21@gmail.com <span aria-hidden="true">↗</span></a>
+<span>Jesse Coggins · <span id="current-year"></span></span>
+<a href="#top">Back to top ↑</a>
+</div>
 </footer>
-
-<script>
-(function () {
-  var body = document.getElementById('grid');
-  var rows = Array.prototype.slice.call(body.querySelectorAll('.project'));
-  var pills = Array.prototype.slice.call(document.querySelectorAll('.pill'));
-  var tagBtns = Array.prototype.slice.call(document.querySelectorAll('.tag'));
-  var q = document.getElementById('q'), sort = document.getElementById('sort');
-  var count = document.getElementById('count'), empty = document.getElementById('empty');
-  var cat = '', tags = [];
-  function apply() {
-    var term = q.value.trim().toLowerCase(), shown = 0;
-    rows.forEach(function (r) {
-      var rt = r.dataset.tags.split('|');
-      var ok = (!cat || r.dataset.cat === cat) &&
-               (!term || r.dataset.search.indexOf(term) > -1) &&
-               tags.every(function (t) { return rt.indexOf(t) > -1; });
-      r.hidden = !ok; if (ok) shown++;
-    });
-    count.textContent = shown + ' of ' + rows.length + ' projects';
-    empty.hidden = shown !== 0;
-  }
-  function order() {
-    var v = sort.value;
-    rows.slice().sort(function (a, b) {
-      if (v === 'title') return a.dataset.title.localeCompare(b.dataset.title);
-      if (v === 'cat') return a.dataset.cat.localeCompare(b.dataset.cat) || (a.dataset.index - b.dataset.index);
-      return a.dataset.index - b.dataset.index;
-    }).forEach(function (r) { body.appendChild(r); });
-  }
-  pills.forEach(function (p) {
-    p.addEventListener('click', function () {
-      cat = p.dataset.cat;
-      pills.forEach(function (x) { x.setAttribute('aria-pressed', x === p ? 'true' : 'false'); });
-      apply();
-    });
-  });
-  tagBtns.forEach(function (t) {
-    t.addEventListener('click', function () {
-      var on = t.getAttribute('aria-pressed') !== 'true';
-      t.setAttribute('aria-pressed', on ? 'true' : 'false');
-      tags = tagBtns.filter(function (x) { return x.getAttribute('aria-pressed') === 'true'; }).map(function (x) { return x.dataset.tag; });
-      apply();
-    });
-  });
-  document.getElementById('clear').addEventListener('click', function () {
-    q.value = ''; cat = ''; tags = []; sort.value = 'featured';
-    pills.forEach(function (x, i) { x.setAttribute('aria-pressed', i === 0 ? 'true' : 'false'); });
-    tagBtns.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
-    order(); apply();
-  });
-  q.addEventListener('input', apply);
-  sort.addEventListener('change', order);
-  document.addEventListener('keydown', function (e) {
-    if (e.key === '/' && !/input|textarea|select/i.test(document.activeElement.tagName)) { e.preventDefault(); q.focus(); }
-  });
-  apply();
-})();
-</script>
-<script>
-/* Letterpress lettering for headings: the same pressed-ink renderer as the card
-   (paper tooth, bevel lit from the top left, ink that skips the paper grain),
-   drawn on a transparent canvas so the page paper shows through. */
-(function () {
-  var S = { ink: [82, 78, 80], grainScale: 0.9, paperRelief: 0.30, impressionDepth: 0.7,
-            bevel: 1.0, inkMottle: 0.15, boldness: 0.008, inkEdge: 0.20 };
-  var FONT = '"AllenCopperplate", Copperplate, "Copperplate Gothic", serif';
-  var PRESETS = {
-    mark:  { track: -0.012, space: 0.62, bold: 0.012, align: 'left',   wrap: false },
-    h1:    { track: -0.040, space: 0.58, bold: 0.014, align: 'center', wrap: true  }, 
-    role:  { track: -0.062, space: 0.95, bold: 0.012, align: 'center', wrap: true  }, 
-    h1l:   { track: -0.012, space: 0.62, bold: 0.016, align: 'left',   wrap: true  },
-    rolel: { track: -0.025, space: 0.65, bold: 0.014, align: 'left',   wrap: true  },
-    h2:    { track: -0.012, space: 0.62, bold: 0.014, align: 'left',   wrap: false },
-    title: { track: -0.015, space: 0.62, bold: 0.012, align: 'left',   wrap: true  }
-  };
-  function mk(seed) { var s = seed >>> 0; return function () { s = (Math.imul(s, 1664525) + 1013904223) >>> 0; return s / 4294967296; }; }
-  function cl(v, a, b) { return v < a ? a : v > b ? b : v; }
-  function ss(a, b, v) { var t = cl((v - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); }
-  function vnoise(W, H, cx, cy, seed) {
-    var r = mk(seed), gw = Math.ceil(W / cx) + 3, gh = Math.ceil(H / cy) + 3, g = new Float32Array(gw * gh), i, x, y;
-    for (i = 0; i < g.length; i++) g[i] = r() * 2 - 1;
-    var out = new Float32Array(W * H);
-    for (y = 0; y < H; y++) {
-      var fy = y / cy, y0 = Math.floor(fy), ty = fy - y0, sy = ty * ty * (3 - 2 * ty);
-      for (x = 0; x < W; x++) {
-        var fx = x / cx, x0 = Math.floor(fx), tx = fx - x0, sx = tx * tx * (3 - 2 * tx), j = y0 * gw + x0;
-        var a = g[j], b = g[j + 1], c = g[j + gw], d = g[j + gw + 1];
-        out[y * W + x] = (a + (b - a) * sx) * (1 - sy) + (c + (d - c) * sx) * sy;
-      }
-    }
-    return out;
-  }
-  function box(src, W, H, r) {
-    var tmp = new Float32Array(W * H), out = new Float32Array(W * H), d = 2 * r + 1, x, y, sum;
-    for (y = 0; y < H; y++) {
-      var row = y * W; sum = 0;
-      for (x = -r; x <= r; x++) sum += src[row + cl(x, 0, W - 1)];
-      for (x = 0; x < W; x++) { tmp[row + x] = sum / d; sum += src[row + Math.min(x + r + 1, W - 1)] - src[row + Math.max(x - r, 0)]; }
-    }
-    for (x = 0; x < W; x++) {
-      sum = 0;
-      for (y = -r; y <= r; y++) sum += tmp[cl(y, 0, H - 1) * W + x];
-      for (y = 0; y < H; y++) { out[y * W + x] = sum / d; sum += tmp[Math.min(y + r + 1, H - 1) * W + x] - tmp[Math.max(y - r, 0) * W + x]; }
-    }
-    return out;
-  }
-  function gauss(src, W, H, r) { r = Math.max(1, Math.round(r)); return box(box(box(src, W, H, r), W, H, r), W, H, r); }
-
-  function layout(text, px, o, maxW, mctx) {
-    mctx.font = '400 ' + px + 'px ' + FONT;
-    var words = text.split(' '), lines = [], cur = [];
-    function adv(ch) { return mctx.measureText(ch).width * (ch === ' ' ? o.space : 1) + o.track * px; }
-    function wid(str) { var w = 0; Array.from(str).forEach(function (ch) { w += adv(ch); }); return w - o.track * px; }
-    words.forEach(function (w) {
-      var t = cur.concat([w]).join(' ');
-      if (cur.length && wid(t) > maxW) { lines.push(cur.join(' ')); cur = [w]; } else cur = cur.concat([w]);
-    });
-    if (cur.length) lines.push(cur.join(' '));
-    return { lines: lines, wid: wid, adv: adv };
-  }
-
-  function render(el) {
-    var o = PRESETS[el.dataset.press]; if (!o) return;
-    var text = el.dataset.text || (el.querySelector('.pt') ? el.querySelector('.pt').textContent : el.textContent);
-    text = text.replace(/\s+/g, ' ').trim();
-    if (!el.querySelector('.pt')) { el.dataset.text = text; el.innerHTML = '<span class="pt"></span>'; el.firstChild.textContent = text; }
-    var cs = getComputedStyle(el), px = parseFloat(cs.fontSize);
-    var lh = parseFloat(cs.lineHeight); if (!lh || isNaN(lh)) lh = px * 1.2;
-    var blockEl = o.wrap ? (cs.display === 'inline' || cs.display === 'inline-block' ? el.parentElement : el) : null;
-    var avail = blockEl ? blockEl.getBoundingClientRect().width : 1e5;
-    if (blockEl && blockEl !== el) { var pcs = getComputedStyle(blockEl); avail -= parseFloat(pcs.paddingLeft) + parseFloat(pcs.paddingRight); }
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var probe = document.createElement('canvas').getContext('2d');
-    var L = layout(text, px, o, avail - 2, probe);
-    var textW = 0; L.lines.forEach(function (ln) { textW = Math.max(textW, L.wid(ln)); });
-    var padX = Math.ceil(px * 0.12) + 4, padY = Math.ceil(px * 0.18);
-    var cssW = Math.ceil(o.wrap ? avail : textW) + padX * 2, cssH = Math.ceil(L.lines.length * lh) + padY * 2;
-    var W = Math.round(cssW * dpr), H = Math.round(cssH * dpr), N = W * H;
-    var mk2 = document.createElement('canvas'); mk2.width = W; mk2.height = H;
-    var m2 = mk2.getContext('2d', { willReadFrequently: true });
-    m2.scale(dpr, dpr);
-    m2.fillStyle = '#000'; m2.strokeStyle = '#000'; m2.lineJoin = 'round'; m2.textBaseline = 'alphabetic';
-    m2.font = '400 ' + px + 'px ' + FONT; m2.lineWidth = px * (S.boldness + o.bold);
-    L.lines.forEach(function (ln, i) {
-      var w = L.wid(ln), x = o.align === 'center' ? (cssW - w) / 2 : padX, y = padY + i * lh + lh / 2 + px * 0.34;
-      Array.from(ln).forEach(function (ch) { m2.fillText(ch, x, y); m2.strokeText(ch, x, y); x += L.adv(ch); });
-    });
-    var pix = m2.getImageData(0, 0, W, H).data, m = new Float32Array(N), i;
-    for (i = 0; i < N; i++) m[i] = pix[i * 4 + 3] / 255;
-
-    var uT = dpr, uB = dpr * cl(px / 57, 0.5, 1.5), fz = cl(px / 57, 0.35, 1);
-    var tooth = new Float32Array(N), fine = new Float32Array(N);
-    [[2.0, 1.7, 0.50], [4.0, 3.2, 0.65], [8.0, 6.0, 0.80], [18.0, 13.0, 0.70], [45.0, 32.0, 0.45]].forEach(function (Ly, k) {
-      var n = vnoise(W, H, Ly[0] * uT * S.grainScale, Ly[1] * uT * S.grainScale, 101 + k * 37);
-      for (var q = 0; q < N; q++) { tooth[q] += n[q] * Ly[2]; if (k < 3) fine[q] += n[q] * Ly[2]; }
-    });
-    var cA = vnoise(W, H, 70 * uT, 52 * uT, 901), cB = vnoise(W, H, 26 * uT, 20 * uT, 933), cloud = new Float32Array(N);
-    for (i = 0; i < N; i++) cloud[i] = cA[i] * 0.6 + cB[i] * 0.4;
-    var s1 = gauss(m, W, H, 0.8 * uB * S.bevel), s2 = gauss(m, W, H, 2.0 * uB * S.bevel);
-    var relief = 0.9 * S.paperRelief, depth = 1.6 * S.impressionDepth * fz, height = new Float32Array(N);
-    for (i = 0; i < N; i++) height[i] = tooth[i] * relief - (s1[i] * 0.6 + s2[i] * 0.4) * depth * 3.0;
-
-    var cv = document.createElement('canvas'); cv.width = W; cv.height = H;
-    var ctx = cv.getContext('2d'), img = ctx.createImageData(W, H), out = img.data;
-    var rnd = mk(7), k1 = Math.max(1, Math.round(0.9 * uT)), I = S.ink, en = vnoise(W, H, 1.6 * uT, 1.6 * uT, 555);
-    for (var y = 0; y < H; y++) {
-      var ya = Math.max(0, y - k1), yb = Math.min(H - 1, y + k1);
-      for (var x = 0; x < W; x++) {
-        var idx = y * W + x, xa = Math.max(0, x - k1), xb = Math.min(W - 1, x + k1);
-        var shade = (height[yb * W + xb] - height[ya * W + xa]) * 15;
-        var broad = cloud[idx] * 3.0 + tooth[idx];
-        var cover = ss(0.5 - S.inkEdge, 0.5 + S.inkEdge, m[idx] + en[idx] * 0.10);
-        var valley = cl(-fine[idx] - 0.25, 0, 2); rnd();
-        var speck = (rnd() - 0.5) * 0.35;
-        var skip = cl(valley * 0.50 * S.inkMottle + speck * S.inkMottle, 0, 0.60);
-        var rim = cl((m[idx] - s1[idx]) * 2.2, 0, 1) * 0.10;
-        var inkAmt = cover * (1 - skip), near = cl(s2[idx] * 3, 0, 1);
-        var emb = (1 - inkAmt) * near * cl(Math.abs(shade) * 0.015, 0, 0.2), op = inkAmt + emb;
-        for (var c = 0; c < 3; c++) {
-          var ink = I[c] + shade * 0.45 - rim * 14 + broad * 0.3, imp = shade >= 0 ? 255 : 70;
-          out[idx * 4 + c] = op > 0 ? cl(Math.round((ink * inkAmt + imp * emb) / op), 0, 255) : 0;
-        }
-        out[idx * 4 + 3] = Math.round(op * 255);
-      }
-    }
-    ctx.putImageData(img, 0, 0);
-    cv.className = 'pc'; cv.setAttribute('aria-hidden', 'true');
-    cv.style.width = cssW + 'px'; cv.style.height = cssH + 'px';
-    cv.style.margin = (-padY) + 'px ' + (-padX) + 'px';
-    var old = el.querySelector('canvas'); if (old) old.remove();
-    el.appendChild(cv); el.classList.add('is-pressed');
-  }
-
-  var els = Array.prototype.slice.call(document.querySelectorAll('[data-press]'));
-  function all() { els.forEach(render); }
-  var t = null, lastW = 0;
-  function later() { clearTimeout(t); t = setTimeout(function () { var w = document.documentElement.clientWidth; if (w !== lastW) { lastW = w; all(); } }, 150); }
-  function start() { lastW = document.documentElement.clientWidth; all(); }
-  if (document.fonts && document.fonts.load) { document.fonts.load('400 48px "AllenCopperplate"').then(start, start); } else { start(); }
-  window.addEventListener('resize', later);
-})();
-
-</script>
 </body>
 </html>
+
