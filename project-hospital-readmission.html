@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=readability-20261104" />
-    <link rel="stylesheet" href="project-detail.css?v=source-sans-20261106" />
+    <link rel="stylesheet" href="project-detail.css?v=tight-headings-20261106" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to project summary</a>
@@ -73,28 +73,28 @@
         <article class="detail-story">
           <section class="detail-section">
             <p class="detail-label">Business question</p>
-            <h2>How well can hospital records classify readmission, and what patient groups emerge from clustering?</h2>
+            <h2 data-press="title">How well can hospital records classify readmission, and what patient groups emerge from clustering?</h2>
           </section>
           <section class="detail-section">
             <p class="detail-label">Approach</p>
-            <h2>How the work was done</h2>
+            <h2 data-press="title">How the work was done</h2>
             <ul><li>Compared 216 Random Forest parameter combinations with five-fold cross-validation, then evaluated the selected forest on a held-out test set.</li>
                 <li>Used the Elbow Method to select three K-Means segments, then applied PCA to inspect cluster separation and profiles.</li></ul>
           </section>
           <section class="detail-section">
             <p class="detail-label">Results</p>
-            <h2>What the analysis shows</h2>
+            <h2 data-press="title">What the analysis shows</h2>
             <ul><li>The full discharge-time model achieved 97.9% accuracy, 96.3% precision, 98.0% recall, 0.971 F1, and 0.999 ROC-AUC.</li>
                 <li>The separate clustering notebook uses 14 features and excludes readmission. One group averaged 9 days and $3,212 in charges; another averaged 60 days and $7,401. The oldest group averaged 74 years, and 95% reported high blood pressure. These profiles do not establish future readmission risk.</li></ul>
           </section>
           <section class="detail-section project-visuals" id="project-visuals" aria-labelledby="visuals-heading">
             <p class="detail-label">From the project</p>
-            <h2 id="visuals-heading">Model evaluation and patient groups</h2>
+            <h2 id="visuals-heading" data-press="title">Model evaluation and patient groups</h2>
             <figure class="project-figure">
               <a class="project-image-link" href="assets/project-visuals/hospital-evaluation.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: How performance depends on feature timing">
                 <img src="assets/project-visuals/hospital-evaluation.png" alt="ROC curves with and without completed length of stay and a full-model confusion matrix showing 929 true negatives, 21 false positives, 11 false negatives and 539 true positives." width="1670" height="724" loading="lazy" decoding="async" />
               </a>
-              <figcaption><h3>How performance depends on feature timing</h3><p>The same held-out records give ROC-AUC 0.999 with completed length of stay and 0.492 without it. The confusion matrix describes the full model at the evaluated threshold.</p>
+              <figcaption><h3 data-press="title">How performance depends on feature timing</h3><p>The same held-out records give ROC-AUC 0.999 with completed length of stay and 0.492 without it. The confusion matrix describes the full model at the evaluated threshold.</p>
                 <div class="project-figure-links"><a href="https://github.com/JesseCoggins/hospital-readmission-ml/blob/main/notebooks/readmission_classification.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/hospital-evaluation.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
               </figcaption>
             </figure>
@@ -102,25 +102,25 @@
               <a class="project-image-link" href="assets/project-visuals/hospital-elbow.png" target="_blank" rel="noreferrer" aria-label="Open full-size image: Choosing the number of patient groups">
                 <img src="assets/project-visuals/hospital-elbow.png" alt="Saved elbow plot from the current 14-feature clustering notebook, with within-cluster variation decreasing from one to ten groups." width="713" height="470" loading="lazy" decoding="async" />
               </a>
-              <figcaption><h3>Choosing the number of patient groups</h3><p>The early reductions in within-group variation informed the choice of three clusters. These groups describe similar records; they do not establish future readmission risk.</p>
+              <figcaption><h3 data-press="title">Choosing the number of patient groups</h3><p>The early reductions in within-group variation informed the choice of three clusters. These groups describe similar records; they do not establish future readmission risk.</p>
                 <div class="project-figure-links"><a href="https://github.com/JesseCoggins/hospital-readmission-ml/blob/main/notebooks/readmission_clustering_pca.ipynb" target="_blank" rel="noreferrer">View the source <span aria-hidden="true">↗</span></a><a href="assets/project-visuals/hospital-elbow.png" target="_blank" rel="noreferrer">Open full size <span aria-hidden="true">↗</span></a></div>
               </figcaption>
             </figure>
           </section>
           <section class="detail-section" id="feature-timing">
             <p class="detail-label">Additional validation</p>
-            <h2>Feature timing at discharge</h2>
+            <h2 data-press="title">Feature timing at discharge</h2>
             <p>Initial_days records completed length of stay, available at discharge. A sensitivity check removes that feature and repeats the selected-model evaluation. ROC-AUC falls from 0.999 to 0.492, near chance. This limits the full model to discharge-time analysis; decisions at admission need a model validated on information available then.</p>
           </section>
           <section class="detail-section" style="margin-top:20px">
             <p class="detail-label">Business relevance</p>
-            <h2>What this makes easier to decide</h2>
+            <h2 data-press="title">What this makes easier to decide</h2>
             <p>The classifier provides a way to rank records for discharge-time review, while cluster profiles help explore differences in service use. Neither analysis establishes that follow-up will reduce readmissions.</p>
           </section>
         </article>
 
         <aside class="detail-aside" aria-label="Project details and links">
-          <h2>Project details</h2>
+          <h2 data-press="title">Project details</h2>
           <dl class="detail-facts"><div class="detail-fact"><dt>Supervised method</dt><dd>Random Forest classification</dd></div>
               <div class="detail-fact"><dt>Unsupervised methods</dt><dd>K-Means · PCA</dd></div>
               <div class="detail-fact"><dt>Segmentation</dt><dd>3 patient clusters</dd></div></dl>
