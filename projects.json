@@ -1,0 +1,336 @@
+[
+  {
+    "id": "PRJ-001",
+    "title": "Customer Churn Dashboard",
+    "category": "Analytics & BI",
+    "tags": [
+      "Tableau",
+      "KPI reporting",
+      "Segmentation",
+      "Customer retention",
+      "M.S. coursework"
+    ],
+    "tools": [
+      "Tableau",
+      "KPI reporting",
+      "Segmentation"
+    ],
+    "summary": "project-customer-churn-dashboard.html",
+    "finding": "37.3% vs. 12.7%",
+    "findingNote": "Churn for month-to-month vs. two-year contracts.",
+    "businessImpact": "Prioritize a retention experiment for month-to-month customers.",
+    "links": [
+      {
+        "label": "Summary",
+        "href": "project-customer-churn-dashboard.html"
+      },
+      {
+        "label": "Tableau",
+        "href": "https://public.tableau.com/app/profile/jesse.coggins6637/viz/ChurnRateDashboard_17756852469330/CustomerChurnDashboardKeyTrendsbyIncomeRegionContractPayment"
+      },
+      {
+        "label": "Code",
+        "href": "https://github.com/jessecoggins/customer-churn-dashboard"
+      }
+    ]
+  },
+  {
+    "id": "PRJ-002",
+    "title": "Loan Default Risk Capstone",
+    "category": "Machine Learning",
+    "tags": [
+      "Python",
+      "Classification",
+      "Credit risk",
+      "Cross-validation",
+      "M.S. coursework"
+    ],
+    "tools": [
+      "Python",
+      "Classification",
+      "Credit risk"
+    ],
+    "summary": "project-loan-default-risk.html",
+    "finding": "0.737 ROC-AUC",
+    "findingNote": "26.5% default recall at the tested threshold.",
+    "businessImpact": "Estimate underwriting workload: 1,380 flagged test loans contained 787 defaults.",
+    "links": [
+      {
+        "label": "Summary",
+        "href": "project-loan-default-risk.html"
+      },
+      {
+        "label": "Code",
+        "href": "https://github.com/jessecoggins/loan-default-risk-capstone"
+      }
+    ]
+  },
+  {
+    "id": "PRJ-003",
+    "title": "Flight Delay Prediction Pipeline",
+    "category": "Machine Learning",
+    "tags": [
+      "Python",
+      "MLOps",
+      "DVC",
+      "MLflow",
+      "FastAPI",
+      "Docker",
+      "CI/CD",
+      "M.S. coursework"
+    ],
+    "tools": [
+      "Python",
+      "MLOps",
+      "DVC"
+    ],
+    "summary": "project-flight-delay-prediction.html",
+    "finding": "8.92-minute RMSE",
+    "findingNote": "Held-out Atlanta flights; delays of 60 minutes or more excluded.",
+    "businessImpact": "Compare average departure delays by route and schedule within the evaluated range.",
+    "links": [
+      {
+        "label": "Summary",
+        "href": "project-flight-delay-prediction.html"
+      },
+      {
+        "label": "Code",
+        "href": "https://github.com/jessecoggins/flight-delay-mlops"
+      }
+    ]
+  },
+  {
+    "id": "PRJ-004",
+    "title": "Hospital Readmission Analysis",
+    "category": "Machine Learning",
+    "tags": [
+      "Python",
+      "Healthcare",
+      "Risk stratification",
+      "Feature timing",
+      "Clustering",
+      "PCA",
+      "M.S. coursework"
+    ],
+    "tools": [
+      "Python",
+      "Healthcare",
+      "Risk stratification"
+    ],
+    "summary": "project-hospital-readmission.html",
+    "finding": "0.999 → 0.492",
+    "findingNote": "ROC-AUC when completed length of stay is removed.",
+    "businessImpact": "Check feature availability before using a model for admission-time decisions.",
+    "links": [
+      {
+        "label": "Summary",
+        "href": "project-hospital-readmission.html"
+      },
+      {
+        "label": "Timing check",
+        "href": "https://github.com/jessecoggins/hospital-readmission-ml#additional-validation-feature-timing"
+      },
+      {
+        "label": "Code",
+        "href": "https://github.com/jessecoggins/hospital-readmission-ml"
+      }
+    ]
+  },
+  {
+    "id": "PRJ-005",
+    "title": "Revenue Forecasting with ARIMA",
+    "category": "Forecasting",
+    "tags": [
+      "Python",
+      "Forecasting",
+      "Time series",
+      "ARIMA",
+      "Statistics",
+      "M.S. coursework"
+    ],
+    "tools": [
+      "Python",
+      "Forecasting",
+      "Time series"
+    ],
+    "summary": "project-revenue-forecasting.html",
+    "finding": "Forecast cadence matters",
+    "findingNote": "Daily refitting favored ARIMA; one-batch forecasting favored no change.",
+    "businessImpact": "Match forecast evaluation to the planning schedule before choosing a model.",
+    "links": [
+      {
+        "label": "Summary",
+        "href": "project-revenue-forecasting.html"
+      },
+      {
+        "label": "Code",
+        "href": "https://github.com/jessecoggins/revenue-forecasting-arima"
+      }
+    ]
+  },
+  {
+    "id": "PRJ-006",
+    "title": "EcoMart Relational + NoSQL Design",
+    "category": "Data Systems",
+    "tags": [
+      "SQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Data modeling",
+      "ETL",
+      "NoSQL",
+      "M.S. coursework"
+    ],
+    "tools": [
+      "SQL",
+      "PostgreSQL",
+      "MongoDB"
+    ],
+    "summary": "project-ecomart-database-design.html",
+    "finding": "Sub-Saharan Africa leads",
+    "findingNote": "$10.31B total profit in the supplied dataset; Europe follows at $10.08B.",
+    "businessImpact": "Compare regional profitability and investigate the largest contributors.",
+    "links": [
+      {
+        "label": "Summary",
+        "href": "project-ecomart-database-design.html"
+      },
+      {
+        "label": "Code",
+        "href": "https://github.com/jessecoggins/ecomart-relational-nosql-database-design"
+      }
+    ]
+  },
+  {
+    "id": "PRJ-007",
+    "title": "Sentiment Analysis with BiLSTM",
+    "category": "Machine Learning",
+    "tags": [
+      "Python",
+      "NLP",
+      "Deep learning",
+      "BiLSTM",
+      "Text analytics",
+      "M.S. coursework"
+    ],
+    "tools": [
+      "Python",
+      "NLP",
+      "Deep learning"
+    ],
+    "summary": "project-sentiment-analysis-bilstm.html",
+    "finding": "78.57% accuracy",
+    "findingNote": "98 held-out reviews; 0.779 F1 for positive reviews.",
+    "businessImpact": "Explore a review queue while checking false alarms and missed negative reviews.",
+    "links": [
+      {
+        "label": "Summary",
+        "href": "project-sentiment-analysis-bilstm.html"
+      },
+      {
+        "label": "Code",
+        "href": "https://github.com/jessecoggins/sentiment-analysis-bilstm"
+      }
+    ]
+  },
+  {
+    "id": "PRJ-008",
+    "title": "Seedling Image Classifier",
+    "category": "Machine Learning",
+    "tags": [
+      "Python",
+      "Computer vision",
+      "CNN",
+      "Image classification",
+      "Deep learning",
+      "M.S. coursework"
+    ],
+    "tools": [
+      "Python",
+      "Computer vision",
+      "CNN"
+    ],
+    "summary": "project-seedling-image-classifier.html",
+    "finding": "66.62% accuracy",
+    "findingNote": "713 held-out seedling images across 12 species.",
+    "businessImpact": "Explore species sorting with expert review; field performance remains untested.",
+    "links": [
+      {
+        "label": "Summary",
+        "href": "project-seedling-image-classifier.html"
+      },
+      {
+        "label": "Code",
+        "href": "https://github.com/jessecoggins/seedling-image-classifier"
+      }
+    ]
+  },
+  {
+    "id": "PRJ-009",
+    "title": "Statistical Analysis + Market Basket",
+    "category": "Statistics & Optimization",
+    "tags": [
+      "Python",
+      "Statistics",
+      "Regression",
+      "PCA",
+      "Housing",
+      "Hypothesis testing",
+      "Market basket",
+      "Apriori",
+      "Retail",
+      "M.S. coursework"
+    ],
+    "tools": [
+      "Python",
+      "Statistics",
+      "Regression"
+    ],
+    "summary": "project-statistical-analysis-market-basket.html",
+    "finding": "88.2 association lift",
+    "findingNote": "Observed co-occurrence relative to independence; only 5 of 441 baskets.",
+    "businessImpact": "Choose product combinations for small merchandising trials.",
+    "links": [
+      {
+        "label": "Summary",
+        "href": "project-statistical-analysis-market-basket.html"
+      },
+      {
+        "label": "Code",
+        "href": "https://github.com/jessecoggins/statistical-analysis-and-market-basket"
+      }
+    ]
+  },
+  {
+    "id": "PRJ-010",
+    "title": "Cargo Network Optimization",
+    "category": "Statistics & Optimization",
+    "tags": [
+      "Python",
+      "Operations research",
+      "Linear programming",
+      "PuLP",
+      "Optimization",
+      "M.S. coursework"
+    ],
+    "tools": [
+      "Python",
+      "Operations research",
+      "Linear programming"
+    ],
+    "summary": "project-cargo-network-optimization.html",
+    "finding": "$200,863.75",
+    "findingNote": "Modeled minimum feasible shipping cost; savings were not measured.",
+    "businessImpact": "Compare feasible shipping plans under hub capacity and demand constraints.",
+    "links": [
+      {
+        "label": "Summary",
+        "href": "project-cargo-network-optimization.html"
+      },
+      {
+        "label": "Code",
+        "href": "https://github.com/jessecoggins/cargo-network-optimization"
+      }
+    ]
+  }
+]

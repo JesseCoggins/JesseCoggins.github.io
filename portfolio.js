@@ -1,5 +1,70 @@
-(() => {
-  const cards = Array.from(document.querySelectorAll(".project-row"));
+(async () => {
+  document.getElementById("current-year").textContent = String(new Date().getFullYear());
+  const make = (tag, className, text) => {
+    const element = document.createElement(tag);
+    if (className) element.className = className;
+    if (text !== undefined) element.textContent = text;
+    return element;
+  };
+  const validUrl = (value) => {
+    if (typeof value !== "string" || !value.trim()) return false;
+    try { return ["http:", "https:"].includes(new URL(value, document.baseURI).protocol); }
+    catch { return false; }
+  };
+  try {
+    const response = await fetch("projects.json", { cache: "no-cache" });
+    if (!response.ok) throw new Error("Project data request failed");
+    const projects = await response.json();
+    if (!Array.isArray(projects) || !projects.length) throw new Error("Project list is empty");
+    const ids = new Set(), summaries = new Set();
+    projects.forEach((project) => {
+      if (!project || !/^PRJ-\d{3,}$/.test(project.id) || ids.has(project.id)) throw new Error("Invalid or duplicate project ID");
+      ids.add(project.id);
+      for (const field of ["title", "category", "finding", "findingNote", "businessImpact"])
+        if (typeof project[field] !== "string" || !project[field].trim()) throw new Error("Missing project field: " + field);
+      if (!validUrl(project.summary) || summaries.has(project.summary)) throw new Error("Invalid or duplicate project summary");
+      summaries.add(project.summary);
+      for (const field of ["tools", "tags"])
+        if (!Array.isArray(project[field]) || !project[field].length || project[field].some((text) => typeof text !== "string" || !text.trim())) throw new Error("Invalid " + field);
+      if (!Array.isArray(project.links) || project.links.some((link) => !link || typeof link.label !== "string" || !link.label.trim() || !validUrl(link.href))) throw new Error("Invalid project links");
+    });
+    const fragment = document.createDocumentFragment();
+    projects.forEach((project, index) => {
+      const row = make("tr", "project-record");
+      row.setAttribute("role", "row");
+      Object.assign(row.dataset, { projectId: project.id, title: project.title, category: project.category, tags: [...new Set([...project.tags, ...project.tools])].join("|"), index: String(index) });
+      const id = make("th", "record-id", project.id);
+      id.scope = "row"; id.setAttribute("role", "rowheader"); row.append(id);
+      const cell = (className, label) => { const element = make("td", className); element.dataset.label = label; element.setAttribute("role", "cell"); row.append(element); return element; };
+      const main = cell("record-project", "Project");
+      const heading = make("h3", "project-title");
+      const title = make("a", "project-summary-link", project.title); title.href = project.summary; heading.append(title); main.append(heading);
+      main.append(make("p", "record-area", project.category), make("p", "record-tools", project.tools.join(" · ")));
+      if (project.tags.includes("M.S. coursework")) main.append(make("span", "record-course", "M.S. coursework"));
+      const finding = cell("record-finding", "Key findings"); finding.append(make("strong", "", project.finding), make("p", "", project.findingNote));
+      cell("record-impact", "Business impact").textContent = project.businessImpact;
+      const links = cell("record-links", "Links");
+      const resourceLinks = project.links.some((link) => link.href === project.summary) ? project.links : [{label:"Summary", href:project.summary}, ...project.links];
+      resourceLinks.forEach((link) => {
+        const anchor = make("a", "", link.label); anchor.href = link.href; anchor.setAttribute("aria-label", link.label + ": " + project.title);
+        if (new URL(link.href, document.baseURI).origin !== location.origin) { anchor.target = "_blank"; anchor.rel = "noreferrer"; }
+        links.append(anchor);
+      });
+      fragment.append(row);
+    });
+    document.getElementById("project-grid").replaceChildren(fragment);
+    document.getElementById("project-status").hidden = true;
+  } catch (error) {
+    console.error("Unable to load portfolio projects", error);
+    const status = document.getElementById("project-status");
+    status.textContent = "Projects are temporarily unavailable. ";
+    const link = make("a", "", "View my projects on GitHub"); link.href = "https://github.com/jessecoggins"; status.append(link);
+    document.querySelector(".project-tools").hidden = true;
+    document.querySelector(".collection-count").textContent = "";
+    return;
+  }
+
+  const cards = Array.from(document.querySelectorAll(".project-record"));
   const projectGrid = document.getElementById("project-grid");
   const categoryRoot = document.getElementById("category-filters");
   const tagRoot = document.getElementById("tag-filters");
@@ -27,7 +92,7 @@
   const normalize = (value) => value.toLocaleLowerCase().trim();
 
   const matchesQuery = (card) =>
-    !state.query || normalize(card.textContent).includes(normalize(state.query));
+    !state.query || normalize(card.textContent + " " + card.dataset.tags).includes(normalize(state.query));
   const matchesCategory = (card) =>
     state.category === "All projects" || card.dataset.category === state.category;
   const matchesTags = (card) => {
@@ -170,6 +235,8 @@
   }
 
   function render() {
+    const focusedTag = document.activeElement?.closest("#tag-filters") ? document.activeElement.dataset.tag : null;
+    const focusedArea = document.activeElement?.closest("#category-filters") ? document.activeElement.querySelector("span")?.textContent : null;
     const visible = resultSet();
     const sorted = [...cards];
 
@@ -188,9 +255,6 @@
     sorted.forEach((card) => projectGrid.append(card));
     cards.forEach((card) => {
       card.hidden = !visible.includes(card);
-      card.querySelectorAll(".tag-chip").forEach((button) => {
-        button.setAttribute("aria-pressed", String(state.tags.has(button.dataset.tag)));
-      });
     });
 
     count.textContent = visible.length + " of " + cards.length + " projects";
@@ -199,6 +263,8 @@
     renderTags();
     renderActiveFilters();
     syncUrl();
+    if (focusedTag) tagRoot.querySelector('[data-tag="' + CSS.escape(focusedTag) + '"]')?.focus();
+    if (focusedArea) [...categoryRoot.children].find((button) => button.querySelector("span")?.textContent === focusedArea)?.focus();
   }
 
   function clearFilters() {
@@ -247,18 +313,6 @@
   document.getElementById("clear-filters").addEventListener("click", clearFilters);
   document.getElementById("empty-clear").addEventListener("click", clearFilters);
 
-  cards.forEach((card) => {
-    card.querySelectorAll(".tag-chip").forEach((button) => {
-      button.addEventListener("click", () => {
-        const tag = button.dataset.tag;
-        if (state.tags.has(tag)) state.tags.delete(tag);
-        else state.tags.add(tag);
-        render();
-        tagRoot.querySelector('[data-tag="' + CSS.escape(tag) + '"]')?.focus();
-      });
-    });
-  });
-
   document.addEventListener("keydown", (event) => {
     const activeTag = document.activeElement?.tagName || "";
     if (
@@ -295,5 +349,8 @@
     button.setAttribute("aria-pressed", String(button.dataset.match === state.match)),
   );
   document.getElementById("current-year").textContent = String(new Date().getFullYear());
+  document.querySelector(".table-filters").open = state.tags.size > 0;
+  document.querySelector(".collection-count").textContent = cards.length + " projects";
   render();
 })();
+
